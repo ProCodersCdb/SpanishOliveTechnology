@@ -16,8 +16,6 @@ public class BiomasaService {
 
             return true;
         }
-
         return false;
-
     }
 }
