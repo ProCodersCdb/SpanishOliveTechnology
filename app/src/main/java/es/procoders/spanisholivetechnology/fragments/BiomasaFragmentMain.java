@@ -1,6 +1,7 @@
 package es.procoders.spanisholivetechnology.fragments;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -12,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import es.procoders.spanisholivetechnology.R;
+import es.procoders.spanisholivetechnology.activities.BiomasaActivity;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
 import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
@@ -48,7 +50,7 @@ public class BiomasaFragmentMain extends Fragment implements AdapterView.OnItemC
     private void initViews(View view) {
         bq = new BiomasaQuestions();
         lv = (ListView) view.findViewById(R.id.listView_mainFragment);
-        adapter = new ListViewAdapter(view, bq.getBioPreguntas());
+        adapter = new ListViewAdapter(view.getContext(), bq.rellenarBioPreguntas());
         lv.setAdapter(adapter);
 
     }

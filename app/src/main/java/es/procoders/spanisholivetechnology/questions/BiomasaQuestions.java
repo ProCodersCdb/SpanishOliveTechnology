@@ -12,10 +12,12 @@ import es.procoders.spanisholivetechnology.R;
 
 public class BiomasaQuestions {
     private ArrayList<String> bioPreguntas=new ArrayList<>();
+    private Activity activity;
+    Resources res= activity.getResources();
 
 
-    public void rellenarBioPreguntas(Activity activity){
-        Resources res= activity.getResources();
+    public ArrayList<String> rellenarBioPreguntas(){
+
         bioPreguntas.add(res.getString(R.string.bioQ1));
         bioPreguntas.add(res.getString(R.string.bioQ2));
         bioPreguntas.add(res.getString(R.string.bioQ3));
@@ -25,6 +27,7 @@ public class BiomasaQuestions {
         bioPreguntas.add(res.getString(R.string.bioQ7));
         bioPreguntas.add(res.getString(R.string.bioQ8));
 
+        return bioPreguntas;
 
     }
 }
