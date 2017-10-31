@@ -1,10 +1,10 @@
 package es.procoders.spanisholivetechnology.controllers;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
+import android.app.FragmentManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.app.FragmentManager;
+
 
 
 import es.procoders.spanisholivetechnology.R;
@@ -14,18 +14,23 @@ import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
  * Created by bjfem on 31/10/2017.
  */
 
-public class BiomasaController extends FragmentActivity{
+public class BiomasaController {
 
     private Activity activity;
+    private android.support.v4.app.FragmentManager fmanager;
 
-    public BiomasaController (Activity activity){
+    public BiomasaController (Activity activity, android.support.v4.app.FragmentManager fmanager){
+        this.fmanager = fmanager;
         this.activity = activity;
-        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        callFragment().commit();
+    }
+
+    private android.support.v4.app.FragmentTransaction callFragment() {
         Fragment newfragment = new BiomasaFragmentMain();
-        android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
+        android.support.v4.app.FragmentTransaction transaction = fmanager.beginTransaction();
         transaction.replace(R.id.fragment_activityBiomasa, newfragment);
         transaction.addToBackStack(null);
-        transaction.commit();
+        return transaction;
     }
 
 }
