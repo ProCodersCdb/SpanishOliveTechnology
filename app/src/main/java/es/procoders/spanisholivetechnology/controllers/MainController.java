@@ -12,19 +12,18 @@ public class MainController implements View.OnClickListener {
     private Activity activity;
     Button btn ;
 
-    public MainController(Activity activity){
-        this.activity= activity;
-        btn = (Button)activity.findViewById(R.id.btnNext);
+    public MainController(Activity activity) {
+        this.activity = activity;
+        btn = (Button) activity.findViewById(R.id.btnNext);
         btn.setOnClickListener(this);
     }
 
-    public MainController() {
 
-    }
 
     @Override
     public void onClick(View view) {
         Intent intent=new Intent(activity, BiomasaActivity.class);
         activity.startActivity(intent);
+
     }
 }
