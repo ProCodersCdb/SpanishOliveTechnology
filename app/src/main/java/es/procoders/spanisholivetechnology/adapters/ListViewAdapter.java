@@ -1,5 +1,6 @@
 package es.procoders.spanisholivetechnology.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
