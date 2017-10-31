@@ -50,15 +50,16 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
         bq = new BiomasaQuestions(view.getContext());
         lv = (ListView) view.findViewById(R.id.listView_mainFragment);
         adapter = new ListViewAdapter(view.getContext(), bq.getBioPreguntas());
+        lv.setOnItemClickListener(this);
         lv.setAdapter(adapter);
 
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        controller.setPosition(i);
         Fragment nuevoFragmento = new BiomasaFragmentDetails();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        controller.setPosition(i);
         transaction.replace(R.id.fragment_activityBiomasa, nuevoFragmento);
         transaction.addToBackStack(null);
         transaction.commit();

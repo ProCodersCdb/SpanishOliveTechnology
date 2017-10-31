@@ -29,42 +29,13 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         controller = BiomasaSingleton.getInstance();
-        View rootView = inflater.inflate(inflate(controller.getPosition()), container, false);
+        View rootView = inflater.inflate(controller.getPosition(), container, false);
 
         return rootView;
     }
 
 
-    public int inflate(int i){
-        int layout;
-        switch (i){
-            case 0:
-                layout = R.layout.fragment_biomasa_fragment_details;
-                break;
-            case 1:
-                layout = R.layout.fragment_biomasa_fragment_details;
-                break;
-            case 2:
-                layout = R.layout.fragment_biomasa_fragment_details;
-                break;
-            case 3:
-                layout = R.layout.fragment_biomasa_fragment_details;
-                break;
-            case 4:
-                layout = R.layout.fragment_biomasa_fragment_details;
-                break;
-            case 5:
-                layout = R.layout.fragment_biomasa_fragment_details;
-                break;
-            case 6:
-                layout = R.layout.fragment_biomasa_fragment_details;
-                break;
-            default:
-                layout = R.layout.fragment_biomasa_fragment_details;
-                break;
-        }
-        return layout;
-    }
+
 
 
 }
