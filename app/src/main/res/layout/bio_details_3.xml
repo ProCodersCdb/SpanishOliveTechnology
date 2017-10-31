@@ -11,14 +11,14 @@
 
 
         <Button
-            android:id="@+id/btnSaveDet3"
+            android:id="@+id/btnSaveBiomasa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="72dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:text="Button"
+            android:text="GUARDAR"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -26,30 +26,52 @@
         <RadioGroup
             android:id="@+id/GrupoDet3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <RadioButton
                 android:id="@+id/det3opcion1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="RadioButton" />
+                android:text="GRANEL" />
 
             <RadioButton
                 android:id="@+id/det3opcion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="RadioButton" />
+                android:text="BIGBAG 1000 KG" />
 
             <RadioButton
                 android:id="@+id/det3opcion3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="RadioButton" />
+                android:text="SACOS DE 20 KG" />
 
         </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="76dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="FORMATO"
+            app:layout_constraintBottom_toTopOf="@+id/GrupoDet3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>
