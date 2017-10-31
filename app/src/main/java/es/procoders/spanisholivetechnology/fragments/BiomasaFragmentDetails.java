@@ -13,7 +13,7 @@ import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BiomasaFragmentDetails extends Fragment {
+public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
 
     BiomasaSingleton controller;
 
