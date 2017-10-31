@@ -8,15 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BiomasaFragmentDetails extends Fragment {
+public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
 
-    BiomasaController controller;
-    private int position;
+    BiomasaSingleton controller;
+
 
 
     public BiomasaFragmentDetails() {
@@ -28,10 +28,8 @@ public class BiomasaFragmentDetails extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        controller = BiomasaController.getInstance();
-        position = controller.getPosition();
-        inflate(position);
-        View rootView = inflater.inflate(inflate(position), container, false);
+        controller = BiomasaSingleton.getInstance();
+        View rootView = inflater.inflate(inflate(controller.getPosition()), container, false);
 
         return rootView;
     }
