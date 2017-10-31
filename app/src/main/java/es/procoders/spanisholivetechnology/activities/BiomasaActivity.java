@@ -9,6 +9,8 @@ import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
+import es.procoders.spanisholivetechnology.beans.BiomasaBean;
+import es.procoders.spanisholivetechnology.services.BiomasaService;
 
 public class BiomasaActivity extends AppCompatActivity {
 
@@ -20,6 +22,12 @@ public class BiomasaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_biomasa);
         biomasaController = new BiomasaController(this);
 
+
+        BiomasaBean datosBiomasa = new BiomasaBean();
+
+        /*BiomasaService serv = new BiomasaService();
+
+        serv.CheckAnswer(datosBiomasa);*/
 
     }
 }
