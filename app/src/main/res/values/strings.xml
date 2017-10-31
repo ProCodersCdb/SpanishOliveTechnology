@@ -3,4 +3,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bioQ1">Interés:</string>
+    <string name="bioQ2">Tipo:</string>
+    <string name="bioQ3">Formato:</string>
+    <string name="bioQ4">Tipo de Consumo:</string>
+    <string name="bioQ5">Cantidades demandadas/ofertadas:</string>
+    <string name="bioQ6">Pais destino:</string>
+    <string name="bioQ7">Experiencia previa comercio hueso de aceituna/orujo:</string>
+    <string name="bioQ8">Comentarios:</string>
+
 </resources>
+
