@@ -21,7 +21,7 @@ import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BiomasaFragmentMain extends Fragment implements AdapterView.OnItemClickListener {
+public class BiomasaFragmentMain extends android.support.v4.app.Fragment implements AdapterView.OnItemClickListener {
 
     ListView lv;
     BiomasaQuestions bq;
