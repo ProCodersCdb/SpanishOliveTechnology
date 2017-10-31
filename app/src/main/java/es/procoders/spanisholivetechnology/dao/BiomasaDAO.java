@@ -10,12 +10,13 @@ import java.io.ObjectOutputStream;
 
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 
-public class BiomasaDAO {
+public class BiomasaDAO implements GestionDAO<BiomasaBean>{
 
-    private String fileName = "datos";
+    //Archivo en el que se guardará el objeto BiomasaBean
+    private final static String fileName = "datosBiomasa.dat";
 
-    //Método que guarda en local el objeto BiomasaBean
-    public void guardar (BiomasaBean b, Context c) {
+    //Método que guarda en local el objeto pasado como parámetro
+    public void guardarLocal (BiomasaBean b, Context c) {
 
         try {
             FileOutputStream fos = c.openFileOutput(fileName, Context.MODE_PRIVATE);
@@ -29,8 +30,9 @@ public class BiomasaDAO {
 
     }
 
-    //Lee, si existe, el archivo local y recupera el contenido previamente guardado
-    public BiomasaBean recuperar (Context c) {
+    //Lee, si existe, el archivo local y recupera el contenido previamente guardado.
+    //En caso de no existir, devuelve FileNotFoundException
+    public BiomasaBean recuperarLocal (Context c) {
 
         BiomasaBean b = new BiomasaBean();
 
