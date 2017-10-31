@@ -4,6 +4,7 @@ package es.procoders.spanisholivetechnology.questions;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Resources;
 import java.util.ArrayList;
 
@@ -12,11 +13,23 @@ import es.procoders.spanisholivetechnology.R;
 
 public class BiomasaQuestions {
     private ArrayList<String> bioPreguntas=new ArrayList<>();
-    private Activity activity;
-    Resources res= activity.getResources();
+    private Context ctx;
+    Resources res;
 
+    public BiomasaQuestions() {
+    }
+
+    public BiomasaQuestions(Context ctx) {
+        this.ctx = ctx;
+        res= ctx.getResources();
+    }
+
+    public ArrayList<String> getBioPreguntas() {
+        return rellenarBioPreguntas();
+    }
 
     public ArrayList<String> rellenarBioPreguntas(){
+
 
         bioPreguntas.add(res.getString(R.string.bioQ1));
         bioPreguntas.add(res.getString(R.string.bioQ2));
