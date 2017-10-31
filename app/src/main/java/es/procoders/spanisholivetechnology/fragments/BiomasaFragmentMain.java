@@ -1,6 +1,5 @@
 package es.procoders.spanisholivetechnology.fragments;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,20 +10,22 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
-import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BiomasaFragmentMain extends Fragment implements AdapterView.OnItemClickListener {
+public class BiomasaFragmentMain extends android.support.v4.app.Fragment implements AdapterView.OnItemClickListener {
 
     ListView lv;
     BiomasaQuestions bq;
     BaseAdapter adapter;
-    BiomasaController controller;
+    BiomasaSingleton controller;
 
 
     public BiomasaFragmentMain() {
@@ -38,7 +39,7 @@ public class BiomasaFragmentMain extends Fragment implements AdapterView.OnItemC
         View rootView = inflater.inflate(R.layout.fragment_biomasa_fragment_main, container, false);
         // Inflate the layout for this fragment
         initViews(rootView);
-        controller = BiomasaController.getInstance();
+        controller = BiomasaSingleton.getInstance();
 
 
         return rootView;
@@ -46,18 +47,19 @@ public class BiomasaFragmentMain extends Fragment implements AdapterView.OnItemC
     }
 
     private void initViews(View view) {
-        bq = new BiomasaQuestions();
+        bq = new BiomasaQuestions(view.getContext());
         lv = (ListView) view.findViewById(R.id.listView_mainFragment);
-        adapter = new ListViewAdapter(view, bq.getBioPreguntas());
+        adapter = new ListViewAdapter(view.getContext(), bq.getBioPreguntas());
+        lv.setOnItemClickListener(this);
         lv.setAdapter(adapter);
 
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        controller.setPosition(i);
         Fragment nuevoFragmento = new BiomasaFragmentDetails();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        controller.setPosition(i);
         transaction.replace(R.id.fragment_activityBiomasa, nuevoFragmento);
         transaction.addToBackStack(null);
         transaction.commit();

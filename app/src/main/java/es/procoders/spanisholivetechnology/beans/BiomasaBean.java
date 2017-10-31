@@ -10,6 +10,7 @@ public class BiomasaBean implements Serializable {
     private String bioQ3;
     private String bioQ4;
     private Float bioQ5;
+    private String bioQ6;
     private String bioQ7;
     private String bioQ8;
 
@@ -42,8 +43,17 @@ public class BiomasaBean implements Serializable {
         this.bioQ3 = bioQ3;
     }
 
+    public String getBioQ6() {
+        return bioQ6;
+    }
+
+    public void setBioQ6(String bioQ6) {
+        this.bioQ6 = bioQ6;
+    }
+
     public String getBioQ4() {
         return bioQ4;
+
     }
 
     public void setBioQ4(String bioQ4) {
@@ -84,11 +94,11 @@ public class BiomasaBean implements Serializable {
         if (bioQ3 != null ? !bioQ3.equals(that.bioQ3) : that.bioQ3 != null) return false;
         if (bioQ4 != null ? !bioQ4.equals(that.bioQ4) : that.bioQ4 != null) return false;
         if (bioQ5 != null ? !bioQ5.equals(that.bioQ5) : that.bioQ5 != null) return false;
+        if (bioQ6 != null ? !bioQ6.equals(that.bioQ6) : that.bioQ6 != null) return false;
         if (bioQ7 != null ? !bioQ7.equals(that.bioQ7) : that.bioQ7 != null) return false;
         return bioQ8 != null ? bioQ8.equals(that.bioQ8) : that.bioQ8 == null;
     }
 
-    //hasCode
     @Override
     public int hashCode() {
         int result = bioQ1 != null ? bioQ1.hashCode() : 0;
@@ -96,6 +106,7 @@ public class BiomasaBean implements Serializable {
         result = 31 * result + (bioQ3 != null ? bioQ3.hashCode() : 0);
         result = 31 * result + (bioQ4 != null ? bioQ4.hashCode() : 0);
         result = 31 * result + (bioQ5 != null ? bioQ5.hashCode() : 0);
+        result = 31 * result + (bioQ6 != null ? bioQ6.hashCode() : 0);
         result = 31 * result + (bioQ7 != null ? bioQ7.hashCode() : 0);
         result = 31 * result + (bioQ8 != null ? bioQ8.hashCode() : 0);
         return result;
