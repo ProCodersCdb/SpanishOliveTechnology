@@ -13,7 +13,7 @@ import android.widget.ListView;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
-import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
 
 /**
@@ -24,7 +24,7 @@ public class BiomasaFragmentMain extends Fragment implements AdapterView.OnItemC
     ListView lv;
     BiomasaQuestions bq;
     BaseAdapter adapter;
-    BiomasaController controller;
+    BiomasaSingleton controller;
 
 
     public BiomasaFragmentMain() {
@@ -38,7 +38,7 @@ public class BiomasaFragmentMain extends Fragment implements AdapterView.OnItemC
         View rootView = inflater.inflate(R.layout.fragment_biomasa_fragment_main, container, false);
         // Inflate the layout for this fragment
         initViews(rootView);
-        controller = BiomasaController.getInstance();
+        controller = BiomasaSingleton.getInstance();
 
 
         return rootView;
