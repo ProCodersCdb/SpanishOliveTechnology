@@ -10,9 +10,7 @@ import android.support.v4.app.FragmentActivity;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 
-/**
- * Created by bjfem on 31/10/2017.
- */
+//Hola test
 
 public class BiomasaController {
 
