@@ -1,6 +1,8 @@
 package es.procoders.spanisholivetechnology.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import es.procoders.spanisholivetechnology.R;
+import es.procoders.spanisholivetechnology.activities.ResultActivity;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
 import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
@@ -24,6 +27,7 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
     BiomasaQuestions bq;
     BaseAdapter adapter;
     BiomasaSingleton controller;
+    FloatingActionButton floating;
 
 
     public BiomasaFragmentMain() {
@@ -47,9 +51,18 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
     private void initViews(View view) {
         bq = new BiomasaQuestions(view.getContext());
         lv = (ListView) view.findViewById(R.id.listView_mainFragment);
+        floating = view.findViewById(R.id.fab);
         adapter = new ListViewAdapter(view.getContext(), bq.getBioPreguntas());
         lv.setOnItemClickListener(this);
         lv.setAdapter(adapter);
+        floating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), ResultActivity.class);
+                intent.putExtra("datos", controller.getBiomasa());
+                startActivity(intent);
+            }
+        });
 
     }
 

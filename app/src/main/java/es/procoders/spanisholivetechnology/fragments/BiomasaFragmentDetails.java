@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import es.procoders.spanisholivetechnology.R;
+
 import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 
 /**
@@ -16,7 +16,6 @@ import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
 
     BiomasaSingleton controller;
-
 
 
     public BiomasaFragmentDetails() {
@@ -30,6 +29,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
         // Inflate the layout for this fragment
         controller = controller.getInstance();
         View rootView = inflater.inflate(controller.getPosition(), container, false);
+
 
         return rootView;
     }
