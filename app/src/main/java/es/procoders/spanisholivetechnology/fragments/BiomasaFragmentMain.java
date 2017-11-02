@@ -42,6 +42,7 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
         // Inflate the layout for this fragment
         controller = BiomasaSingleton.getInstance();
         initViews(rootView);
+        controller = BiomasaSingleton.getInstance();
 
 
         return rootView;
