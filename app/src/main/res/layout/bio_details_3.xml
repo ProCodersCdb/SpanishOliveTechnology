@@ -60,7 +60,7 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txtDetails3"
             android:layout_width="76dp"
             android:layout_height="20dp"
             android:layout_marginBottom="8dp"

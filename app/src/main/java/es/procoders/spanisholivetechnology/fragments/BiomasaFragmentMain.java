@@ -40,6 +40,7 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_biomasa_fragment_main, container, false);
         // Inflate the layout for this fragment
+        controller = BiomasaSingleton.getInstance();
         initViews(rootView);
         controller = BiomasaSingleton.getInstance();
 

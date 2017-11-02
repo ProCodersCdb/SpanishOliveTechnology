@@ -10,6 +10,34 @@
      android:layout_height="match_parent">
 
 
+     <RadioGroup
+         android:id="@+id/GrupoDet7"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <RadioButton
+             android:id="@+id/det7opcion1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="SI" />
+
+         <RadioButton
+             android:id="@+id/det7opcion2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="NO" />
+     </RadioGroup>
+
      <Button
          android:id="@+id/btnSaveBiomasa"
          android:layout_width="wrap_content"
@@ -23,32 +51,20 @@
          app:layout_constraintStart_toStartOf="parent" />
 
      <TextView
-         android:id="@+id/textView6"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginEnd="8dp"
-         android:layout_marginStart="8dp"
-         android:layout_marginTop="52dp"
-         android:text="EXPERIENCIA PREVIA COMERCIO ACEITUNA/ORUJO"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="0.512"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent" />
-
-     <EditText
-         android:id="@+id/edtDetails7"
+         android:id="@+id/txtDetails7"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_marginBottom="8dp"
          android:layout_marginEnd="8dp"
          android:layout_marginStart="8dp"
-         android:layout_marginTop="8dp"
-         android:ems="10"
-         android:inputType="textMultiLine"
-         app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
+         android:layout_marginTop="52dp"
+         android:text="EXPERIENCIA PREVIA COMERCIO ACEITUNA/ORUJO"
+         app:layout_constraintBottom_toTopOf="@+id/GrupoDet7"
          app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.512"
          app:layout_constraintStart_toStartOf="parent"
          app:layout_constraintTop_toTopOf="parent" />
+
  </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>
