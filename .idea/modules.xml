@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\Apps\Desktop\GitHub\SpanishOliveTechnology\ProyectoSpanishOlive.iml" filepath="C:\Users\Apps\Desktop\GitHub\SpanishOliveTechnology\ProyectoSpanishOlive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProyectoSpanishOlive.iml" filepath="$PROJECT_DIR$/ProyectoSpanishOlive.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpanishOliveTechnology.iml" filepath="$PROJECT_DIR$/SpanishOliveTechnology.iml" />
       <module fileurl="file://C:\Users\usuario\Documents\Aplications\ProyectoSpanishOlive\SpanishOliveTechnology.iml" filepath="C:\Users\usuario\Documents\Aplications\ProyectoSpanishOlive\SpanishOliveTechnology.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

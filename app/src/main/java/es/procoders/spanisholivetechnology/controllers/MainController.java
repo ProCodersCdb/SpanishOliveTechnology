@@ -19,11 +19,9 @@ public class MainController implements View.OnClickListener {
     }
 
 
-
     @Override
     public void onClick(View view) {
         Intent intent=new Intent(activity, BiomasaActivity.class);
         activity.startActivity(intent);
-
     }
 }

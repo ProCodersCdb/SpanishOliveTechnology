@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.procoders.spanisholivetechnology.activities.ResultActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:width="60sp"
+        android:height="25sp"
+        android:text="@string/bioQ1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:width="60sp"
+        android:height="25sp"
+        android:text="@string/bioQ2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:width="60sp"
+        android:height="25sp"
+        android:text="@string/bioQ3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="121dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="39dp"
+        android:layout_marginTop="44dp"
+        android:width="60sp"
+        android:height="25sp"
+        android:text="@string/bioQ4"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="184dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="185dp"
+        android:width="60sp"
+        android:height="25sp"
+        android:text="@string/bioQ5"
+        app:layout_constraintBottom_toBottomOf="@+id/res8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:width="60sp"
+        android:height="25sp"
+        android:text="@string/bioQ6"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="33dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:width="60sp"
+        android:height="25sp"
+        android:text="@string/bioQ7"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/res7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginStart="16dp"
+        android:width="60sp"
+        android:height="25sp"
+        android:text="@string/bioQ8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/res1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="Resultado1"
+        app:layout_constraintEnd_toEndOf="@+id/res7"
+        app:layout_constraintStart_toStartOf="@+id/res7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/res2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Resultado2"
+        app:layout_constraintStart_toStartOf="@+id/res1"
+        app:layout_constraintTop_toBottomOf="@+id/res1" />
+
+    <TextView
+        android:id="@+id/res3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Resultado3"
+        app:layout_constraintBottom_toTopOf="@+id/res4"
+        app:layout_constraintStart_toStartOf="@+id/res2" />
+
+    <TextView
+        android:id="@+id/res4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/res3" />
+
+    <TextView
+        android:id="@+id/res5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Resultado5"
+        app:layout_constraintStart_toStartOf="@+id/res4"
+        app:layout_constraintTop_toBottomOf="@+id/res4" />
+
+    <TextView
+        android:id="@+id/res6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Resultado6"
+        app:layout_constraintStart_toStartOf="@+id/res5"
+        app:layout_constraintTop_toBottomOf="@+id/res5" />
+
+    <TextView
+        android:id="@+id/res7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado7"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/res8" />
+
+    <TextView
+        android:id="@+id/res8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:text="Resultado8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+
+</android.support.constraint.ConstraintLayout>
