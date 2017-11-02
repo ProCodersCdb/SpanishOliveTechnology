@@ -28,7 +28,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        controller = BiomasaSingleton.getInstance();
+        controller = controller.getInstance();
         View rootView = inflater.inflate(controller.getPosition(), container, false);
 
         return rootView;

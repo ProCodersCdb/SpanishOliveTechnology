@@ -61,13 +61,14 @@ public class BiomasaSingleton {
         this.biomasa = biomasa;
     }
 
-    private BiomasaSingleton() {
+    public BiomasaSingleton() {
     }
 
-    public static BiomasaSingleton getInstance(){
-        if( bio == null){
+    public  BiomasaSingleton  getInstance() {
+        if(bio == null){
             bio = new BiomasaSingleton();
         }
-        return bio;
+        return  bio;
     }
+
 }
