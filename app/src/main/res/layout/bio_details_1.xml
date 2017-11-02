@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails">
+
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+      <RadioGroup
+          android:id="@+id/GrupoDet1"
+          android:layout_width="125dp"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <RadioButton
+              android:id="@+id/det1opcion1"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_weight="1"
+              android:text="COMPRA" />
+
+          <RadioButton
+              android:id="@+id/det1opcion2"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_weight="1"
+              android:text="VENTA" />
+      </RadioGroup>
+
+      <Button
+          android:id="@+id/btnSaveBiomasa"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="32dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginStart="8dp"
+          android:text="GUARDAR"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent" />
+
+      <TextView
+          android:id="@+id/interes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:text="INTERÉS"
+          app:layout_constraintBottom_toTopOf="@+id/GrupoDet1"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+  </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
