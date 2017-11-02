@@ -3,6 +3,7 @@ package es.procoders.spanisholivetechnology.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import es.procoders.spanisholivetechnology.R;
+import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 
 /**
@@ -69,71 +72,78 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
 
     @Override
     public void onClick(View v) {
+        BiomasaBean bio= controller.getBiomasa();
 
         switch (controller.getPosition()) {
             case R.layout.bio_details_1:
                 if(det1opcion1.isChecked()){
-                    controller.getBiomasa().setBioQ1(det1opcion1.getText().toString());
+                    bio.setBioQ1(det1opcion1.getText().toString());
                 } else if(det1opcion2.isChecked()){
-                    controller.getBiomasa().setBioQ1(det1opcion2.getText().toString());
+                    bio.setBioQ1(det1opcion2.getText().toString());
                 }
                 break;
 
             case R.layout.bio_details_2:
                 if(det2opcion1.isChecked()){
-                    controller.getBiomasa().setBioQ2(det2opcion1.getText().toString());
+                    bio.setBioQ2(det2opcion1.getText().toString());
                 } else if(det2opcion2.isChecked()){
-                    controller.getBiomasa().setBioQ2(det2opcion2.getText().toString());
+                    bio.setBioQ2(det2opcion2.getText().toString());
                 } else if(det2opcion3.isChecked()){
-                    controller.getBiomasa().setBioQ2(det2opcion3.getText().toString());
+                    bio.setBioQ2(det2opcion3.getText().toString());
                 }
                 break;
 
             case R.layout.bio_details_3:
                 if(det3opcion1.isChecked()){
-                    controller.getBiomasa().setBioQ3(det3opcion1.getText().toString());
+                    bio.setBioQ3(det3opcion1.getText().toString());
                 } else if(det3opcion2.isChecked()){
-                    controller.getBiomasa().setBioQ3(det3opcion2.getText().toString());
+                    bio.setBioQ3(det3opcion2.getText().toString());
                 } else if(det3opcion3.isChecked()){
-                    controller.getBiomasa().setBioQ3(det3opcion3.getText().toString());
+                    bio.setBioQ3(det3opcion3.getText().toString());
                 }
                 break;
 
             case R.layout.bio_details_4:
                 if(det4opcion1.isChecked()){
-                    controller.getBiomasa().setBioQ4(det4opcion1.getText().toString());
+                    bio.setBioQ4(det4opcion1.getText().toString());
                 } else if(det4opcion2.isChecked()){
-                    controller.getBiomasa().setBioQ4(det4opcion2.getText().toString());
+                    bio.setBioQ4(det4opcion2.getText().toString());
                 }
                 break;
 
             case R.layout.bio_details_5:
                 if(!TextUtils.isEmpty(edtDetails5.getText())){
-                    controller.getBiomasa().setBioQ5(Float.parseFloat(edtDetails5.getText().toString()));
+                    bio.setBioQ5(Float.parseFloat(edtDetails5.getText().toString()));
                 }
                 break;
 
             case R.layout.bio_details_6:
                 if(!TextUtils.isEmpty(edtDetails6.getText())){
-                    controller.getBiomasa().setBioQ6(edtDetails6.getText().toString());
+                    bio.setBioQ6(edtDetails6.getText().toString());
                 }
                 break;
 
             case R.layout.bio_details_7:
                 if(det7opcion1.isChecked()){
-                    controller.getBiomasa().setBioQ7(det7opcion1.getText().toString());
+                    bio.setBioQ7(det7opcion1.getText().toString());
                 } else if(det7opcion2.isChecked()){
-                    controller.getBiomasa().setBioQ7(det7opcion2.getText().toString());
+                    bio.setBioQ7(det7opcion2.getText().toString());
                 }
                 break;
 
             case R.layout.bio_details_8:
                 if(!TextUtils.isEmpty(edtDetails8.getText())){
-                    controller.getBiomasa().setBioQ8(edtDetails8.getText().toString());
+                    bio.setBioQ8(edtDetails8.getText().toString());
                 }
                 break;
 
         }
+        controller.setBiomasa(bio);
+        // DAO
+        getActivity().onBackPressed();
+        Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
 
     }
+
+
 }

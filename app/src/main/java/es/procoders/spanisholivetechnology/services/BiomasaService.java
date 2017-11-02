@@ -1,5 +1,9 @@
 package es.procoders.spanisholivetechnology.services;
 
+import android.text.TextUtils;
+
+import java.util.Objects;
+
 import es.procoders.spanisholivetechnology.activities.BiomasaActivity;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 
@@ -15,12 +19,19 @@ public class BiomasaService {
 
         Boolean retVal = false;
 
-        if (datosBio.getBioQ2().toString() != null && datosBio.getBioQ3().toString() != null && datosBio.getBioQ5().toString() != null && datosBio.getBioQ6().toString() != null) {
-
+        if (datosBio.getBioQ2() == null){
+            retVal = false;
+        } else if (datosBio.getBioQ3() == null){
+            retVal = false;
+        } else if (datosBio.getBioQ5() == null){
+            retVal = false;
+        } else if (datosBio.getBioQ6() == null){
+            retVal = false;
+        }else {
             retVal = true;
         }
-
         return retVal;
+
     }
 
 //    public BussinessRule getRule ()

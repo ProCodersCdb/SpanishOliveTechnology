@@ -53,7 +53,7 @@ public class ListViewAdapter extends BaseAdapter {
 
 
         TextView name = (TextView) view.findViewById(R.id.mainListView);
-        String nameS= i + ". " + lista.get(i);
+        String nameS= i+1 + ". " + lista.get(i);
         name.setText(nameS);
         return view;
     }

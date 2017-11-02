@@ -117,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
-        android:text="Resultado1"
+        android:text=""
         app:layout_constraintEnd_toEndOf="@+id/res7"
         app:layout_constraintStart_toStartOf="@+id/res7"
         app:layout_constraintTop_toTopOf="parent" />
@@ -127,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Resultado2"
+        android:text=""
         app:layout_constraintStart_toStartOf="@+id/res1"
         app:layout_constraintTop_toBottomOf="@+id/res1" />
 
@@ -136,7 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:text="Resultado3"
+        android:text=""
         app:layout_constraintBottom_toTopOf="@+id/res4"
         app:layout_constraintStart_toStartOf="@+id/res2" />
 
@@ -144,7 +144,7 @@
         android:id="@+id/res4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado4"
+        android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/res3" />
 
@@ -153,7 +153,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Resultado5"
+        android:text=""
         app:layout_constraintStart_toStartOf="@+id/res4"
         app:layout_constraintTop_toBottomOf="@+id/res4" />
 
@@ -162,7 +162,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Resultado6"
+        android:text=""
         app:layout_constraintStart_toStartOf="@+id/res5"
         app:layout_constraintTop_toBottomOf="@+id/res5" />
 
@@ -170,7 +170,7 @@
         android:id="@+id/res7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado7"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="@+id/res8" />
 
@@ -179,7 +179,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:text="Resultado8"
+        android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
         app:layout_constraintStart_toEndOf="@+id/textView8" />
 

@@ -54,6 +54,9 @@ public class BiomasaSingleton {
     }
 
     public BiomasaBean getBiomasa() {
+        if (biomasa==null){
+            biomasa= new BiomasaBean();
+        }
         return biomasa;
     }
 

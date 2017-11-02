@@ -3,10 +3,12 @@ package es.procoders.spanisholivetechnology.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.TextView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
@@ -71,15 +73,37 @@ public class ResultActivity extends AppCompatActivity {
 
 
     public void showData(BiomasaBean bio) {
+        if (!TextUtils.isEmpty(bio.getBioQ1())) {
+            res1.setText(bio.getBioQ1());
+        }
 
-        res1.setText(bio.getBioQ1());
-        res2.setText(bio.getBioQ2());
-        res3.setText(bio.getBioQ3());
-        res4.setText(bio.getBioQ4());
-        res5.setText(bio.getBioQ5().toString());
-        res6.setText(bio.getBioQ6());
-        res7.setText(bio.getBioQ7());
-        res8.setText(bio.getBioQ8());
+        if (!TextUtils.isEmpty(bio.getBioQ2())) {
+            res2.setText(bio.getBioQ2());
+        }
+
+        if (!TextUtils.isEmpty(bio.getBioQ3())) {
+            res3.setText(bio.getBioQ3());
+        }
+
+        if (!TextUtils.isEmpty(bio.getBioQ4())) {
+            res4.setText(bio.getBioQ4());
+        }
+
+        if (!TextUtils.isEmpty(bio.getBioQ5().toString())) {
+            res5.setText(bio.getBioQ5().toString());
+        }
+
+        if (!TextUtils.isEmpty(bio.getBioQ6())) {
+            res6.setText(bio.getBioQ6());
+        }
+
+        if (!TextUtils.isEmpty(bio.getBioQ7())) {
+            res7.setText(bio.getBioQ7());
+        }
+
+        if (!TextUtils.isEmpty(bio.getBioQ8())) {
+            res8.setText(bio.getBioQ8());
+        }
 
     }
 }
