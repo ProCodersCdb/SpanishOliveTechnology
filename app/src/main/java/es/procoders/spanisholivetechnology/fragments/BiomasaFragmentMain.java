@@ -11,12 +11,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.activities.ResultActivity;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
 import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
+import es.procoders.spanisholivetechnology.services.BiomasaService;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +30,7 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
     BaseAdapter adapter;
     BiomasaSingleton controller;
     FloatingActionButton floating;
+    BiomasaService services;
 
 
     public BiomasaFragmentMain() {
@@ -59,9 +62,13 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
         floating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ResultActivity.class);
-                intent.putExtra("datos", controller.getBiomasa());
-                startActivity(intent);
+                if(services.isReady(controller.getBiomasa())) {
+                    Intent intent = new Intent(view.getContext(), ResultActivity.class);
+                    intent.putExtra("datos", controller.getBiomasa());
+                    startActivity(intent);
+                } else{
+                    Toast.makeText(view.getContext(), "No se puede enviar la petición. Formulario no relleno.", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
