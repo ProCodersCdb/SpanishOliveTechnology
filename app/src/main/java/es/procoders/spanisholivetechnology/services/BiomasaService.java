@@ -11,6 +11,8 @@ public class BiomasaService {
         cumplimentacion no queden sin rellenar. Una vez que quedan rellenas, se confirma. En caso
         de no cumplirse la condicion devuelve un false */
 
+        private
+
         if (datosBio.getBioQ2().toString() != null && datosBio.getBioQ3().toString() != null && datosBio.getBioQ5().toString() != null && datosBio.getBioQ6().toString() != null) {
 
             return true;
