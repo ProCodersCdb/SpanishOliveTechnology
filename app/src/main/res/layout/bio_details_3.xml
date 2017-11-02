@@ -14,11 +14,12 @@
             android:id="@+id/btnSaveDet3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="72dp"
+            android:layout_marginBottom="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:text="Button"
+            android:text="@string/guardar"
+            android:textAllCaps="?android:attr/windowSwipeToDismiss"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -33,21 +34,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="RadioButton" />
+                android:text="@string/granel" />
 
             <RadioButton
                 android:id="@+id/det3opcion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="RadioButton" />
+                android:text="@string/bigbag_1000_kg" />
 
             <RadioButton
                 android:id="@+id/det3opcion3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="RadioButton" />
+                android:text="@string/sacos_20_kg" />
 
         </RadioGroup>
     </android.support.constraint.ConstraintLayout>

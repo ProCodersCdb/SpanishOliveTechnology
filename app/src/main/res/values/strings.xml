@@ -11,6 +11,17 @@
     <string name="bioQ6">Pais destino:</string>
     <string name="bioQ7">Experiencia previa comercio hueso de aceituna/orujo:</string>
     <string name="bioQ8">Comentarios:</string>
+    <string name="venta">Venta</string>
+    <string name="compra">Compra</string>
+    <string name="guardar">Guardar</string>
+    <string name="aceituna">Aceituna</string>
+    <string name="pelet_de_orujo">Pelet de orujo</string>
+    <string name="orujillo">Orujillo</string>
+    <string name="granel">Granel</string>
+    <string name="bigbag_1000_kg">BigBag 1000 Kg</string>
+    <string name="sacos_20_kg">Sacos 20 Kg</string>
+    <string name="dom_stico">Doméstico</string>
+    <string name="industrial">Industrial</string>
 
 </resources>
 
