@@ -64,7 +64,7 @@ public class BiomasaSingleton {
     public BiomasaSingleton() {
     }
 
-    public  BiomasaSingleton  getInstance() {
+    public static BiomasaSingleton  getInstance() {
         if(bio == null){
             bio = new BiomasaSingleton();
         }
