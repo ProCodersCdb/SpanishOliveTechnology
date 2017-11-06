@@ -31,14 +31,14 @@ public class BiomasaQuestions {
     public ArrayList<String> rellenarBioPreguntas(){
 
 
-        bioPreguntas.add(res.getString(R.string.bioQ1));
-        bioPreguntas.add(res.getString(R.string.bioQ2));
-        bioPreguntas.add(res.getString(R.string.bioQ3));
-        bioPreguntas.add(res.getString(R.string.bioQ4));
-        bioPreguntas.add(res.getString(R.string.bioQ5));
-        bioPreguntas.add(res.getString(R.string.bioQ6));
-        bioPreguntas.add(res.getString(R.string.bioQ7));
-        bioPreguntas.add(res.getString(R.string.bioQ8));
+        bioPreguntas.add(res.getString(R.string.txtDetails1));
+        bioPreguntas.add(res.getString(R.string.txtDetails2));
+        bioPreguntas.add(res.getString(R.string.txtDetails3));
+        bioPreguntas.add(res.getString(R.string.txtDetails4));
+        bioPreguntas.add(res.getString(R.string.txtDetails5));
+        bioPreguntas.add(res.getString(R.string.txtDetails6));
+        bioPreguntas.add(res.getString(R.string.txtDetails7));
+        bioPreguntas.add(res.getString(R.string.txtDetails8));
 
         return bioPreguntas;
 

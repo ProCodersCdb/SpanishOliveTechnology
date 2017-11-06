@@ -14,7 +14,7 @@
             android:id="@+id/GrupoDet1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="84dp"
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,13 +28,13 @@
                 android:layout_height="150dp"
                 android:layout_weight="1"
                 android:background="@drawable/rbtn_selector"
+                android:button="@null"
                 android:checked="false"
                 android:gravity="center"
                 android:padding="5dp"
-                android:button="@null"
+                android:text="@string/det1opcion1"
                 android:textColor="@drawable/rbtn_textcolor_selector"
-                android:textSize="@dimen/optionRbtnSizeMax"
-                android:text="@string/det1opcion1"/>
+                android:textSize="@dimen/optionRbtnSizeMax" />
 
             <RadioButton
                 android:id="@+id/det1opcion2"
@@ -42,12 +42,12 @@
                 android:layout_height="150dp"
                 android:layout_weight="1"
                 android:background="@drawable/rbtn_selector"
+                android:button="@null"
                 android:gravity="center"
                 android:padding="5dp"
-                android:button="@null"
+                android:text="@string/det1opcion2"
                 android:textColor="@drawable/rbtn_textcolor_selector"
-                android:textSize="@dimen/optionRbtnSizeMax"
-                android:text="@string/det1opcion2"/>
+                android:textSize="@dimen/optionRbtnSizeMax" />
         </RadioGroup>
 
         <Button

@@ -14,10 +14,6 @@ import java.util.List;
 
 import es.procoders.spanisholivetechnology.R;
 
-/**
- * Created by Apps on 30/10/2017.
- */
-
 public class ListViewAdapter extends BaseAdapter {
 
     private Context ctx;
@@ -53,7 +49,7 @@ public class ListViewAdapter extends BaseAdapter {
 
 
         TextView name = (TextView) view.findViewById(R.id.mainListView);
-        String nameS= i+1 + ". " + lista.get(i);
+        String nameS = lista.get(i);
         name.setText(nameS);
         return view;
     }
