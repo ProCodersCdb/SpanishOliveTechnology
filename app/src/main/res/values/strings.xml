@@ -23,22 +23,22 @@
 
     <!-- Traducciones de botones-->
 
-    <string name="btnSaveBiomasa">Guardar:</string>
+    <string name="btnSaveBiomasa">Guardar</string>
     <string name="btnNext">Ir a Biomasa:</string>
 
 
     <!-- Traducciones listView -->
 
-    <string name="interes">Interés</string>
+    <string name="txtDetails1">Interés</string>
     <string name="txtDetails2">Tipo</string>
     <string name="txtDetails3">Formato</string>
-    <string name="textView3">Tipo de Consumo</string>
+    <string name="txtDetails4">Tipo de Consumo</string>
     <string name="txtDetails5">Cantidades</string>
     <string name="txtDetails6">País destino para venta</string>
     <string name="txtDetails7">Experiencia previa comercio Aceituna/Orujo</string>
     <string name="txtDetails8">Comentarios</string>
 
-    <!-- Traducciones RadioButton -->
+    <!-- Traducciones Titulos RadioButtons -->
 
     <string name="det1opcion1">Compra</string>
     <string name="det1opcion2">Venta</string>
@@ -52,6 +52,9 @@
     <string name="det4opcion2">Industrial</string>
     <string name="det7opcion1">Si</string>
     <string name="det7opcion2">No</string>
+
+    <string name="optionSubTittleSelect">(Seleccione una opción)</string>
+    <string name="optionSubTittleType">(Escriba en el campo de texto)</string>
 
     <!--                                 -->
 

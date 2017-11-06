@@ -6,10 +6,10 @@
 
         <stroke android:width="0dp" android:color="@color/transparent" />
     </shape></item>
-    <item android:state_checked="false">
-        <solid android:color="@color/colorRadioButtonOff" />
+    <item android:state_checked="false"><shape>
+        <solid android:color="@color/transparent" />
 
         <stroke android:width="0dp" android:color="@color/colorRadioButtonOff" />
-    </item>
+    </shape></item>
 
 </selector>

@@ -10,68 +10,90 @@
         android:layout_height="match_parent">
 
 
-        <Button
-            android:id="@+id/btnSaveBiomasa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="72dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:text="@string/btnSaveBiomasa"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <RadioGroup
             android:id="@+id/GrupoDet3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="22dp"
+            android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintStart_toStartOf="parent">
 
             <RadioButton
                 android:id="@+id/det3opcion1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/det3opcion1" />
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:padding="20sp"
+                android:text="@string/det3opcion1"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:textSize="@dimen/optionRbtnSizeMax" />
 
             <RadioButton
                 android:id="@+id/det3opcion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/det3opcion2" />
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:padding="20sp"
+                android:text="@string/det3opcion2"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:textSize="@dimen/optionRbtnSizeMax" />
 
             <RadioButton
                 android:id="@+id/det3opcion3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/det3opcion3" />
-
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:padding="20sp"
+                android:text="@string/det3opcion3"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:textSize="@dimen/optionRbtnSizeMax" />
         </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSaveBiomasa"
+            style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="@string/btnSaveBiomasa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/txtDetails3"
-            android:layout_width="76dp"
-            android:layout_height="20dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="@string/txtDetails3"
-            app:layout_constraintBottom_toTopOf="@+id/GrupoDet3"
+            android:textSize="@dimen/optionTittleSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/optionSubTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/optionSubTittleSelect"
+            app:layout_constraintStart_toStartOf="@+id/txtDetails3"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetails3" />
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>
