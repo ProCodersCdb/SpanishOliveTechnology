@@ -31,7 +31,7 @@
                 android:checked="false"
                 android:gravity="center"
                 android:padding="20sp"
-                android:text="@string/det2opcion1"
+                android:text="@string/det4opcion1"
                 android:textColor="@drawable/rbtn_textcolor_selector"
                 android:textSize="@dimen/optionRbtnSizeMax" />
 
