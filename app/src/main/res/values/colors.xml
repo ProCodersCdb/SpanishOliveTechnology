@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFF</color>
+    <color name="colorPrimary">#9ec400</color>
     <color name="colorPrimaryDark">#5e6a71</color>
     <color name="colorAccent">#9ec400</color>
+
+    <color name="colorRadioButtonOn">#9ec400</color>
+    <color name="colorRadioButtonOff">#5e6a71</color>
+    <color name="transparent">none</color>
 </resources>

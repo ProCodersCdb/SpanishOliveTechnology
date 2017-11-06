@@ -5,64 +5,71 @@
     android:layout_height="match_parent"
     tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails">
 
-  <android.support.constraint.ConstraintLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-      <RadioGroup
-          android:id="@+id/GrupoDet1"
-          android:layout_width="125dp"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="8dp"
-          android:layout_marginEnd="8dp"
-          android:layout_marginStart="8dp"
-          android:layout_marginTop="8dp"
-          app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-          <RadioButton
-              android:id="@+id/det1opcion1"
-              android:layout_width="match_parent"
-              android:layout_height="50dp"
-              android:layout_weight="1"
-              android:text="COMPRA" />
+            <RadioButton
+                android:id="@+id/radioYes"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/yes"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:textSize="50dp" />
 
-          <RadioButton
-              android:id="@+id/det1opcion2"
-              android:layout_width="match_parent"
-              android:layout_height="50dp"
-              android:layout_weight="1"
-              android:text="VENTA" />
-      </RadioGroup>
+            <RadioButton
+                android:id="@+id/radioNo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/no"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:textSize="50dp" />
+        </RadioGroup>
 
-      <Button
-          android:id="@+id/btnSaveBiomasa"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="32dp"
-          android:layout_marginEnd="8dp"
-          android:layout_marginStart="8dp"
-          android:text="GUARDAR"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btnSaveBiomasa"
+            style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="GUARDAR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
 
-      <TextView
-          android:id="@+id/interes"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="8dp"
-          android:layout_marginEnd="8dp"
-          android:layout_marginStart="8dp"
-          android:layout_marginTop="8dp"
-          android:text="INTERÉS"
-          app:layout_constraintBottom_toTopOf="@+id/GrupoDet1"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-  </android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/interes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/bioQ1"
+            android:textSize="@dimen/tittleSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>
