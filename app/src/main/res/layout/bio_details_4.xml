@@ -17,7 +17,7 @@
         android:layout_marginBottom="56dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="GUARDAR"
+        android:text="@string/btnSaveBiomasa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -40,14 +40,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="DOMESTICO" />
+            android:text="@string/det4opcion1" />
 
         <RadioButton
             android:id="@+id/det4opcion2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="INDUSTRIAL" />
+            android:text="@string/det4opcion2" />
     </RadioGroup>
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TIPO DE CONSUMO"
+        android:text="@string/textView3"
         app:layout_constraintBottom_toTopOf="@+id/GrupoDet4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
