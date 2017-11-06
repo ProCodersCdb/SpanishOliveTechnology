@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Spanish Olive Technology</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Preguntas Biomasa -->
+    <string name="bioQ1">Gabacho:</string>
+    <string name="bioQ2">Je suis Napoleon:</string>
+    <string name="bioQ3">Tous les Enfants:</string>
+    <string name="bioQ4">Fromage:</string>
+    <string name="bioQ5">Cantidades demandadas/ofertadas(Gabacho):</string>
+    <string name="bioQ6">Pais destino(Gabacho):</string>
+    <string name="bioQ7">Experiencia previa comercio hueso de aceituna/orujo(Gabacho):</string>
+    <string name="bioQ8">Comentarios(Gabacho):</string>
+
+    <!-- Traducciones de botones-->
+
+    <string name="btnSaveBiomasa">Guardar(Gabacho)</string>
+    <string name="btnNext">Ir a Biomasa(Gabacho)</string>
+
+
+    <!-- Traducciones textView -->
+
+    <string name="txtDetails1">Interés(Gabacho)</string>
+    <string name="txtDetails2">Tipo(Gabacho)</string>
+    <string name="txtDetails3">Formato(Gabacho)</string>
+    <string name="textView3">Tipo de Consumo(Gabacho)</string>
+    <string name="txtDetails5">Cantidades(Gabacho)</string>
+    <string name="txtDetails6">País destino para venta(Gabacho)</string>
+    <string name="txtDetails7">Experiencia previa comercio Aceituna/Orujo(Gabacho)</string>
+    <string name="txtDetails8">Comentarios(Gabacho)</string>
+
+    <!-- Traducciones RadioButton -->
+
+    <string name="det1opcion1">Compra(Gabacho)</string>
+    <string name="det1opcion2">Venta(Gabacho)</string>
+    <string name="det2opcion1">Hueso de Aceituna(Gabacho)</string>
+    <string name="det2opcion2">Palet de Orujo(Gabacho)</string>
+    <string name="det2opcion3">Orujillo(Gabacho)</string>
+    <string name="det3opcion1">Granel(Gabacho)</string>
+    <string name="det3opcion2">BigBag 1000kg(Gabacho)</string>
+    <string name="det3opcion3">Sacos 20kg(Gabacho)</string>
+    <string name="det4opcion1">Doméstico(Gabacho)</string>
+    <string name="det4opcion2">Industrial(Gabacho)</string>
+    <string name="det7opcion1">Si(Gabacho)</string>
+    <string name="det7opcion2">No(Gabacho)</string>
+
+
+    <!--                                 -->
+
+</resources>
+

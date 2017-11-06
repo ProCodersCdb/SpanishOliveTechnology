@@ -28,14 +28,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SI" />
+                android:text="@string/det7opcion1" />
 
             <RadioButton
                 android:id="@+id/det7opcion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="NO" />
+                android:text="@string/det7opcion2" />
         </RadioGroup>
 
         <Button
@@ -45,7 +45,7 @@
             android:layout_marginBottom="36dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="GUARDAR"
+            android:text="@string/btnSaveBiomasa"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -58,7 +58,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="52dp"
-            android:text="EXPERIENCIA PREVIA COMERCIO ACEITUNA/ORUJO"
+            android:text="@string/txtDetails7"
             app:layout_constraintBottom_toTopOf="@+id/GrupoDet7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.512"

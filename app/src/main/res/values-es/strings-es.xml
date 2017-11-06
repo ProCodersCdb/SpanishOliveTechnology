@@ -4,11 +4,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!-- Strings Tools -->
-
-    <string name="yes">Si</string>
-    <string name="no">No</string>
-
 
     <!-- Preguntas Biomasa -->
     <string name="bioQ1">Interés:</string>
@@ -20,16 +15,15 @@
     <string name="bioQ7">Experiencia previa comercio hueso de aceituna/orujo:</string>
     <string name="bioQ8">Comentarios:</string>
 
-
     <!-- Traducciones de botones-->
 
-    <string name="btnSaveBiomasa">Guardar:</string>
-    <string name="btnNext">Ir a Biomasa:</string>
+    <string name="btnSaveBiomasa">Guardar</string>
+    <string name="btnNext">Ir a Biomasa</string>
 
 
-    <!-- Traducciones listView -->
+    <!-- Traducciones textView -->
 
-    <string name="interes">Interés</string>
+    <string name="txtDetails1">Interés</string>
     <string name="txtDetails2">Tipo</string>
     <string name="txtDetails3">Formato</string>
     <string name="textView3">Tipo de Consumo</string>
@@ -52,6 +46,12 @@
     <string name="det4opcion2">Industrial</string>
     <string name="det7opcion1">Si</string>
     <string name="det7opcion2">No</string>
+
+
+
+
+
+
 
     <!--                                 -->
 

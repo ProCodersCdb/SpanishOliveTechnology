@@ -17,7 +17,7 @@
           android:layout_marginBottom="16dp"
           android:layout_marginEnd="8dp"
           android:layout_marginStart="8dp"
-          android:text="GUARDAR"
+          android:text="@string/btnSaveBiomasa"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent" />
@@ -29,7 +29,7 @@
           android:layout_marginEnd="8dp"
           android:layout_marginStart="8dp"
           android:layout_marginTop="60dp"
-          android:text="CANTIDADES"
+          android:text="@string/txtDetails5"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintHorizontal_bias="0.501"
           app:layout_constraintStart_toStartOf="parent"

@@ -18,7 +18,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:text="GUARDAR"
+            android:text="@string/btnSaveBiomasa"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -41,21 +41,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="GRANEL" />
+                android:text="@string/det3opcion1" />
 
             <RadioButton
                 android:id="@+id/det3opcion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="BIGBAG 1000 KG" />
+                android:text="@string/det3opcion2" />
 
             <RadioButton
                 android:id="@+id/det3opcion3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SACOS DE 20 KG" />
+                android:text="@string/det3opcion3" />
 
         </RadioGroup>
 
@@ -67,7 +67,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="FORMATO"
+            android:text="@string/txtDetails3"
             app:layout_constraintBottom_toTopOf="@+id/GrupoDet3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

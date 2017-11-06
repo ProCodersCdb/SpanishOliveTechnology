@@ -28,21 +28,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="HUESO DE ACEITUNO" />
+                android:text="@string/det2opcion1" />
 
             <RadioButton
                 android:id="@+id/det2opcion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="PALET DE ORUJO" />
+                android:text="@string/det2opcion2" />
 
             <RadioButton
                 android:id="@+id/det2opcion3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ORUJILLO" />
+                android:text="@string/det2opcion3" />
         </RadioGroup>
 
         <Button
@@ -52,7 +52,7 @@
             android:layout_marginBottom="48dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="GUARDAR"
+            android:text="@string/btnSaveBiomasa"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -65,7 +65,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="TIPO"
+            android:text="@string/txtDetails2"
             app:layout_constraintBottom_toTopOf="@+id/GrupoDet2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
