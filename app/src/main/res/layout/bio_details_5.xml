@@ -15,17 +15,14 @@
           style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginBottom="40dp"
-          android:layout_marginTop="16dp"
+          android:layout_marginBottom="28dp"
           android:fontFamily="@font/arial"
           android:text="@string/btnSaveBiomasa"
           android:textSize="@dimen/btnTextSize"
           android:textStyle="bold"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/til_nombre"
-          app:layout_constraintVertical_bias="1.0" />
+          app:layout_constraintStart_toStartOf="parent" />
 
       <TextView
           android:id="@+id/txtDetails5"
@@ -60,15 +57,16 @@
           android:layout_height="wrap_content"
           android:layout_marginEnd="8dp"
           android:layout_marginStart="8dp"
-          android:layout_marginTop="60dp"
+          android:layout_marginTop="20dp"
           android:gravity="center_horizontal"
           app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/optionSubTittle">
 
           <EditText
               android:id="@+id/edtDetails5"
-              android:layout_width="wrap_content"
+              android:layout_width="191dp"
               android:layout_height="wrap_content"
               android:layout_marginBottom="8dp"
               android:layout_marginEnd="8dp"
@@ -83,6 +81,8 @@
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toBottomOf="@+id/optionSubTittle"
               app:layout_constraintVertical_bias="0.22" />
+
+
       </android.support.design.widget.TextInputLayout>
   </android.support.constraint.ConstraintLayout>
 
