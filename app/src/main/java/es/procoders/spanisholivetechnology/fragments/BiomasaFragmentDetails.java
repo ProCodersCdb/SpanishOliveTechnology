@@ -4,6 +4,7 @@ package es.procoders.spanisholivetechnology.fragments;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.text.Layout;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,8 +34,6 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
     RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     EditText edtDetails5, edtDetails6, edtDetails8;
     TextView txtDetails6, txtDetails7, txtDetails5;
-    BiomasaQuestions bq;
-    ArrayList<Options> options;
 
 
     public BiomasaFragmentDetails() {
@@ -47,7 +46,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         controller = BiomasaSingleton.getInstance();
-        options = bq.getBioPreguntas();
+        ArrayList<Options> options = new BiomasaQuestions(getContext()).getBioPreguntas();
         View rootView = inflater.inflate(options.get(controller.getPosition()).getLayout(), container, false);
         initViews(rootView);
 
@@ -82,7 +81,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         BiomasaBean bio= controller.getBiomasa();
 
         switch (controller.getPosition()) {
-            case R.layout.bio_details_1:
+            case 0:
                 if(det1opcion1.isChecked()){
                     bio.setBioQ1(det1opcion1.getText().toString());
                 } else if(det1opcion2.isChecked()){
@@ -90,7 +89,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 }
                 break;
 
-            case R.layout.bio_details_2:
+            case 1:
                 if(det2opcion1.isChecked()){
                     bio.setBioQ2(det2opcion1.getText().toString());
                 } else if(det2opcion2.isChecked()){
@@ -100,7 +99,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 }
                 break;
 
-            case R.layout.bio_details_3:
+            case 2:
                 if(det3opcion1.isChecked()){
                     bio.setBioQ3(det3opcion1.getText().toString());
                 } else if(det3opcion2.isChecked()){
@@ -110,7 +109,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 }
                 break;
 
-            case R.layout.bio_details_4:
+            case 3:
                 if(det4opcion1.isChecked()){
                     bio.setBioQ4(det4opcion1.getText().toString());
                 } else if(det4opcion2.isChecked()){
@@ -118,19 +117,19 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 }
                 break;
 
-            case R.layout.bio_details_5:
+            case 4:
                 if(!TextUtils.isEmpty(edtDetails5.getText())){
                     bio.setBioQ5(Float.parseFloat(edtDetails5.getText().toString()));
                 }
                 break;
 
-            case R.layout.bio_details_6:
+            case 5:
                 if(!TextUtils.isEmpty(edtDetails6.getText())){
                     bio.setBioQ6(edtDetails6.getText().toString());
                 }
                 break;
 
-            case R.layout.bio_details_7:
+            case 6:
                 if(det7opcion1.isChecked()){
                     bio.setBioQ7(det7opcion1.getText().toString());
                 } else if(det7opcion2.isChecked()){
@@ -138,7 +137,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 }
                 break;
 
-            case R.layout.bio_details_8:
+            case 7:
                 if(!TextUtils.isEmpty(edtDetails8.getText())){
                     bio.setBioQ8(edtDetails8.getText().toString());
                 }

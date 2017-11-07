@@ -15,8 +15,6 @@ public class BiomasaQuestions {
     private Context ctx;
     Resources res;
 
-    public BiomasaQuestions() {
-    }
 
     public BiomasaQuestions(Context ctx) {
         this.ctx = ctx;
@@ -28,8 +26,6 @@ public class BiomasaQuestions {
     }
 
     public ArrayList<Options> rellenarBioPreguntas() {
-
-
         bioPreguntas.add(new Options(res.getString(R.string.txtDetails1), false, R.layout.bio_details_1));
         bioPreguntas.add(new Options(res.getString(R.string.txtDetails2), true, R.layout.bio_details_2));
         bioPreguntas.add(new Options(res.getString(R.string.txtDetails3), true, R.layout.bio_details_3));
