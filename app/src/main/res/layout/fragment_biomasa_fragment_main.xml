@@ -5,15 +5,20 @@
     android:layout_height="match_parent"
     tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain">
 
+
     <!-- TODO: Update blank fragment layout -->
     <ListView
         android:id="@+id/listView_mainFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fontFamily="@font/arial" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:tint="#fff"
+        android:fontFamily="@font/arial"
         android:layout_width="60sp"
         android:layout_height="60sp"
         android:layout_gravity="bottom|end"

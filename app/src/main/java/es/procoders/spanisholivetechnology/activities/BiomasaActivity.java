@@ -32,6 +32,7 @@ public class BiomasaActivity extends FragmentActivity {
 
         BiomasaBean datosBiomasa = new BiomasaBean();
 
+
         /*BiomasaService serv = new BiomasaService();
 
         serv.CheckAnswer(datosBiomasa);*/
@@ -39,4 +40,5 @@ public class BiomasaActivity extends FragmentActivity {
 
 
     }
+
 }

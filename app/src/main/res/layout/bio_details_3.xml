@@ -26,6 +26,7 @@
 
             <RadioButton
                 android:id="@+id/det3opcion1"
+                android:fontFamily="@font/arial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -40,6 +41,7 @@
 
             <RadioButton
                 android:id="@+id/det3opcion2"
+                android:fontFamily="@font/arial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -54,6 +56,7 @@
 
             <RadioButton
                 android:id="@+id/det3opcion3"
+                android:fontFamily="@font/arial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -69,6 +72,8 @@
 
         <Button
             android:id="@+id/btnSaveBiomasa"
+            android:fontFamily="@font/arial"
+            android:textStyle="bold"
             style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,6 +85,7 @@
 
         <TextView
             android:id="@+id/txtDetails3"
+            android:fontFamily="@font/arial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -91,6 +97,7 @@
 
         <TextView
             android:id="@+id/optionSubTittle"
+            android:fontFamily="@font/arial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"

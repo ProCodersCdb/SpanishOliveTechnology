@@ -12,6 +12,8 @@
 
         <Button
             android:id="@+id/btnSaveBiomasa"
+            android:fontFamily="@font/arial"
+            android:textStyle="bold"
             style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,6 +25,7 @@
 
         <TextView
             android:id="@+id/txtDetails6"
+            android:fontFamily="@font/arial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -36,6 +39,7 @@
 
         <TextView
             android:id="@+id/optionSubTittle"
+            android:fontFamily="@font/arial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -55,11 +59,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:fontFamily="@font/arial"
             android:inputType="textShortMessage"
             app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/optionSubTittle"
+            app:layout_constraintVertical_bias="0.22" />
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>

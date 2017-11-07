@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#9ec400</color>
     <color name="colorPrimaryDark">#5e6a71</color>
-    <color name="colorAccent">#9ec400</color>
+    <color name="colorAccent">#89a31d</color>
 
     <color name="colorRadioButtonOn">#9ec400</color>
     <color name="colorRadioButtonOff">#5e6a71</color>

@@ -2,17 +2,20 @@ package es.procoders.spanisholivetechnology.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import es.procoders.spanisholivetechnology.R;
+import es.procoders.spanisholivetechnology.questions.Options;
 
 /**
  * @author Procoders
@@ -24,9 +27,9 @@ public class ListViewAdapter extends BaseAdapter {
 
 
     private Context ctx;
-    private ArrayList<String> lista;
+    private ArrayList<Options> lista;
 
-    public ListViewAdapter(Context ctx, ArrayList<String> lista) {
+    public ListViewAdapter(Context ctx, ArrayList<Options> lista) {
         this.ctx = ctx;
         this.lista = lista;
 
@@ -58,8 +61,12 @@ public class ListViewAdapter extends BaseAdapter {
 
 
         TextView name = (TextView) view.findViewById(R.id.mainListView);
-        String nameS = lista.get(i);
-        name.setText(nameS);
+        ImageView image = view.findViewById(R.id.imageListView);
+        Options nameS = lista.get(i);
+        if (nameS.isRequired()){
+            image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
+        }
+        name.setText(nameS.getTituloOpcion());
         return view;
     }
 }

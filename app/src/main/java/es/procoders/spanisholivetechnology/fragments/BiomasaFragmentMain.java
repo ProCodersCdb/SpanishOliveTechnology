@@ -96,6 +96,7 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
         controller.setPosition(i);
         Fragment nuevoFragmento = new BiomasaFragmentDetails();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
