@@ -13,7 +13,14 @@ import java.util.Objects;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
+
 public class ResultActivity extends AppCompatActivity {
+
     TextView tv1;
     TextView tv2;
     TextView tv3;
@@ -31,6 +38,12 @@ public class ResultActivity extends AppCompatActivity {
     TextView res6;
     TextView res7;
     TextView res8;
+
+    /**
+     *
+     * @param savedInstanceState hace un guardado de la información recabada en la actividad
+     *                           activity_result
+     */
 
 
     @Override
@@ -73,6 +86,11 @@ public class ResultActivity extends AppCompatActivity {
 
 
     public void showData(BiomasaBean bio) {
+
+        /**
+         * Este método comprueba que los campos de respuesta están llenos, recoge la información
+         * contenida y la vuelca en el documento de respuesta
+         */
         if (!TextUtils.isEmpty(bio.getBioQ1())) {
             res1.setText(bio.getBioQ1());
         }

@@ -1,9 +1,15 @@
 package es.procoders.spanisholivetechnology.services;
 
 /**
- * Created by Jose on 02/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 //Interfaz que declara el funcionamiento genérico de una regla de negocio
 public interface BussinessRule {
+
+    /**
+     *
+     */
 }
