@@ -14,7 +14,14 @@ import java.util.List;
 
 import es.procoders.spanisholivetechnology.R;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
+
 public class ListViewAdapter extends BaseAdapter {
+
 
     private Context ctx;
     private ArrayList<String> lista;
@@ -22,6 +29,8 @@ public class ListViewAdapter extends BaseAdapter {
     public ListViewAdapter(Context ctx, ArrayList<String> lista) {
         this.ctx = ctx;
         this.lista = lista;
+
+
     }
 
     @Override

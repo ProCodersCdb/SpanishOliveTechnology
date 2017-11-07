@@ -2,6 +2,11 @@ package es.procoders.spanisholivetechnology.beans;
 
 import java.io.Serializable;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
 public class BiomasaBean implements Serializable {
 
     //Propiedades
@@ -13,6 +18,12 @@ public class BiomasaBean implements Serializable {
     private String bioQ6;
     private String bioQ7;
     private String bioQ8;
+
+    /**
+     * Se declaran las variables que representan a las diferentes preguntas del apartado biomasa
+     * de la aplicacion. Se declaran sus getters y setters así como los hash code y equals para
+     * poder trabajar con ellos
+     */
 
     //Constructor por defecto
     public BiomasaBean() {

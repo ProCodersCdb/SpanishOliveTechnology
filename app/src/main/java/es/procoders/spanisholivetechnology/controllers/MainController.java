@@ -8,9 +8,20 @@ import android.widget.Button;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.activities.BiomasaActivity;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
+
 public class MainController implements View.OnClickListener {
     private Activity activity;
     Button btn ;
+
+    /**
+     * @param activity el controlador recibe este parámetro y trabaja sobre él
+     *                 para saber como actuar
+     */
 
     public MainController(Activity activity) {
         this.activity = activity;

@@ -22,8 +22,16 @@ import es.procoders.spanisholivetechnology.services.BiomasaService;
 
 /**
  * A simple {@link Fragment} subclass.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 public class BiomasaFragmentMain extends android.support.v4.app.Fragment implements AdapterView.OnItemClickListener {
+
+    /**
+     * Esta clase hace llamada a clases secundarias que se precisan para el correcto funcionamiento
+     * del sistema de Fragment
+     */
 
     ListView lv;
     BiomasaQuestions bq;
@@ -33,12 +41,14 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
     BiomasaService services;
 
 
+
     public BiomasaFragmentMain() {
         // Required empty public constructor
     }
 
 
     @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_biomasa_fragment_main, container, false);
@@ -50,6 +60,10 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
 
 
         return rootView;
+
+        /**
+         *
+         */
 
     }
 
@@ -73,6 +87,11 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
             }
         });
 
+        /**
+         * Tras la declaracion de las variables, se procede a la comprobacion de que las variables
+         * desiganadas en BiomasaServices
+         */
+
     }
 
     @Override
@@ -84,5 +103,9 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
         transaction.addToBackStack(null);
         transaction.commit();
 
+
+        /**
+         *
+         */
     }
 }

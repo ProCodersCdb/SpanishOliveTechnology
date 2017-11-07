@@ -21,8 +21,14 @@ import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
 
 /**
  * A simple {@link Fragment} subclass.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 public class BiomasaFragmentDetails extends android.support.v4.app.Fragment implements View.OnClickListener {
+    /**
+     *
+     */
 
     BiomasaSingleton controller;
     Button save;

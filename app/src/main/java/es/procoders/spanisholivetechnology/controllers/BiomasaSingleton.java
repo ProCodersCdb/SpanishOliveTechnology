@@ -3,7 +3,17 @@ package es.procoders.spanisholivetechnology.controllers;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
+
 public class BiomasaSingleton {
+
+    /**
+     *
+     */
 
 
     private  static BiomasaSingleton bio;

@@ -8,9 +8,19 @@ import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
+
 public class BiomasaActivity extends FragmentActivity {
 
     private BiomasaController biomasaController;
+
+    /**
+     * @param savedInstanceState guarda el resultado obtenido en la actividad activity_biomasa
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

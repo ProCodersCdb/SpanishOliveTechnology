@@ -10,12 +10,26 @@ import java.io.ObjectOutputStream;
 
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
 public class BiomasaDAO implements GestionDAO<BiomasaBean>{
 
-    //Archivo en el que se guardará el objeto BiomasaBean
     private final static String fileName = "datosBiomasa.dat";
 
-    //Método que guarda en local el objeto pasado como parámetro
+
+    /**
+     *@see "private final static String fileName" se crea el archivo en el que se guardara el objeto
+     * BiomasaBean
+     * @param b parámetro que se usa en método guardarLocal. Este método guarda el objeto que se
+     *          pasa en forma de parámetro
+     * @param c parámetro usado como base para el método recuperarLocal. Lee, si existe, el archivo
+     *         local y recupera el contenido previamente guardado.En caso de no existir,
+     *         devuelve FileNotFoundException
+     */
+
     public void guardarLocal (BiomasaBean b, Context c) {
 
         try {
@@ -30,8 +44,7 @@ public class BiomasaDAO implements GestionDAO<BiomasaBean>{
 
     }
 
-    //Lee, si existe, el archivo local y recupera el contenido previamente guardado.
-    //En caso de no existir, devuelve FileNotFoundException
+
     public BiomasaBean recuperarLocal (Context c) {
 
         BiomasaBean b = new BiomasaBean();
