@@ -29,5 +29,4 @@
             android:paddingRight="15dp"
             android:textSize="@dimen/itemListSize" />
     </LinearLayout>
-
 </LinearLayout>
