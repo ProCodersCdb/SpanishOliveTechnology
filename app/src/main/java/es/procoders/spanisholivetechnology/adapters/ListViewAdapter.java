@@ -15,13 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.procoders.spanisholivetechnology.R;
+import es.procoders.spanisholivetechnology.questions.Options;
 
 public class ListViewAdapter extends BaseAdapter {
 
     private Context ctx;
-    private ArrayList<String> lista;
+    private ArrayList<Options> lista;
 
-    public ListViewAdapter(Context ctx, ArrayList<String> lista) {
+    public ListViewAdapter(Context ctx, ArrayList<Options> lista) {
         this.ctx = ctx;
         this.lista = lista;
     }
@@ -51,10 +52,12 @@ public class ListViewAdapter extends BaseAdapter {
 
 
         TextView name = (TextView) view.findViewById(R.id.mainListView);
-        ImageView img = (ImageView) view.findViewById(R.id.imgOptionStatus);
-        img.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_response_no));
-        String nameS = lista.get(i);
-        name.setText(nameS);
+        ImageView image = view.findViewById(R.id.imageListView);
+        Options nameS = lista.get(i);
+        if (nameS.isRequired()){
+            image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
+        }
+        name.setText(nameS.getTituloOpcion());
         return view;
     }
 }

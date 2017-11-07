@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
     android:orientation="vertical"
-    tools:layout_editor_absoluteY="81dp">
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
 
-    <TextView
-        android:id="@+id/mainListView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:hint="Pregunta a mostrar"
-        android:paddingBottom="15dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:textSize="@dimen/itemListSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imgOptionStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_response_no" />
+        <ImageView
+            android:id="@+id/imageListView"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/mainListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Prueba de código"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="@dimen/itemListSize" />
+    </LinearLayout>
+</LinearLayout>

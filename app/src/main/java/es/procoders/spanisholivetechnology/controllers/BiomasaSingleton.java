@@ -14,33 +14,7 @@ public class BiomasaSingleton {
     }
 
     public void setPosition(int i) {
-        switch (i){
-            case 0:
-                i = R.layout.bio_details_1;
-                break;
-            case 1:
-                i = R.layout.bio_details_2;
-                break;
-            case 2:
-                i = R.layout.bio_details_3;
-                break;
-            case 3:
-                i = R.layout.bio_details_4;
-                break;
-            case 4:
-                i = R.layout.bio_details_5;
-                break;
-            case 5:
-                i = R.layout.bio_details_6;
-                break;
-            case 6:
-                i = R.layout.bio_details_7;
-                break;
-            default:
-                i = R.layout.bio_details_8;
-                break;
-        }
-        this.position = i;
+       this.position = i;
     }
 
     private BiomasaBean biomasa;
