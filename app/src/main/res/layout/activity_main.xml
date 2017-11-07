@@ -7,6 +7,9 @@
     tools:context="es.procoders.spanisholivetechnology.activities.MainActivity">
 
     <Button
+        android:fontFamily="@font/arial"
+        android:textStyle="bold"
+        android:textAllCaps="false"
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
