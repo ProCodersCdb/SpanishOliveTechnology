@@ -53,7 +53,7 @@
 
         <Button
             android:id="@+id/btnSaveBiomasa"
-            style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
+            style="@style/btnSaveOptions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
