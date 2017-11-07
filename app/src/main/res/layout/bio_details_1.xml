@@ -60,6 +60,7 @@
             android:fontFamily="@font/arial"
             android:text="@string/btnSaveBiomasa"
             android:textStyle="bold"
+            android:textSize="@dimen/btnTextSize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

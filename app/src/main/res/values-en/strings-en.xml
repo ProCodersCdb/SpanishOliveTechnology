@@ -6,14 +6,14 @@
 
 
     <!-- Preguntas Biomasa -->
-    <string name="bioQ1">Interest:</string>
-    <string name="bioQ2">Kind:</string>
-    <string name="bioQ3">Format:</string>
-    <string name="bioQ4">Type of consumption:</string>
-    <string name="bioQ5">Amounts demanded/Amount offered:</string>
+    <string name="bioQ1">Interest</string>
+    <string name="bioQ2">Kind</string>
+    <string name="bioQ3">Format</string>
+    <string name="bioQ4">Type of consumption</string>
+    <string name="bioQ5">Amounts demanded/offered</string>
     <string name="bioQ6">Country:</string>
-    <string name="bioQ7">Experience(Experiencia previa comercio hueso de aceituna/orujo):</string>
-    <string name="bioQ8">Commentation:</string>
+    <string name="bioQ7">Previous Experience</string>
+    <string name="bioQ8">Coments:</string>
 
     <!-- Traducciones de botones-->
 
@@ -27,10 +27,10 @@
     <string name="txtDetails2">Kind</string>
     <string name="txtDetails3">Format</string>
     <string name="textView3">Type of consumption</string>
-    <string name="txtDetails5">Amounts demanded/Amount offered</string>
+    <string name="txtDetails5">Amounts demanded/offered</string>
     <string name="txtDetails6">Country</string>
-    <string name="txtDetails7">Experience(Experiencia previa comercio hueso de aceituna/orujo)</string>
-    <string name="txtDetails8">Commentation</string>
+    <string name="txtDetails7">Previous Experience</string>
+    <string name="txtDetails8">Coments</string>
 
     <!-- Traducciones RadioButton -->
 
@@ -41,7 +41,7 @@
     <string name="det2opcion3">Orujillo</string>
     <string name="det3opcion1">Granel</string>
     <string name="det3opcion2">BigBag 1000kg</string>
-    <string name="det3opcion3">Sacos 20kg</string>
+    <string name="det3opcion3">Bags 20kg</string>
     <string name="det4opcion1">Home</string>
     <string name="det4opcion2">Industrial</string>
     <string name="det7opcion1">Yes</string>

@@ -19,6 +19,7 @@
           android:layout_marginTop="16dp"
           android:fontFamily="@font/arial"
           android:text="@string/btnSaveBiomasa"
+          android:textSize="@dimen/btnTextSize"
           android:textStyle="bold"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
