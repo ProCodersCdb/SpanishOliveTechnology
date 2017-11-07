@@ -15,9 +15,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import java.util.ArrayList;
+
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
+import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
+import es.procoders.spanisholivetechnology.questions.Options;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +33,8 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
     RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     EditText edtDetails5, edtDetails6, edtDetails8;
     TextView txtDetails6, txtDetails7, txtDetails5;
+    BiomasaQuestions bq;
+    ArrayList<Options> options;
 
 
     public BiomasaFragmentDetails() {
@@ -41,7 +47,8 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         controller = BiomasaSingleton.getInstance();
-        View rootView = inflater.inflate(controller.getPosition(), container, false);
+        options = bq.getBioPreguntas();
+        View rootView = inflater.inflate(options.get(controller.getPosition()).getLayout(), container, false);
         initViews(rootView);
 
         save.setOnClickListener(this);
