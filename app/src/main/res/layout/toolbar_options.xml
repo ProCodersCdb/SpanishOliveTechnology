@@ -8,40 +8,4 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:elevation="16dp">
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <android.support.design.widget.CoordinatorLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/btnBack"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical|start"
-                android:background="@color/transparent"
-                app:srcCompat="@drawable/ic_btn_back"
-                android:fontFamily="@font/arial" />
-
-
-            <ImageButton
-                android:id="@+id/btnOptionSave"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical|end"
-                android:background="@color/transparent"
-                app:srcCompat="@drawable/ic_option_ok"
-                android:tint="@color/colorWhite"
-                android:fontFamily="@font/arial"
-                android:layout_margin="10sp"/>
-        </android.support.design.widget.CoordinatorLayout>
-
-    </LinearLayout>
-
 </android.support.v7.widget.Toolbar>

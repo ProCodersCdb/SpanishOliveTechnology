@@ -12,6 +12,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -43,7 +44,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
      */
 
     BiomasaSingleton controller;
-    ImageButton save, back;
+    MenuItem save, back;
     Toolbar toolbar;
     RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     EditText edtDetails5, edtDetails6, edtDetails8;
@@ -62,11 +63,14 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         controller = BiomasaSingleton.getInstance();
         ArrayList<Options> options = new BiomasaQuestions(getContext()).getBioPreguntas();
         View rootView = inflater.inflate(options.get(controller.getPosition()).getLayout(), container, false);
+
         initViews(rootView);
 
-
-        save.setOnClickListener(this);
         setHasOptionsMenu(true);
+        save.setOnMenuItemClickListener(this);
+        back.setOnClickListener(this);
+
+
 
         return rootView;
     }
@@ -78,6 +82,8 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
     }
 
     private void initViews(View v) {
+        save = v.findViewById(R.id.btnOptionSave);
+        back = v.findViewById(R.id.btnBack);
         det1opcion1 = v.findViewById(R.id.det1opcion1);
         det1opcion2 = v.findViewById(R.id.det1opcion2);
         det2opcion1 = v.findViewById(R.id.det2opcion1);
@@ -93,8 +99,6 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         det7opcion1 = v.findViewById(R.id.det7opcion1);
         det7opcion2 = v.findViewById(R.id.det7opcion2);
         edtDetails8 = v.findViewById(R.id.edtDetails8);
-        save = v.findViewById(R.id.btnOptionSave);
-        back = v.findViewById(R.id.btnBack);
 
     }
 
