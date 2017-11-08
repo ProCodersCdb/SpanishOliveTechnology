@@ -53,7 +53,7 @@ public class ResultActivity extends AppCompatActivity {
 
 
         viewsOrder();
-
+//Esto que mierda es?, si se puede acceder desde cualquier sitio con el singleton... no hagáis estas burradas !
         Intent intent = getIntent();
         if (intent != null) {
             if (intent.hasExtra("datos")) {

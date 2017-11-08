@@ -85,9 +85,9 @@ public class ListViewAdapter extends ArrayAdapter<Options> {
         // Get the data item for this position
         Options user = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
-        if (view == null) {
+
             view = LayoutInflater.from(getContext()).inflate(R.layout.list_simple_item, parent, false);
-        }
+
         // Lookup view for data population
         TextView desc = (TextView) view.findViewById(R.id.idDescription);
         TextView name = (TextView) view.findViewById(R.id.mainListView);
