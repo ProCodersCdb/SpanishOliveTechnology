@@ -71,7 +71,6 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         back.setOnClickListener(this);
 
 
-
         return rootView;
     }
 
