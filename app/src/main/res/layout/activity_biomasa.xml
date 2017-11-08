@@ -15,7 +15,7 @@
         android:background="@drawable/appbarborder"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:elevation="16dp"
-        android:layout_margin="3dp">
+        android:layout_marginBottom="0dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -25,7 +25,8 @@
             android:elevation="16dp"
             android:minHeight="?attr/actionBarSize"
             tools:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            tools:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            tools:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_marginBottom="0dp">
 
 
             <LinearLayout

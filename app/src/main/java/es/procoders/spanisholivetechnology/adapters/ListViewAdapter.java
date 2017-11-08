@@ -17,7 +17,14 @@ import java.util.List;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.questions.Options;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
+
 public class ListViewAdapter extends BaseAdapter {
+
 
     private Context ctx;
     private ArrayList<Options> lista;
@@ -25,6 +32,8 @@ public class ListViewAdapter extends BaseAdapter {
     public ListViewAdapter(Context ctx, ArrayList<Options> lista) {
         this.ctx = ctx;
         this.lista = lista;
+
+
     }
 
     @Override

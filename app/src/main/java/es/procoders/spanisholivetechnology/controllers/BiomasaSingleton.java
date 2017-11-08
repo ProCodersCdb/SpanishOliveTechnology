@@ -7,7 +7,17 @@ import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
 import es.procoders.spanisholivetechnology.questions.Options;
 
+/**
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
+ */
+
 public class BiomasaSingleton {
+
+    /**
+     *
+     */
 
 
     private  static BiomasaSingleton bio;

@@ -7,4 +7,5 @@
     <color name="colorRadioButtonOn">#9ec400</color>
     <color name="colorRadioButtonOff">#5e6a71</color>
     <color name="transparent">#00ff0000</color>
+    <color name="colorWhite">#FFF</color>
 </resources>
