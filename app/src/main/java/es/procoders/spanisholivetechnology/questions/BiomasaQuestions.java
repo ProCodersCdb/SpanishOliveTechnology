@@ -2,9 +2,11 @@ package es.procoders.spanisholivetechnology.questions;
 
 
 import android.app.Activity;
+import android.app.VoiceInteractor;
 import android.content.Context;
 import android.content.res.Resources;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import es.procoders.spanisholivetechnology.R;
@@ -36,6 +38,9 @@ public class BiomasaQuestions {
 
     public ArrayList<Options> getBioPreguntas() {
         return rellenarBioPreguntas();
+    }
+    public void setBioPreguntas(ArrayList<Options> array){
+        this.bioPreguntas = array;
     }
 
         /**

@@ -55,8 +55,10 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
         // Inflate the layout for this fragment
         controller = BiomasaSingleton.getInstance();
         services = new BiomasaService();
-        initViews(rootView);
         controller = BiomasaSingleton.getInstance();
+
+        initViews(rootView);
+
 
 
         return rootView;
@@ -69,11 +71,11 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
 
     private void initViews(View view) {
         bq = new BiomasaQuestions(view.getContext());
+        controller.setBioQ(bq.getBioPreguntas());
         lv = (ListView) view.findViewById(R.id.listView_mainFragment);
         floating = view.findViewById(R.id.fab);
-        adapter = new ListViewAdapter(view.getContext(), bq.getBioPreguntas());
         lv.setOnItemClickListener(this);
-        lv.setAdapter(adapter);
+        setAdapter(view);
         floating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,8 +97,18 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onResume() {
+        super.onResume();
+        setAdapter(getView());
+    }
 
+    private void setAdapter(View view){
+        adapter = new ListViewAdapter(view.getContext(), controller.getBioQ());
+        lv.setAdapter(adapter);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         controller.setPosition(i);
         Fragment nuevoFragmento = new BiomasaFragmentDetails();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();

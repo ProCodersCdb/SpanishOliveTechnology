@@ -11,11 +11,23 @@ public class Options {
     private String tituloOpcion;
     private boolean required;
     private int layout;
+    private String description;
 
     public Options(String tituloOpcion, boolean required, int layout) {
         this.tituloOpcion = tituloOpcion;
         this.required = required;
         this.layout = layout;
+    }
+    public Options(){
+
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getLayout() {
