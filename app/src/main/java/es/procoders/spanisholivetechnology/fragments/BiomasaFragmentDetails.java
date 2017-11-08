@@ -1,17 +1,23 @@
 package es.procoders.spanisholivetechnology.fragments;
 
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +43,8 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
      */
 
     BiomasaSingleton controller;
-    Button save, back;
+    ImageButton save, back;
+    Toolbar toolbar;
     RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     EditText edtDetails5, edtDetails6, edtDetails8;
     TextView txtDetails6, txtDetails7, txtDetails5;
@@ -57,9 +64,17 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         View rootView = inflater.inflate(options.get(controller.getPosition()).getLayout(), container, false);
         initViews(rootView);
 
+
         save.setOnClickListener(this);
+        setHasOptionsMenu(true);
 
         return rootView;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.option_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
     private void initViews(View v) {
@@ -78,7 +93,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         det7opcion1 = v.findViewById(R.id.det7opcion1);
         det7opcion2 = v.findViewById(R.id.det7opcion2);
         edtDetails8 = v.findViewById(R.id.edtDetails8);
-        save = v.findViewById(R.id.btnSaveBiomasa);
+        save = v.findViewById(R.id.btnOptionSave);
         back = v.findViewById(R.id.btnBack);
 
     }

@@ -5,16 +5,18 @@
     <item
         android:id="@+id/btnOptionSave"
         android:title="@string/btnOptionSave"
+        android:orderInCategory="2"
         android:icon="@drawable/ic_option_ok"
         android:iconTint="@color/colorWhite"
-        app:showAsAction="never"
+        app:showAsAction="always"
         />
 
     <item
         android:id="@+id/btnBack"
         android:title="@string/btnBack"
+        android:orderInCategory="1"
         android:icon="@drawable/ic_btn_back"
-        app:showAsAction="never"
+        app:showAsAction="always"
         />
 
 
