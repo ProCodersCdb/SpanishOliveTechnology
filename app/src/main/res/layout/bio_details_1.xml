@@ -4,9 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails">
-    <android.support.design.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -14,33 +11,38 @@
             android:orientation="vertical">
 
 
+            <include
+                android:id="@+id/opToolbar"
+                layout="@layout/toolbar_options" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="1"
-                android:gravity="center_horizontal"
+                android:layout_weight="70"
                 android:background="@color/colorPrimary"
-                android:layout_weight="70">
-
+                android:elevation="26dp"
+                android:fontFamily="@font/arial"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="1">
 
                 <TextView
-                    android:id="@+id/txtDetails1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
                     android:fontFamily="@font/arial"
                     android:text="@string/txtDetails1"
+                    android:textSize="@dimen/optionTittleSizeMin"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/optionTittleSize" />
+                    android:gravity="center"/>
 
                 <TextView
-                    android:id="@+id/optionSubTittle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arial"
-                    android:text="@string/optionSubTittleSelect"
+                    android:padding="20sp"
+                    android:text="@string/descriptionDetails1"
                     android:textColor="@color/colorWhite" />
+
 
             </LinearLayout>
 
@@ -50,7 +52,8 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:layout_weight="30"
-                android:layout_marginTop="70sp">
+                android:layout_marginTop="70sp"
+                android:fontFamily="@font/arial">
 
 
                 <RadioGroup
@@ -96,20 +99,4 @@
             </LinearLayout>
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnSaveBiomasa"
-            style="@style/btnSaveOptions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:layout_gravity="bottom|center_horizontal"
-            android:fontFamily="@font/arial"
-            android:text="@string/btnSaveBiomasa"
-            android:textSize="@dimen/btnTextSize"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </android.support.design.widget.CoordinatorLayout>
 </FrameLayout>

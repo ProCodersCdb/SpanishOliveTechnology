@@ -25,6 +25,8 @@
 
     <string name="btnSaveBiomasa">Guardar</string>
     <string name="btnNext">Ir a Biomasa</string>
+    <string name="btnBack">Volver</string>
+    <string name="btnOptionSave">Guardar</string>
 
 
     <!-- Traducciones listView -->
@@ -53,10 +55,16 @@
     <string name="det7opcion1">Si</string>
     <string name="det7opcion2">No</string>
 
-    <string name="optionSubTittleSelect">(Seleccione una opción)</string>
+    <string name="optionDescription">(Seleccione una opción)</string>
     <string name="optionSubTittleType">(Escriba en el campo de texto)</string>
 
     <!--                                 -->
+
+    <!-- Descripciones de opciones -->
+    <string name="descriptionDetails1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.
+    </string>
 
 </resources>
 
