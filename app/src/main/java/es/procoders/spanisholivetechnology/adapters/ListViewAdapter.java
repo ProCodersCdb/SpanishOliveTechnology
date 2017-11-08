@@ -50,12 +50,15 @@ public class ListViewAdapter extends BaseAdapter {
             view = inflater.inflate(R.layout.list_simple_item, viewGroup, false);
         }
 
-
+        TextView desc = (TextView) view.findViewById(R.id.idDescription);
         TextView name = (TextView) view.findViewById(R.id.mainListView);
         ImageView image = view.findViewById(R.id.imageListView);
         Options nameS = lista.get(i);
         if (nameS.isRequired()){
             image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
+        }
+        if (lista.get(i).getDescription() != null){
+            desc.setText(lista.get(i).getDescription());
         }
         name.setText(nameS.getTituloOpcion());
         return view;

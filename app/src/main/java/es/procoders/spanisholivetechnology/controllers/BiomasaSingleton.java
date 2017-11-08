@@ -1,13 +1,30 @@
 package es.procoders.spanisholivetechnology.controllers;
 
+import java.util.ArrayList;
+
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
+import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
+import es.procoders.spanisholivetechnology.questions.Options;
 
 public class BiomasaSingleton {
 
 
     private  static BiomasaSingleton bio;
     private int position;
+    private ArrayList<Options> bioQ;
+
+    public ArrayList<Options> getBioQ() {
+        return bioQ;
+
+    }
+
+    public void setBioQ(ArrayList<Options> arraybioQ) {
+        if (bioQ==null) {
+            this.bioQ = arraybioQ;
+        }
+
+    }
 
     public int getPosition() {
         return position;

@@ -87,6 +87,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 } else if(det1opcion2.isChecked()){
                     bio.setBioQ1(det1opcion2.getText().toString());
                 }
+                setArray(bio.getBioQ1());
                 break;
 
             case 1:
@@ -97,6 +98,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 } else if(det2opcion3.isChecked()){
                     bio.setBioQ2(det2opcion3.getText().toString());
                 }
+                setArray(bio.getBioQ2());
                 break;
 
             case 2:
@@ -107,6 +109,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 } else if(det3opcion3.isChecked()){
                     bio.setBioQ3(det3opcion3.getText().toString());
                 }
+                setArray(bio.getBioQ3());
                 break;
 
             case 3:
@@ -115,18 +118,21 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 } else if(det4opcion2.isChecked()){
                     bio.setBioQ4(det4opcion2.getText().toString());
                 }
+                setArray(bio.getBioQ4());
                 break;
 
             case 4:
                 if(!TextUtils.isEmpty(edtDetails5.getText())){
                     bio.setBioQ5(Float.parseFloat(edtDetails5.getText().toString()));
                 }
+                setArray(bio.getBioQ5().toString());
                 break;
 
             case 5:
                 if(!TextUtils.isEmpty(edtDetails6.getText())){
                     bio.setBioQ6(edtDetails6.getText().toString());
                 }
+                setArray(bio.getBioQ6());
                 break;
 
             case 6:
@@ -135,12 +141,14 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 } else if(det7opcion2.isChecked()){
                     bio.setBioQ7(det7opcion2.getText().toString());
                 }
+                setArray(bio.getBioQ7());
                 break;
 
             case 7:
                 if(!TextUtils.isEmpty(edtDetails8.getText())){
                     bio.setBioQ8(edtDetails8.getText().toString());
                 }
+                setArray(bio.getBioQ8());
                 break;
 
         }
@@ -149,6 +157,12 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         getActivity().onBackPressed();
         Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
 
+    }
+
+    private void setArray(String str) {
+        ArrayList<Options> array = controller.getBioQ();
+        array.get(controller.getPosition()).setDescription(str);
+        controller.setBioQ(array);
     }
 
 
