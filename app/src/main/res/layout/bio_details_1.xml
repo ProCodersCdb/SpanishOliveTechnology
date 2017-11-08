@@ -4,52 +4,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails">
-
-    <android.support.constraint.ConstraintLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <RadioGroup
-            android:id="@+id/GrupoDet1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDetails1">
 
-            <RadioButton
-                android:id="@+id/det1opcion1"
-                android:fontFamily="@font/arial"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/rbtn_selector"
-                android:button="@null"
-                android:checked="false"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/det1opcion1"
-                android:textColor="@drawable/rbtn_textcolor_selector"
-                android:textSize="@dimen/optionRbtnSizeMax" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:gravity="center_horizontal"
+                android:background="@color/colorPrimary"
+                android:layout_weight="70">
 
-            <RadioButton
-                android:id="@+id/det1opcion2"
-                android:fontFamily="@font/arial"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/rbtn_selector"
-                android:button="@null"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/det1opcion2"
-                android:textColor="@drawable/rbtn_textcolor_selector"
-                android:textSize="@dimen/optionRbtnSizeMax" />
-        </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtDetails1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/arial"
+                    android:text="@string/txtDetails1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/optionTittleSize" />
+
+                <TextView
+                    android:id="@+id/optionSubTittle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arial"
+                    android:text="@string/optionSubTittleSelect"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="30"
+                android:layout_marginTop="70sp">
+
+
+                <RadioGroup
+                    android:id="@+id/GrupoDet1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="273dp"
+                    android:divider="@drawable/option_separator"
+                    android:showDividers="middle">
+
+                    <RadioButton
+                        android:id="@+id/det1opcion1"
+                        android:layout_width="150dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:fontFamily="@font/arial"
+                        android:layout_marginRight="15sp"
+                        android:gravity="center"
+                        android:text="@string/det1opcion1"
+                        android:textColor="@drawable/rbtn_textcolor_selector"
+                        android:textSize="@dimen/optionRbtnSizeMax" />
+
+                    <RadioButton
+                        android:id="@+id/det1opcion2"
+                        android:layout_width="150dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/arial"
+                        android:gravity="center"
+                        android:text="@string/det1opcion2"
+                        android:textColor="@drawable/rbtn_textcolor_selector"
+                        android:textSize="@dimen/optionRbtnSizeMax" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnSaveBiomasa"
@@ -57,38 +103,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
+            android:layout_gravity="bottom|center_horizontal"
             android:fontFamily="@font/arial"
             android:text="@string/btnSaveBiomasa"
-            android:textStyle="bold"
             android:textSize="@dimen/btnTextSize"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:fontFamily="@font/arial"
-            android:id="@+id/txtDetails1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="65dp"
-            android:text="@string/txtDetails1"
-            android:textSize="@dimen/optionTittleSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:fontFamily="@font/arial"
-            android:id="@+id/optionSubTittle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/optionSubTittleSelect"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDetails1" />
-    </android.support.constraint.ConstraintLayout>
-
+    </android.support.design.widget.CoordinatorLayout>
 </FrameLayout>
