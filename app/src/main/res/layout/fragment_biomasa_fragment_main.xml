@@ -9,7 +9,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <ListView
-        android:id="@+id/listView_mainFragment"
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@android:color/transparent"

@@ -23,18 +23,22 @@ import es.procoders.spanisholivetechnology.questions.Options;
  * @version 1.0
  */
 
-public class ListViewAdapter extends BaseAdapter {
+public class ListViewAdapter extends ArrayAdapter<Options> {
 
 
     private Context ctx;
     private ArrayList<Options> lista;
 
     public ListViewAdapter(Context ctx, ArrayList<Options> lista) {
+        super(ctx,0,lista);
         this.ctx = ctx;
         this.lista = lista;
 
 
     }
+ /*   public ListViewAdapter(){
+
+    }*/
 
     @Override
     public int getCount() {
@@ -42,7 +46,7 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
+    public Options getItem(int i) {
         return lista.get(i);
     }
 
@@ -51,8 +55,11 @@ public class ListViewAdapter extends BaseAdapter {
         return 0;
     }
 
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+
+
+   // @Override
+ /*   public View getView(int i, View view, ViewGroup viewGroup) {
+        super.getView(i,view,viewGroup);
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater) viewGroup.getContext()
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -62,6 +69,7 @@ public class ListViewAdapter extends BaseAdapter {
         TextView desc = (TextView) view.findViewById(R.id.idDescription);
         TextView name = (TextView) view.findViewById(R.id.mainListView);
         ImageView image = view.findViewById(R.id.imageListView);
+
         Options nameS = lista.get(i);
         if (nameS.isRequired()){
             image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
@@ -70,6 +78,38 @@ public class ListViewAdapter extends BaseAdapter {
             desc.setText(lista.get(i).getDescription());
         }
         name.setText(nameS.getTituloOpcion());
+        return view;
+    }*/
+    @Override
+    public View getView(int position, View view, ViewGroup parent) {
+        // Get the data item for this position
+        Options user = getItem(position);
+        // Check if an existing view is being reused, otherwise inflate the view
+        if (view == null) {
+            view = LayoutInflater.from(getContext()).inflate(R.layout.list_simple_item, parent, false);
+        }
+        // Lookup view for data population
+        TextView desc = (TextView) view.findViewById(R.id.idDescription);
+        TextView name = (TextView) view.findViewById(R.id.mainListView);
+        ImageView image = view.findViewById(R.id.imageListView);
+        if (user.isRequired()){
+
+            image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
+            image.setVisibility(View.VISIBLE);
+
+        }
+        if (lista.get(position).getDescription() != null){
+            desc.setText(user.getDescription());
+        }else{
+            desc.setText("");
+        }
+        name.setText(user.getTituloOpcion());
+     //   TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
+       // TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
+        // Populate the data into the template view using the data object
+       // tvName.setText(user.name);
+        //tvHome.setText(user.hometown);
+        // Return the completed view to render on screen
         return view;
     }
 }
