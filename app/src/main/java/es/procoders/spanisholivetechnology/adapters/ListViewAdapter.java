@@ -53,11 +53,9 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        if (view == null) {
-            LayoutInflater inflater = (LayoutInflater) viewGroup.getContext()
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.list_simple_item, viewGroup, false);
-        }
+
+        LayoutInflater inflater = (LayoutInflater) viewGroup.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        view = inflater.inflate(R.layout.list_simple_item, viewGroup, false);
 
         TextView desc = (TextView) view.findViewById(R.id.idDescription);
         TextView name = (TextView) view.findViewById(R.id.mainListView);
