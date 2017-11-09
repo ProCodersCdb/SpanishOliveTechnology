@@ -5,96 +5,133 @@
     android:layout_height="match_parent"
     tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-        <RadioGroup
-            android:id="@+id/GrupoDet7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="46dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="85"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.986">
+            android:background="@color/colorPrimary"
+            android:weightSum="2">
 
-            <RadioButton
 
-                android:id="@+id/det7opcion1"
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/btnOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_gravity="start"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_btn_back"
+                android:text="@string/btnBack"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/arial"/>
+
+            <Button
+                android:id="@+id/btnOptionSave"
+                style="@style/btnOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:drawableRight="@drawable/ic_option_ok"
+                android:drawableTint="@color/colorWhite"
+                android:padding="10sp"
+                android:text="@string/btnOptionSave"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/arial"/>
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/arial"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/rbtn_selector"
-                android:button="@null"
-                android:checked="false"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/bioQ7Option1"
-                android:textColor="@drawable/rbtn_textcolor_selector"
-                android:textSize="@dimen/optionRbtnSizeMax" />
+                android:text="@string/bioQTittle7"
+                android:textSize="@dimen/optionTittleSizeMin"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"/>
 
-            <RadioButton
-                android:id="@+id/det7opcion2"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/rbtn_selector"
-                android:button="@null"
+                android:padding="20sp"
+                android:text="@string/bioDescriptionQ7"
+                android:textColor="@color/colorWhite" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="30"
+            android:layout_marginTop="70sp"
+            android:fontFamily="@font/arial">
+
+
+            <RadioGroup
+                android:id="@+id/GrupoDet7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="46dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:padding="5dp"
-                android:text="@string/bioQ7Option2"
-                android:textColor="@drawable/rbtn_textcolor_selector"
-                android:textSize="@dimen/optionRbtnSizeMax" />
-        </RadioGroup>
+                android:orientation="vertical"
+                android:divider="@drawable/option_separator"
+                android:showDividers="middle">
 
-        <Button
-            android:id="@+id/btnSaveBiomasa"
-            android:fontFamily="@font/arial"
-            android:textStyle="bold"
-            style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:text="@string/btnSaveBiomasa"
-            android:textSize="@dimen/btnTextSize"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+                <RadioButton
+                    android:id="@+id/det7opcion1"
+                    android:fontFamily="@font/arial"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/bioQ7Option1"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/optionRbtnSizeMax" />
 
-        <TextView
-            android:id="@+id/txtDetails7"
-            android:fontFamily="@font/arial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:gravity="center"
-            android:text="@string/bioQTittle7"
-            android:textSize="@dimen/optionTittleSizeMin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <RadioButton
+                    android:id="@+id/det7opcion2"
+                    android:fontFamily="@font/arial"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/bioQ7Option2"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/optionRbtnSizeMax" />
+            </RadioGroup>
 
-        <TextView
-            android:id="@+id/optionSubTittle"
-            android:fontFamily="@font/arial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/optionDescription"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDetails7" />
-    </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
 
+    </LinearLayout>
 </FrameLayout>

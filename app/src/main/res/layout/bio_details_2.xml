@@ -22,18 +22,19 @@
 
             <Button
                 android:id="@+id/btnBack"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                style="@style/btnOptions"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_gravity="start"
                 android:background="@color/transparent"
                 android:drawableLeft="@drawable/ic_btn_back"
                 android:text="@string/btnBack"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/arial"/>
 
             <Button
                 android:id="@+id/btnOptionSave"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                style="@style/btnOptions"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_gravity="end"
@@ -43,7 +44,8 @@
                 android:padding="10sp"
                 android:text="@string/btnOptionSave"
                 android:textAlignment="center"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/arial"/>
 
 
         </android.support.design.widget.CoordinatorLayout>
@@ -72,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
-                android:text="@string/bioDescriptionQ1"
+                android:text="@string/bioDescriptionQ3"
                 android:textColor="@color/colorWhite" />
 
 

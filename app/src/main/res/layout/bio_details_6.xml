@@ -5,68 +5,116 @@
     android:layout_height="match_parent"
     tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-        <Button
-            android:id="@+id/btnSaveBiomasa"
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="85"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:weightSum="2">
+
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/btnOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_gravity="start"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_btn_back"
+                android:text="@string/btnBack"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/arial"/>
+
+            <Button
+                android:id="@+id/btnOptionSave"
+                style="@style/btnOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:drawableRight="@drawable/ic_option_ok"
+                android:drawableTint="@color/colorWhite"
+                android:padding="10sp"
+                android:text="@string/btnOptionSave"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/arial"/>
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:background="@color/colorPrimary"
             android:fontFamily="@font/arial"
-            android:textStyle="bold"
-            style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:text="@string/btnSaveBiomasa"
-            android:textSize="@dimen/btnTextSize"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="1">
 
-        <TextView
-            android:id="@+id/txtDetails6"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:text="@string/bioQTittle6"
+                android:textSize="@dimen/optionTittleSizeMin"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:padding="20sp"
+                android:text="@string/bioDescriptionQ6"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70sp"
+            android:layout_weight="30"
             android:fontFamily="@font/arial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="36dp"
-            android:text="@string/bioQTittle6"
-            android:textSize="@dimen/optionTittleSizeMin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/optionSubTittle"
-            android:fontFamily="@font/arial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/optionSubTittleType"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDetails6" />
 
-        <EditText
-            android:id="@+id/edtDetails6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:fontFamily="@font/arial"
-            android:inputType="textShortMessage"
-            app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/optionSubTittle"
-            app:layout_constraintVertical_bias="0.22" />
-    </android.support.constraint.ConstraintLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal">
 
+                <EditText
+                    android:id="@+id/edtDetails6"
+                    android:layout_width="191dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/arial"
+                    android:hint="Indique país de venta"
+                    android:inputType="textShortMessage" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </FrameLayout>
