@@ -25,14 +25,12 @@ import es.procoders.spanisholivetechnology.questions.Options;
 
 public class ListViewAdapter extends BaseAdapter {
 
-
     private Context ctx;
     private ArrayList<Options> lista;
 
     public ListViewAdapter(Context ctx, ArrayList<Options> lista) {
         this.ctx = ctx;
         this.lista = lista;
-
 
     }
 
@@ -53,11 +51,9 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        if (view == null) {
-            LayoutInflater inflater = (LayoutInflater) viewGroup.getContext()
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.list_simple_item, viewGroup, false);
-        }
+
+        LayoutInflater inflater = (LayoutInflater) viewGroup.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        view = inflater.inflate(R.layout.list_simple_item, viewGroup, false);
 
         TextView desc = (TextView) view.findViewById(R.id.idDescription);
         TextView name = (TextView) view.findViewById(R.id.mainListView);

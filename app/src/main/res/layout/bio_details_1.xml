@@ -11,7 +11,7 @@
             android:orientation="vertical">
 
 
-            <LinearLayout
+            <android.support.design.widget.CoordinatorLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="85"
@@ -20,33 +20,41 @@
                 android:weightSum="2">
 
 
-                <ImageButton
-                    android:id="@+id/btnSaveBiomasa"
-                    android:layout_width="50sp"
+                <Button
+                    android:id="@+id/btnBack"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
                     android:layout_height="50sp"
-                    android:gravity="start"
+                    android:layout_gravity="start"
                     android:background="@color/transparent"
-                    android:src="@drawable/ic_btn_back"
-                    android:layout_weight="1"/>
+                    android:drawableLeft="@drawable/ic_btn_back"
+                    android:text="@string/btnBack"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/arial"/>
 
-                <ImageButton
-                    android:id="@+id/btnNext"
-                    android:layout_width="50sp"
+                <Button
+                    android:id="@+id/btnOptionSave"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
                     android:layout_height="50sp"
-                    android:gravity="end"
+                    android:layout_gravity="end"
                     android:background="@color/transparent"
-                    android:src="@drawable/ic_option_ok"
-                    android:tint="@color/colorWhite"/>
+                    android:drawableRight="@drawable/ic_option_ok"
+                    android:drawableTint="@color/colorWhite"
+                    android:padding="10sp"
+                    android:text="@string/btnOptionSave"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/arial"/>
 
 
-            </LinearLayout>
+            </android.support.design.widget.CoordinatorLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="70"
                 android:background="@color/colorPrimary"
-                android:elevation="26dp"
                 android:fontFamily="@font/arial"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
@@ -66,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arial"
                     android:padding="20sp"
-                    android:text="@string/descriptionDetails1"
+                    android:text="@string/bioDescriptionDetails1"
                     android:textColor="@color/colorWhite" />
 
 
@@ -87,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     tools:layout_editor_absoluteX="42dp"
                     tools:layout_editor_absoluteY="273dp"
                     android:divider="@drawable/option_separator"
@@ -95,14 +103,13 @@
 
                     <RadioButton
                         android:id="@+id/det1opcion1"
-                        android:layout_width="150dp"
-                        android:layout_height="70dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/rbtn_selector"
                         android:button="@null"
                         android:checked="false"
                         android:fontFamily="@font/arial"
-                        android:layout_marginRight="15sp"
                         android:gravity="center"
                         android:text="@string/det1opcion1"
                         android:textColor="@drawable/rbtn_textcolor_selector"
@@ -110,8 +117,8 @@
 
                     <RadioButton
                         android:id="@+id/det1opcion2"
-                        android:layout_width="150dp"
-                        android:layout_height="70dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/rbtn_selector"
                         android:button="@null"
