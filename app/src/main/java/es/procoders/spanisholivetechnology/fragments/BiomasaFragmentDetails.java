@@ -64,8 +64,10 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         View rootView = inflater.inflate(options.get(controller.getPosition()).getLayout(), container, false);
 
         initViews(rootView);
+        recuperaRespuestas();
 
         save.setOnClickListener(this);
+//        back.setOnClickListener(this);
 
         return rootView;
     }
@@ -89,6 +91,78 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         save = v.findViewById(R.id.btnSaveBiomasa);
         //back = v.findViewById(R.id.btnBack);
 
+    }
+
+    private void recuperaRespuestas() {
+        BiomasaBean bio= controller.getBiomasa();
+
+        switch (controller.getPosition()) {
+            case 0:
+                if(!TextUtils.isEmpty(bio.getBioQ1())) {
+                    if (bio.getBioQ1().equals(det1opcion1.getText().toString())) {
+                        det1opcion1.setChecked(true);
+                    } else if (bio.getBioQ1().equals(det1opcion2.getText().toString())) {
+                        det1opcion2.setChecked(true);
+                    }
+                }
+                break;
+
+            case 1:
+                if(!TextUtils.isEmpty(bio.getBioQ2())) {
+                    if (bio.getBioQ2().equals(det2opcion1.getText().toString())) {
+                        det2opcion1.setChecked(true);
+                    } else if (bio.getBioQ2().equals(det2opcion2.getText().toString())) {
+                        det2opcion2.setChecked(true);
+                    } else if (bio.getBioQ2().equals(det2opcion3.getText().toString())) {
+                        det2opcion3.setChecked(true);
+                    }
+                }
+                break;
+            case 2:
+                if(!TextUtils.isEmpty(bio.getBioQ3())) {
+                    if (bio.getBioQ3().equals(det3opcion1.getText().toString())) {
+                        det3opcion1.setChecked(true);
+                    } else if (bio.getBioQ3().equals(det3opcion2.getText().toString())) {
+                        det3opcion2.setChecked(true);
+                    } else if (bio.getBioQ3().equals(det3opcion3.getText().toString())) {
+                        det3opcion3.setChecked(true);
+                    }
+                }
+                break;
+
+            case 3:
+                if(!TextUtils.isEmpty(bio.getBioQ4())) {
+                    if (bio.getBioQ4().equals(det4opcion1.getText().toString())) {
+                        det4opcion1.setChecked(true);
+                    } else if (bio.getBioQ4().equals(det4opcion2.getText().toString())) {
+                        det4opcion2.setChecked(true);
+                    }
+                }
+                break;
+            case 4:
+                if(bio.getBioQ5()>=0) edtDetails5.setText(bio.getBioQ5().toString());
+
+                break;
+            case 5:
+                if(!TextUtils.isEmpty(bio.getBioQ6())) {
+                    edtDetails6.setText(bio.getBioQ6());
+                }
+                break;
+            case 6:
+                if(!TextUtils.isEmpty(bio.getBioQ6())) {
+                    if (bio.getBioQ6().equals(det7opcion1.getText().toString())) {
+                        det7opcion1.setChecked(true);
+                    } else if (bio.getBioQ6().equals(det7opcion2.getText().toString())) {
+                        det7opcion2.setChecked(true);
+                    }
+                }
+                break;
+            case 7:
+                if(!TextUtils.isEmpty(bio.getBioQ8())) {
+                    edtDetails8.setText(bio.getBioQ8());
+                }
+                break;
+        }
     }
 
     @Override

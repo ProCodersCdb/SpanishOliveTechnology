@@ -14,7 +14,7 @@ public class BiomasaBean implements Serializable {
     private String bioQ2;
     private String bioQ3;
     private String bioQ4;
-    private Float bioQ5;
+    private Float bioQ5 = -1F;
     private String bioQ6;
     private String bioQ7;
     private String bioQ8;
@@ -54,14 +54,6 @@ public class BiomasaBean implements Serializable {
         this.bioQ3 = bioQ3;
     }
 
-    public String getBioQ6() {
-        return bioQ6;
-    }
-
-    public void setBioQ6(String bioQ6) {
-        this.bioQ6 = bioQ6;
-    }
-
     public String getBioQ4() {
         return bioQ4;
 
@@ -74,6 +66,14 @@ public class BiomasaBean implements Serializable {
     public Float getBioQ5() {return bioQ5;}
 
     public void setBioQ5(Float bioQ5) {this.bioQ5 = bioQ5;}
+
+    public String getBioQ6() {
+        return bioQ6;
+    }
+
+    public void setBioQ6(String bioQ6) {
+        this.bioQ6 = bioQ6;
+    }
 
     public String getBioQ7() {
         return bioQ7;
