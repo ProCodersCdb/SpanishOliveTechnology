@@ -36,7 +36,7 @@
                 android:checked="false"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="@string/det7opcion1"
+                android:text="@string/bioQ7Option1"
                 android:textColor="@drawable/rbtn_textcolor_selector"
                 android:textSize="@dimen/optionRbtnSizeMax" />
 
@@ -50,7 +50,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="@string/det7opcion2"
+                android:text="@string/bioQ7Option2"
                 android:textColor="@drawable/rbtn_textcolor_selector"
                 android:textSize="@dimen/optionRbtnSizeMax" />
         </RadioGroup>
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="@string/txtDetails7"
+            android:text="@string/bioQTittle7"
             android:textSize="@dimen/optionTittleSizeMin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

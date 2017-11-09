@@ -35,7 +35,7 @@
                 android:checked="false"
                 android:gravity="center"
                 android:padding="20sp"
-                android:text="@string/det3opcion1"
+                android:text="@string/bioQ3Option1"
                 android:textColor="@drawable/rbtn_textcolor_selector"
                 android:textSize="@dimen/optionRbtnSizeMax" />
 
@@ -50,7 +50,7 @@
                 android:checked="false"
                 android:gravity="center"
                 android:padding="20sp"
-                android:text="@string/det3opcion2"
+                android:text="@string/bioQ3Option2"
                 android:textColor="@drawable/rbtn_textcolor_selector"
                 android:textSize="@dimen/optionRbtnSizeMax" />
 
@@ -65,7 +65,7 @@
                 android:checked="false"
                 android:gravity="center"
                 android:padding="20sp"
-                android:text="@string/det3opcion3"
+                android:text="@string/bioQ3Option3"
                 android:textColor="@drawable/rbtn_textcolor_selector"
                 android:textSize="@dimen/optionRbtnSizeMax" />
         </RadioGroup>
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/txtDetails3"
+            android:text="@string/bioQTittle3"
             android:textSize="@dimen/optionTittleSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

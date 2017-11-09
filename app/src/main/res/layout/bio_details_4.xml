@@ -32,7 +32,7 @@
                 android:checked="false"
                 android:gravity="center"
                 android:padding="20sp"
-                android:text="@string/det4opcion1"
+                android:text="@string/bioQ4Option1"
                 android:textColor="@drawable/rbtn_textcolor_selector"
                 android:textSize="@dimen/optionRbtnSizeMax" />
 
@@ -47,7 +47,7 @@
                 android:checked="false"
                 android:gravity="center"
                 android:padding="20sp"
-                android:text="@string/det4opcion2"
+                android:text="@string/bioQ4Option2"
                 android:textColor="@drawable/rbtn_textcolor_selector"
                 android:textSize="@dimen/optionRbtnSizeMax" />
 
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/txtDetails4"
+            android:text="@string/bioQTittle4"
             android:textSize="@dimen/optionTittleSizeMid"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"

@@ -23,29 +23,29 @@
 
     <!-- Traducciones textView -->
 
-    <string name="txtDetails1">Interés</string>
-    <string name="txtDetails2">Tipo</string>
-    <string name="txtDetails3">Formato</string>
+    <string name="bioQTittle1">Interés</string>
+    <string name="bioQTittle2">Tipo</string>
+    <string name="bioQTittle3">Formato</string>
     <string name="textView3">Tipo de Consumo</string>
-    <string name="txtDetails5">Cantidades</string>
-    <string name="txtDetails6">País destino para venta</string>
-    <string name="txtDetails7">Experiencia previa comercio Aceituna/Orujo</string>
-    <string name="txtDetails8">Comentarios</string>
+    <string name="bioQTittle5">Cantidades</string>
+    <string name="bioQTittle6">País destino para venta</string>
+    <string name="bioQTittle7">Experiencia previa comercio Aceituna/Orujo</string>
+    <string name="bioQTittle8">Comentarios</string>
 
     <!-- Traducciones RadioButton -->
 
-    <string name="det1opcion1">Compra</string>
-    <string name="det1opcion2">Venta</string>
-    <string name="det2opcion1">Hueso de Aceituna</string>
-    <string name="det2opcion2">Palet de Orujo</string>
-    <string name="det2opcion3">Orujillo</string>
-    <string name="det3opcion1">Granel</string>
-    <string name="det3opcion2">BigBag 1000kg</string>
-    <string name="det3opcion3">Sacos 20kg</string>
-    <string name="det4opcion1">Doméstico</string>
-    <string name="det4opcion2">Industrial</string>
-    <string name="det7opcion1">Si</string>
-    <string name="det7opcion2">No</string>
+    <string name="bioQ1Option1">Compra</string>
+    <string name="bioQ1Option2">Venta</string>
+    <string name="bioQ2Option1">Hueso de Aceituna</string>
+    <string name="bioQ2Option2">Palet de Orujo</string>
+    <string name="bioQ2Option3">Orujillo</string>
+    <string name="bioQ3Option1">Granel</string>
+    <string name="bioQ3Option2">BigBag 1000kg</string>
+    <string name="bioQ3Option3">Sacos 20kg</string>
+    <string name="bioQ4Option1">Doméstico</string>
+    <string name="bioQ4Option2">Industrial</string>
+    <string name="bioQ7Option1">Si</string>
+    <string name="bioQ7Option2">No</string>
 
 
 

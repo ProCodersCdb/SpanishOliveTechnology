@@ -23,29 +23,29 @@
 
     <!-- Traducciones textView -->
 
-    <string name="txtDetails1">Interés(Gabacho)</string>
-    <string name="txtDetails2">Tipo(Gabacho)</string>
-    <string name="txtDetails3">Formato(Gabacho)</string>
+    <string name="bioQTittle1">Interés(Gabacho)</string>
+    <string name="bioQTittle2">Tipo(Gabacho)</string>
+    <string name="bioQTittle3">Formato(Gabacho)</string>
     <string name="textView3">Tipo de Consumo(Gabacho)</string>
-    <string name="txtDetails5">Cantidades(Gabacho)</string>
-    <string name="txtDetails6">País destino para venta(Gabacho)</string>
-    <string name="txtDetails7">Experiencia previa comercio Aceituna/Orujo(Gabacho)</string>
-    <string name="txtDetails8">Comentarios(Gabacho)</string>
+    <string name="bioQTittle5">Cantidades(Gabacho)</string>
+    <string name="bioQTittle6">País destino para venta(Gabacho)</string>
+    <string name="bioQTittle7">Experiencia previa comercio Aceituna/Orujo(Gabacho)</string>
+    <string name="bioQTittle8">Comentarios(Gabacho)</string>
 
     <!-- Traducciones RadioButton -->
 
-    <string name="det1opcion1">Compra(Gabacho)</string>
-    <string name="det1opcion2">Venta(Gabacho)</string>
-    <string name="det2opcion1">Hueso de Aceituna(Gabacho)</string>
-    <string name="det2opcion2">Palet de Orujo(Gabacho)</string>
-    <string name="det2opcion3">Orujillo(Gabacho)</string>
-    <string name="det3opcion1">Granel(Gabacho)</string>
-    <string name="det3opcion2">BigBag 1000kg(Gabacho)</string>
-    <string name="det3opcion3">Sacos 20kg(Gabacho)</string>
-    <string name="det4opcion1">Doméstico(Gabacho)</string>
-    <string name="det4opcion2">Industrial(Gabacho)</string>
-    <string name="det7opcion1">Si(Gabacho)</string>
-    <string name="det7opcion2">No(Gabacho)</string>
+    <string name="bioQ1Option1">Compra(Gabacho)</string>
+    <string name="bioQ1Option2">Venta(Gabacho)</string>
+    <string name="bioQ2Option1">Hueso de Aceituna(Gabacho)</string>
+    <string name="bioQ2Option2">Palet de Orujo(Gabacho)</string>
+    <string name="bioQ2Option3">Orujillo(Gabacho)</string>
+    <string name="bioQ3Option1">Granel(Gabacho)</string>
+    <string name="bioQ3Option2">BigBag 1000kg(Gabacho)</string>
+    <string name="bioQ3Option3">Sacos 20kg(Gabacho)</string>
+    <string name="bioQ4Option1">Doméstico(Gabacho)</string>
+    <string name="bioQ4Option2">Industrial(Gabacho)</string>
+    <string name="bioQ7Option1">Si(Gabacho)</string>
+    <string name="bioQ7Option2">No(Gabacho)</string>
 
 
     <!--                                 -->

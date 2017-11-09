@@ -10,7 +10,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="btnSaveOptions" parent="@android:style/Widget.Material.Light.Button.Borderless.Colored">
+    <style name="btnOptions" parent="@android:style/Widget.Material.Light.Button.Borderless.Colored">
 
     </style>
 

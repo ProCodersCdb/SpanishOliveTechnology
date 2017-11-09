@@ -32,7 +32,7 @@
           android:layout_marginEnd="8dp"
           android:layout_marginStart="8dp"
           android:layout_marginTop="36dp"
-          android:text="@string/txtDetails5"
+          android:text="@string/bioQTittle5"
           android:textSize="@dimen/optionTittleSize"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
