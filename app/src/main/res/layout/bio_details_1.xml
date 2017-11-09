@@ -11,9 +11,35 @@
             android:orientation="vertical">
 
 
-            <include
-                android:id="@+id/opToolbar"
-                layout="@layout/toolbar_options" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="85"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary"
+                android:weightSum="2">
+
+
+                <ImageButton
+                    android:id="@+id/btnSaveBiomasa"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:gravity="start"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_btn_back"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:gravity="end"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_option_ok"
+                    android:tint="@color/colorWhite"/>
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

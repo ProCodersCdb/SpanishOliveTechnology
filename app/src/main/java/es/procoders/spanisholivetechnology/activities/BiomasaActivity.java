@@ -3,6 +3,11 @@ package es.procoders.spanisholivetechnology.activities;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+
+
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
@@ -14,7 +19,7 @@ import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
  * @version 1.0
  */
 
-public class BiomasaActivity extends FragmentActivity {
+public class BiomasaActivity extends AppCompatActivity {
 
     private BiomasaController biomasaController;
 

@@ -44,8 +44,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
      */
 
     BiomasaSingleton controller;
-    MenuItem save, back;
-    Toolbar toolbar;
+    Button save, back;
     RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     EditText edtDetails5, edtDetails6, edtDetails8;
     TextView txtDetails6, txtDetails7, txtDetails5;
@@ -66,23 +65,12 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
 
         initViews(rootView);
 
-        setHasOptionsMenu(true);
-        save.setOnMenuItemClickListener(this);
-        back.setOnClickListener(this);
-
+        save.setOnClickListener(this);
 
         return rootView;
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.option_menu, menu);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
     private void initViews(View v) {
-        save = v.findViewById(R.id.btnOptionSave);
-        back = v.findViewById(R.id.btnBack);
         det1opcion1 = v.findViewById(R.id.det1opcion1);
         det1opcion2 = v.findViewById(R.id.det1opcion2);
         det2opcion1 = v.findViewById(R.id.det2opcion1);
@@ -98,9 +86,10 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         det7opcion1 = v.findViewById(R.id.det7opcion1);
         det7opcion2 = v.findViewById(R.id.det7opcion2);
         edtDetails8 = v.findViewById(R.id.edtDetails8);
+        save = v.findViewById(R.id.btnSaveBiomasa);
+        //back = v.findViewById(R.id.btnBack);
 
     }
-
 
     @Override
     public void onClick(View v) {
