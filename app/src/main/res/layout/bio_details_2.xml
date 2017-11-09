@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
-                android:text="@string/txtDetails1"
+                android:text="@string/txtDetails2"
                 android:textSize="@dimen/optionTittleSizeMin"
                 android:textColor="@color/colorWhite"
                 android:gravity="center"/>
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
-                android:text="@string/descriptionDetails1"
+                android:text="@string/bioDescriptionDetails1"
                 android:textColor="@color/colorWhite" />
 
 
@@ -81,18 +81,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:layout_weight="30"
             android:layout_marginTop="70sp"
-            android:fontFamily="@font/arial">
+            android:layout_weight="30"
+            android:fontFamily="@font/arial"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
 
             <RadioGroup
                 android:id="@+id/GrupoDet2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:divider="@drawable/option_separator"
                 android:gravity="center"
+                android:showDividers="middle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.47"
@@ -102,13 +104,13 @@
 
                 <RadioButton
                     android:id="@+id/det2opcion1"
-                    android:fontFamily="@font/arial"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:checked="false"
+                    android:fontFamily="@font/arial"
                     android:gravity="center"
                     android:padding="20sp"
                     android:text="@string/det2opcion1"
@@ -117,13 +119,13 @@
 
                 <RadioButton
                     android:id="@+id/det2opcion2"
-                    android:fontFamily="@font/arial"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:checked="false"
+                    android:fontFamily="@font/arial"
                     android:gravity="center"
                     android:padding="20sp"
                     android:text="@string/det2opcion2"
@@ -132,13 +134,13 @@
 
                 <RadioButton
                     android:id="@+id/det2opcion3"
-                    android:fontFamily="@font/arial"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/rbtn_selector"
                     android:button="@null"
                     android:checked="false"
+                    android:fontFamily="@font/arial"
                     android:gravity="center"
                     android:padding="20sp"
                     android:text="@string/det2opcion3"

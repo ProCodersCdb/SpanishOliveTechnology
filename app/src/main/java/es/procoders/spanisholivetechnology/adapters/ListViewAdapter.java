@@ -25,14 +25,12 @@ import es.procoders.spanisholivetechnology.questions.Options;
 
 public class ListViewAdapter extends BaseAdapter {
 
-
     private Context ctx;
     private ArrayList<Options> lista;
 
     public ListViewAdapter(Context ctx, ArrayList<Options> lista) {
         this.ctx = ctx;
         this.lista = lista;
-
 
     }
 

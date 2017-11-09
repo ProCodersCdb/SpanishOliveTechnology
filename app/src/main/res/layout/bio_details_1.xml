@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arial"
                     android:padding="20sp"
-                    android:text="@string/descriptionDetails1"
+                    android:text="@string/bioDescriptionDetails1"
                     android:textColor="@color/colorWhite" />
 
 
