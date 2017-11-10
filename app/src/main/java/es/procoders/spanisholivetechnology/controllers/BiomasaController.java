@@ -29,17 +29,9 @@ public class BiomasaController {
      */
 
 
-    public BiomasaController (Activity activity, android.support.v4.app.FragmentManager fmanager){
-        this.fmanager = fmanager;
-        this.activity = activity;
-        callFragment().commit();
-    }
-
-
-    private android.support.v4.app.FragmentTransaction callFragment() {
-        Fragment newfragment = new BiomasaFragmentMain();
+    public static android.support.v4.app.FragmentTransaction callFragment(Activity activity, android.support.v4.app.FragmentManager fmanager, Fragment newfragment, int id) {
         android.support.v4.app.FragmentTransaction transaction = fmanager.beginTransaction();
-        transaction.replace(R.id.fragment_activityBiomasa, newfragment);
+        transaction.replace(id, newfragment);
         transaction.addToBackStack(null);
         return transaction;
     }

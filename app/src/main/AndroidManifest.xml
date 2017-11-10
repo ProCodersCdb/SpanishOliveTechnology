@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".activities.BiomasaActivity" />
         <activity android:name=".activities.ResultActivity" />
-        <activity android:name=".activities.LanguageActivity"></activity>
     </application>
 
 </manifest>

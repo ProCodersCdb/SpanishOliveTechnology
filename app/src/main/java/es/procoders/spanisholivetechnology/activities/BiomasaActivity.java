@@ -32,10 +32,8 @@ public class BiomasaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biomasa);
         android.support.v4.app.FragmentManager fragmentManager= getSupportFragmentManager();
-        biomasaController = new BiomasaController(this, fragmentManager);
 
-
-        BiomasaBean datosBiomasa = new BiomasaBean();
+        BiomasaController.callFragment(this, fragmentManager, new BiomasaFragmentMain(), R.id.fragment_activityBiomasa).commit();
 
 
         /*BiomasaService serv = new BiomasaService();
