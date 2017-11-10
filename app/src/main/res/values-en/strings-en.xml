@@ -2,7 +2,6 @@
     <string name="app_name">Spanish Olive Technology</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     <!-- Preguntas Biomasa -->
@@ -17,16 +16,12 @@
 
     <!-- Traducciones de botones-->
 
-    <string name="btnSaveBiomasa">Save</string>
-    <string name="btnNext">Go to Biomasa</string>
-
 
     <!-- Traducciones textView -->
 
     <string name="bioQTittle1">Interest</string>
     <string name="bioQTittle2">Kind</string>
     <string name="bioQTittle3">Format</string>
-    <string name="textView3">Type of consumption</string>
     <string name="bioQTittle5">Amounts demanded/offered</string>
     <string name="bioQTittle6">Country</string>
     <string name="bioQTittle7">Previous Experience</string>
