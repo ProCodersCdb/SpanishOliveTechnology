@@ -17,6 +17,7 @@ import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.activities.ResultActivity;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
 import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
+import es.procoders.spanisholivetechnology.controllers.MainController;
 import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
 import es.procoders.spanisholivetechnology.services.BiomasaService;
 
@@ -39,6 +40,7 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
     BiomasaSingleton controller;
     FloatingActionButton floating;
     BiomasaService services;
+    MainController mController;
 
 
 
@@ -57,15 +59,12 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
         services = new BiomasaService();
         controller = BiomasaSingleton.getInstance();
 
+        mController = new MainController(getActivity());
+        mController.enableToolbar(getActivity());
+
         initViews(rootView);
 
-
-
         return rootView;
-
-        /**
-         *
-         */
 
     }
 
@@ -100,6 +99,7 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
     public void onResume() {
         super.onResume();
         setAdapter(getView());
+        mController.loadToolbar(getActivity());
     }
 
     private void setAdapter(View view){

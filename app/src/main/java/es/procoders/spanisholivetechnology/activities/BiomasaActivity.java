@@ -1,16 +1,20 @@
 package es.procoders.spanisholivetechnology.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.MainController;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 
 /**
@@ -22,6 +26,7 @@ import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 public class BiomasaActivity extends AppCompatActivity {
 
     private BiomasaController biomasaController;
+    private MainController mController;
 
     /**
      * @param savedInstanceState guarda el resultado obtenido en la actividad activity_biomasa
@@ -33,13 +38,18 @@ public class BiomasaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_biomasa);
         android.support.v4.app.FragmentManager fragmentManager= getSupportFragmentManager();
 
+        mController = new MainController(this);
+
+        mController.loadToolbar(this);
+
         BiomasaController.callFragment(this, fragmentManager, new BiomasaFragmentMain(), R.id.fragment_activityBiomasa).commit();
+
+
 
 
         /*BiomasaService serv = new BiomasaService();
 
         serv.CheckAnswer(datosBiomasa);*/
-
 
 
     }

@@ -137,4 +137,39 @@ public class MainController {
     public static void toast(View v){
         Toast.makeText(v.getContext(), "No se puede enviar la petición. Formulario no relleno.", Toast.LENGTH_LONG).show();
     }
+
+    // ################################ TOOLBAR ACTIVITYS ##########################
+
+    public static void loadToolbar(final Activity v){
+
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar_activity);
+        toolbar.setTitle("");
+        ((AppCompatActivity)v).setSupportActionBar(toolbar);
+        ((AppCompatActivity)v).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((AppCompatActivity)v).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationIcon(v.getResources().getDrawable(R.drawable.ic_btn_back));
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()){
+                    case R.id.btnBack:
+                        ((AppCompatActivity)v).finish();
+                }
+
+            }
+        });
+
+    }
+
+    public static void disableToolbar(final Activity v){
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar_activity);
+        ((AppCompatActivity)v).getSupportActionBar().hide();
+    }
+
+    public static void enableToolbar(final Activity v){
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar_activity);
+        ((AppCompatActivity)v).getSupportActionBar().show();
+
+    }
 }

@@ -1,6 +1,7 @@
 package es.procoders.spanisholivetechnology.fragments;
 
 
+import android.app.Activity;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.BiomasaBean;
 import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
+import es.procoders.spanisholivetechnology.controllers.MainController;
 import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
 import es.procoders.spanisholivetechnology.questions.Options;
 
@@ -49,6 +51,8 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
     EditText edtDetails5, edtDetails6, edtDetails8;
     TextView txtDetails6, txtDetails7, txtDetails5;
 
+    MainController mController;
+
 
     public BiomasaFragmentDetails() {
         // Required empty public constructor
@@ -63,11 +67,17 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
         ArrayList<Options> options = new BiomasaQuestions(getContext()).getBioPreguntas();
         View rootView = inflater.inflate(options.get(controller.getPosition()).getLayout(), container, false);
 
+        mController = new MainController(getActivity());
+
+        mController.disableToolbar(getActivity());
+
         initViews(rootView);
         recuperaRespuestas();
 
         save.setOnClickListener(this);
         back.setOnClickListener(this);
+
+
 
         return rootView;
     }
@@ -249,6 +259,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
 
             case R.id.btnBack:
+                mController.loadToolbar(getActivity());
                 getActivity().onBackPressed();
                 break;
         }
