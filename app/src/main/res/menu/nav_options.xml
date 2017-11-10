@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/inicio"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="Inicio"/>
+
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:title="Solicitudes">
+
+        <item
+            android:id="@+id/otra_section"
+            android:title="Solicitudes">
+
+            <menu>
+                <item
+                android:id="@+id/menu_plantacion"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:title="Plantación"/>
+                <item
+                    android:id="@+id/menu_almanzara"
+                    android:icon="@android:drawable/ic_dialog_alert"
+                    android:title="Almanzara" />
+                <item
+                    android:id="@+id/menu_fabrica"
+                    android:icon="@android:drawable/ic_dialog_info"
+                    android:title="Fábrica Aceituna de Mesa" />
+                <item
+                    android:id="@+id/menu_aceite"
+                    android:icon="@android:drawable/ic_dialog_dialer"
+                    android:title="Comercio Aceite de Oliva"/>
+                <item
+                    android:id="@+id/menu_aceituna"
+                    android:icon="@android:drawable/ic_dialog_dialer"
+                    android:title="Comercio Aceituna de Mesa"/>
+                <item
+                    android:id="@+id/menu_biomasa"
+                    android:icon="@android:drawable/ic_dialog_dialer"
+                    android:title="Comercio Biomasa"/>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>
