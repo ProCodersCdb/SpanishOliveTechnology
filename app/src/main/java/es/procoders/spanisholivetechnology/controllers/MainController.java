@@ -25,8 +25,8 @@ public class MainController implements View.OnClickListener {
 
     public MainController(Activity activity) {
         this.activity = activity;
-        btn = (Button) activity.findViewById(R.id.btnNext);
-        btn.setOnClickListener(this);
+        //btn = (Button) activity.findViewById(R.id.btnNext);
+        //btn.setOnClickListener(this);
     }
 
 
