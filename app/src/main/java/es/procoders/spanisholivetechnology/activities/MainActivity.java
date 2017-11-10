@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.BotonBioMasa;
+import es.procoders.spanisholivetechnology.controllers.Controller;
 import es.procoders.spanisholivetechnology.controllers.MainController;
 
 /**
@@ -29,7 +30,9 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
 
-        MainController mController = new MainController(this);
+
+        Controller mController = new MainController(this,BiomasaActivity.class,findViewById(R.id.btnNext));
+        mController.getView().setOnClickListener(new BotonBioMasa(mController));
 
     }
 

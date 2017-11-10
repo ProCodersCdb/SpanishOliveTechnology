@@ -3,8 +3,6 @@ package es.procoders.spanisholivetechnology.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.text.Layout;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,16 +10,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
 import java.util.ArrayList;
 
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.beans.BiomasaBean;
-import es.procoders.spanisholivetechnology.controllers.BiomasaSingleton;
-import es.procoders.spanisholivetechnology.questions.BiomasaQuestions;
+import es.procoders.spanisholivetechnology.beans.Respuesta;
+import es.procoders.spanisholivetechnology.beans.TipoRespuesta;
+import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
+import es.procoders.spanisholivetechnology.questions.Questions;
 import es.procoders.spanisholivetechnology.questions.Options;
 
 /**
@@ -35,11 +33,10 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
      *
      */
 
-    BiomasaSingleton controller;
+    GeneralSingleton controller;
     Button save;
     RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     EditText edtDetails5, edtDetails6, edtDetails8;
-    TextView txtDetails6, txtDetails7, txtDetails5;
 
 
     public BiomasaFragmentDetails() {
@@ -51,9 +48,8 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        controller = BiomasaSingleton.getInstance();
-        ArrayList<Options> options = new BiomasaQuestions(getContext()).getBioPreguntas();
-        View rootView = inflater.inflate(options.get(controller.getPosition()).getLayout(), container, false);
+        controller = GeneralSingleton.getInstance();
+        View rootView = inflater.inflate(controller.getRespuesta().getPregunta().getLayout(), container, false);
         initViews(rootView);
 
         save.setOnClickListener(this);
@@ -84,92 +80,79 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment impl
 
     @Override
     public void onClick(View v) {
-        BiomasaBean bio= controller.getBiomasa();
 
-        switch (controller.getPosition()) {
-            case 0:
+        Respuesta res= controller.getRespuesta().get(controller.getPosition());
+
+        switch (res.getPregunta().getLayout()) {
+            case R.layout.bio_details_1:
                 if(det1opcion1.isChecked()){
-                    bio.setBioQ1(det1opcion1.getText().toString());
+                    res.setStr(det1opcion1.getText().toString());
+
                 } else if(det1opcion2.isChecked()){
-                    bio.setBioQ1(det1opcion2.getText().toString());
+                    res.setStr(det1opcion2.getText().toString());
                 }
-                setArray(bio.getBioQ1());
                 break;
 
-            case 1:
+            case R.layout.bio_details_2:
                 if(det2opcion1.isChecked()){
-                    bio.setBioQ2(det2opcion1.getText().toString());
+                    res.setStr(det2opcion1.getText().toString());
                 } else if(det2opcion2.isChecked()){
-                    bio.setBioQ2(det2opcion2.getText().toString());
+                    res.setStr(det2opcion2.getText().toString());
                 } else if(det2opcion3.isChecked()){
-                    bio.setBioQ2(det2opcion3.getText().toString());
+                    res.setStr(det2opcion3.getText().toString());
                 }
-                setArray(bio.getBioQ2());
+
                 break;
 
-            case 2:
+            case R.layout.bio_details_3:
                 if(det3opcion1.isChecked()){
-                    bio.setBioQ3(det3opcion1.getText().toString());
+                    res.setStr(det3opcion1.getText().toString());
                 } else if(det3opcion2.isChecked()){
-                    bio.setBioQ3(det3opcion2.getText().toString());
+                    res.setStr(det3opcion2.getText().toString());
                 } else if(det3opcion3.isChecked()){
-                    bio.setBioQ3(det3opcion3.getText().toString());
+                    res.setStr(det3opcion3.getText().toString());
                 }
-                setArray(bio.getBioQ3());
                 break;
 
-            case 3:
+            case R.layout.bio_details_4:
                 if(det4opcion1.isChecked()){
-                    bio.setBioQ4(det4opcion1.getText().toString());
+                    res.setStr(det4opcion1.getText().toString());
                 } else if(det4opcion2.isChecked()){
-                    bio.setBioQ4(det4opcion2.getText().toString());
+                    res.setStr(det4opcion2.getText().toString());
                 }
-                setArray(bio.getBioQ4());
                 break;
 
-            case 4:
+            case R.layout.bio_details_5:
                 if(!TextUtils.isEmpty(edtDetails5.getText())){
-                    bio.setBioQ5(Float.parseFloat(edtDetails5.getText().toString()));
+                    res.setStr(edtDetails5.getText().toString());
                 }
-                setArray(bio.getBioQ5().toString());
                 break;
 
-            case 5:
+            case R.layout.bio_details_6:
                 if(!TextUtils.isEmpty(edtDetails6.getText())){
-                    bio.setBioQ6(edtDetails6.getText().toString());
+                    res.setStr(edtDetails6.getText().toString());
                 }
-                setArray(bio.getBioQ6());
                 break;
 
-            case 6:
+            case R.layout.bio_details_7:
                 if(det7opcion1.isChecked()){
-                    bio.setBioQ7(det7opcion1.getText().toString());
+                    res.setStr(det7opcion1.getText().toString());
                 } else if(det7opcion2.isChecked()){
-                    bio.setBioQ7(det7opcion2.getText().toString());
+                    res.setStr(det7opcion2.getText().toString());
                 }
-                setArray(bio.getBioQ7());
                 break;
 
-            case 7:
+            case R.layout.bio_details_8:
                 if(!TextUtils.isEmpty(edtDetails8.getText())){
-                    bio.setBioQ8(edtDetails8.getText().toString());
+                    res.setStr(edtDetails8.getText().toString());
                 }
-                setArray(bio.getBioQ8());
                 break;
 
         }
-        controller.setBiomasa(bio);
         // DAO
+        //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
         getActivity().onBackPressed();
         Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
 
     }
-
-    private void setArray(String str) {
-        ArrayList<Options> array = controller.getBioQ();
-        array.get(controller.getPosition()).setDescription(str);
-        controller.setBioQ(array);
-    }
-
-
 }

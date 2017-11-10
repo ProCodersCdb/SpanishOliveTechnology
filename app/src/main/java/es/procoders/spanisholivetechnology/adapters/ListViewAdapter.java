@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.procoders.spanisholivetechnology.R;
+import es.procoders.spanisholivetechnology.beans.Pregunta;
+import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.questions.Options;
 
 /**
@@ -23,13 +25,13 @@ import es.procoders.spanisholivetechnology.questions.Options;
  * @version 1.0
  */
 
-public class ListViewAdapter extends ArrayAdapter<Options> {
+public class ListViewAdapter extends ArrayAdapter<Respuesta> {
 
 
     private Context ctx;
-    private ArrayList<Options> lista;
+    private ArrayList<Respuesta> lista;
 
-    public ListViewAdapter(Context ctx, ArrayList<Options> lista) {
+    public ListViewAdapter(Context ctx, ArrayList<Respuesta> lista) {
         super(ctx,0,lista);
         this.ctx = ctx;
         this.lista = lista;
@@ -46,7 +48,7 @@ public class ListViewAdapter extends ArrayAdapter<Options> {
     }
 
     @Override
-    public Options getItem(int i) {
+    public Respuesta getItem(int i) {
         return lista.get(i);
     }
 
@@ -56,60 +58,20 @@ public class ListViewAdapter extends ArrayAdapter<Options> {
     }
 
 
-
-   // @Override
- /*   public View getView(int i, View view, ViewGroup viewGroup) {
-        super.getView(i,view,viewGroup);
-        if (view == null) {
-            LayoutInflater inflater = (LayoutInflater) viewGroup.getContext()
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.list_simple_item, viewGroup, false);
-        }
-
-        TextView desc = (TextView) view.findViewById(R.id.idDescription);
-        TextView name = (TextView) view.findViewById(R.id.mainListView);
-        ImageView image = view.findViewById(R.id.imageListView);
-
-        Options nameS = lista.get(i);
-        if (nameS.isRequired()){
-            image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
-        }
-        if (lista.get(i).getDescription() != null){
-            desc.setText(lista.get(i).getDescription());
-        }
-        name.setText(nameS.getTituloOpcion());
-        return view;
-    }*/
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-        // Get the data item for this position
-        Options user = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view
-        if (view == null) {
-            view = LayoutInflater.from(getContext()).inflate(R.layout.list_simple_item, parent, false);
-        }
-        // Lookup view for data population
+        Respuesta user = lista.get(position);
+        view = LayoutInflater.from(getContext()).inflate(R.layout.list_simple_item, parent, false);
         TextView desc = (TextView) view.findViewById(R.id.idDescription);
         TextView name = (TextView) view.findViewById(R.id.mainListView);
         ImageView image = view.findViewById(R.id.imageListView);
-        if (user.isRequired()){
-
+        if (user.getPregunta().isRequired()){
             image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
-            image.setVisibility(View.VISIBLE);
-
         }
-        if (lista.get(position).getDescription() != null){
-            desc.setText(user.getDescription());
-        }else{
-            desc.setText("");
+        if (user.getStr() != null){
+            desc.setText(user.getStr());
         }
-        name.setText(user.getTituloOpcion());
-     //   TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
-       // TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
-        // Populate the data into the template view using the data object
-       // tvName.setText(user.name);
-        //tvHome.setText(user.hometown);
-        // Return the completed view to render on screen
+        name.setText(user.getPregunta().getStr());
         return view;
     }
 }

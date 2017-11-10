@@ -1,11 +1,13 @@
 package es.procoders.spanisholivetechnology.activities;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.widget.Toast;
+
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.beans.BiomasaBean;
-import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.FragmentController;
+import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 
 /**
@@ -16,27 +18,27 @@ import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 
 public class BiomasaActivity extends FragmentActivity {
 
-    private BiomasaController biomasaController;
-
-    /**
-     * @param savedInstanceState guarda el resultado obtenido en la actividad activity_biomasa
-     */
+    private GeneralSingleton single;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biomasa);
-        android.support.v4.app.FragmentManager fragmentManager= getSupportFragmentManager();
-        biomasaController = new BiomasaController(this, fragmentManager);
+        single = GeneralSingleton.getInstance();
+        single.setFragmentManager(getSupportFragmentManager());
+ /*      try {
 
 
-        BiomasaBean datosBiomasa = new BiomasaBean();
-
-
-        /*BiomasaService serv = new BiomasaService();
-
-        serv.CheckAnswer(datosBiomasa);*/
-
+           android.support.v4.app.FragmentTransaction trans = FragmentController.callFragment(single.getFragmentManager(), R.layout.fragment_biomasa_fragment_main, new BiomasaFragmentMain());
+           trans.commit();
+       }catch (Exception e ){
+           Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+       }*/
+        BiomasaFragmentMain fragment = new BiomasaFragmentMain();
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_activityBiomasa, fragment);
+        ft.commit();
 
 
     }

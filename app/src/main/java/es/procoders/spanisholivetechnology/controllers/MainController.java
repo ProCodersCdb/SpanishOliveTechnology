@@ -14,25 +14,29 @@ import es.procoders.spanisholivetechnology.activities.BiomasaActivity;
  * @version 1.0
  */
 
-public class MainController implements View.OnClickListener {
-    private Activity activity;
-    Button btn ;
+public class MainController extends Controller  {
+    @Override
+    public View getView() {
+        return view;
+    }
+
+    public void setView(View view) {
+        this.view = view;
+    }
 
     /**
      * @param activity el controlador recibe este parámetro y trabaja sobre él
      *                 para saber como actuar
      */
+    private View view;
 
-    public MainController(Activity activity) {
+    public MainController(final Activity activity,Class destino,View btn) {
         this.activity = activity;
-        btn = (Button) activity.findViewById(R.id.btnNext);
-        btn.setOnClickListener(this);
+        this.destino=destino;
+        view=btn;
+
     }
 
 
-    @Override
-    public void onClick(View view) {
-        Intent intent=new Intent(activity, BiomasaActivity.class);
-        activity.startActivity(intent);
-    }
+
 }
