@@ -9,9 +9,9 @@ import android.text.Layout;
 public class Options {
 
     private String tituloOpcion;
-    private boolean required;
+    private boolean required=false;
     private int layout;
-    private String description;
+    private String description="";
 
     public Options(String tituloOpcion, boolean required, int layout) {
         this.tituloOpcion = tituloOpcion;
