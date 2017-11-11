@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 
 import es.procoders.spanisholivetechnology.R;
+import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
+import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
 
 
 /**
@@ -32,6 +34,9 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         Button btn = findViewById(R.id.btnNext);
         btn.setOnClickListener(this);
 
+        if (new BiomasaDAO().recuperarLocal(this) != null){
+            GeneralSingleton.getInstance().setMapa(new BiomasaDAO().recuperarLocal(this));
+        }
 
 
         /*Controller mController = new MainController(this,BiomasaActivity.class,findViewById(R.id.btnNext));
