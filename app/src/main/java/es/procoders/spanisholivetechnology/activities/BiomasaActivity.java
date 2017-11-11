@@ -1,21 +1,14 @@
 package es.procoders.spanisholivetechnology.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
-import android.view.View;
-
 
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.beans.BiomasaBean;
+
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.controllers.MainController;
-import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
+import es.procoders.spanisholivetechnology.fragments.FragmentMain;
 
 /**
  * @author Procoders
@@ -23,33 +16,35 @@ import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
  * @version 1.0
  */
 
-public class BiomasaActivity extends AppCompatActivity {
+public class BiomasaActivity extends FragmentActivity {
 
+    private GeneralSingleton single;
     private BiomasaController biomasaController;
     private MainController mController;
 
-    /**
-     * @param savedInstanceState guarda el resultado obtenido en la actividad activity_biomasa
-     */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biomasa);
-        android.support.v4.app.FragmentManager fragmentManager= getSupportFragmentManager();
+        single = GeneralSingleton.getInstance();
+        single.setFragmentManager(getSupportFragmentManager());
+ /*      try {
+           android.support.v4.app.FragmentTransaction trans = FragmentController.callFragment(single.getFragmentManager(), R.layout.fragment_biomasa_fragment_main, new FragmentMain());
+           trans.commit();
+       }catch (Exception e ){
+           Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+       }*/
+
 
         mController = new MainController(this);
-
         mController.loadToolbar(this);
 
-        BiomasaController.callFragment(this, fragmentManager, new BiomasaFragmentMain(), R.id.fragment_activityBiomasa).commit();
-
-
-
-
-        /*BiomasaService serv = new BiomasaService();
-
-        serv.CheckAnswer(datosBiomasa);*/
+        FragmentMain fragment = new FragmentMain();
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.fragment_activityBiomasa, fragment);
+        //ft.addToBackStack(null);
+        ft.commit();
 
 
     }

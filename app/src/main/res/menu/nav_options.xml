@@ -15,7 +15,7 @@
 
         <item
             android:id="@+id/otra_section"
-            android:title="Solicitudes">
+            android:title="Nueva solicitud">
 
             <menu>
                 <item
@@ -42,6 +42,18 @@
                     android:id="@+id/menu_biomasa"
                     android:icon="@drawable/ic_add_document"
                     android:title="Comercio Biomasa"/>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/session"
+            android:title="Sesion">
+
+            <menu>
+                <item
+                    android:id="@+id/close_session"
+                    android:icon="@drawable/ic_sign_out"
+                    android:title="Cerrar sesión"/>
             </menu>
         </item>
 
