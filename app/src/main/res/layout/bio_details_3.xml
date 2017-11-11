@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
-            android:text="@string/optionSubTittleSelect"
+            android:text="@string/optionDescription"
             app:layout_constraintStart_toStartOf="@+id/txtDetails3"
             app:layout_constraintTop_toBottomOf="@+id/txtDetails3" />
     </android.support.constraint.ConstraintLayout>
