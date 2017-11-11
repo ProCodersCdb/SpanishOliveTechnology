@@ -1,10 +1,12 @@
 package es.procoders.spanisholivetechnology.beans;
 
+import java.io.Serializable;
+
 /**
  * Created by Apps on 10/11/2017.
  */
 
-public class Respuesta {
+public class Respuesta implements Serializable{
     private Pregunta respuesta;
     private String str;
 

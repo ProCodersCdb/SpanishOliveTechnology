@@ -1,10 +1,14 @@
 package es.procoders.spanisholivetechnology.beans;
 
+import android.support.annotation.NonNull;
+
+import java.io.Serializable;
+
 /**
  * Created by Apps on 10/11/2017.
  */
 
-public class Pregunta {
+public class Pregunta implements Comparable<Pregunta>, Serializable {
     private TipoRespuesta tipo;
     private String str;
     private boolean requerido;
@@ -30,5 +34,10 @@ public class Pregunta {
 
     public int getLayout() {
         return layout;
+    }
+
+    @Override
+    public int compareTo(@NonNull Pregunta pregunta) {
+        return str.compareTo(pregunta.getStr());
     }
 }

@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.controllers.FragmentController;
+
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 
@@ -37,7 +37,8 @@ public class BiomasaActivity extends FragmentActivity {
        }*/
         BiomasaFragmentMain fragment = new BiomasaFragmentMain();
         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.fragment_activityBiomasa, fragment);
+        ft.add(R.id.fragment_activityBiomasa, fragment);
+        //ft.addToBackStack(null);
         ft.commit();
 
 

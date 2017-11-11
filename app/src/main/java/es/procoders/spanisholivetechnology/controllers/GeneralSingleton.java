@@ -22,6 +22,18 @@ public class GeneralSingleton {
 
     private  static GeneralSingleton single;
     private ArrayList<Respuesta> respuesta;
+    private int position;
+    private android.support.v4.app.FragmentManager fragmentManager;
+    private TreeMap<Pregunta, Respuesta> mapa=new TreeMap<>();
+
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
     public ArrayList<Respuesta> getRespuesta() {
         return respuesta;
@@ -31,7 +43,7 @@ public class GeneralSingleton {
         this.respuesta = respuesta;
     }
 
-    private Map<Pregunta, Respuesta> mapa;
+
 
 
     public FragmentManager getFragmentManager() {
@@ -42,22 +54,21 @@ public class GeneralSingleton {
         this.fragmentManager = fragmentManager;
     }
 
-    private android.support.v4.app.FragmentManager fragmentManager;
 
 
-    @SuppressLint("UseSparseArrays")
+
+
     private GeneralSingleton(){
-        mapa = new TreeMap<>();
     }
 
 
 
 
-    public Map<Pregunta, Respuesta> getMapa() {
+    public TreeMap<Pregunta, Respuesta> getMapa() {
         return mapa;
     }
 
-    public void setMapa(Map<Pregunta, Respuesta> mapa) {
+    public void setMapa(TreeMap<Pregunta, Respuesta> mapa) {
         this.mapa = mapa;
     }
 
@@ -67,6 +78,9 @@ public class GeneralSingleton {
             single = new GeneralSingleton();
         }
         return single;
+    }
+    public void resetSingleton(){
+        single= new GeneralSingleton();
     }
 
 

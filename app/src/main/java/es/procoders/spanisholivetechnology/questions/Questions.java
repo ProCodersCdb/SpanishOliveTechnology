@@ -10,7 +10,6 @@ import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.beans.TipoRespuesta;
-import es.procoders.spanisholivetechnology.interfaces.GeneralControler;
 
 /**
  * @author Procoders

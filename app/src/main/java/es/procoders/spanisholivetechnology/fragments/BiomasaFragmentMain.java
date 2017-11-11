@@ -1,5 +1,6 @@
 package es.procoders.spanisholivetechnology.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -10,12 +11,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Toast;
+
+import java.util.TreeMap;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
-import es.procoders.spanisholivetechnology.controllers.FragmentController;
+import es.procoders.spanisholivetechnology.beans.Pregunta;
+import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
+import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
 import es.procoders.spanisholivetechnology.questions.Questions;
+import es.procoders.spanisholivetechnology.services.BiomasaService;
 
 
 /**
@@ -68,29 +75,28 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        adapter = new ListViewAdapter(rootView.getContext(), bq.getBiomasa());
+        if (single.getRespuesta()==null){
+        single.setRespuesta(new Questions(getContext()).getBiomasa());
+        }
+        adapter = new ListViewAdapter(rootView.getContext(), single.getRespuesta());
         setListAdapter(adapter);
         getListView().setOnItemClickListener(this);
     }
 
     private void initViews(View view) {
         floating = view.findViewById(R.id.fab);
-
-        //lv.setAdapter(adapter);
-//Hay que mejorar la capa de servicio para poder utilizar el mapa.
-/*        floating.setOnClickListener(new View.OnClickListener() {
+        final BiomasaDAO biomasaDAO= new BiomasaDAO();
+        final BiomasaService finalServices = new BiomasaService();
+        floating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(services.isReady(controller.getBiomasa())) {
-                    Intent intent = new Intent(view.getContext(), ResultActivity.class);
-                    intent.putExtra("datos", controller.getBiomasa());
-                    startActivity(intent);
+                if(finalServices.isReady(single.getMapa())) {
+                    biomasaDAO.guardarLocal(single.getMapa(), view.getContext());
                 } else{
                     Toast.makeText(view.getContext(), "No se puede enviar la petición. Formulario no relleno.", Toast.LENGTH_LONG).show();
                 }
             }
-        });*/
+        });
 
         /**
          * Tras la declaracion de las variables, se procede a la comprobacion de que las variables
@@ -98,12 +104,11 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
          */
 
     }
+
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        single.setRespuesta(i);
-        single.setRespuesta(bq.getBiomasa().get(i));
+        single.setPosition(i);
         FragmentController.callFragment(single.getFragmentManager(), R.id.fragment_activityBiomasa, new BiomasaFragmentDetails()).commit();
-
     }
 
 

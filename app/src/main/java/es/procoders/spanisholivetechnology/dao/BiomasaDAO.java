@@ -1,4 +1,3 @@
-/*
 package es.procoders.spanisholivetechnology.dao;
 
 import android.content.Context;
@@ -8,55 +7,39 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.TreeMap;
 
-*/
-/**
- * @author Procoders
- * @since API 21
- * @version 1.0
- *//*
-
-public class BiomasaDAO implements GestionDAO<BiomasaBean>{
-
-    private final static String fileName = "datosBiomasa.dat";
+import es.procoders.spanisholivetechnology.beans.Pregunta;
+import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 
-    */
-/**
-     *@see "private final static String fileName" se crea el archivo en el que se guardara el objeto
-     * BiomasaBean
-     * @param b parámetro que se usa en método guardarLocal. Este método guarda el objeto que se
-     *          pasa en forma de parámetro
-     * @param c parámetro usado como base para el método recuperarLocal. Lee, si existe, el archivo
-     *         local y recupera el contenido previamente guardado.En caso de no existir,
-     *         devuelve FileNotFoundException
-     *//*
+public class BiomasaDAO implements GestionDAO<TreeMap<Pregunta, Respuesta>>{
+
+    private final static String fileName = "datos.dat";
 
 
-    public void guardarLocal (BiomasaBean b, Context c) {
-
+    @Override
+    public void guardarLocal(TreeMap<Pregunta, Respuesta> e, Context c) {
         try {
             FileOutputStream fos = c.openFileOutput(fileName, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(b);
+            oos.writeObject(e);
             oos.close();
             fos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException u) {
+            u.printStackTrace();
         }
-
     }
 
+    public TreeMap<Pregunta, Respuesta> recuperarLocal (Context c) {
 
-    public BiomasaBean recuperarLocal (Context c) {
-
-        BiomasaBean b = new BiomasaBean();
+        TreeMap<Pregunta, Respuesta> b = new TreeMap<>();
 
         try {
             FileInputStream fis = c.openFileInput (fileName);
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            b = (BiomasaBean) ois.readObject();
+            b = (TreeMap<Pregunta, Respuesta>) ois.readObject();
 
             ois.close();
             fis.close();
@@ -67,4 +50,3 @@ public class BiomasaDAO implements GestionDAO<BiomasaBean>{
     }
 }
 
-*/
