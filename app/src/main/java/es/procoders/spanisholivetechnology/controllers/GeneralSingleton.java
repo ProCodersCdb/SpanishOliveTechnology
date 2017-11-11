@@ -9,6 +9,7 @@ import java.util.TreeMap;
 
 import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
+import es.procoders.spanisholivetechnology.beans.Usuario;
 import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
 
 /**
@@ -26,7 +27,15 @@ public class GeneralSingleton {
     private int position;
     private android.support.v4.app.FragmentManager fragmentManager;
     private TreeMap<Pregunta, Respuesta> mapa;
+    private Usuario user;
 
+    public Usuario getUser() {
+        return user;
+    }
+
+    public void setUser(Usuario user) {
+        this.user = user;
+    }
 
     public int getPosition() {
         return position;
