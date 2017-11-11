@@ -78,6 +78,40 @@
     <string name="plantacionQ14Option1">Si</string>
     <string name="plantacionQ14Option2">No</string>
 
+    <!--Descripción plantación-->
+
+    <string name="plantacionDescriptionQ1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="plantacionDescriptionQ15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+
+
 
     <!-- ####################################### STRINGS ALMANZARA #################################### -->
     <!-- Preguntas almanzara-->
@@ -141,6 +175,40 @@
     <string name="almanzaraQ14Option1">Si</string>
     <string name="almanzaraQ14Option2">No</string>
 
+    <!--Descripción almanzara-->
+
+    <string name="almanzaraDescriptionQ1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="almanzaraDescriptionQ15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+
+
 
 
     <!-- ####################################### STRINGS FABRICA ACEITUNA MESA #################################### -->
@@ -197,6 +265,36 @@
     <string name="fabricaQ11Option2">Con inclinación</string>
     <string name="fabricaQ12Option1">Si</string>
     <string name="fabricaQ12Option2">No</string>
+
+    <!--Descripción fabrica-->
+
+    <string name="fabricaDescriptionQ1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="fabricaDescriptionQ13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+
 
 
 
@@ -262,6 +360,37 @@
     <string name="comercioAceiteQ13Option2">No</string>
     <string name="comercioAceiteQ13Option3">Mercados</string>
 
+    <!--Descripción comercio aceite-->
+
+    <string name="comercioAceiteDescriptionQ1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceiteDescriptionQ14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+
 
 
     <!-- ####################################### STRINGS COMERCIO ACEITUNA MESA #################################### -->
@@ -303,6 +432,27 @@
     <string name="comercioAceitunaQ5Option1">Lata</string>
     <string name="comercioAceitunaQ5Option2">Vidrio</string>
     <string name="comercioAceitunaQ5Option3">Bolsa</string>
+
+    <!--Descripción comercio aceituna-->
+
+    <string name="comercioAceitunaDescriptionQ1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceitunaDescriptionQ2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceitunaDescriptionQ3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceitunaDescriptionQ4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceitunaDescriptionQ5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceitunaDescriptionQ6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceitunaDescriptionQ7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceitunaDescriptionQ8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
+    <string name="comercioAceitunaDescriptionQ9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.</string>
 
 
     <!-- ####################################### STRINGS BIOMASA #################################### -->
@@ -375,6 +525,7 @@
 
 
     <string name="optionDescription">(Seleccione una opción)</string>
+
 
     <string name="optionSubTittleType">(Escriba en el campo de texto)</string>
 
