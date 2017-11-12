@@ -18,12 +18,12 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:tint="#fff"
-        android:fontFamily="@font/arial"
         android:layout_width="60sp"
         android:layout_height="60sp"
         android:layout_gravity="bottom|end"
         android:layout_margin="26dp"
-        android:src="@android:drawable/ic_menu_save" />
+        android:fontFamily="@font/arial"
+        android:src="@drawable/ic_addform"
+        android:tint="#fff" />
 
 </FrameLayout>

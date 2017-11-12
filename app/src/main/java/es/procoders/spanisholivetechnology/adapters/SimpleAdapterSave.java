@@ -23,7 +23,7 @@ public class SimpleAdapterSave extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 6;
+        return 3;
     }
 
     @Override
@@ -59,6 +59,7 @@ public class SimpleAdapterSave extends BaseAdapter {
                 viewHolder.textView.setText("Guardar y enviar");
                 break;
             case 2:
+                viewHolder.textView.setTextColor(context.getResources().getColor(android.R.color.holo_red_dark));
                 viewHolder.textView.setText("Cancelar");
                 break;
         }
