@@ -37,7 +37,7 @@ import es.procoders.spanisholivetechnology.questions.Questions;
  * @since API 21
  * @version 1.0
  */
-public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     /**
      *
@@ -86,6 +86,9 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             public void onClick(View view) {
                 DialogPlus dialog = DialogPlus.newDialog(view.getContext())
                         .setAdapter(adapter2)
+                        .setHeader(R.layout.menu_header)
+                        .setInAnimation(R.transition.slide_in_bottom)
+                        .setOutAnimation(R.transition.slide_out_bottom)
                         .setOnItemClickListener(new OnItemClickListener() {
                             @Override
                             public void onItemClick(DialogPlus dialog, Object item, View view, int position) {
@@ -132,9 +135,5 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     }
 
 
-    @Override
-    public void onClick(View view) {
-        Intent inte= new Intent(this, BiomasaActivity.class);
-        startActivity(inte);
-    }
+
 }

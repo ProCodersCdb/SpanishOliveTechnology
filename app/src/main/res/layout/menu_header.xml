@@ -2,29 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/border_dialog"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
-<android.support.v7.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingBottom="5dp">
+        android:paddingBottom="5dp"
+        android:paddingLeft="-10dp"
+        android:paddingRight="-10dp"
+        android:paddingTop="-10dp">
 
         <TextView
-            android:id="@+id/menuList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Prueba de código"
+            android:hint="NUEVA CONSULTA"
             android:paddingBottom="10dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingTop="10dp"
-            android:textSize="18sp"
+            android:text="NUEVA CONSULTA"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </LinearLayout>
-</android.support.v7.widget.CardView>
 </LinearLayout>

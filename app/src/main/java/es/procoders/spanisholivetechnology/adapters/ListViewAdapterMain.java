@@ -64,8 +64,15 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
             TextView estado = (TextView) view.findViewById(R.id.estado_listView);
 
             name.setText(user.getTipo().toString());
-            date.setText(user.getDate().toString());
-            estado.setText("Estado no indicado aún");
+            if (user.getDate()!=null) {
+                date.setText(user.getDate().toString());
+                estado.setTextColor(view.getContext().getResources().getColor(R.color.colorAccent));
+                estado.setText("Enviado");
+            }else{
+                estado.setTextColor(view.getContext().getResources().getColor(android.R.color.holo_red_dark));
+                estado.setText("No enviado");
+            }
+
         }
         return view;
     }
