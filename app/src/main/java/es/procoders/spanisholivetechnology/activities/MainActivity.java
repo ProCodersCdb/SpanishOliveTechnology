@@ -134,6 +134,18 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
-
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (new BiomasaDAO().recuperarLocal(this) != null){
+            GeneralSingleton.getInstance().setFormularios(new BiomasaDAO().recuperarLocal(this));
+        }
+        if (single.getFormularios()!=null) {
+            adapter = new ListViewAdapterMain(this, single.getFormularios());
+        }else{
+            single.setFormularios(new ArrayList<Formulario>());
+            adapter = new ListViewAdapterMain(this, single.getFormularios());
+        }
+        lv.setAdapter(adapter);
+    }
 }
