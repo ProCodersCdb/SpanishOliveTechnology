@@ -9,6 +9,7 @@
 
     <string name="yes">Si</string>
     <string name="no">No</string>
+    <string name="noText"> </string>
 
     <string name="btnNext">Ir a Biomasa</string>
     <string name="btnBack">Volver</string>

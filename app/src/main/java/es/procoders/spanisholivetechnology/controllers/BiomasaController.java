@@ -46,43 +46,37 @@ public class BiomasaController {
 
         controller = GeneralSingleton.getInstance();
 
-        if (controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_5){
+        if (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_5){
             bioQ5desc = v.findViewById(R.id.bioQ5Description);
             edtDetails5.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (hasFocus) {
-                        bioQ5desc.setText("");
-                    }else {
-                        bioQ5desc.setText(R.string.bioQ5Description);
+                        bioQ5desc.setText(R.string.noText);
                     }
                 }
             });
         }
 
-        if (controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_6){
-            bioQ5desc = v.findViewById(R.id.bioQ6Description);
+        if (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_6){
+            bioQ6desc = v.findViewById(R.id.bioQ6Description);
             edtDetails6.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (hasFocus) {
-                        bioQ6desc.setText("");
-                    }else {
-                        bioQ6desc.setText(R.string.bioQ6Description);
+                        bioQ6desc.setText(R.string.noText);
                     }
                 }
             });
         }
 
-        if (controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_8){
+        if (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_8){
             bioQ8desc = v.findViewById(R.id.bioQ8Description);
             edtDetails8.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (hasFocus) {
-                        bioQ8desc.setText("");
-                    }else {
-                        bioQ8desc.setText(R.string.bioQ8Description);
+                        bioQ8desc.setText(R.string.noText);
                     }
                 }
             });

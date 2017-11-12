@@ -63,8 +63,6 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
 
 
 
-
-
         return rootView;
     }
 
