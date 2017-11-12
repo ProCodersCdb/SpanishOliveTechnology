@@ -3,6 +3,7 @@ package es.procoders.spanisholivetechnology.activities;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
@@ -19,6 +20,7 @@ import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 public class BiomasaActivity extends FragmentActivity {
 
     private GeneralSingleton single;
+    ImageButton save, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,10 @@ public class BiomasaActivity extends FragmentActivity {
         setContentView(R.layout.activity_biomasa);
         single = GeneralSingleton.getInstance();
         single.setFragmentManager(getSupportFragmentManager());
+
+        save = (ImageButton) findViewById(R.id.btnOptionSave);
+        back = (ImageButton) findViewById(R.id.btnBack);
+
  /*      try {
 
 

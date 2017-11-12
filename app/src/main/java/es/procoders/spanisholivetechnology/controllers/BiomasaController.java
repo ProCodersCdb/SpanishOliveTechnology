@@ -6,23 +6,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.beans.Pregunta;
-import es.procoders.spanisholivetechnology.beans.Respuesta;
-
-/**
- * Created by bjfem on 11/11/2017.
- */
 
 public class BiomasaController {
     RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     EditText edtDetails5, edtDetails6, edtDetails8;
-    Button save;
     private View view;
     GeneralSingleton controller;
     Activity activity;
+    Button save, back;
+    TextView bioQ5desc, bioQ6desc, bioQ8desc;
 
 
 
@@ -39,18 +35,65 @@ public class BiomasaController {
         det3opcion3 = v.findViewById(R.id.det3opcion3);
         det4opcion1 = v.findViewById(R.id.det4opcion1);
         det4opcion2 = v.findViewById(R.id.det4opcion2);
-        edtDetails5 = v.findViewById(R.id.edtDetails5);
-        edtDetails6 = v.findViewById(R.id.edtDetails6);
+        edtDetails5 = v.findViewById(R.id.bioQ5edt);
+        edtDetails6 = v.findViewById(R.id.bioQ6edt);
         det7opcion1 = v.findViewById(R.id.det7opcion1);
         det7opcion2 = v.findViewById(R.id.det7opcion2);
-        edtDetails8 = v.findViewById(R.id.edtDetails8);
-        save = v.findViewById(R.id.btnSaveBiomasa);
+        edtDetails8 = v.findViewById(R.id.bioQ8edt);
+
+        save = v.findViewById(R.id.btnOptionSave);
+        back = v.findViewById(R.id.btnBack);
+
         controller = GeneralSingleton.getInstance();
+
+        if (controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_5){
+            bioQ5desc = v.findViewById(R.id.bioQ5Description);
+            edtDetails5.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (hasFocus) {
+                        bioQ5desc.setText("");
+                    }else {
+                        bioQ5desc.setText(R.string.bioQ5Description);
+                    }
+                }
+            });
+        }
+
+        if (controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_6){
+            bioQ5desc = v.findViewById(R.id.bioQ6Description);
+            edtDetails6.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (hasFocus) {
+                        bioQ6desc.setText("");
+                    }else {
+                        bioQ6desc.setText(R.string.bioQ6Description);
+                    }
+                }
+            });
+        }
+
+        if (controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout() == R.layout.bio_details_8){
+            bioQ8desc = v.findViewById(R.id.bioQ8Description);
+            edtDetails8.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (hasFocus) {
+                        bioQ8desc.setText("");
+                    }else {
+                        bioQ8desc.setText(R.string.bioQ8Description);
+                    }
+                }
+            });
+        }
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
                     case R.layout.bio_details_1:
+
                         if(det1opcion1.isChecked()){
 
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det1opcion1.getText().toString());
@@ -99,6 +142,7 @@ public class BiomasaController {
                         break;
 
                     case R.layout.bio_details_5:
+
                         if(!TextUtils.isEmpty(edtDetails5.getText())){
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(edtDetails5.getText().toString());
 
@@ -134,6 +178,14 @@ public class BiomasaController {
                 //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
                 activity.onBackPressed();
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.onBackPressed();
             }
         });
     }

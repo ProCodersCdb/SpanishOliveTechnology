@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
      */
 
     GeneralSingleton controller;
+    ImageButton save, back;
 
 
     public BiomasaFragmentDetails() {
@@ -51,9 +53,13 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout(), container, false);
         switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getTipo()){
             case BIOMASA:
+
+
                 new BiomasaController(rootView, getActivity());
                 break;
         }
+
+
 
 
 
