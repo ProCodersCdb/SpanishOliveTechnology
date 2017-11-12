@@ -50,12 +50,8 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         controller = GeneralSingleton.getInstance();
-
-        save = (ImageButton) getActivity().findViewById(R.id.btnOptionSave);
-        back = (ImageButton) getActivity().findViewById(R.id.btnBack);
-
-        View rootView = inflater.inflate(controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout(), container, false);
-        switch (controller.getRespuesta().get(controller.getPosition()).getPregunta().getTipo()){
+        View rootView = inflater.inflate(controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout(), container, false);
+        switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getTipo()){
             case BIOMASA:
 
 

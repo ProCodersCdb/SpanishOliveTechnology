@@ -40,4 +40,23 @@ public class Formulario implements Serializable {
         this.date = date;
 
     }
+    public Formulario() {
+    }
+
+    public void setTipo(TipoRespuesta tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setUser(Usuario user) {
+        this.user = user;
+    }
+
+    public void setRespuestas(ArrayList<Respuesta> respuestas) {
+        this.respuestas = respuestas;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
 }

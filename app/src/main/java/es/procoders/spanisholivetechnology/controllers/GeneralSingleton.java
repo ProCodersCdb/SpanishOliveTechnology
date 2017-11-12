@@ -24,13 +24,19 @@ public class GeneralSingleton {
 
 
     private  static GeneralSingleton single;
-    private ArrayList<Respuesta> respuesta;
     private int position;
     private android.support.v4.app.FragmentManager fragmentManager;
     private Usuario user;
     private ArrayList<Formulario> formularios;
+    private int positionformulario;
 
+    public int getPositionformulario() {
+        return positionformulario;
+    }
 
+    public void setPositionformulario(int positionformulario) {
+        this.positionformulario = positionformulario;
+    }
 
     public ArrayList<Formulario> getFormularios() {
         return formularios;
@@ -56,14 +62,14 @@ public class GeneralSingleton {
         this.position = position;
     }
 
-    public ArrayList<Respuesta> getRespuesta() {
+   /* public ArrayList<Respuesta> getRespuesta() {
         return respuesta;
     }
 
     public void setRespuesta(ArrayList<Respuesta> respuesta) {
         this.respuesta = respuesta;
     }
-
+*/
 
 
 

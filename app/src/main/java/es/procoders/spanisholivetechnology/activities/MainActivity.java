@@ -18,10 +18,14 @@ import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.OnClickListener;
 import com.orhanobut.dialogplus.OnItemClickListener;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapterMain;
 import es.procoders.spanisholivetechnology.adapters.SimpleAdapter;
+import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
@@ -33,7 +37,7 @@ import es.procoders.spanisholivetechnology.questions.Questions;
  * @since API 21
  * @version 1.0
  */
-public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     /**
      *
@@ -64,12 +68,15 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
         if (single.getFormularios()!=null) {
             adapter = new ListViewAdapterMain(this, single.getFormularios());
-            lv.setAdapter(adapter);
+        }else{
+            single.setFormularios(new ArrayList<Formulario>());
+            adapter = new ListViewAdapterMain(this, single.getFormularios());
         }
+        lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                single.setRespuesta(single.getFormularios().get(i).getRespuestas());
+                single.setPositionformulario(i);
                 Intent inte= new Intent(view.getContext(), BiomasaActivity.class);
                 startActivity(inte);
             }
@@ -79,33 +86,41 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             public void onClick(View view) {
                 DialogPlus dialog = DialogPlus.newDialog(view.getContext())
                         .setAdapter(adapter2)
+                        .setHeader(R.layout.menu_header)
+                        .setInAnimation(R.transition.slide_in_bottom)
+                        .setOutAnimation(R.transition.slide_out_bottom)
                         .setOnItemClickListener(new OnItemClickListener() {
                             @Override
                             public void onItemClick(DialogPlus dialog, Object item, View view, int position) {
                                 qu =new Questions(view.getContext());
+                                Formulario form = new Formulario();
                                 switch (position){
                                     case 0:
-                                        single.setRespuesta(qu.getPlantacion());
+                                        form.setRespuestas(qu.getPlantacion());
                                         break;
                                     case 1:
-                                        single.setRespuesta(qu.getAlmazara());
+                                        form.setRespuestas(qu.getAlmazara());
                                         break;
                                     case 2:
-                                        single.setRespuesta(qu.getFabricaAceituna());
+                                        form.setRespuestas(qu.getFabricaAceituna());
                                         break;
                                     case 3:
-                                        single.setRespuesta(qu.getComercioAceite());
+                                        form.setRespuestas(qu.getComercioAceite());
                                         break;
                                     case 4:
-                                        single.setRespuesta(qu.getComercioAceituna());
+                                        form.setRespuestas(qu.getComercioAceituna());
                                         break;
                                     case 5:
-                                        single.setRespuesta(qu.getBiomasa());
+                                        form.setRespuestas(qu.getBiomasa());
                                         break;
                                 }
-
+                                form.setUser(single.getUser());
+                                form.setTipo(form.getRespuestas().get(0).getPregunta().getTipo());
+                                single.getFormularios().add(form);
+                                single.setPositionformulario(single.getFormularios().size()-1);
                                 Intent inte= new Intent(view.getContext(), BiomasaActivity.class);
                                 startActivity(inte);
+                                dialog.dismiss();
                             }
                         })
                         .setExpanded(false)
@@ -119,10 +134,18 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     }
 
-
     @Override
-    public void onClick(View view) {
-        Intent inte= new Intent(this, BiomasaActivity.class);
-        startActivity(inte);
+    protected void onResume() {
+        super.onResume();
+        if (new BiomasaDAO().recuperarLocal(this) != null){
+            GeneralSingleton.getInstance().setFormularios(new BiomasaDAO().recuperarLocal(this));
+        }
+        if (single.getFormularios()!=null) {
+            adapter = new ListViewAdapterMain(this, single.getFormularios());
+        }else{
+            single.setFormularios(new ArrayList<Formulario>());
+            adapter = new ListViewAdapterMain(this, single.getFormularios());
+        }
+        lv.setAdapter(adapter);
     }
 }
