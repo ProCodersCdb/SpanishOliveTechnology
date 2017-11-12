@@ -114,7 +114,6 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                                 Formulario form = new Formulario();
                                 switch (position){
                                     case 0:
-                                        single.getFormularios().get(single.getPositionformulario()).setDate(new Date());
                                         biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
                                         getActivity().onBackPressed();
                                         break;
@@ -124,8 +123,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                                             biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
                                             getActivity().onBackPressed();
                                         } else{
-                                            Snackbar.make(view, "No se han rellenado los requeridos, el formulario solo se guardará.", Snackbar.LENGTH_SHORT).show();
-                                            single.getFormularios().get(single.getPositionformulario()).setDate(new Date());
+                                            Toast.makeText(view.getContext()    , "Formulario no enviado, debes rellenar todos los campos requeridos", Toast.LENGTH_SHORT).show();
                                             biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
                                             getActivity().onBackPressed();
                                         }
