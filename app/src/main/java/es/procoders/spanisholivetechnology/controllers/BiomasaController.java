@@ -46,6 +46,9 @@ public class BiomasaController {
 
         controller = GeneralSingleton.getInstance();
 
+
+// ############################# Control de eventos para los editText y descripciones ############################
+
         switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()){
 
             case R.layout.bio_details_5:
