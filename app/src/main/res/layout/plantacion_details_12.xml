@@ -41,20 +41,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
-                android:text="@string/bioQ8Tittle"
+                android:text="@string/plantacionQ12"
                 android:textSize="@dimen/optionTittleSizeMin"
+                android:layout_margin="10dp"
                 android:textColor="@color/colorWhite"
                 android:gravity="center"
                 android:paddingTop="40dp"
+                android:layout_marginBottom="5sp"
                 android:layout_gravity="center_horizontal"/>
 
             <TextView
-                android:id="@+id/bioQ8Description"
+                android:id="@+id/plantacionQ12Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
-                android:text="@string/bioQ8Description"
+                android:text="@string/plantacionQ12Description"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"/>
 
@@ -87,7 +89,7 @@
 
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/til_nombre_Q8"
+                android:id="@+id/til_nombre_Q12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -96,8 +98,8 @@
                 android:gravity="center_horizontal">
 
                 <EditText
-                    android:id="@+id/bioQ8edt"
-                    android:layout_width="191dp"
+                    android:id="@+id/plantacionQ12edt"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
@@ -105,8 +107,8 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:fontFamily="@font/arial"
-                    android:hint="Escriba su comentario"
-                    android:inputType="textMultiLine" />
+                    android:hint="Indicar nº de horas"
+                    android:inputType="number" />
 
             </android.support.design.widget.TextInputLayout>
 

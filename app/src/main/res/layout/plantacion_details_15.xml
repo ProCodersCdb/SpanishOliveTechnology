@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
-                android:text="@string/bioQ8Tittle"
+                android:text="@string/plantacionQ15Tittle"
                 android:textSize="@dimen/optionTittleSizeMin"
                 android:textColor="@color/colorWhite"
                 android:gravity="center"
@@ -49,12 +49,12 @@
                 android:layout_gravity="center_horizontal"/>
 
             <TextView
-                android:id="@+id/bioQ8Description"
+                android:id="@+id/plantacionQ15Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
-                android:text="@string/bioQ8Description"
+                android:text="@string/plantacionQ15Description"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"/>
 
@@ -87,7 +87,7 @@
 
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/til_nombre_Q8"
+                android:id="@+id/til_nombre_Q15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -96,7 +96,7 @@
                 android:gravity="center_horizontal">
 
                 <EditText
-                    android:id="@+id/bioQ8edt"
+                    android:id="@+id/plantacionQ15edt"
                     android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"

@@ -41,22 +41,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
-                android:text="@string/bioQ8Tittle"
                 android:textSize="@dimen/optionTittleSizeMin"
                 android:textColor="@color/colorWhite"
                 android:gravity="center"
                 android:paddingTop="40dp"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:text="@string/plantacionQ3Tittle"/>
 
             <TextView
-                android:id="@+id/bioQ8Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
-                android:text="@string/bioQ8Description"
                 android:textColor="@color/colorWhite"
-                android:layout_gravity="bottom"/>
+                android:layout_gravity="bottom"
+                android:text="@string/plantacionQ3Description"/>
 
             <Button
                 android:id="@+id/btnOptionSave"
@@ -86,29 +85,57 @@
             android:fontFamily="@font/arial">
 
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/til_nombre_Q8"
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:id="@+id/GrupoDet3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_horizontal">
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="42dp"
+                tools:layout_editor_absoluteY="273dp"
+                android:divider="@drawable/option_separator"
+                android:showDividers="middle">
 
-                <EditText
-                    android:id="@+id/bioQ8edt"
-                    android:layout_width="191dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
+                <RadioButton
+                    android:id="@+id/det3opcion1"
+                    android:text="@string/plantacionQ3Option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:checked="false"
                     android:fontFamily="@font/arial"
-                    android:hint="Escriba su comentario"
-                    android:inputType="textMultiLine" />
+                    android:gravity="center"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/optionRbtnSizeMax" />
 
-            </android.support.design.widget.TextInputLayout>
+                <RadioButton
+                    android:id="@+id/det3opcion2"
+                    android:text="@string/plantacionQ3Option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/arial"
+                    android:gravity="center"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/optionRbtnSizeMax" />
+
+                <RadioButton
+                    android:id="@+id/det3opcion3"
+                    android:text="@string/plantacionQ3Option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/arial"
+                    android:gravity="center"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/optionRbtnSizeMax" />
+            </RadioGroup>
 
         </LinearLayout>
 
