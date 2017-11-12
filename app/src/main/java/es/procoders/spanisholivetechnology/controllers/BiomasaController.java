@@ -49,27 +49,27 @@ public class BiomasaController {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout()) {
+                switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
                     case R.layout.bio_details_1:
                         if(det1opcion1.isChecked()){
 
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det1opcion1.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det1opcion1.getText().toString());
 
                         } else if(det1opcion2.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det1opcion2.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det1opcion2.getText().toString());
 
                         }
                         break;
 
                     case R.layout.bio_details_2:
                         if(det2opcion1.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det2opcion1.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det2opcion1.getText().toString());
 
                         } else if(det2opcion2.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det2opcion2.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det2opcion2.getText().toString());
 
                         } else if(det2opcion3.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det2opcion3.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det2opcion3.getText().toString());
 
                         }
 
@@ -77,54 +77,54 @@ public class BiomasaController {
 
                     case R.layout.bio_details_3:
                         if(det3opcion1.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det3opcion1.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det3opcion1.getText().toString());
 
                         } else if(det3opcion2.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det3opcion2.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det3opcion2.getText().toString());
 
                         } else if(det3opcion3.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det3opcion3.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det3opcion3.getText().toString());
 
                         }
                         break;
 
                     case R.layout.bio_details_4:
                         if(det4opcion1.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det4opcion1.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det4opcion1.getText().toString());
 
                         } else if(det4opcion2.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det4opcion2.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det4opcion2.getText().toString());
 
                         }
                         break;
 
                     case R.layout.bio_details_5:
                         if(!TextUtils.isEmpty(edtDetails5.getText())){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(edtDetails5.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(edtDetails5.getText().toString());
 
                         }
                         break;
 
                     case R.layout.bio_details_6:
                         if(!TextUtils.isEmpty(edtDetails6.getText())){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(edtDetails6.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(edtDetails6.getText().toString());
 
                         }
                         break;
 
                     case R.layout.bio_details_7:
                         if(det7opcion1.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det7opcion1.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det7opcion1.getText().toString());
 
                         } else if(det7opcion2.isChecked()){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(det7opcion2.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(det7opcion2.getText().toString());
 
                         }
                         break;
 
                     case R.layout.bio_details_8:
                         if(!TextUtils.isEmpty(edtDetails8.getText())){
-                            controller.getRespuesta().get(controller.getPosition()).setStr(edtDetails8.getText().toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(edtDetails8.getText().toString());
 
                         }
                         break;

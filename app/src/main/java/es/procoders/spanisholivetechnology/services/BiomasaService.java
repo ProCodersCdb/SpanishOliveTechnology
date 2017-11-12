@@ -16,8 +16,8 @@ public class BiomasaService {
     public Boolean isReady(ArrayList<Respuesta> mapa) {
         boolean retVal= true;
         GeneralSingleton single= GeneralSingleton.getInstance();
-        for (int i=0; i<single.getRespuesta().size();i++){
-            if (single.getRespuesta().get(i).getPregunta().isRequired() && retVal){
+        for (int i=0; i<single.getFormularios().get(single.getPositionformulario()).getRespuestas().size();i++){
+            if (single.getFormularios().get(single.getPositionformulario()).getRespuestas().get(i).getPregunta().isRequired() && retVal){
                 if (mapa.get(i).getStr() == null){
                     retVal=false;
                 }

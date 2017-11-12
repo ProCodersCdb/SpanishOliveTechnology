@@ -48,7 +48,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
      */
 
    //ListView lv;
-    Questions bq;
+
     BaseAdapter adapter;
     GeneralSingleton single;
     FloatingActionButton floating;
@@ -69,7 +69,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
         rootView = inflater.inflate(R.layout.fragment_biomasa_fragment_main, container, false);
         // Inflate the layout for this fragment
         single = GeneralSingleton.getInstance();
-        bq = new Questions(rootView.getContext());
+
 
         initViews(rootView);
         return rootView;
@@ -83,7 +83,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        adapter = new ListViewAdapter(rootView.getContext(), single.getRespuesta());
+        adapter = new ListViewAdapter(rootView.getContext(), single.getFormularios().get(single.getPositionformulario()).getRespuestas());
         setListAdapter(adapter);
         getListView().setOnItemClickListener(this);
     }
@@ -95,11 +95,10 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
         floating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(finalServices.isReady(single.getRespuesta())) {
-                    ArrayList<Formulario> formulario = single.getFormularios();
-                    formulario.add(createFormulary());
-                    single.setFormularios(formulario);
+                if(finalServices.isReady(single.getFormularios().get(single.getPositionformulario()).getRespuestas())) {
+                    single.getFormularios().get(single.getPositionformulario()).setDate(new Date());
                     biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
+                    getActivity().onBackPressed();
                 } else{
                     Snackbar.make(view, "Se deben rellenar los campos requeridos", Snackbar.LENGTH_SHORT).show();
                 }
@@ -113,14 +112,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
 
     }
 
-    private Formulario createFormulary() {
-        TipoRespuesta tipo = single.getRespuesta().get(0).getPregunta().getTipo();
-        Usuario user = single.getUser();
-        ArrayList<Respuesta> respuestas = single.getRespuesta();
-        Date date = new Date();
-        Formulario form = new Formulario(tipo, user, respuestas, date);
-        return form;
-    }
+
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
