@@ -7,19 +7,21 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.TreeMap;
 
+import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 
-public class BiomasaDAO implements GestionDAO<TreeMap<Pregunta, Respuesta>>{
+public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
 
     private final static String fileName = "datos.dat";
 
 
     @Override
-    public void guardarLocal(TreeMap<Pregunta, Respuesta> e, Context c) {
+    public void guardarLocal(ArrayList<Formulario> e, Context c) {
         try {
             FileOutputStream fos = c.openFileOutput(fileName, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -31,15 +33,15 @@ public class BiomasaDAO implements GestionDAO<TreeMap<Pregunta, Respuesta>>{
         }
     }
 
-    public TreeMap<Pregunta, Respuesta> recuperarLocal (Context c) {
+    public ArrayList<Formulario> recuperarLocal (Context c) {
 
-        TreeMap<Pregunta, Respuesta> b = new TreeMap<>();
+       ArrayList<Formulario> b = new ArrayList<>();
 
         try {
             FileInputStream fis = c.openFileInput (fileName);
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            b = (TreeMap<Pregunta, Respuesta>) ois.readObject();
+            b = (ArrayList<Formulario>) ois.readObject();
 
             ois.close();
             fis.close();
