@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -13,12 +14,19 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.TreeMap;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
+import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
+import es.procoders.spanisholivetechnology.beans.TipoRespuesta;
+import es.procoders.spanisholivetechnology.beans.Usuario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
 import es.procoders.spanisholivetechnology.questions.Questions;
@@ -75,9 +83,6 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (single.getRespuesta()==null){
-        single.setRespuesta(new Questions(getContext()).getBiomasa());
-        }
         adapter = new ListViewAdapter(rootView.getContext(), single.getRespuesta());
         setListAdapter(adapter);
         getListView().setOnItemClickListener(this);
@@ -90,10 +95,13 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
         floating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(finalServices.isReady(single.getMapa())) {
-                    biomasaDAO.guardarLocal(single.getMapa(), view.getContext());
+                if(finalServices.isReady(single.getRespuesta())) {
+                    ArrayList<Formulario> formulario = single.getFormularios();
+                    formulario.add(createFormulary());
+                    single.setFormularios(formulario);
+                    biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
                 } else{
-                    Toast.makeText(view.getContext(), "No se puede enviar la petición. Formulario no relleno.", Toast.LENGTH_LONG).show();
+                    Snackbar.make(view, "Se deben rellenar los campos requeridos", Snackbar.LENGTH_SHORT).show();
                 }
             }
         });
@@ -103,6 +111,15 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
          * desiganadas en BiomasaServices
          */
 
+    }
+
+    private Formulario createFormulary() {
+        TipoRespuesta tipo = single.getRespuesta().get(0).getPregunta().getTipo();
+        Usuario user = single.getUser();
+        ArrayList<Respuesta> respuestas = single.getRespuesta();
+        Date date = new Date();
+        Formulario form = new Formulario(tipo, user, respuestas, date);
+        return form;
     }
 
     @Override

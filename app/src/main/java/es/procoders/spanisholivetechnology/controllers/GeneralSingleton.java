@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
+import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.beans.Usuario;
@@ -26,8 +27,18 @@ public class GeneralSingleton {
     private ArrayList<Respuesta> respuesta;
     private int position;
     private android.support.v4.app.FragmentManager fragmentManager;
-    private TreeMap<Pregunta, Respuesta> mapa;
     private Usuario user;
+    private ArrayList<Formulario> formularios;
+
+
+
+    public ArrayList<Formulario> getFormularios() {
+        return formularios;
+    }
+
+    public void setFormularios(ArrayList<Formulario> formularios) {
+        this.formularios = formularios;
+    }
 
     public Usuario getUser() {
         return user;
@@ -69,20 +80,7 @@ public class GeneralSingleton {
 
 
     private GeneralSingleton(){
-        if (mapa==null){
-            mapa =new TreeMap<>();
-        }
-    }
 
-
-
-
-    public TreeMap<Pregunta, Respuesta> getMapa() {
-        return mapa;
-    }
-
-    public void setMapa(TreeMap<Pregunta, Respuesta> mapa) {
-        this.mapa = mapa;
     }
 
 

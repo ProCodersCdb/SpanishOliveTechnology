@@ -43,4 +43,29 @@ public class Questions implements GeneralControler {
         bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails8), false, R.layout.bio_details_8), null));
         return bioPreguntas;
     }
+
+    @Override
+    public ArrayList<Respuesta> getPlantacion() {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Respuesta> getFabricaAceituna() {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Respuesta> getComercioAceite() {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Respuesta> getComercioAceituna() {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Respuesta> getAlmazara() {
+        return null;
+    }
 }

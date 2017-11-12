@@ -60,6 +60,13 @@
 
     <!--                                 -->
 
+    <string name="biomasa">Comercio Biomasa</string>
+    <string name="comercioa">Comercio aceituna de mesa</string>
+    <string name="comercioaceite">Comercio aceite de oliva</string>
+    <string name="almazara">Almazara</string>
+    <string name="fabricaace">Fabrica aceituna de mesa</string>
+    <string name="plantacion">Plantación</string>
+
     <!-- Descripciones de opciones -->
     <string name="descriptionDetails1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

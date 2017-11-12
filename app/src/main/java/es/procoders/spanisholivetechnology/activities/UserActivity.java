@@ -47,6 +47,7 @@ public class UserActivity extends AppCompatActivity {
                 editor.commit();
                 Intent inte = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(inte);
+                finish();
             }
         });
     }
@@ -57,6 +58,7 @@ public class UserActivity extends AppCompatActivity {
             GeneralSingleton.getInstance().setUser(user);
             Intent inte = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(inte);
+            finish();
         }
     }
 }
