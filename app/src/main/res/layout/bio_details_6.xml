@@ -49,6 +49,7 @@
                 android:layout_gravity="center_horizontal"/>
 
             <TextView
+                android:id="@+id/bioQ6Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"

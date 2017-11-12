@@ -52,11 +52,14 @@
                 android:id="@+id/bioQ5Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:allowUndo="false"
+                android:ems="10"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
                 android:text="@string/bioQ5Description"
                 android:textColor="@color/colorWhite"
-                android:layout_gravity="bottom"/>
+                android:visibility="visible" />
 
             <Button
                 android:id="@+id/btnOptionSave"
