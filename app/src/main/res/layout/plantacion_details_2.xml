@@ -57,7 +57,7 @@
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"
                 android:id="@+id/plantacionDescriptionQ2"
-                android:text="@string/plantacionDescriptionQ2"/>
+                android:text="@string/plantacionQ2Description"/>
 
             <Button
                 android:id="@+id/btnOptionSave"
