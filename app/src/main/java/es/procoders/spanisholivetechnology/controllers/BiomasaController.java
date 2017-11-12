@@ -6,11 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.beans.Pregunta;
-import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 /**
  * Created by bjfem on 11/11/2017.
@@ -19,10 +18,10 @@ import es.procoders.spanisholivetechnology.beans.Respuesta;
 public class BiomasaController {
     RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     EditText edtDetails5, edtDetails6, edtDetails8;
-    Button save;
     private View view;
     GeneralSingleton controller;
     Activity activity;
+    Button save, back;
 
 
 
@@ -39,18 +38,23 @@ public class BiomasaController {
         det3opcion3 = v.findViewById(R.id.det3opcion3);
         det4opcion1 = v.findViewById(R.id.det4opcion1);
         det4opcion2 = v.findViewById(R.id.det4opcion2);
-        edtDetails5 = v.findViewById(R.id.edtDetails5);
-        edtDetails6 = v.findViewById(R.id.edtDetails6);
+        edtDetails5 = v.findViewById(R.id.bioQ5edt);
+        edtDetails6 = v.findViewById(R.id.bioQ6edt);
         det7opcion1 = v.findViewById(R.id.det7opcion1);
         det7opcion2 = v.findViewById(R.id.det7opcion2);
         edtDetails8 = v.findViewById(R.id.edtDetails8);
-        save = v.findViewById(R.id.btnSaveBiomasa);
+
+        save = v.findViewById(R.id.btnOptionSave);
+        back = v.findViewById(R.id.btnBack);
+
         controller = GeneralSingleton.getInstance();
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switch (controller.getRespuesta().get(controller.getPosition()).getPregunta().getLayout()) {
                     case R.layout.bio_details_1:
+
                         if(det1opcion1.isChecked()){
 
                             controller.getRespuesta().get(controller.getPosition()).setStr(det1opcion1.getText().toString());
@@ -134,6 +138,14 @@ public class BiomasaController {
                 //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
                 activity.onBackPressed();
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.onBackPressed();
             }
         });
     }

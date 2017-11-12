@@ -33,14 +33,14 @@ public class Questions implements GeneralControler {
 
     @Override
     public ArrayList<Respuesta> getBiomasa() {
-        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails1), false, R.layout.bio_details_1), null));
-        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails2), true, R.layout.bio_details_2), null));
-        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails3), true, R.layout.bio_details_3), null));
-        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails4), false, R.layout.bio_details_4), null));
-        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails5), false, R.layout.bio_details_5), null));
-        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails6), true, R.layout.bio_details_6), null));
-        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails7), true, R.layout.bio_details_7), null));
-        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.txtDetails8), false, R.layout.bio_details_8), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.bioQ1), false, R.layout.bio_details_1), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.bioQ2), true, R.layout.bio_details_2), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.bioQ3), true, R.layout.bio_details_3), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.bioQ4), false, R.layout.bio_details_4), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.bioQ5), false, R.layout.bio_details_5), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.bioQ6), true, R.layout.bio_details_6), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.bioQ7), true, R.layout.bio_details_7), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.BIOMASA, res.getString(R.string.bioQ8), false, R.layout.bio_details_8), null));
         return bioPreguntas;
     }
 
