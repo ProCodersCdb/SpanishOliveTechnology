@@ -96,6 +96,7 @@
                 android:gravity="center_horizontal">
 
 
+
                 <EditText
                     android:id="@+id/almanzaraQ15edt"
                     android:layout_width="191dp"
