@@ -46,7 +46,22 @@ public class Questions implements GeneralControler {
 
     @Override
     public ArrayList<Respuesta> getPlantacion() {
-        return null;
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ1), true, R.layout.plantacion_details_1), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ2), true, R.layout.plantacion_details_2), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ3), true, R.layout.plantacion_details_3), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ4), true, R.layout.plantacion_details_4), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ5), true, R.layout.plantacion_details_5), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ6), false, R.layout.plantacion_details_6), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ7), false, R.layout.plantacion_details_7), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ8), false, R.layout.plantacion_details_8), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ9), false, R.layout.plantacion_details_9), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ10), false, R.layout.plantacion_details_10), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ11), false, R.layout.plantacion_details_11), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ12), false, R.layout.plantacion_details_12), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ13), false, R.layout.plantacion_details_13), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ14), false, R.layout.plantacion_details_14), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.PLANTACION, res.getString(R.string.plantacionQ15), false, R.layout.plantacion_details_15), null));
+        return bioPreguntas;
     }
 
     @Override

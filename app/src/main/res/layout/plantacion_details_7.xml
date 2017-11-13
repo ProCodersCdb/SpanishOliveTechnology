@@ -49,6 +49,7 @@
                 android:text="@string/plantacionQ7Tittle"/>
 
             <TextView
+                android:id="@+id/plantacionQ7Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
@@ -86,7 +87,7 @@
 
 
             <RadioGroup
-                android:id="@+id/GrupoDet7"
+                android:id="@+id/plantacionQ7Group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -97,7 +98,7 @@
                 android:showDividers="middle">
 
                 <RadioButton
-                    android:id="@+id/det7opcion1"
+                    android:id="@+id/plantacionQ7Option1"
                     android:text="@string/plantacionQ7Option1"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
@@ -111,7 +112,7 @@
                     android:textSize="@dimen/optionRbtnSizeMax" />
 
                 <RadioButton
-                    android:id="@+id/det7opcion2"
+                    android:id="@+id/plantacionQ7Option2"
                     android:text="@string/plantacionQ7Option2"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"

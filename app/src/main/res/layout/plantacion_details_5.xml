@@ -86,7 +86,7 @@
 
 
             <RadioGroup
-                android:id="@+id/GrupoDet5"
+                android:id="@+id/plantacionQ5Group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -97,7 +97,7 @@
                 android:showDividers="middle">
 
                 <RadioButton
-                    android:id="@+id/det5opcion1"
+                    android:id="@+id/plantacionQ5Option1"
                     android:text="@string/plantacionQ5Option1"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
@@ -111,7 +111,7 @@
                     android:textSize="@dimen/optionRbtnSizeMax" />
 
                 <RadioButton
-                    android:id="@+id/det5opcion2"
+                    android:id="@+id/plantacionQ5Option2"
                     android:text="@string/plantacionQ5Option2"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"

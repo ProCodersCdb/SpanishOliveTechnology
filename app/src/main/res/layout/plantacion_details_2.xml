@@ -56,7 +56,7 @@
                 android:padding="20sp"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"
-                android:id="@+id/plantacionDescriptionQ2"
+                android:id="@+id/plantacionQ2Description"
                 android:text="@string/plantacionQ2Description"/>
 
             <Button
