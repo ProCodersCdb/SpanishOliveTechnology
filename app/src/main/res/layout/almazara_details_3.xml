@@ -56,7 +56,7 @@
                 android:padding="20sp"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"
-                android:id="@+id/almazaraDescriptionQ3"
+                android:id="@+id/almazaraQ3Description"
                 android:text="@string/almazaraQ3Description"/>
 
             <Button
@@ -68,7 +68,7 @@
                 android:background="@color/transparent"
                 android:visibility="visible"
                 android:layout_marginRight="10sp"
-                android:text="Guardar  "
+                android:text="@string/btnOptionSave"
                 android:fontFamily="@font/arial"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"

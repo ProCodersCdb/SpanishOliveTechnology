@@ -68,7 +68,7 @@
                 android:background="@color/transparent"
                 android:visibility="visible"
                 android:layout_marginRight="10sp"
-                android:text="Guardar  "
+                android:text="@string/btnOptionSave"
                 android:fontFamily="@font/arial"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"
