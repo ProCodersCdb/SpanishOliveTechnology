@@ -53,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
+                android:id="@+id/bioQ4Description"
                 android:text="@string/bioQ4Description"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"/>
@@ -66,7 +67,7 @@
                 android:background="@color/transparent"
                 android:visibility="visible"
                 android:layout_marginRight="10sp"
-                android:text="Guardar  "
+                android:text="@string/btnOptionSave"
                 android:fontFamily="@font/arial"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"

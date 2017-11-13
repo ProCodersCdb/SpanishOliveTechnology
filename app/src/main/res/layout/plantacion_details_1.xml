@@ -68,7 +68,7 @@
                 android:background="@color/transparent"
                 android:visibility="visible"
                 android:layout_marginRight="10sp"
-                android:text="Guardar  "
+                android:text="@string/btnOptionSave"
                 android:fontFamily="@font/arial"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"
@@ -106,7 +106,7 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:fontFamily="@font/arial"
-                    android:hint="Escriba el pais"
+                    android:hint="@string/plantacionQ1HintOpcion1"
                     android:inputType="textShortMessage" />
 
             </android.support.design.widget.TextInputLayout>

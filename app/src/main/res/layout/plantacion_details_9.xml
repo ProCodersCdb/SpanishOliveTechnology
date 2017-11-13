@@ -49,6 +49,8 @@
                 android:text="@string/plantacionQ9Tittle"/>
 
             <TextView
+
+                android:id="@+id/plantacionQ9Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
@@ -66,7 +68,7 @@
                 android:background="@color/transparent"
                 android:visibility="visible"
                 android:layout_marginRight="10sp"
-                android:text="Guardar  "
+                android:text="@string/btnOptionSave"
                 android:fontFamily="@font/arial"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"

@@ -24,6 +24,12 @@
     <string name="fabricaace">Fabrica aceituna de mesa</string>
     <string name="plantacion">Plantación</string>
 
+
+    <!-- ####################################### OTROS #################################### -->
+
+    <!--SeleccionMultiple-->
+    <string name="seleccionMultiple">Seleccione una o varias respuestas</string>
+
     <!-- ####################################### STRINGS LOGIN #################################### -->
 
 
@@ -46,6 +52,18 @@
     <string name="plantacionQ13">Cultivos en la zona</string>
     <string name="plantacionQ14">Experiencia en olivicultura</string>
     <string name="plantacionQ15">Comentarios</string>
+
+    <!-- Hint Plantacion -->
+
+    <string name="plantacionQ1HintOpcion1">Escribe el país</string>
+    <string name="plantacionQ2HintOpcion2">Indique la superficie</string>
+    <string name="plantacionQ6HintOpcion6">Metros cúbicos por ha</string>
+    <string name="plantacionQ7HintOpcion7">Indique caudal</string>
+    <string name="plantacionQ10HintOpcion10">Nº de años con registros</string>
+    <string name="plantacionQ11HintOpcion11">Indicar cifra</string>
+    <string name="plantacionQ12HintOpcion12">Nº de horas</string>
+    <string name="plantacionQ13HintOpcion13">Indique cultivos</string>
+    <string name="plantacionQ15HintOpcion15">Comentarios</string>
 
     <!-- Títulos Plantacion -->
 
@@ -237,6 +255,16 @@
     <string name="fabricaQ12">Experiencia en aceituna de mesa</string>
     <string name="fabricaQ13">Comentarios</string>
 
+<!-- Hint fabrica aceituna mesa-->
+
+    <string name="fabricaQ1HintOption1">País y localidad</string>
+    <string name="fabricaQ2HintOption2">Cantidad estimada</string>
+    <string name="fabricaQ3HintOption3">Indicar %</string>
+    <string name="fabricaQ6HintOption6">Variedades a trabajar</string>
+    <string name="fabricaQ8HintOption8">gr/Kg</string>
+    <string name="fabricaQ9HintOption9">Escribir rango</string>
+    <string name="fabricaQ13HintOption13">Comentarios</string>
+
     <!-- Titulos fabrica aceituna mesa-->
 
     <string name="fabricaQ1Tittle">País y Localidad</string>
@@ -324,6 +352,17 @@
     <string name="comercioAceiteQ12">Análisis de calidad disponible</string>
     <string name="comercioAceiteQ13">Experiencia exportación</string>
     <string name="comercioAceiteQ14">Comentarios</string>
+
+
+    <!--Hint comercio aceite de oliva-->
+
+    <string name="comercioAceiteQ5HintOpcion5">Indicar ml/L</string>
+    <string name="comercioAceiteQ7HintOpcion7">Litros granel/ nº botellas embasado</string>
+    <string name="comercioAceiteQ8HintOpcion8">País destino</string>
+    <string name="comercioAceiteQ10HintOpcion10">País de origen</string>
+    <string name="comercioAceiteQ11HintOpcion11">Variedad</string>
+    <string name="comercioAceiteQ13HintOpcion13">Indicar mercados</string>
+    <string name="comercioAceiteQ14HintOpcion14">Comentarios</string>
 
     <!-- Títulos comercio aceite de oliva-->
 
@@ -413,6 +452,13 @@
     <string name="comercioAceitunaQ7">Calibres</string>
     <string name="comercioAceitunaQ8">Cantidades</string>
     <string name="comercioAceitunaQ9">País de origen para venta</string>
+
+    <!-- Hint Aceituna Mesa -->
+
+    <string name="comercioAceitunaQ6Option6">Kg/gr</string>
+    <string name="comercioAceitunaQ7Option7">Indicar</string>
+    <string name="comercioAceitunaQ8Option8">Cantidad</string>
+    <string name="comercioAceitunaQ9Option9">Pais Origen Venta</string>
 
     <!-- Titulos comercio aceituna de mesa-->
 
@@ -536,6 +582,12 @@
 
 
     <string name="optionSubTittleType">(Escriba en el campo de texto)</string>
+
+
+    <!-- Hint de Biomasa-->
+    <string name="biomasaQ5Opcion5">Cantidad en Kg</string>
+    <string name="biomasaQ6Opcion6">Escribe el país</string>
+    <string name="biomasaQ8Opcion8">Comentarios</string>
 
 
     <!--                                 -->

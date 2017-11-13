@@ -41,23 +41,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
+                android:text="@string/comercioAceitunaQ9Tittle"
                 android:textSize="@dimen/optionTittleSizeMin"
                 android:textColor="@color/colorWhite"
                 android:gravity="center"
                 android:paddingTop="40dp"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/plantacionQ10Tittle"/>
+                android:layout_gravity="center_horizontal"/>
 
             <TextView
-
-                android:id="@+id/plantacionQ10Description"
+                android:id="@+id/comercioAceitunaQ9Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
+                android:text="@string/comercioAceitunaQ9Description"
                 android:textColor="@color/colorWhite"
-                android:layout_gravity="bottom"
-                android:text="@string/plantacionQ10Description"/>
+                android:layout_gravity="bottom"/>
 
             <Button
                 android:id="@+id/btnOptionSave"
@@ -81,65 +80,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_weight="30"
             android:layout_marginTop="70sp"
             android:fontFamily="@font/arial">
 
 
-            <RadioGroup
-                android:id="@+id/GrupoDet10"
-                android:layout_width="wrap_content"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_nombre_Q8"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="42dp"
-                tools:layout_editor_absoluteY="273dp"
-                android:divider="@drawable/option_separator"
-                android:showDividers="middle">
-
-                <RadioButton
-                    android:id="@+id/det10opcion1"
-                    android:text="@string/plantacionQ10Option1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rbtn_selector"
-                    android:button="@null"
-                    android:checked="false"
-                    android:fontFamily="@font/arial"
-                    android:gravity="center"
-                    android:textColor="@drawable/rbtn_textcolor_selector"
-                    android:textSize="@dimen/optionRbtnSizeMax" />
-
-                <RadioButton
-                    android:id="@+id/det10opcion2"
-                    android:text="@string/plantacionQ10Option2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rbtn_selector"
-                    android:button="@null"
-                    android:fontFamily="@font/arial"
-                    android:gravity="center"
-                    android:textColor="@drawable/rbtn_textcolor_selector"
-                    android:textSize="@dimen/optionRbtnSizeMax" />
-
-            </RadioGroup>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:ems="10"
-                android:fontFamily="@font/arial"
-                android:hint="Nº de años de registros"
-                android:inputType="number"
-                android:gravity="center_vertical"
-                android:id="@+id/plantacionQ10edt"/>
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/comercioAcitunaQ9edt"
+                    android:layout_width="191dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/arial"
+                    android:hint="@string/comercioAceitunaQ9Option9"
+                    android:inputType="textMultiLine" />
+
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 

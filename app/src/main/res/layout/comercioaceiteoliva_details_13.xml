@@ -46,18 +46,17 @@
                 android:gravity="center"
                 android:paddingTop="40dp"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/plantacionQ10Tittle"/>
+                android:text="@string/comercioAceiteQ13Tittle"/>
 
             <TextView
-
-                android:id="@+id/plantacionQ10Description"
+                android:id="@+id/comercioAceiteQ13Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"
-                android:text="@string/plantacionQ10Description"/>
+                android:text="@string/comercioAceiteQ13Description"/>
 
             <Button
                 android:id="@+id/btnOptionSave"
@@ -88,7 +87,7 @@
 
 
             <RadioGroup
-                android:id="@+id/GrupoDet10"
+                android:id="@+id/comercioAceiteQ13Group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -99,8 +98,8 @@
                 android:showDividers="middle">
 
                 <RadioButton
-                    android:id="@+id/det10opcion1"
-                    android:text="@string/plantacionQ10Option1"
+                    android:id="@+id/comercioAceiteQ13Option1"
+                    android:text="@string/comercioAceiteQ13Option1"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_weight="1"
@@ -113,8 +112,8 @@
                     android:textSize="@dimen/optionRbtnSizeMax" />
 
                 <RadioButton
-                    android:id="@+id/det10opcion2"
-                    android:text="@string/plantacionQ10Option2"
+                    android:id="@+id/comercioAceiteQ13Option2"
+                    android:text="@string/comercioAceiteQ13Option2"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_weight="1"
@@ -128,6 +127,7 @@
             </RadioGroup>
 
             <EditText
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -136,10 +136,10 @@
                 android:layout_marginTop="40dp"
                 android:ems="10"
                 android:fontFamily="@font/arial"
-                android:hint="Nº de años de registros"
+                android:hint="@string/comercioAceiteQ13HintOpcion13"
                 android:inputType="number"
                 android:gravity="center_vertical"
-                android:id="@+id/plantacionQ10edt"/>
+                android:id="@+id/comercioAceiteQ13edt"/>
 
         </LinearLayout>
 
