@@ -10,68 +10,92 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <android.support.design.widget.CoordinatorLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="60"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical|center_horizontal"
             android:background="@color/colorPrimary"
-            android:elevation="26dp"
-            android:fontFamily="@font/arial"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:weightSum="2">
+            android:elevation="16dp"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp">
 
             <Button
                 android:id="@+id/btnBack"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_gravity="start"
-                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="50"
                 android:background="@color/transparent"
-                android:visibility="visible"
+                android:drawableStart="@drawable/ic_btn_back"
                 android:fontFamily="@font/arial"
                 android:text="@string/btnBack"
+                android:textAlignment="textStart"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
-                android:drawableStart="@drawable/ic_btn_back"
-                android:layout_marginLeft="10dp"/>
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnOptionSave"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="50"
+                android:background="@color/transparent"
+                android:drawableEnd="@drawable/ic_option_ok"
+                android:fontFamily="@font/arial"
+                android:text="Guardar  "
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@color/colorPrimary"
+            android:elevation="16dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="72dp"
+            android:paddingRight="16dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:text="@string/comercioAceiteQ2Tittle"
-                android:textSize="@dimen/optionTittleSizeMin"
+                android:textAlignment="textStart"
                 android:textColor="@color/colorWhite"
-                android:gravity="center"
-                android:paddingTop="40dp"
-                android:layout_gravity="center_horizontal"/>
+                android:textSize="@dimen/optionTittleSizeMin" />
+        </LinearLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+
+            android:elevation="16dp"
+            android:fontFamily="@font/arial"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="32dp"
+            android:weightSum="2">
 
             <TextView
-                android:id="@+id/comercioAceiteQ2Description"
+                android:id="@+id/comercioAceiteQ2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
                 android:fontFamily="@font/arial"
-                android:padding="20sp"
                 android:text="@string/comercioAceiteQ2Description"
-                android:textColor="@color/colorWhite"
-                android:layout_gravity="bottom"/>
-
-            <Button
-                android:id="@+id/btnOptionSave"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                android:background="@color/transparent"
-                android:visibility="visible"
-                android:layout_marginRight="10sp"
-                android:text="@string/btnOptionSave"
-                android:fontFamily="@font/arial"
-                android:textStyle="bold"
-                android:textColor="@color/colorWhite"
-                android:drawableEnd="@drawable/ic_option_ok"/>
+                android:textColor="@color/colorWhite" />
 
 
         </android.support.design.widget.CoordinatorLayout>
@@ -79,21 +103,19 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="0dp"
             android:layout_weight="25"
             android:fontFamily="@font/arial"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
 
             <RadioGroup
                 android:id="@+id/comercioAceiteQ2Group"
 
                 android:layout_width="249dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:divider="@drawable/option_separator"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -104,10 +126,26 @@
                 app:layout_constraintTop_toTopOf="parent">
 
 
+                <TextView
+                    android:id="@+id/txtSeleccioneVarias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/seleccionMultiple"
+                    app:layout_constraintBottom_toTopOf="@+id/comercioAceiteQ2Group"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <CheckBox
                     android:id="@+id/comercioAceiteQ2Option1"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
@@ -120,7 +158,6 @@
                     android:text="@string/comercioAceiteQ2Option1"
                     android:textColor="@drawable/rbtn_textcolor_selector"
                     android:textSize="@dimen/optionRbtnSizeMax"
-                    android:layout_marginBottom="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +165,8 @@
                 <CheckBox
                     android:id="@+id/comercioAceiteQ2Option2"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
@@ -141,7 +179,6 @@
                     android:text="@string/comercioAceiteQ2Option2"
                     android:textColor="@drawable/rbtn_textcolor_selector"
                     android:textSize="@dimen/optionRbtnSizeMax"
-                    android:layout_marginBottom="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.501"
                     app:layout_constraintStart_toStartOf="parent"
@@ -150,7 +187,8 @@
                 <CheckBox
                     android:id="@+id/comercioAceiteQ2Option3"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
@@ -163,7 +201,6 @@
                     android:text="@string/comercioAceiteQ2Option3"
                     android:textColor="@drawable/rbtn_textcolor_selector"
                     android:textSize="@dimen/optionRbtnSizeMax"
-                    android:layout_marginBottom="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/comercioAceiteQ2Option2" />
@@ -171,7 +208,8 @@
                 <CheckBox
                     android:id="@+id/comercioAceiteQ2Option4"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
@@ -182,7 +220,6 @@
                     android:fontFamily="@font/arial"
                     android:gravity="center"
                     android:text="@string/comercioAceiteQ2Option4"
-                    android:layout_marginBottom="10dp"
                     android:textColor="@drawable/rbtn_textcolor_selector"
                     android:textSize="@dimen/optionRbtnSizeMax"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -192,7 +229,7 @@
                 <CheckBox
                     android:id="@+id/comercioAceiteQ2Option5"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
@@ -211,20 +248,6 @@
 
 
             </RadioGroup>
-
-            <TextView
-                android:id="@+id/txtSeleccioneVarias"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/seleccionMultiple"
-                app:layout_constraintBottom_toTopOf="@+id/comercioAceiteQ2Group"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
 
         </android.support.constraint.ConstraintLayout>

@@ -53,7 +53,7 @@ public class BiomasaController {
         switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()){
 
             case R.layout.bio_details_5:
-                bioQ5desc = v.findViewById(R.id.bioQ5Description);
+               /* bioQ5desc = v.findViewById(R.id.bioQ5Description);
                 edtDetails5.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                     @Override
                     public void onFocusChange(View v, boolean hasFocus) {
@@ -61,7 +61,7 @@ public class BiomasaController {
                             bioQ5desc.setText(R.string.noText);
                         }
                     }
-                });
+                });*/
                 break;
 
             case R.layout.bio_details_6:
