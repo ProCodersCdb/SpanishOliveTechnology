@@ -42,8 +42,8 @@ public class PlantacionController {
         plantacionQ4Option2 = v.findViewById(R.id.plantacionQ4Option2);
         plantacionQ4Option3 = v.findViewById(R.id.plantacionQ4Option3);
         plantacionQ4Option4 = v.findViewById(R.id.plantacionQ4Option4);
-        plantacionQ5Option1 = v.findViewById(R.id.plantacionQ4Option1);
-        plantacionQ5Option2 = v.findViewById(R.id.plantacionQ4Option2);
+        plantacionQ5Option1 = v.findViewById(R.id.plantacionQ5Option1);
+        plantacionQ5Option2 = v.findViewById(R.id.plantacionQ5Option2);
         plantacionQ6edt = v.findViewById(R.id.plantacionQ6edt);
         plantacionQ7Option1 = v.findViewById(R.id.plantacionQ7Option1);
         plantacionQ7Option2 = v.findViewById(R.id.plantacionQ7Option2);
