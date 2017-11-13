@@ -56,7 +56,6 @@
             android:layout_height="match_parent"
             android:layout_weight="60"
             android:background="@color/colorPrimary"
-            android:elevation="26dp"
             android:fontFamily="@font/arial"
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -66,26 +65,24 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/arial"
-                android:text="@string/plantacionQ13"
-                android:textSize="@dimen/optionTittleSizeMin"
-                android:textColor="@color/colorWhite"
-                android:gravity="center"
-
+                android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5sp"
-                android:layout_gravity="center_horizontal"/>
+                android:fontFamily="@font/arial"
+                android:gravity="center"
+                android:text="@string/plantacionQ13"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/optionTittleSizeMin" />
 
             <TextView
                 android:id="@+id/plantacionQ13Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
                 android:text="@string/plantacionQ13Description"
-                android:textColor="@color/colorWhite"
-                android:layout_gravity="bottom"/>
-
-
+                android:textColor="@color/colorWhite" />
 
 
         </android.support.design.widget.CoordinatorLayout>

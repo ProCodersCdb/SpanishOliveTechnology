@@ -58,7 +58,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="60"
                 android:background="@color/colorPrimary"
-                android:elevation="26dp"
+
                 android:fontFamily="@font/arial"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
