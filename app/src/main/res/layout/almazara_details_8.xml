@@ -1,0 +1,176 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:background="@color/colorPrimary"
+            android:elevation="26dp"
+            android:fontFamily="@font/arial"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:visibility="visible"
+                android:fontFamily="@font/arial"
+                android:text="@string/btnBack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_btn_back"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:textSize="@dimen/optionTittleSizeMin"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/almazaraQ8Tittle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:padding="20sp"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="bottom"
+                android:text="@string/almazaraQ8Description"/>
+
+            <Button
+                android:id="@+id/btnOptionSave"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:visibility="visible"
+                android:layout_marginRight="10sp"
+                android:text="Guardar  "
+                android:fontFamily="@font/arial"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:drawableEnd="@drawable/ic_option_ok"/>
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:fontFamily="@font/arial"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_nombre_Q6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/almazaraQ8edt1"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:fontFamily="@font/arial"
+                    android:hint="@string/almazaraQ8HintOption1"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/almanzaraQ8Group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/option_separator"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                tools:layout_editor_absoluteX="42dp"
+                tools:layout_editor_absoluteY="273dp">
+
+                <RadioButton
+                    android:id="@+id/almazaraQ8option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:fontFamily="@font/arial"
+                    android:gravity="center"
+                    android:text="@string/almazaraQ8Option1"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/optionRbtnSizeMax" />
+
+                <RadioButton
+                    android:id="@+id/almazaraQ8option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/arial"
+                    android:gravity="center"
+                    android:text="@string/almazaraQ8Option2"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/optionRbtnSizeMax" />
+
+                <RadioButton
+                    android:id="@+id/almazaraQ8option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/arial"
+                    android:gravity="center"
+                    android:text="@string/almazaraQ8Option3"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:textSize="@dimen/optionRbtnSizeMax" />
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/til_nombre_Q3d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
