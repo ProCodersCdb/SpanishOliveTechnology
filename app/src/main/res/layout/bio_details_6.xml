@@ -83,7 +83,10 @@
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
                 android:text="@string/bioQ6Description"
+<<<<<<< HEAD
                 android:textColor="@color/colorWhite" />
+=======
+>>>>>>> VistasBardoAlfonso
 
 
         </android.support.design.widget.CoordinatorLayout>
@@ -117,7 +120,6 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:fontFamily="@font/arial"
-                    android:hint="Escriba el pais"
                     android:inputType="textShortMessage" />
 
             </android.support.design.widget.TextInputLayout>

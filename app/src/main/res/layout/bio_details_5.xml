@@ -87,6 +87,9 @@
                 android:textColor="@color/colorWhite"
                 android:visibility="visible" />
 
+<<<<<<< HEAD
+=======
+>>>>>>> VistasBardoAlfonso
 
         </android.support.design.widget.CoordinatorLayout>
 
@@ -119,7 +122,6 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:fontFamily="@font/arial"
-                    android:hint="Cantidad en Kg."
                     android:inputType="numberDecimal" />
 
             </android.support.design.widget.TextInputLayout>

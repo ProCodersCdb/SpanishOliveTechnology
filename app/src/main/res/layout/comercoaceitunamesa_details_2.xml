@@ -9,82 +9,69 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:background="@color/colorPrimary"
-            android:orientation="horizontal"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp">
 
-            <Button
-                android:id="@+id/btnBack"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_weight="50"
-                android:background="@color/transparent"
-                android:drawableStart="@drawable/ic_btn_back"
-                android:fontFamily="@font/arial"
-                android:text="@string/btnBack"
-                android:textAlignment="textStart"
-                android:textColor="@color/colorWhite"
-                android:textStyle="bold"
-                android:visibility="visible" />
-
-            <Button
-                android:id="@+id/btnOptionSave"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_weight="50"
-                android:background="@color/transparent"
-                android:drawableEnd="@drawable/ic_option_ok"
-                android:fontFamily="@font/arial"
-                android:text="Guardar  "
-                android:textAlignment="textEnd"
-                android:textColor="@color/colorWhite"
-                android:textStyle="bold"
-                android:visibility="visible" />
-        </LinearLayout>
 
         <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="60"
             android:background="@color/colorPrimary"
+            android:elevation="26dp"
             android:fontFamily="@font/arial"
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:weightSum="2">
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:visibility="visible"
                 android:fontFamily="@font/arial"
-                android:gravity="center"
-                android:text="@string/bioQ4Tittle"
+                android:text="@string/btnBack"
                 android:textColor="@color/colorWhite"
-
-                android:textSize="@dimen/optionTittleSizeMin" />
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_btn_back"
+                android:layout_marginLeft="10dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:fontFamily="@font/arial"
+                android:text="@string/comercioAceitunaQ2Tittle"
+                android:textSize="@dimen/optionTittleSizeMin"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/comercioAceitunaQ2Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
-                android:id="@+id/bioQ4Description"
-                android:text="@string/bioQ4Description"
-<<<<<<< HEAD
-                android:textColor="@color/colorWhite" />
-=======
->>>>>>> VistasBardoAlfonso
+                android:text="@string/comercioAceitunaQ2Description"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="bottom"/>
+
+            <Button
+                android:id="@+id/btnOptionSave"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:visibility="visible"
+                android:layout_marginRight="10sp"
+                android:text="@string/btnOptionSave"
+                android:fontFamily="@font/arial"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:drawableEnd="@drawable/ic_option_ok"/>
 
 
         </android.support.design.widget.CoordinatorLayout>
@@ -100,7 +87,7 @@
 
 
             <RadioGroup
-                android:id="@+id/GrupoDet4"
+                android:id="@+id/comercioAceitunaQ2Group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -111,7 +98,7 @@
                 android:showDividers="middle">
 
                 <RadioButton
-                    android:id="@+id/det4opcion1"
+                    android:id="@+id/comercioAceitunaQ2Option1"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_weight="1"
@@ -120,12 +107,12 @@
                     android:checked="false"
                     android:fontFamily="@font/arial"
                     android:gravity="center"
-                    android:text="@string/bioQ4Option1"
+                    android:text="@string/comercioAceitunaQ2Option1"
                     android:textColor="@drawable/rbtn_textcolor_selector"
                     android:textSize="@dimen/optionRbtnSizeMax" />
 
                 <RadioButton
-                    android:id="@+id/det4opcion2"
+                    android:id="@+id/comercioAceitunaQ2Option2"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_weight="1"
@@ -133,10 +120,9 @@
                     android:button="@null"
                     android:fontFamily="@font/arial"
                     android:gravity="center"
-                    android:text="@string/bioQ4Option2"
+                    android:text="@string/comercioAceitunaQ2Option2"
                     android:textColor="@drawable/rbtn_textcolor_selector"
                     android:textSize="@dimen/optionRbtnSizeMax" />
-
             </RadioGroup>
 
         </LinearLayout>

@@ -76,7 +76,27 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
                 android:layout_gravity="bottom"
+=======
+                android:fontFamily="@font/arial"
+                android:padding="20sp"
+                android:id="@+id/plantacionQ8Description"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="bottom"
+                android:text="@string/plantacionQ8Description"/>
+
+            <Button
+                android:id="@+id/btnOptionSave"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:visibility="visible"
+                android:layout_marginRight="10sp"
+                android:text="@string/btnOptionSave"
+>>>>>>> VistasBardoAlfonso
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
                 android:text="@string/plantacionQ8Description"

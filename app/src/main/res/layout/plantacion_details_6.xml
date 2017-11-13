@@ -83,7 +83,27 @@
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
                 android:text="@string/plantacionQ6Description"
+<<<<<<< HEAD
                 android:textColor="@color/colorWhite" />
+=======
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="bottom"/>
+
+            <Button
+                android:id="@+id/btnOptionSave"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:visibility="visible"
+                android:layout_marginRight="10sp"
+                android:text="@string/btnOptionSave"
+                android:fontFamily="@font/arial"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:drawableEnd="@drawable/ic_option_ok"/>
+>>>>>>> VistasBardoAlfonso
 
 
         </android.support.design.widget.CoordinatorLayout>
@@ -117,7 +137,7 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:fontFamily="@font/arial"
-                    android:hint="Metros cúbicos por ha"
+                    android:hint="@string/plantacionQ6HintOpcion6"
                     android:inputType="number" />
 
             </android.support.design.widget.TextInputLayout>

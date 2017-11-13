@@ -79,8 +79,12 @@
                 android:layout_gravity="bottom"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
+                android:id="@+id/bioQ3Description"
                 android:text="@string/bioQ3Description"
+<<<<<<< HEAD
                 android:textColor="@color/colorWhite" />
+=======
+>>>>>>> VistasBardoAlfonso
 
 
         </android.support.design.widget.CoordinatorLayout>
