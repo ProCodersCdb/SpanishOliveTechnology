@@ -141,98 +141,123 @@
 
 
     <!-- ####################################### STRINGS ALMANZARA #################################### -->
-    <!-- Preguntas almanzara-->
 
-    <string name="almanzaraQ1">País y localidad</string>
-    <string name="almanzaraQ2">Objetivo almanzara</string>
-    <string name="almanzaraQ3">Capacidad trabajo</string>
-    <string name="almanzaraQ4">Nº de variedades de aceituna a trabajar</string>
-    <string name="almanzaraQ5">Tipo  de variedades de aceituna a trabajar</string>
-    <string name="almanzaraQ6">Venta de aceite de oliva</string>  //
-    <string name="almanzaraQ7">Capacidad envasado</string>
-    <string name="almanzaraQ8">Formatos botellas</string>
-    <string name="almanzaraQ9">Rango temperaturas anual</string>
-    <string name="almanzaraQ10">Interés en recuperar hueso del alperujo para combustible</string>
-    <string name="almanzaraQ11">Incluir laboratorio</string>
-    <string name="almanzaraQ12">Construcción</string>
-    <string name="almanzaraQ13">Terreno</string>
-    <string name="almanzaraQ14">Experiencia en oleicultura</string>
-    <string name="almanzaraQ15">Comentarios</string>
+    <!-- Strings almazara-->
 
-    <!-- Títulos almanzara -->
+    <string name="almazaraQ1HintOption1">Indique el país</string>
+    <string name="almazaraQ1HintOption2">Indique la población</string>
+    <string name="almazaraQ3HintOption1">Indique toneladas/campaña</string>
+    <string name="almazaraQ3HintOption2">Indique toneladas/dia</string>
+    <string name="almazaraQ4HintOption1">Indique el número de variedades</string>
+    <string name="almazaraQ5HintOption1">Indique el tipo de variedades</string>
+    <string name="almazaraQ6HintOption1">Indique % inicial granel frente a envasado</string>
+    <string name="almazaraQ7HintOption1">Indique Nº de botellas/hora</string>
+    <string name="almazaraQ8HintOption1">Indique capacidad en Nº de ml.</string>
+    <string name="almazaraQ9HintOption1">Indique rango de temperaturas anual</string>
+    <string name="almazaraQ15HintOption1">Escriba su comentario</string>
 
-    <string name="almanzaraQ1Tittle">País y Localidad</string>
-    <string name="almanzaraQ2Tittle">Objetivo Almanzara</string>
-    <string name="almanzaraQ3Tittle">Capacidad Trabajo</string>
-    <string name="almanzaraQ4Tittle">Nº de Variedades de Aceituna a Trabajar</string>
-    <string name="almanzaraQ5Tittle">Tipo  de Variedades de Aceituna a Trabajar</string>
-    <string name="almanzaraQ6Tittle">Venta de Aceite de Oliva</string>  //
-    <string name="almanzaraQ7Tittle">Capacidad Envasado</string>
-    <string name="almanzaraQ8Tittle">Formatos Botellas</string>
-    <string name="almanzaraQ9Tittle">Rango Temperaturas anual</string>
-    <string name="almanzaraQ10Tittle">Interés en Recuperar Hueso del Alperujo para Combustible</string>
-    <string name="almanzaraQ11Tittle">Incluir Laboratorio</string>
-    <string name="almanzaraQ12Tittle">Construcción</string>
-    <string name="almanzaraQ13Tittle">Terreno</string>
-    <string name="almanzaraQ14Tittle">Experiencia en Oleicultura</string>
-    <string name="almanzaraQ15Tittle">Comentarios</string>
 
-    <!-- Respuestas almanzara -->
 
-    <string name="almanzaraQ2Option1">Propia producción</string>
-    <string name="almanzaraQ2Option2">Prestación de servicio</string>
-    <string name="almanzaraQ2Option3">Ambas</string>
-    <string name="almanzaraQ6Option1">Granel</string>
-    <string name="almanzaraQ6Option2">Envasado</string>
-    <string name="almanzaraQ6Option3">Ambos</string>
-    <string name="almanzaraQ8Option1">Vidrio</string>
-    <string name="almanzaraQ8Option2">Pet</string>
-    <string name="almanzaraQ8Option3">Lata</string>
-    <string name="almanzaraQ10Option1">Si</string>
-    <string name="almanzaraQ10Option2">No</string>
-    <string name="almanzaraQ11Option1">Si</string>
-    <string name="almanzaraQ11Option2">No</string>
-    <string name="almanzaraQ11Option3">Analizador NIR</string>
-    <string name="almanzaraQ11Option4">Analizador Abencor</string>
-    <string name="almanzaraQ11Option5">Analizador Oxytester</string>
-    <string name="almanzaraQ12Option1">Nueva construcción</string>
-    <string name="almanzaraQ12Option2">Adaptar a construcción existente</string>
-    <string name="almanzaraQ13Option1">Plano</string>
-    <string name="almanzaraQ13Option2">Con Inclinacion</string>
-    <string name="almanzaraQ14Option1">Si</string>
-    <string name="almanzaraQ14Option2">No</string>
 
-    <!--Descripción almanzara-->
 
-    <string name="almanzaraQ1Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+
+
+
+
+    <!-- Preguntas almazara-->
+
+    <string name="almazaraQ1">País y localidad</string>
+    <string name="almazaraQ2">Objetivo almanzara</string>
+    <string name="almazaraQ3">Capacidad trabajo</string>
+    <string name="almazaraQ4">Nº de variedades de aceituna a trabajar</string>
+    <string name="almazaraQ5">Tipo  de variedades de aceituna a trabajar</string>
+    <string name="almazaraQ6">Venta de aceite de oliva</string>  //
+    <string name="almazaraQ7">Capacidad envasado</string>
+    <string name="almazaraQ8">Formatos botellas</string>
+    <string name="almazaraQ9">Rango temperaturas anual</string>
+    <string name="almazaraQ10">Interés en recuperar hueso del alperujo para combustible</string>
+    <string name="almazaraQ11">Incluir laboratorio</string>
+    <string name="almazaraQ12">Construcción</string>
+    <string name="almazaraQ13">Terreno</string>
+    <string name="almazaraQ14">Experiencia en oleicultura</string>
+    <string name="almazaraQ15">Comentarios</string>
+
+    <!-- Títulos almazara -->
+
+    <string name="almazaraQ1Tittle">País y Localidad</string>
+    <string name="almazaraQ2Tittle">Objetivo Almanzara</string>
+    <string name="almazaraQ3Tittle">Capacidad Trabajo</string>
+    <string name="almazaraQ4Tittle">Nº de Variedades de Aceituna a Trabajar</string>
+    <string name="almazaraQ5Tittle">Tipo  de Variedades de Aceituna a Trabajar</string>
+    <string name="almazaraQ6Tittle">Venta de Aceite de Oliva</string>  //
+    <string name="almazaraQ7Tittle">Capacidad Envasado</string>
+    <string name="almazaraQ8Tittle">Formatos Botellas</string>
+    <string name="almazaraQ9Tittle">Rango Temperaturas anual</string>
+    <string name="almazaraQ10Tittle">Interés en Recuperar Hueso del Alperujo para Combustible</string>
+    <string name="almazaraQ11Tittle">Incluir Laboratorio</string>
+    <string name="almazaraQ12Tittle">Construcción</string>
+    <string name="almazaraQ13Tittle">Terreno</string>
+    <string name="almazaraQ14Tittle">Experiencia en Oleicultura</string>
+    <string name="almazaraQ15Tittle">Comentarios</string>
+
+    <!-- Respuestas almazara -->
+
+    <string name="almazaraQ2Option1">Propia producción</string>
+    <string name="almazaraQ2Option2">Prestación de servicio</string>
+    <string name="almazaraQ2Option3">Ambas</string>
+    <string name="almazaraQ6Option1">Granel</string>
+    <string name="almazaraQ6Option2">Envasado</string>
+    <string name="almazaraQ6Option3">Ambos</string>
+    <string name="almazaraQ8Option1">Vidrio</string>
+    <string name="almazaraQ8Option2">Pet</string>
+    <string name="almazaraQ8Option3">Lata</string>
+    <string name="almazaraQ10Option1">Si</string>
+    <string name="almazaraQ10Option2">No</string>
+    <string name="almazaraQ11Option1">Si</string>
+    <string name="almazaraQ11Option2">No</string>
+    <string name="almazaraQ11Option3">Analizador NIR</string>
+    <string name="almazaraQ11Option4">Analizador Abencor</string>
+    <string name="almazaraQ11Option5">Analizador Oxytester</string>
+    <string name="almazaraQ12Option1">Nueva construcción</string>
+    <string name="almazaraQ12Option2">Adaptar a construcción existente</string>
+    <string name="almazaraQ13Option1">Plano</string>
+    <string name="almazaraQ13Option2">Con Inclinacion</string>
+    <string name="almazaraQ14Option1">Si</string>
+    <string name="almazaraQ14Option2">No</string>
+
+    <!--Descripción almazara-->
+
+    <string name="almazaraQ1Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ2Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ2Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ3Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ3Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ4Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ4Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ5Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ5Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ6Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ6Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ7Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ7Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ8Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ8Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ9Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ9Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ10Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ10Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ11Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ11Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ12Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ12Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ13Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ13Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ14Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ14Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
-    <string name="almanzaraQ15Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <string name="almazaraQ15Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam.</string>
 
 
