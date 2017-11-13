@@ -97,7 +97,7 @@
 
 
             <RadioGroup
-                android:id="@+id/GrupoDet10"
+                android:id="@+id/plantacionQ10Group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -136,19 +136,26 @@
 
             </RadioGroup>
 
-            <EditText
+            <LinearLayout
+                android:id="@+id/plantacionQ10edtContent"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:ems="10"
-                android:fontFamily="@font/arial"
-                android:hint="Nº de años de registros"
-                android:inputType="number"
-                android:gravity="center_vertical"
-                android:id="@+id/plantacionQ10edt"/>
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
+                    android:ems="10"
+                    android:fontFamily="@font/arial"
+                    android:hint="Nº de años de registros"
+                    android:inputType="number"
+                    android:gravity="center_vertical"
+                    android:id="@+id/plantacionQ10edt"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 

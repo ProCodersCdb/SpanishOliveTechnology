@@ -137,19 +137,27 @@
 
             </RadioGroup>
 
-            <EditText
+            <LinearLayout
+                android:id="@+id/plantacionQ7edtContent"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:ems="10"
-                android:fontFamily="@font/arial"
-                android:hint="Escriba caudal"
-                android:inputType="number"
-                android:gravity="center_vertical"
-                android:id="@+id/plantacionQ7edt"/>
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
+                    android:ems="10"
+                    android:fontFamily="@font/arial"
+                    android:hint="Escriba caudal"
+                    android:inputType="number"
+                    android:gravity="center_vertical"
+                    android:id="@+id/plantacionQ7edt"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

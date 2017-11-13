@@ -5,26 +5,28 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.TextView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
 
 public class PlantacionController {
-    RadioButton plantacionQ3Option1, plantacionQ3Option2, plantacionQ3Option3, plantacionQ4Option1, plantacionQ4Option2, plantacionQ4Option3, plantacionQ4Option4,
+    private RadioButton plantacionQ3Option1, plantacionQ3Option2, plantacionQ3Option3, plantacionQ4Option1, plantacionQ4Option2, plantacionQ4Option3, plantacionQ4Option4,
             plantacionQ5Option1, plantacionQ5Option2, plantacionQ7Option1, plantacionQ7Option2, plantacionQ8Option1, plantacionQ8Option2, plantacionQ9Option1,
             plantacionQ9Option2, plantacionQ10Option1, plantacionQ10Option2, plantacionQ14Option1, plantacionQ14Option2;
 
-    EditText plantacionQ1edt1, plantacionQ1edt2, plantacionQ2edt, plantacionQ6edt, plantacionQ7edt, plantacionQ10edt, plantacionQ11edt, plantacionQ12edt,
+    private EditText plantacionQ1edt1, plantacionQ1edt2, plantacionQ2edt, plantacionQ6edt, plantacionQ7edt, plantacionQ10edt, plantacionQ11edt, plantacionQ12edt,
             plantacionQ13edt, plantacionQ15edt;
 
     private View view;
-    GeneralSingleton controller;
-    Activity activity;
-    Button save, back;
-    TextView plantacionQ1desc, plantacionQ2desc, plantacionQ6desc, plantacionQ7desc, plantacionQ10desc, plantacionQ11desc, plantacionQ12desc, plantacionQ13desc,
-            plantacionQ15desc;
+    private GeneralSingleton controller;
+    private Activity activity;
+    private Button save, back;
+    private String plantacionQ1str1, plantacionQ1str2, plantacionQ1strEnd;
+
+    LinearLayout plantacionQ7edtContent, plantacionQ10edtContent;
 
 
 
@@ -72,118 +74,42 @@ public class PlantacionController {
 
         switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()){
 
-            case R.layout.plantacion_details_1:
-                plantacionQ1desc = v.findViewById(R.id.plantacionQ1Description);
-                plantacionQ1edt1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ1desc.setText(R.string.noText);
-                        }
-                    }
-                });
-
-                plantacionQ1edt2.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ1desc.setText(R.string.noText);
-                        }
-                    }
-                });
-                break;
-
-            case R.layout.plantacion_details_2:
-                plantacionQ2desc = v.findViewById(R.id.plantacionQ2Description);
-                plantacionQ2edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ2desc.setText(R.string.noText);
-                        }
-                    }
-                });
-                break;
-
-            case R.layout.plantacion_details_6:
-                plantacionQ6desc = v.findViewById(R.id.plantacionQ6Description);
-                plantacionQ6edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ6desc.setText(R.string.noText);
-                        }
-                    }
-                });
-                break;
-
             case R.layout.plantacion_details_7:
-                plantacionQ7desc = v.findViewById(R.id.plantacionQ7Description);
-                plantacionQ7edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                plantacionQ7edtContent = v.findViewById(R.id.plantacionQ7edtContent);
+                plantacionQ7edtContent.setVisibility(View.GONE);
+
+                RadioGroup rGroupQ7 = (RadioGroup)v.findViewById(R.id.plantacionQ7Group);
+                rGroupQ7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ7desc.setText(R.string.noText);
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.plantacionQ7Option1:
+                                plantacionQ7edtContent.setVisibility(View.VISIBLE);
+                                break;
+                            case R.id.plantacionQ7Option2:
+                                plantacionQ7edtContent.setVisibility(View.GONE);
+                                break;
                         }
                     }
                 });
                 break;
 
             case R.layout.plantacion_details_10:
-                plantacionQ10desc = v.findViewById(R.id.plantacionQ10Description);
-                plantacionQ10edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ10desc.setText(R.string.noText);
-                        }
-                    }
-                });
-                break;
+                plantacionQ10edtContent = v.findViewById(R.id.plantacionQ10edtContent);
 
-                case R.layout.plantacion_details_11:
-                plantacionQ11desc = v.findViewById(R.id.plantacionQ11Description);
-                plantacionQ11edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ11desc.setText(R.string.noText);
-                        }
-                    }
-                });
-                break;
+                plantacionQ10edtContent.setVisibility(View.GONE);
 
-            case R.layout.plantacion_details_12:
-                plantacionQ12desc = v.findViewById(R.id.plantacionQ12Description);
-                plantacionQ12edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                RadioGroup rGroupQ10 = (RadioGroup)v.findViewById(R.id.plantacionQ10Group);
+                rGroupQ10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ12desc.setText(R.string.noText);
-                        }
-                    }
-                });
-                break;
-
-            case R.layout.plantacion_details_13:
-                plantacionQ13desc = v.findViewById(R.id.plantacionQ13Description);
-                plantacionQ13edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ13desc.setText(R.string.noText);
-                        }
-                    }
-                });
-                break;
-
-            case R.layout.plantacion_details_15:
-                plantacionQ15desc = v.findViewById(R.id.plantacionQ15Description);
-                plantacionQ15edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if (hasFocus) {
-                            plantacionQ15desc.setText(R.string.noText);
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.plantacionQ10Option1:
+                                plantacionQ10edtContent.setVisibility(View.VISIBLE);
+                                break;
+                            case R.id.plantacionQ10Option2:
+                                plantacionQ10edtContent.setVisibility(View.GONE);
+                                break;
                         }
                     }
                 });
@@ -199,12 +125,16 @@ public class PlantacionController {
                 switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
 
                     case R.layout.plantacion_details_1:
-                        if(!TextUtils.isEmpty(plantacionQ1edt1.getText())){
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ1edt1.getText().toString());
+                        if(!TextUtils.isEmpty(plantacionQ1edt1.getText())) {
+                            plantacionQ1str1 = plantacionQ1edt1.getText().toString();
                         }
                         if(!TextUtils.isEmpty(plantacionQ1edt2.getText())){
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ1edt2.getText().toString());
+                            plantacionQ1str2 = plantacionQ1edt2.getText().toString();
                         }
+                        plantacionQ1strEnd = plantacionQ1str1.toString() + ", " + plantacionQ1str2.toString();
+
+                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ1strEnd.toString());
+
                         break;
 
                     case R.layout.plantacion_details_2:
@@ -260,14 +190,11 @@ public class PlantacionController {
 
                     case R.layout.plantacion_details_7:
                         if(plantacionQ7Option1.isChecked()){
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ7Option1.getText().toString());
-
-                        } else if(plantacionQ5Option2.isChecked()){
+                            if(!TextUtils.isEmpty(plantacionQ7edt.getText())){
+                                controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ7edt.getText().toString());
+                            }
+                        } else if(plantacionQ5Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ7Option2.getText().toString());
-
-                        }
-                        if(!TextUtils.isEmpty(plantacionQ7edt.getText())){
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ7edt.getText().toString());
                         }
                         break;
 
@@ -293,14 +220,11 @@ public class PlantacionController {
 
                     case R.layout.plantacion_details_10:
                         if(plantacionQ10Option1.isChecked()){
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ10Option1.getText().toString());
-
+                            if(!TextUtils.isEmpty(plantacionQ10edt.getText())){
+                                controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ10edt.getText().toString());
+                            }
                         } else if(plantacionQ10Option2.isChecked()){
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ10Option2.getText().toString());
-
-                        }
-                        if(!TextUtils.isEmpty(plantacionQ10edt.getText())){
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ10edt.getText().toString());
                         }
                         break;
 
