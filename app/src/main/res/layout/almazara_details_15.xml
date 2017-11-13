@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
                 android:padding="20sp"
-                android:text="@string/almanzaraQ15Description"
+                android:text="@string/almazaraQ15Description"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"/>
 
