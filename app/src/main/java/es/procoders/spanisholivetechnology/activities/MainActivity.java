@@ -35,6 +35,8 @@ import es.procoders.spanisholivetechnology.adapters.SimpleAdapterCharge;
 import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
+import es.procoders.spanisholivetechnology.dao.FormularioDAO;
+import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 import es.procoders.spanisholivetechnology.questions.Questions;
 
@@ -60,11 +62,13 @@ public class MainActivity extends AppCompatActivity{
     private FloatingActionButton fab;
     private BaseAdapter adapter2;
     DialogPlus cargar;
+    private IFormularioDAO dao;
     Questions qu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dao= new FormularioDAO();
         //Button btn = findViewById(R.id.btnNext);
         //btn.setOnClickListener(this);
         single = GeneralSingleton.getInstance();
@@ -74,10 +78,16 @@ public class MainActivity extends AppCompatActivity{
         cargar = cargarDB(this);
         cargar.show();
         lv = findViewById(R.id.list_main);
-        if (new BiomasaDAO().recuperarLocal(this) != null){
-            GeneralSingleton.getInstance().setFormularios(new BiomasaDAO().recuperarLocal(this));
+        try {
+            single.setFormularios(new ArrayList<Formulario>());
+            single.setFormularios(dao.consultarFormularios(single.getUser(), this));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
-        if (single.getFormularios()!=null) {
+        if (new BiomasaDAO().recuperarLocal(this) != null){
+            GeneralSingleton.getInstance().getFormularios().addAll(new BiomasaDAO().recuperarLocal(this));
+        }
+        if (single.getFormularios().size()>0) {
             adapter = new ListViewAdapterMain(this, single.getFormularios());
         }else{
             single.setFormularios(new ArrayList<Formulario>());
