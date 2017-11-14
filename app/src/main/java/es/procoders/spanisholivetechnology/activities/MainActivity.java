@@ -1,6 +1,7 @@
 package es.procoders.spanisholivetechnology.activities;
 
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -61,6 +62,12 @@ public class MainActivity extends AppCompatActivity{
         single = GeneralSingleton.getInstance();
         fab = findViewById(R.id.fab_main);
         adapter2 = new SimpleAdapter(this);
+
+        //TODO QUITAR LUEGO CUANDO ESTÉ EL ASYNC
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
         lv = findViewById(R.id.list_main);
         if (new BiomasaDAO().recuperarLocal(this) != null){
