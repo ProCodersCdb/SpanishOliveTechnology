@@ -136,7 +136,7 @@
                     android:textSize="@dimen/optionRbtnSizeMax" />
 
                 <RadioButton
-                    android:id="@+id/comercioAceitunaQ4Option2"
+                    android:id="@+id/comercioAceiteQ4Option2"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_weight="1"
@@ -149,7 +149,7 @@
                     android:textSize="@dimen/optionRbtnSizeMax" />
 
                 <RadioButton
-                    android:id="@+id/comercioAceitunaQ4Option3"
+                    android:id="@+id/comercioAceiteQ4Option3"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_weight="1"
