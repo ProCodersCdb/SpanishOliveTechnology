@@ -1,4 +1,4 @@
-/*package es.procoders.spanisholivetechnology.controllers;
+package es.procoders.spanisholivetechnology.controllers;
 
 import android.app.Activity;
 import android.text.TextUtils;
@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
 
@@ -19,16 +20,52 @@ public class FabricaAceitunaController {
     private GeneralSingleton controller;
     private Activity activity;
     private Button save, back;
-    private String fabricaQ1str1, fabricaQ1str2, fabricaQ1strEnd, fabricaQ2str1,fabricaQ2str2,fabricaQ2strEnd,fabricaQ8str1,fabricaQ8str2,fabricaQ8strEnd;
+
+
+
+    private String fabricaQ1str1, fabricaQ1str2, fabricaQ1strEnd, fabricaQ2str1, fabricaQ2str2, fabricaQ2strEnd, fabricaQ8str1, fabricaQ8str2, fabricaQ8strEnd;
 
 
     public FabricaAceitunaController(final View v, final Activity activity) {
         this.view = v;
         this.activity = activity;
 
-    // ############################# Control de eventos para los editText y descripciones ############################
+        fabricaQ1edt1 = v.findViewById(R.id.fabricaQ1edt1);
+        fabricaQ1edt2 = v.findViewById(R.id.fabricaQ1edt2);
+        fabricaQ2edt = v.findViewById(R.id.fabricaQ2edt);
+        fabricaQ3edt1 = v.findViewById(R.id.fabricaQ3edt1);
+        fabricaQ3edt2 = v.findViewById(R.id.fabricaQ3edt2);
+        fabricaQ3Option1 = v.findViewById(R.id.fabricaQ3Option1);
+        fabricaQ3Option2 = v.findViewById(R.id.fabricaQ3Option2);
+        fabricaQ3Option3 = v.findViewById(R.id.fabricaQ3Option3);
+        fabricaQ4Option1 = v.findViewById(R.id.fabricaQ4Option1);
+        fabricaQ4Option2 = v.findViewById(R.id.fabricaQ4Option2);
+        fabricaQ5Option1 = v.findViewById(R.id.fabricaQ5Option1);
+        fabricaQ5Option2 = v.findViewById(R.id.fabricaQ5Option2);
+        fabricaQ6edt = v.findViewById(R.id.fabricaQ6edt);
+        fabricaQ7Option1 = v.findViewById(R.id.fabricaQ7Option1);
+        fabricaQ7Option2 = v.findViewById(R.id.fabricaQ7Option2);
+        fabricaQ8Option1 = v.findViewById(R.id.fabricaQ8Option1);
+        fabricaQ8Option2 = v.findViewById(R.id.fabricaQ8Option2);
+        fabricaQ8Option3 = v.findViewById(R.id.fabricaQ8Option3);
+        fabricaQ8Option4 = v.findViewById(R.id.fabricaQ8Option4);
+        fabricaQ8edt = v.findViewById(R.id.fabricaQ8edt);
+        fabricaQ9edt = v.findViewById(R.id.fabricaQ9edt);
+        fabricaQ10Option1 = v.findViewById(R.id.fabricaQ10Option1);
+        fabricaQ10Option2 = v.findViewById(R.id.fabricaQ10Option2);
+        fabricaQ11Option1 = v.findViewById(R.id.fabricaQ11Option1);
+        fabricaQ11Option2 = v.findViewById(R.id.fabricaQ11Option2);
+        fabricaQ12Option1 = v.findViewById(R.id.fabricaQ12Option1);
+        fabricaQ12Option2 = v.findViewById(R.id.fabricaQ12Option2);
+        fabricaQ13edt = v.findViewById(R.id.fabricaQ13edt);
 
-    switch(controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()){
+        save = v.findViewById(R.id.btnOptionSave);
+        back = v.findViewById(R.id.btnBack);
+
+        controller = GeneralSingleton.getInstance();
+
+
+        // ############################# Control de eventos para los editText y descripciones ############################
 
 
         save.setOnClickListener(new View.OnClickListener() {
@@ -177,13 +214,23 @@ public class FabricaAceitunaController {
                         }
 
                         break;
-
-
                 }
-
+                // DAO
+                //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
+                activity.onBackPressed();
+                Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
 
             }
-        }
+
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.onBackPressed();
+            }
+        });
+
     }
-    }
-}*/
+}
+

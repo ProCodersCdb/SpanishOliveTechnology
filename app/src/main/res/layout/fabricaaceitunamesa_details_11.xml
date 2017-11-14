@@ -121,7 +121,7 @@
                 android:showDividers="middle">
 
                 <RadioButton
-                    android:id="@+id/fabrica11Option1"
+                    android:id="@+id/fabricaQ11Option1"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_weight="1"
