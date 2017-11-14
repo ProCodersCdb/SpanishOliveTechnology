@@ -171,6 +171,7 @@ public class FabricaAceitunaController {
                         } else if(fabricaQ12Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ12Option2.getText().toString());
                         }
+
                     break;
 
                     case R.layout.fabricaaceitunamesa_details_13:
