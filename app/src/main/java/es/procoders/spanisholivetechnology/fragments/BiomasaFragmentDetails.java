@@ -54,14 +54,10 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout(), container, false);
         switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getTipo()){
             case BIOMASA:
-
-
                 new BiomasaController(rootView, getActivity());
                 break;
 
             case PLANTACION:
-
-
                 new PlantacionController(rootView, getActivity());
                 break;
         }
