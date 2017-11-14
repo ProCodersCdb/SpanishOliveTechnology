@@ -5,31 +5,22 @@ import java.io.Serializable;
 
 public class Usuario implements Serializable{
 
+    //Propiedades
     private String email;
     private String nombre;
     private String pass;
 
-    public Usuario(String email, String nombre, String password) {
+    //Constructores
+    public Usuario() {
+    }
+
+    public Usuario(String email, String nombre, String pass) {
         this.email = email;
-    }
-
-    public String getPass() {
-        return pass;
-    }
-
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
-
-    public void setNombre(String nombre, String pass) {
         this.nombre = nombre;
         this.pass = pass;
     }
 
-    public Usuario() {
-
-    }
-
+    //Getters and Setters
     public String getEmail() {
         return email;
     }
@@ -46,11 +37,11 @@ public class Usuario implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getPassword() {
+    public String getPass() {
         return pass;
     }
 
-    public void setPassword(String password) {
-        this.pass = password;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 }
