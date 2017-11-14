@@ -110,6 +110,8 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                         .setAdapter(adapter2)
                         .setInAnimation(R.transition.slide_in_bottom)
                         .setOutAnimation(R.transition.slide_out_bottom)
+                        .setMargin(20,0,20,20)
+                        .setCancelable(false)
                         .setOnItemClickListener(new OnItemClickListener() {
                             @Override
                             public void onItemClick(DialogPlus dialog, Object item, View view, int position) {

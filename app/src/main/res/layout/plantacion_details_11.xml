@@ -9,11 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_gravity="center_vertical|center_horizontal"
             android:background="@color/colorPrimary"
+            android:elevation="16dp"
             android:orientation="horizontal"
             android:paddingBottom="16dp"
             android:paddingLeft="16dp"
@@ -51,40 +53,48 @@
                 android:visibility="visible" />
         </LinearLayout>
 
-        <android.support.design.widget.CoordinatorLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="60"
+            android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:fontFamily="@font/arial"
-            android:gravity="center_horizontal"
+            android:elevation="16dp"
+            android:gravity="center_vertical"
             android:orientation="vertical"
-            android:weightSum="2">
-
+            android:paddingLeft="72dp"
+            android:paddingRight="16dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="5sp"
                 android:fontFamily="@font/arial"
-                android:gravity="center"
                 android:text="@string/plantacionQ11"
-
+                android:textAlignment="textStart"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/optionTittleSizeMin" />
+        </LinearLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+
+            android:elevation="16dp"
+            android:fontFamily="@font/arial"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="32dp"
+            android:weightSum="2">
 
             <TextView
-                android:id="@+id/plantacionQ11Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:fontFamily="@font/arial"
-                android:padding="20sp"
                 android:text="@string/plantacionQ11Description"
                 android:textColor="@color/colorWhite" />
-
-
 
 
         </android.support.design.widget.CoordinatorLayout>
@@ -95,7 +105,7 @@
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:layout_weight="30"
-            android:layout_marginTop="70sp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/arial">
 
 

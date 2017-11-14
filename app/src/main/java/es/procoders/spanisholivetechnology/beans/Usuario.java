@@ -7,22 +7,9 @@ public class Usuario implements Serializable{
 
     private String email;
     private String nombre;
-    private String pass;
+    private String password;
 
-    public Usuario(){
-    }
-
-    public Usuario(String email, String nombre, String pass) {
-        this.email = email;
-        this.nombre = nombre;
-        this.pass = pass;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
+    public Usuario(String email, String nombre, String password) {
         this.email = email;
     }
 
@@ -40,5 +27,34 @@ public class Usuario implements Serializable{
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+        this.password = password;
+    }
+
+    public Usuario() {
+
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
