@@ -19,7 +19,7 @@ import es.procoders.spanisholivetechnology.R;
 
 public class ComercioAceiteOlivaController {
 
-    private RadioButton comercioAceiteQ1Option1, comercioAceiteQ1Option2,comercioAceiteQ12Option1, comercioAceiteQ12Option2,
+    private RadioButton comercioAceiteQ1Option1, comercioAceiteQ1Option2, comercioAceiteQ12Option1, comercioAceiteQ12Option2,
             comercioAceiteQ13Option1, comercioAceiteQ13Option2, comercioAceiteQ3Option1, comercioAceiteQ3Option2,
             comercioAceiteQ4Option1, comercioAceiteQ4Option2, comercioAceiteQ4Option3, comercioAceiteQ6Option1,
             comercioAceiteQ6Option2, comercioAceiteQ9Option1, comercioAceiteQ9Option2;
@@ -35,7 +35,6 @@ public class ComercioAceiteOlivaController {
     private View view;
     GeneralSingleton controller;
     Activity activity;
-
 
 
     public ComercioAceiteOlivaController(final View v, final Activity activity) {
@@ -75,8 +74,6 @@ public class ComercioAceiteOlivaController {
         comercioAceiteQ2Option5 = v.findViewById(R.id.comercioAceiteQ2Option5);
 
 
-
-
         back = v.findViewById(R.id.btnBack);
         save = v.findViewById(R.id.btnOptionSave);
 
@@ -84,14 +81,14 @@ public class ComercioAceiteOlivaController {
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
 
                     case R.layout.comercioaceiteoliva_details_1:
-                        if(comercioAceiteQ1Option1.isChecked()){
+                        if (comercioAceiteQ1Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ1Option1.getText().toString());
 
-                        } else if(comercioAceiteQ1Option2.isChecked()){
+                        } else if (comercioAceiteQ1Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ1Option2.getText().toString());
 
                         }
@@ -100,26 +97,26 @@ public class ComercioAceiteOlivaController {
 
 
                     case R.layout.comercioaceiteoliva_details_2:
-                        String details="";
-                        if(comercioAceiteQ2Option1.isChecked()){
+                        String details = "";
+                        if (comercioAceiteQ2Option1.isChecked()) {
 
-                             details += ", "+ comercioAceiteQ2Option1.getText().toString();
+                            details += ", " + comercioAceiteQ2Option1.getText().toString();
 
-                        } else if(comercioAceiteQ2Option2.isChecked()){
+                        } else if (comercioAceiteQ2Option2.isChecked()) {
 
-                        details += ", "+ comercioAceiteQ2Option2.getText().toString();
+                            details += ", " + comercioAceiteQ2Option2.getText().toString();
 
-                    }else if(comercioAceiteQ2Option3.isChecked()){
+                        } else if (comercioAceiteQ2Option3.isChecked()) {
 
-                            details += ", "+ comercioAceiteQ2Option3.getText().toString();
+                            details += ", " + comercioAceiteQ2Option3.getText().toString();
 
-                        }else if(comercioAceiteQ2Option4.isChecked()){
+                        } else if (comercioAceiteQ2Option4.isChecked()) {
 
-                            details += ", "+ comercioAceiteQ2Option4.getText().toString();
+                            details += ", " + comercioAceiteQ2Option4.getText().toString();
 
-                        }else if(comercioAceiteQ2Option5.isChecked()){
+                        } else if (comercioAceiteQ2Option5.isChecked()) {
 
-                            details += ", "+ comercioAceiteQ2Option5.getText().toString();
+                            details += ", " + comercioAceiteQ2Option5.getText().toString();
 
                         }
 
@@ -130,10 +127,10 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_3:
 
-                        if(comercioAceiteQ3Option1.isChecked()){
+                        if (comercioAceiteQ3Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ3Option1.getText().toString());
 
-                        } else if(comercioAceiteQ3Option2.isChecked()){
+                        } else if (comercioAceiteQ3Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ3Option2.getText().toString());
 
                         }
@@ -144,23 +141,23 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_4:
 
-                        if(comercioAceiteQ4Option1.isChecked()){
+                        if (comercioAceiteQ4Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ4Option1.getText().toString());
 
-                        } else if(comercioAceiteQ4Option2.isChecked()){
+                        } else if (comercioAceiteQ4Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ4Option2.getText().toString());
 
-                        }else if(comercioAceiteQ4Option3.isChecked()) {
+                        } else if (comercioAceiteQ4Option3.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ4Option3.getText().toString());
 
                         }
 
-                            break;
+                        break;
 
 
                     case R.layout.comercioaceiteoliva_details_5:
 
-                        if(!TextUtils.isEmpty(comercioAceiteQ5edt.getText())){
+                        if (!TextUtils.isEmpty(comercioAceiteQ5edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ5edt.getText().toString());
                         }
 
@@ -168,13 +165,12 @@ public class ComercioAceiteOlivaController {
                         break;
 
 
-
                     case R.layout.comercioaceiteoliva_details_6:
 
-                        if(comercioAceiteQ6Option1.isChecked()){
+                        if (comercioAceiteQ6Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ6Option1.getText().toString());
 
-                        } else if(comercioAceiteQ6Option2.isChecked()){
+                        } else if (comercioAceiteQ6Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ6Option2.getText().toString());
 
                         }
@@ -185,7 +181,7 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_7:
 
-                        if(!TextUtils.isEmpty(comercioAceiteQ7edt.getText())){
+                        if (!TextUtils.isEmpty(comercioAceiteQ7edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ7edt.getText().toString());
                         }
 
@@ -195,7 +191,7 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_8:
 
-                        if(!TextUtils.isEmpty(comercioAceiteQ8edt.getText())){
+                        if (!TextUtils.isEmpty(comercioAceiteQ8edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ8edt.getText().toString());
                         }
 
@@ -205,10 +201,10 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_9:
 
-                        if(comercioAceiteQ9Option1.isChecked()){
+                        if (comercioAceiteQ9Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ9Option1.getText().toString());
 
-                        } else if(comercioAceiteQ9Option2.isChecked()){
+                        } else if (comercioAceiteQ9Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ9Option2.getText().toString());
 
                         }
@@ -219,7 +215,7 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_10:
 
-                        if(!TextUtils.isEmpty(comercioAceiteQ10edt.getText())){
+                        if (!TextUtils.isEmpty(comercioAceiteQ10edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ10edt.getText().toString());
                         }
 
@@ -229,7 +225,7 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_11:
 
-                        if(!TextUtils.isEmpty(comercioAceiteQ11edt.getText())){
+                        if (!TextUtils.isEmpty(comercioAceiteQ11edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ11edt.getText().toString());
                         }
 
@@ -239,10 +235,10 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_12:
 
-                        if(comercioAceiteQ12Option1.isChecked()){
+                        if (comercioAceiteQ12Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ12Option1.getText().toString());
 
-                        } else if(comercioAceiteQ12Option2.isChecked()){
+                        } else if (comercioAceiteQ12Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ12Option2.getText().toString());
 
                         }
@@ -251,14 +247,13 @@ public class ComercioAceiteOlivaController {
                         break;
 
 
-
                     case R.layout.comercioaceiteoliva_details_13:
 
-                        if(comercioAceiteQ13Option1.isChecked()){
-                            if(!TextUtils.isEmpty(comercioAceiteQ13edt.getText())){
+                        if (comercioAceiteQ13Option1.isChecked()) {
+                            if (!TextUtils.isEmpty(comercioAceiteQ13edt.getText())) {
                                 controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ13Option1.getText().toString());
                             }
-                        } else if(comercioAceiteQ13Option2.isChecked()) {
+                        } else if (comercioAceiteQ13Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ13Option2.getText().toString());
                         }
 
@@ -268,15 +263,26 @@ public class ComercioAceiteOlivaController {
 
                     case R.layout.comercioaceiteoliva_details_14:
 
-                        if(!TextUtils.isEmpty(comercioAceiteQ14edt.getText())){
+                        if (!TextUtils.isEmpty(comercioAceiteQ14edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ14edt.getText().toString());
                         }
-
 
 
                         break;
 
                 }
+                // DAO
+                //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
+                activity.onBackPressed();
+                Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.onBackPressed();
             }
         });
     }
