@@ -35,6 +35,8 @@ import es.procoders.spanisholivetechnology.beans.TipoRespuesta;
 import es.procoders.spanisholivetechnology.beans.Usuario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
+import es.procoders.spanisholivetechnology.dao.FormularioDAO;
+import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
 import es.procoders.spanisholivetechnology.questions.Questions;
 import es.procoders.spanisholivetechnology.services.BiomasaService;
 
@@ -54,6 +56,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
      */
 
    //ListView lv;
+    private IFormularioDAO dao = new FormularioDAO();
 
     BaseAdapter adapter;
     GeneralSingleton single;
@@ -121,8 +124,9 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                                         break;
                                     case 1:
                                         if(finalServices.isReady(single.getFormularios().get(single.getPositionformulario()).getRespuestas())) {
-                                            single.getFormularios().get(single.getPositionformulario()).setDate(new Date());
+//                                            single.getFormularios().get(single.getPositionformulario()).setDate(new Date());
                                             biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
+                                            dao.crearFormulario(single.getFormularios().get(single.getPositionformulario()));
                                             getActivity().onBackPressed();
                                         } else{
                                             Toast.makeText(view.getContext()    , "Formulario no enviado, debes rellenar todos los campos requeridos", Toast.LENGTH_SHORT).show();

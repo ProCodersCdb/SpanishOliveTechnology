@@ -3,6 +3,7 @@ package es.procoders.spanisholivetechnology.activities;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
