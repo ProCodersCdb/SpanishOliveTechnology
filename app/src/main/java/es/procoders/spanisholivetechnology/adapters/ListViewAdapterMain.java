@@ -63,7 +63,27 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
             TextView name = (TextView) view.findViewById(R.id.mainListView);
             TextView estado = (TextView) view.findViewById(R.id.estado_listView);
 
-            name.setText(user.getTipo().toString());
+
+            switch (user.getTipo()){
+                case BIOMASA:
+                    name.setText("Comercio de biomasa");
+                    break;
+                case ALMAZARA:
+                    name.setText("Almazara");
+                    break;
+                case PLANTACION:
+                    name.setText("Plantación");
+                    break;
+                case COMERCIOACEITE:
+                    name.setText("Comercio de aceite de oliva");
+                    break;
+                case FABRICAACEITUNA:
+                    name.setText("Fabrica de aceituna de mesa");
+                    break;
+                case COMERCIOACEITUNA:
+                    name.setText("Comercio de aceituna de mesa");
+                    break;
+            }
             if (user.getDate()!=null) {
                 date.setText(user.getDate());
                 estado.setTextColor(view.getContext().getResources().getColor(R.color.colorAccent));

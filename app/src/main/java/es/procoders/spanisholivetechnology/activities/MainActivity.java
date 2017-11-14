@@ -3,6 +3,7 @@ package es.procoders.spanisholivetechnology.activities;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -55,15 +56,12 @@ public class MainActivity extends AppCompatActivity{
      */
 
     private IFormularioDAO dao;
-    private Toolbar toolbar;
-    private AppBarLayout appBarLayout;
     ListView lv;
     BaseAdapter adapter3;
     BaseAdapter adapter;
     GeneralSingleton single;
     private FloatingActionButton fab;
     private BaseAdapter adapter2;
-    DialogPlus cargar;
     Questions qu;
     
     @Override
@@ -84,12 +82,8 @@ public class MainActivity extends AppCompatActivity{
         fab = findViewById(R.id.fab_main);
         adapter2 = new SimpleAdapter(this);
         adapter3 = new SimpleAdapterCharge(this);
-        cargar = cargarDB(this);
-        cargar.show();
         lv = findViewById(R.id.list_main);
-
         loadArrayFormularios();
-      
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -156,9 +150,10 @@ public class MainActivity extends AppCompatActivity{
     protected void onResume() {
         super.onResume();
         loadArrayFormularios();
+
     }
-    public DialogPlus cargarDB(Activity activity){
-        DialogPlus dialog = DialogPlus.newDialog(activity)
+    public void cargarDB(Activity activity){
+        final DialogPlus dialog = DialogPlus.newDialog(activity)
                 .setAdapter(adapter3)
                 .setInAnimation(R.transition.slide_in_bottom)
                 .setOutAnimation(R.transition.slide_out_bottom)
@@ -168,11 +163,17 @@ public class MainActivity extends AppCompatActivity{
                 .setGravity(Gravity.CENTER)
                 .setCancelable(true)
                 .create();
-        return dialog;
+        dialog.show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+            }
+        }, 3000);
     }
 
     private void loadArrayFormularios(){
-        cargar.show();
+        cargarDB(this);
         ArrayList<Formulario> arrayFormulario = new ArrayList<>();
         try {
             arrayFormulario = dao.consultarFormularios(single.getUser(), this);
@@ -184,6 +185,7 @@ public class MainActivity extends AppCompatActivity{
 
         adapter = new ListViewAdapterMain(this, single.getFormularios());
         lv.setAdapter(adapter);
-        cargar.dismiss();
+
+
     }
 }

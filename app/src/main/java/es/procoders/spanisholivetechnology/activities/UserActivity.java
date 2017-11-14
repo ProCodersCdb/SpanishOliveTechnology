@@ -44,7 +44,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         prefs = getSharedPreferences("usuario", Context.MODE_PRIVATE);
-        checkExist(prefs);
+
         til_contraseña2 = findViewById(R.id.til_contraseña2);
         name = findViewById(R.id.user_name);
         til_nombre = findViewById(R.id.til_nombre);
@@ -62,6 +62,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
+        checkExist(prefs);
         nuevouser.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -89,10 +90,13 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
             user.setPass(prefs.getString("password", null));
             user.setNombre(prefs.getString("name", null));
             user.setEmail(prefs.getString("email", null));
-            GeneralSingleton.getInstance().setUser(user);
-            Intent inte = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(inte);
-            finish();
+            if (checkDB(user.getEmail(), user.getPass())){
+                GeneralSingleton.getInstance().setUser(user);
+                Intent inte = new Intent(this, MainActivity.class);
+                startActivity(inte);
+            }else{
+                Toast.makeText(this, "Error cargando usuario", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -160,6 +164,9 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     }
     private boolean checkDB(EditText email, EditText password, EditText name) {
         return dao.crearUsuario(email.getText().toString(), password.getText().toString(), name.getText().toString());
+    }
+    private boolean checkDB(String email, String password  ) {
+        return dao.comprobarPass(email, password);
     }
 
 

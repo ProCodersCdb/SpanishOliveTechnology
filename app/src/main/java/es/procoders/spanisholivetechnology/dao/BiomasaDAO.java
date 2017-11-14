@@ -13,6 +13,7 @@ import java.util.TreeMap;
 import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
+import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 
 
 public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
@@ -53,6 +54,12 @@ public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
             fis.close();
         }  catch (Exception e) {
             e.printStackTrace();
+        }
+        GeneralSingleton single = GeneralSingleton.getInstance();
+        for (Formulario formulario: b) {
+            if (formulario.getUser() ==null) {
+                formulario.setUser(single.getUser());
+            }
         }
         return b;
     }

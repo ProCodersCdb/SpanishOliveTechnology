@@ -115,8 +115,6 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                         .setOnItemClickListener(new OnItemClickListener() {
                             @Override
                             public void onItemClick(DialogPlus dialog, Object item, View view, int position) {
-
-                                Formulario form = new Formulario();
                                 switch (position){
                                     case 0:
                                         biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
@@ -124,9 +122,9 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                                         break;
                                     case 1:
                                         if(finalServices.isReady(single.getFormularios().get(single.getPositionformulario()).getRespuestas())) {
-//                                            single.getFormularios().get(single.getPositionformulario()).setDate(new Date());
-                                            //biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
                                             dao.crearFormulario(single.getFormularios().get(single.getPositionformulario()));
+                                            single.getFormularios().remove(single.getFormularios().get(single.getPositionformulario()));
+                                            biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
                                             getActivity().onBackPressed();
                                         } else{
                                             Toast.makeText(view.getContext()    , "Formulario no enviado, debes rellenar todos los campos requeridos", Toast.LENGTH_SHORT).show();
@@ -140,7 +138,6 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                                 }
 
                                 dialog.dismiss();
-
                             }
                         })
                         .setExpanded(false)
