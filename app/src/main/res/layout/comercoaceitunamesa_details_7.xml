@@ -119,7 +119,7 @@
                 android:gravity="center_horizontal">
 
                 <EditText
-                    android:id="@+id/comercioAcitunaQ7edt"
+                    android:id="@+id/comercioAceitunaQ7edt"
                     android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
