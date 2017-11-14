@@ -65,9 +65,9 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
 
             name.setText(user.getTipo().toString());
             if (user.getDate()!=null) {
-                date.setText(user.getDate().toString());
+                date.setText(user.getDate());
                 estado.setTextColor(view.getContext().getResources().getColor(R.color.colorAccent));
-                estado.setText("Enviado");
+                estado.setText(user.getEstado());
             }else{
                 estado.setTextColor(view.getContext().getResources().getColor(android.R.color.holo_red_dark));
                 estado.setText("No enviado");

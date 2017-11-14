@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
 
     //Propiedades
-    private String table = "prueba.usuarios";
+    private String table = "jperez_app.usuarios";
 
     //Constructor
     public UsuarioDAO() {
