@@ -15,6 +15,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -59,9 +61,11 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                 if (b){
                     repassword.setVisibility(View.VISIBLE);
                     register.setVisibility(View.VISIBLE);
+                    til_nombre.setVisibility(View.VISIBLE);
                     til_contraseña2.setVisibility(View.VISIBLE);
                     login.setVisibility(View.GONE);
                 }else{
+                    til_nombre.setVisibility(View.GONE);
                     repassword.setVisibility(View.GONE);
                     til_contraseña2.setVisibility(View.GONE);
                     register.setVisibility(View.GONE);
@@ -90,28 +94,58 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()){
             case R.id.btn_user:
-                if (!TextUtils.isEmpty(email.getText()) && !TextUtils.isEmpty(password.getText())){
-                    if (saveLog.isChecked()){
-                        guardarDatos(prefs, false);
-                        loginto();
+                if (isValidEmail(email.getText().toString())){
+                    if (isEmpty(password)) {
+                        if (checkDB(email, password)) {
+                            if (saveLog.isChecked()) {
+                                guardarDatos(prefs, false);
+                                loginto();
+                            } else {
+                                loginto();
+                            }
+                        }else{
+                            Toast.makeText(this, "El email o contraseña no corresponde.", Toast.LENGTH_SHORT).show();
+                        }
                     }else{
-                        loginto();
+                        email.setError("Debes rellenar el campo");
                     }
+                }else{
+                    email.setError("El email no es válido");
                 }
                 break;
             case R.id.btn_register:
-                if (!TextUtils.isEmpty(email.getText()) && Objects.equals(password.getText(), repassword.getText()) && !TextUtils.isEmpty(password.getText())){
-                    if (saveLog.isChecked()){
-                        guardarDatos(prefs, true);
-                        //saveinDB();
-                        loginto();
+                if (isValidEmail(email.getText().toString())){
+                    if (isEmpty(name)) {
+                        if (isValidPassword(password.getText().toString(), repassword.getText().toString())) {
+                            if (checkDB(email,password, name)) {
+                                if (saveLog.isChecked()) {
+                                    guardarDatos(prefs, true);
+                                    //saveinDB();
+                                    loginto();
+                                } else {
+                                    loginto();
+                                }
+                            }
+                        }else{
+                            repassword.setError("La contraseña debe ser la misma");
+                        }
                     }else{
-                        loginto();
+                        name.setError("Debes rellenar el campo");
                     }
+                }else{
+                    email.setError("El email no es válido");
                 }
                 break;
         }
     }
+
+    private boolean checkDB(EditText email, EditText password) {
+        return true;
+    }
+    private boolean checkDB(EditText email, EditText password, EditText name) {
+        return true;
+    }
+
 
     private void loginto() {
         Intent inte = new Intent(getApplicationContext(), MainActivity.class);
@@ -137,4 +171,14 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         editor.commit();
 
     }
+    public final static boolean isValidEmail(String target) {
+        return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+    }
+    public final static boolean isValidPassword(String p1, String p2){
+        return p1.equals(p2);
+    }
+    public final static boolean isEmpty(TextView view){
+        return !TextUtils.isEmpty(view.getText());
+    }
+
 }
