@@ -23,7 +23,7 @@ public class FabricaAceitunaController {
 
 
 
-    private String fabricaQ1str1, fabricaQ1str2, fabricaQ1strEnd, fabricaQ2str1, fabricaQ2str2, fabricaQ2strEnd, fabricaQ8str1, fabricaQ8str2, fabricaQ8strEnd;
+    private String fabricaQ1str1, fabricaQ1str2, fabricaQ1strEnd, fabricaQ3str1, fabricaQ3str2, fabricaQ3strEnd, fabricaQ8str1, fabricaQ8str2, fabricaQ8strEnd;
 
 
     public FabricaAceitunaController(final View v, final Activity activity) {
@@ -99,15 +99,15 @@ public class FabricaAceitunaController {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ3Option2.getText().toString());
                         } else if (fabricaQ3Option3.isChecked()) {
                             if (!TextUtils.isEmpty(fabricaQ3edt1.getText()) && (!TextUtils.isEmpty(fabricaQ3edt2.getText()))) {
-                                fabricaQ2str1 = fabricaQ3edt1.getText().toString();
+                                fabricaQ3str1 = fabricaQ3edt1.getText().toString();
                             }
                             if (!TextUtils.isEmpty(fabricaQ3edt1.getText()) && (!TextUtils.isEmpty(fabricaQ3edt2.getText()))) {
-                                fabricaQ2str2 = fabricaQ1edt2.getText().toString();
+                                fabricaQ3str2 = fabricaQ1edt2.getText().toString();
                             }
 
-                            fabricaQ2strEnd = fabricaQ2str1.toString() + ", " + fabricaQ2str2.toString();
+                            fabricaQ3strEnd = fabricaQ3str1.toString() + ", " + fabricaQ3str2.toString();
 
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ1strEnd.toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ3strEnd.toString());
                         }
 
                         break;
@@ -165,6 +165,7 @@ public class FabricaAceitunaController {
                         }
 
                         fabricaQ8strEnd = fabricaQ8str1.toString() + ", " + fabricaQ8str2.toString();
+                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ8strEnd.toString());
 
                         break;
 
