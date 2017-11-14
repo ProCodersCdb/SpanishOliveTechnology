@@ -99,26 +99,21 @@ public class ComercioAceiteOlivaController {
                     case R.layout.comercioaceiteoliva_details_2:
                         String details = "";
                         if (comercioAceiteQ2Option1.isChecked()) {
-
-                            details += ", " + comercioAceiteQ2Option1.getText().toString();
-
-                        } else if (comercioAceiteQ2Option2.isChecked()) {
-
-                            details += ", " + comercioAceiteQ2Option2.getText().toString();
-
-                        } else if (comercioAceiteQ2Option3.isChecked()) {
-
-                            details += ", " + comercioAceiteQ2Option3.getText().toString();
-
-                        } else if (comercioAceiteQ2Option4.isChecked()) {
-
-                            details += ", " + comercioAceiteQ2Option4.getText().toString();
-
-                        } else if (comercioAceiteQ2Option5.isChecked()) {
-
-                            details += ", " + comercioAceiteQ2Option5.getText().toString();
-
+                            details += comercioAceiteQ2Option1.getText().toString() + ", ";
                         }
+                        if (comercioAceiteQ2Option2.isChecked()) {
+                            details += comercioAceiteQ2Option2.getText().toString() + ", ";
+                        }
+                        if (comercioAceiteQ2Option3.isChecked()) {
+                            details += comercioAceiteQ2Option3.getText().toString() + ", ";
+                        }
+                        if (comercioAceiteQ2Option4.isChecked()) {
+                            details += comercioAceiteQ2Option4.getText().toString() + ", ";
+                        }
+                        if (comercioAceiteQ2Option5.isChecked()) {
+                            details += comercioAceiteQ2Option5.getText().toString() + ", ";
+                        }
+
 
                         controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(details.toString());
 
