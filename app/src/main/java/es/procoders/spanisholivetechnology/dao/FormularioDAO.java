@@ -19,7 +19,7 @@ import es.procoders.spanisholivetechnology.questions.Questions;
 public class FormularioDAO extends DBConnection implements IFormularioDAO {
 
     //Propiedades
-    private String table = "prueba.formularios";
+    private String table = "jperez_app.formularios";
     private String insertPlantacion = "INSERT INTO "+table+" (email, tipoFormulario, plantacionQ1, plantacionQ2, plantacionQ3, plantacionQ4, plantacionQ5, plantacionQ6, plantacionQ7, plantacionQ8, plantacionQ9, plantacionQ10, plantacionQ11, plantacionQ12, plantacionQ13, plantacionQ14, plantacionQ15) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     private String insertAlmazara = "INSERT INTO "+table+" (email, tipoFormulario, almazaraQ1, almazaraQ2, almazaraQ3, almazaraQ4, almazaraQ5, almazaraQ6, almazaraQ7, almazaraQ8, almazaraQ9, almazaraQ10, almazaraQ11, almazaraQ12, almazaraQ13, almazaraQ14, almazaraQ15) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     private String insertFabricaAceituna = "INSERT INTO "+table+" (email, tipoFormulario, fabricaQ1, fabricaQ2, fabricaQ3, fabricaQ4, fabricaQ5, fabricaQ6, fabricaQ7, fabricaQ8, fabricaQ9, fabricaQ10, fabricaQ11, fabricaQ12, fabricaQ13) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -36,8 +36,8 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
     @Override
     public Boolean crearFormulario(Formulario formulario) {
         Boolean retVal = false;
-        //String email = formulario.getUser().getEmail();
-        String email = "sot@sot.es";
+        String email = formulario.getUser().getEmail();
+        //String email = "sot@sot.es";
         TipoRespuesta tipoFormulario = (TipoRespuesta) formulario.getTipo();
         ArrayList<Respuesta> respuestas = formulario.getRespuestas();
 
