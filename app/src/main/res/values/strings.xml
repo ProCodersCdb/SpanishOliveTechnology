@@ -152,8 +152,8 @@
     <string name="almazaraQ5HintOption1">Indique el tipo de variedades</string>
     <string name="almazaraQ6HintOption1">Indique % inicial granel frente a envasado</string>
     <string name="almazaraQ7HintOption1">Nº de botellas/hora</string>
-    <string name="almazaraQ8HintOption1">Indique capacidad en Nº de ml.</string>
-    <string name="almazaraQ9HintOption1">Indique rango de temperaturas anual</string>
+    <string name="almazaraQ8HintOption1">Capacidad en ml.</string>
+    <string name="almazaraQ9HintOption1">Rango de temperaturas anual</string>
     <string name="almazaraQ15HintOption1">Escriba su comentario</string>
 
     <!-- Preguntas almazara-->

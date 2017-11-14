@@ -201,16 +201,16 @@ public class AlmazaraController {
 
                     case R.layout.almazara_details_8:
                         if (!TextUtils.isEmpty(almazaraQ8edt.getText())) {
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ8edt.getText().toString());
+                            almazaraQ8str1 = almazaraQ8edt.getText().toString();
                         }
                         if (almazaraQ8Option1.isChecked()) {
-                            almazaraQ8str1 = almazaraQ8Option1.getText().toString();
+                            almazaraQ8str2 = almazaraQ8Option1.getText().toString();
                         } else if (almazaraQ8Option2.isChecked()) {
                             almazaraQ8str2 = almazaraQ8Option2.getText().toString();
                         } else if (almazaraQ8Option3.isChecked()) {
                             almazaraQ8str2 = almazaraQ8Option2.getText().toString();
                         }
-                        almazaraQ8strEnd = almazaraQ8str1.toString() + ", " + almazaraQ8str2.toString();
+                        almazaraQ8strEnd = almazaraQ8str1.toString() + " ml., " + almazaraQ8str2.toString();
 
                         controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ8strEnd.toString());
 
@@ -232,10 +232,11 @@ public class AlmazaraController {
 
                     case R.layout.almazara_details_11:
                         if(almazaraQ11g1Option1.isChecked()){
-                            almazaraQ11str1 = almazaraQ8Option2.getText().toString();
+                            almazaraQ11str1 = almazaraQ11g1Option1.getText().toString();
                         } else if(almazaraQ11g1Option2.isChecked()) {
-                            almazaraQ11str1 = almazaraQ8Option2.getText().toString();
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ11g1Option2.getText().toString());
                         }
+
                         if(almazaraQ11g2Option1.isChecked()){
                             almazaraQ11str2 = almazaraQ11g2Option1.getText().toString();
                         } else if(almazaraQ11g2Option2.isChecked()) {
@@ -244,9 +245,12 @@ public class AlmazaraController {
                             almazaraQ11str2 = almazaraQ11g2Option3.getText().toString();
                         }
 
-                        almazaraQ11strEnd = almazaraQ11str1.toString() + ", " + almazaraQ11str2.toString();
+                        if (almazaraQ11g1Option1.isChecked()){
+                            if (almazaraQ11g2Option1.isChecked() || almazaraQ11g2Option2.isChecked() || almazaraQ11g2Option3.isChecked())
+                            almazaraQ11strEnd = almazaraQ11str1.toString() + ", " + almazaraQ11str2.toString();
 
-                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ11strEnd.toString());
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ11strEnd.toString());
+                        }
 
                         break;
                     case R.layout.almazara_details_12:
@@ -263,6 +267,7 @@ public class AlmazaraController {
                         } else if (almazaraQ13Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ13Option2.getText().toString());
                         }
+                        break;
 
                     case R.layout.almazara_details_14:
                         if (almazaraQ14Option1.isChecked()) {
