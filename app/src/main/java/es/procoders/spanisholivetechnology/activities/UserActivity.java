@@ -79,7 +79,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     private void checkExist(SharedPreferences prefs) {
         if (prefs.getString("email", null)!= null){
             Usuario user =new Usuario();
-            user.setPassword(prefs.getString("password", null));
+            user.setPass(prefs.getString("password", null));
             user.setNombre(prefs.getString("name", null));
             user.setEmail(prefs.getString("email", null));
             GeneralSingleton.getInstance().setUser(user);
@@ -165,7 +165,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         String mail = email.getText().toString();
         user.setEmail(mail);
         editor.putString("email", mail);
-        user.setPassword(pass);
+        user.setPass(pass);
         GeneralSingleton.getInstance().setUser(user);
         editor.putString("password", pass);
         editor.commit();

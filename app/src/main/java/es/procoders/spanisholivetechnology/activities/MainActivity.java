@@ -35,6 +35,8 @@ import es.procoders.spanisholivetechnology.adapters.SimpleAdapterCharge;
 import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
+import es.procoders.spanisholivetechnology.dao.FormularioDAO;
+import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
 import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 import es.procoders.spanisholivetechnology.questions.Questions;
 
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity{
      * @param savedInstanceState hace un guardado de la información recabada en cada una de las
      *                           preguntas
      */
+
+    private IFormularioDAO dao = new FormularioDAO();
     private Toolbar toolbar;
     private AppBarLayout appBarLayout;
     ListView lv;
@@ -64,6 +68,13 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //TODO QUITAR LUEGO CUANDO ESTÉ EL ASYNC
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
         setContentView(R.layout.activity_main);
         //Button btn = findViewById(R.id.btnNext);
         //btn.setOnClickListener(this);
@@ -74,6 +85,16 @@ public class MainActivity extends AppCompatActivity{
         cargar = cargarDB(this);
         cargar.show();
         lv = findViewById(R.id.list_main);
+
+        ArrayList<Formulario> arrayFormulario = new ArrayList<>();
+
+        arrayFormulario = dao.consultarFormularios(single.getUser(), this);
+        cargar.dismiss();
+
+        single.setFormularios(arrayFormulario);
+
+
+
         if (new BiomasaDAO().recuperarLocal(this) != null){
             GeneralSingleton.getInstance().setFormularios(new BiomasaDAO().recuperarLocal(this));
         }

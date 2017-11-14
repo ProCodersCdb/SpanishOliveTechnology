@@ -28,7 +28,8 @@ class DBConnection {
     protected DBConnection() {
         dbUser = "root"; //TODO sustituir cadenas por strings dentro de los recursos
         dbPass = "010883"; //TODO sustituir cadenas por strings dentro de los recursos
-        urlServer = "jdbc:mariadb://192.168.1.36"; //TODO sustituir cadenas por strings dentro de los recursos
+        //urlServer = "jdbc:mariadb://192.168.1.36"; //TODO sustituir cadenas por strings dentro de los recursos
+        urlServer = "jdbc:mariadb://10.20.32.115";
         //dbUser = " jperez_app";
         //dbPass = ")mSL!,^ub{7op{]1){p";
         //urlServer = "jdbc:mariadb://164.138.209.89/phpmyadmin";

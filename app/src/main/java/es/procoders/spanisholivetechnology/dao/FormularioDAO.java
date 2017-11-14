@@ -107,6 +107,8 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
     private Formulario rellenarFormulario(Usuario usuario, Context context) throws SQLException {
         Formulario formulario = new Formulario();
         formulario.setUser(usuario);
+        formulario.setDate(rs.getString("fecha"));
+        formulario.setEstado(rs.getString("estado"));
         TipoRespuesta tipoFormulario = convertirTipo(rs.getString("tipoFormulario"));
         formulario.setTipo(tipoFormulario);
         Questions qu = new Questions(context);
