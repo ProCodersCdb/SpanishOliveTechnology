@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 
+import es.procoders.spanisholivetechnology.controllers.AlmazaraController;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.controllers.PlantacionController;
@@ -61,7 +62,7 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
                 new PlantacionController(rootView, getActivity());
                 break;
             case ALMAZARA:
-                new PlantacionController(rootView, getActivity());
+                new AlmazaraController(rootView, getActivity());
                 break;
         }
 
