@@ -22,6 +22,7 @@ import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 import es.procoders.spanisholivetechnology.controllers.AlmazaraController;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.FabricaAceitunaController;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.controllers.PlantacionController;
 import es.procoders.spanisholivetechnology.questions.Questions;
@@ -63,6 +64,9 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
                 break;
             case ALMAZARA:
                 new AlmazaraController(rootView, getActivity());
+                break;
+            case FABRICAACEITUNA:
+                new FabricaAceitunaController(rootView, getActivity());
                 break;
         }
 

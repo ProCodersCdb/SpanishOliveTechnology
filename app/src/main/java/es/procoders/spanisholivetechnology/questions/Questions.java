@@ -66,7 +66,20 @@ public class Questions implements GeneralControler {
 
     @Override
     public ArrayList<Respuesta> getFabricaAceituna() {
-        return null;
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ1), true, R.layout.fabricaaceitunamesa_details_1), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ2), true, R.layout.fabricaaceitunamesa_details_2), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ3), true, R.layout.fabricaaceitunamesa_details_3), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ4), true, R.layout.fabricaaceitunamesa_details_4), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ5), true, R.layout.fabricaaceitunamesa_details_5), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ6), false, R.layout.fabricaaceitunamesa_details_6), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ7), true, R.layout.fabricaaceitunamesa_details_7), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ8), false, R.layout.fabricaaceitunamesa_details_8), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ9), false, R.layout.fabricaaceitunamesa_details_9), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ10), true, R.layout.fabricaaceitunamesa_details_10), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ11), false, R.layout.fabricaaceitunamesa_details_11), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ12), false, R.layout.fabricaaceitunamesa_details_12), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ13), false, R.layout.fabricaaceitunamesa_details_13), null));
+        return bioPreguntas;
     }
 
     @Override

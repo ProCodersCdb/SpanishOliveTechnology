@@ -272,7 +272,8 @@
 
 <!-- Hint fabrica aceituna mesa-->
 
-    <string name="fabricaQ1HintOption1">País y localidad</string>
+    <string name="fabricaQ1HintOption1">País</string>
+    <string name="fabricaQ1HintOption2">Localidad</string>
     <string name="fabricaQ2HintOption2">Cantidad estimada</string>
     <string name="fabricaQ3HintOption3_1">Indicar % verde</string>
     <string name="fabricaQ3HintOption3_2">Indicar % negra</string>

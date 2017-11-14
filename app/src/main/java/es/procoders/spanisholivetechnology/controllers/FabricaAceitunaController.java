@@ -9,9 +9,6 @@ import android.widget.RadioButton;
 
 import es.procoders.spanisholivetechnology.R;
 
-/**
- * Created by T0NY on 14/11/2017.
- */
 
 public class FabricaAceitunaController {
     private RadioButton fabricaQ3Option1, fabricaQ3Option2, fabricaQ3Option3, fabricaQ4Option1, fabricaQ4Option2, fabricaQ5Option1, fabricaQ5Option2, fabricaQ7Option1, fabricaQ7Option2, fabricaQ8Option1, fabricaQ8Option2, fabricaQ8Option3, fabricaQ8Option4, fabricaQ10Option1, fabricaQ10Option2, fabricaQ11Option1, fabricaQ11Option2, fabricaQ12Option1, fabricaQ12Option2;
@@ -24,6 +21,10 @@ public class FabricaAceitunaController {
     private Button save, back;
     private String fabricaQ1str1, fabricaQ1str2, fabricaQ1strEnd, fabricaQ2str1,fabricaQ2str2,fabricaQ2strEnd,fabricaQ8str1,fabricaQ8str2,fabricaQ8strEnd;
 
+
+    public FabricaAceitunaController(final View v, final Activity activity) {
+        this.view = v;
+        this.activity = activity;
 
     // ############################# Control de eventos para los editText y descripciones ############################
 
@@ -49,7 +50,7 @@ public class FabricaAceitunaController {
                         break;
 
                     case R.layout.fabricaaceitunamesa_details_2:
-                        if(!TextUtils.isEmpty(fabricaQ2edt.getText())){
+                        if (!TextUtils.isEmpty(fabricaQ2edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ2edt.getText().toString());
                         }
                         break;
@@ -75,58 +76,54 @@ public class FabricaAceitunaController {
                         break;
 
                     case R.layout.fabricaaceitunamesa_details_4:
-                        if(fabricaQ4Option1.isChecked()){
+                        if (fabricaQ4Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ4Option1.getText().toString());
 
-                        } else if(fabricaQ4Option2.isChecked()) {
+                        } else if (fabricaQ4Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ4Option2.getText().toString());
                         }
 
 
-
-                    break;
+                        break;
                     case R.layout.fabricaaceitunamesa_details_5:
-                        if(fabricaQ5Option1.isChecked()){
+                        if (fabricaQ5Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ5Option1.getText().toString());
 
-                        } else if(fabricaQ5Option2.isChecked()) {
+                        } else if (fabricaQ5Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ5Option2.getText().toString());
                         }
 
-                    break;
+                        break;
 
                     case R.layout.fabricaaceitunamesa_details_6:
-                        if(!TextUtils.isEmpty(fabricaQ6edt.getText())){
+                        if (!TextUtils.isEmpty(fabricaQ6edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ6edt.getText().toString());
                         }
 
-                    break;
+                        break;
 
                     case R.layout.fabricaaceitunamesa_details_7:
-                        if(fabricaQ7Option1.isChecked()){
+                        if (fabricaQ7Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ7Option1.getText().toString());
 
-                        } else if(fabricaQ7Option2.isChecked()) {
+                        } else if (fabricaQ7Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ7Option2.getText().toString());
                         }
 
-                    break;
+                        break;
 
 
                     case R.layout.fabricaaceitunamesa_details_8:
-                        if(fabricaQ8Option1.isChecked()) {
+                        if (fabricaQ8Option1.isChecked()) {
                             fabricaQ8str1 = fabricaQ8Option1.getText().toString();
-                        }
-                        else if(fabricaQ8Option2.isChecked()){
+                        } else if (fabricaQ8Option2.isChecked()) {
                             fabricaQ8str1 = fabricaQ8Option2.getText().toString();
-                        }
-                        else if(fabricaQ8Option3.isChecked()){
+                        } else if (fabricaQ8Option3.isChecked()) {
                             fabricaQ8str1 = fabricaQ8Option3.getText().toString();
-                        }
-                        else if(fabricaQ8Option4.isChecked()){
+                        } else if (fabricaQ8Option4.isChecked()) {
                             fabricaQ8str1 = fabricaQ8Option4.getText().toString();
                         }
-                        if(!TextUtils.isEmpty(fabricaQ8edt.getText())){
+                        if (!TextUtils.isEmpty(fabricaQ8edt.getText())) {
                             fabricaQ8str2 = fabricaQ8edt.getText().toString();
                         }
 
@@ -136,53 +133,57 @@ public class FabricaAceitunaController {
 
 
                     case R.layout.fabricaaceitunamesa_details_9:
-                        if(!TextUtils.isEmpty(fabricaQ9edt.getText())){
+                        if (!TextUtils.isEmpty(fabricaQ9edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ9edt.getText().toString());
                         }
 
-                    break;
+                        break;
 
                     case R.layout.fabricaaceitunamesa_details_10:
-                        if(fabricaQ10Option1.isChecked()){
+                        if (fabricaQ10Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ10Option1.getText().toString());
 
-                        } else if(fabricaQ10Option2.isChecked()) {
+                        } else if (fabricaQ10Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ10Option2.getText().toString());
                         }
 
-                    break;
+                        break;
 
                     case R.layout.fabricaaceitunamesa_details_11:
-                        if(fabricaQ11Option1.isChecked()){
+                        if (fabricaQ11Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ11Option1.getText().toString());
 
-                        } else if(fabricaQ11Option2.isChecked()) {
+                        } else if (fabricaQ11Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ11Option2.getText().toString());
                         }
 
 
-                    break;
+                        break;
 
                     case R.layout.fabricaaceitunamesa_details_12:
 
-                        if(fabricaQ12Option1.isChecked()){
+                        if (fabricaQ12Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ12Option1.getText().toString());
 
-                        } else if(fabricaQ12Option2.isChecked()) {
+                        } else if (fabricaQ12Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ12Option2.getText().toString());
                         }
 
-                    break;
+                        break;
 
                     case R.layout.fabricaaceitunamesa_details_13:
-                        if(!TextUtils.isEmpty(fabricaQ13edt.getText())){
+                        if (!TextUtils.isEmpty(fabricaQ13edt.getText())) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ13edt.getText().toString());
                         }
 
-                    break;
+                        break;
 
 
+                }
+
+
+            }
         }
-
-
     }
+    }
+}
