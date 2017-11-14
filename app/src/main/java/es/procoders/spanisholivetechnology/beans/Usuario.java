@@ -7,7 +7,7 @@ public class Usuario implements Serializable{
 
     private String email;
     private String nombre;
-    private String password;
+    private String pass;
 
     public Usuario(String email, String nombre, String password) {
         this.email = email;
@@ -21,13 +21,9 @@ public class Usuario implements Serializable{
         this.pass = pass;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre, String pass) {
         this.nombre = nombre;
-        this.password = password;
+        this.pass = pass;
     }
 
     public Usuario() {
@@ -51,10 +47,10 @@ public class Usuario implements Serializable{
     }
 
     public String getPassword() {
-        return password;
+        return pass;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.pass = password;
     }
 }

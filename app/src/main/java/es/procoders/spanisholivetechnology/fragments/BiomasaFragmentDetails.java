@@ -60,6 +60,9 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
             case PLANTACION:
                 new PlantacionController(rootView, getActivity());
                 break;
+            case ALMAZARA:
+                new PlantacionController(rootView, getActivity());
+                break;
         }
 
 

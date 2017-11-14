@@ -111,7 +111,7 @@
 
 
             <RadioGroup
-                android:id="@+id/almazaraQ10Group1"
+                android:id="@+id/almazaraQ11Group1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:divider="@drawable/option_separator"
@@ -159,7 +159,8 @@
                 android:orientation="vertical"
                 android:showDividers="middle"
                 tools:layout_editor_absoluteX="42dp"
-                tools:layout_editor_absoluteY="273dp">
+                tools:layout_editor_absoluteY="273dp"
+                android:layout_marginLeft="20sp">
 
                 <RadioButton
                     android:id="@+id/almazaraQ11g2Option1"
@@ -173,7 +174,7 @@
                     android:gravity="center"
                     android:text="@string/almazaraQ11Option3"
                     android:textColor="@drawable/rbtn_textcolor_selector"
-                    android:textSize="30dp" />
+                    android:textSize="25dp" />
 
                 <RadioButton
                     android:id="@+id/almazaraQ11g2Option2"
@@ -186,7 +187,7 @@
                     android:gravity="center"
                     android:text="@string/almazaraQ11Option4"
                     android:textColor="@drawable/rbtn_textcolor_selector"
-                    android:textSize="30dp" />
+                    android:textSize="25dp"  />
 
                 <RadioButton
                     android:id="@+id/almazaraQ11g2Option3"
@@ -199,7 +200,7 @@
                     android:gravity="center"
                     android:text="@string/almazaraQ11Option5"
                     android:textColor="@drawable/rbtn_textcolor_selector"
-                    android:textSize="30dp" />
+                    android:textSize="25dp"  />
 
             </RadioGroup>
 

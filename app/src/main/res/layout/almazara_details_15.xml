@@ -122,7 +122,7 @@
 
 
                 <EditText
-                    android:id="@+id/almanzaraQ15edt"
+                    android:id="@+id/almazaraQ15edt"
                     android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"

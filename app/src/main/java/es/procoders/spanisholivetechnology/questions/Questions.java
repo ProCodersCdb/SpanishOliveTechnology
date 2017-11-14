@@ -81,6 +81,21 @@ public class Questions implements GeneralControler {
 
     @Override
     public ArrayList<Respuesta> getAlmazara() {
-        return null;
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ1), true, R.layout.almazara_details_1), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ2), true, R.layout.almazara_details_2), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ3), true, R.layout.almazara_details_3), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ4), false, R.layout.almazara_details_4), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ5), false, R.layout.almazara_details_5), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ6), true, R.layout.almazara_details_6), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ7), false, R.layout.almazara_details_7), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ8), false, R.layout.almazara_details_8), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ9), false, R.layout.almazara_details_9), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ10), false, R.layout.almazara_details_10), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ11), false, R.layout.almazara_details_11), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ12), true, R.layout.almazara_details_12), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ13), false, R.layout.almazara_details_13), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ14), false, R.layout.almazara_details_14), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.ALMAZARA, res.getString(R.string.almazaraQ15), false, R.layout.almazara_details_15), null));
+        return bioPreguntas;
     }
 }
