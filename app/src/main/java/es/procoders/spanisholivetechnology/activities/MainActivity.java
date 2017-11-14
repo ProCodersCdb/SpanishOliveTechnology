@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity{
     private BaseAdapter adapter2;
     DialogPlus cargar;
     Questions qu;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -178,9 +179,7 @@ public class MainActivity extends AppCompatActivity{
         cargar.dismiss();
         single.setFormularios(arrayFormulario);
 
-        if (new BiomasaDAO().recuperarLocal(this) != null){
-            GeneralSingleton.getInstance().setFormularios(new BiomasaDAO().recuperarLocal(this));
-        }
+        GeneralSingleton.getInstance().getFormularios().addAll(new BiomasaDAO().recuperarLocal(this));
         if (single.getFormularios()!=null) {
             adapter = new ListViewAdapterMain(this, single.getFormularios());
         }else{
