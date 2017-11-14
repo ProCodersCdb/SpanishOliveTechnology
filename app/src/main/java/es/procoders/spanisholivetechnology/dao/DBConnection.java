@@ -38,9 +38,12 @@ class DBConnection {
     protected void conectar() {
         //create connection for a server installed in localhost, with a user "root" with no password
         try {
+            Class.forName("org.mariadb.jdbc.Driver");
             conexionSQL = DriverManager.getConnection(urlServer, dbUser, dbPass);
         }
          catch (SQLException e){
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

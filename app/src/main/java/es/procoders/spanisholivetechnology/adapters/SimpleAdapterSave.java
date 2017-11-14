@@ -56,7 +56,7 @@ public class SimpleAdapterSave extends BaseAdapter {
                 viewHolder.textView.setText("Guardar");
                 break;
             case 1:
-                viewHolder.textView.setText("Guardar y enviar");
+                viewHolder.textView.setText("Enviar");
                 break;
             case 2:
                 viewHolder.textView.setTextColor(context.getResources().getColor(android.R.color.holo_red_dark));

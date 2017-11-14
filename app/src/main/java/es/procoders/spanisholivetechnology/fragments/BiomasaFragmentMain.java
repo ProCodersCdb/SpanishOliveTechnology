@@ -125,7 +125,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                                     case 1:
                                         if(finalServices.isReady(single.getFormularios().get(single.getPositionformulario()).getRespuestas())) {
 //                                            single.getFormularios().get(single.getPositionformulario()).setDate(new Date());
-                                            biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
+                                            //biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
                                             dao.crearFormulario(single.getFormularios().get(single.getPositionformulario()));
                                             getActivity().onBackPressed();
                                         } else{

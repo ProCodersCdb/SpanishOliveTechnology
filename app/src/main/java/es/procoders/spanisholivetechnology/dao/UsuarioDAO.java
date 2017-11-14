@@ -68,14 +68,19 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
         Boolean retVal = false;
         try {
             conectar();
-            consultaSQL = "SELECT pass FROM "+table+" WHERE email = '"+email+"'";
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        consultaSQL = "SELECT pass FROM "+table+" WHERE email = '"+email+"'";
+        try {
             stmt = conexionSQL.createStatement();
             rs = stmt.executeQuery(consultaSQL);
             rs.next();
             retVal = pass.equals(rs.getString("pass"));
             desconectar();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        }catch (Exception e){
+            System.out.printf(e.getMessage());
         }
 
         return retVal;

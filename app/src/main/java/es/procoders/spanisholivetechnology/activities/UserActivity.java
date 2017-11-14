@@ -3,6 +3,7 @@ package es.procoders.spanisholivetechnology.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.StrictMode;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -25,14 +26,17 @@ import java.util.Objects;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.Usuario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
+import es.procoders.spanisholivetechnology.dao.IUsuarioDAO;
+import es.procoders.spanisholivetechnology.dao.UsuarioDAO;
 
 public class UserActivity extends AppCompatActivity implements View.OnClickListener{
-    EditText usuario, password, repassword, email, name;
-    Button login, register;
-    Switch nuevouser;
-    CheckBox saveLog;
-     SharedPreferences prefs;
-     TextInputLayout til_contraseña2, til_nombre;
+    private EditText usuario, password, repassword, email, name;
+    private Button login, register;
+    private Switch nuevouser;
+    private CheckBox saveLog;
+    private SharedPreferences prefs;
+    private TextInputLayout til_contraseña2, til_nombre;
+    private IUsuarioDAO dao = new UsuarioDAO();
 
 
     @Override
@@ -54,7 +58,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(this);
         register.setOnClickListener(this);
         repassword.setVisibility(View.GONE);
-
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
         nuevouser.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -96,15 +103,19 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_user:
                 if (isValidEmail(email.getText().toString())){
                     if (isEmpty(password)) {
-                        if (checkDB(email, password)) {
-                            if (saveLog.isChecked()) {
-                                guardarDatos(prefs, false);
-                                loginto();
+                        try {
+                            if (checkDB(email, password)) {
+                                if (saveLog.isChecked()) {
+                                    guardarDatos(prefs, false);
+                                    loginto();
+                                } else {
+                                    loginto();
+                                }
                             } else {
-                                loginto();
+                                Toast.makeText(this, "El email o contraseña no corresponde.", Toast.LENGTH_SHORT).show();
                             }
-                        }else{
-                            Toast.makeText(this, "El email o contraseña no corresponde.", Toast.LENGTH_SHORT).show();
+                        }catch (Exception e){
+                            System.out.println(e.getMessage());
                         }
                     }else{
                         email.setError("Debes rellenar el campo");
@@ -117,14 +128,19 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                 if (isValidEmail(email.getText().toString())){
                     if (isEmpty(name)) {
                         if (isValidPassword(password.getText().toString(), repassword.getText().toString())) {
-                            if (checkDB(email,password, name)) {
-                                if (saveLog.isChecked()) {
-                                    guardarDatos(prefs, true);
-                                    //saveinDB();
-                                    loginto();
-                                } else {
-                                    loginto();
+                            try {
+                                if (checkDB(email, password, name)) {
+                                    if (saveLog.isChecked()) {
+                                        guardarDatos(prefs, true);
+                                        loginto();
+                                    } else {
+                                        GeneralSingleton single =GeneralSingleton.getInstance();
+                                        single.setUser(new Usuario(email.getText().toString(), name.getText().toString(), password.getText().toString()));
+                                        loginto();
+                                    }
                                 }
+                            }catch (Exception e){
+                                System.out.println(e.getMessage());
                             }
                         }else{
                             repassword.setError("La contraseña debe ser la misma");
@@ -140,10 +156,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private boolean checkDB(EditText email, EditText password) {
-        return true;
+        return dao.comprobarPass(email.getText().toString(), password.getText().toString());
     }
     private boolean checkDB(EditText email, EditText password, EditText name) {
-        return true;
+        return dao.crearUsuario(email.getText().toString(), password.getText().toString(), name.getText().toString());
     }
 
 

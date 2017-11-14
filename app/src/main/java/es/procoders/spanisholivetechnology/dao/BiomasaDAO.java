@@ -22,6 +22,12 @@ public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
 
     @Override
     public void guardarLocal(ArrayList<Formulario> e, Context c) {
+        for (Formulario formulario: e) {
+            if (formulario.getDate()!=null) {
+                e.remove(formulario);
+            }
+        }
+        
         try {
             FileOutputStream fos = c.openFileOutput(fileName, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);

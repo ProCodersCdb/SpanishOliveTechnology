@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity{
      *                           preguntas
      */
 
-    private IFormularioDAO dao = new FormularioDAO();
+    private IFormularioDAO dao;
     private Toolbar toolbar;
     private AppBarLayout appBarLayout;
     ListView lv;
@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity{
     private FloatingActionButton fab;
     private BaseAdapter adapter2;
     DialogPlus cargar;
-    private IFormularioDAO dao;
     Questions qu;
     
     @Override
@@ -173,18 +172,18 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void loadArrayFormularios(){
-
-        ArrayList<Formulario> arrayFormulario = dao.consultarFormularios(single.getUser(), this);
-        cargar.dismiss();
-        single.setFormularios(arrayFormulario);
-
-        GeneralSingleton.getInstance().getFormularios().addAll(new BiomasaDAO().recuperarLocal(this));
-        if (single.getFormularios()!=null) {
-            adapter = new ListViewAdapterMain(this, single.getFormularios());
-        }else{
-            single.setFormularios(new ArrayList<Formulario>());
-            adapter = new ListViewAdapterMain(this, single.getFormularios());
+        cargar.show();
+        ArrayList<Formulario> arrayFormulario = new ArrayList<>();
+        try {
+            arrayFormulario = dao.consultarFormularios(single.getUser(), this);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
+        single.setFormularios(arrayFormulario);
+        GeneralSingleton.getInstance().getFormularios().addAll(new BiomasaDAO().recuperarLocal(this));
+
+        adapter = new ListViewAdapterMain(this, single.getFormularios());
         lv.setAdapter(adapter);
+        cargar.dismiss();
     }
 }
