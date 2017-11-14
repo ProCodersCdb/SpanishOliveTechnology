@@ -67,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arial"
-                android:text="@string/almazaraQ2Tittle"
+                android:text="@string/almazaraQ10Tittle"
                 android:textAlignment="textStart"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/optionTittleSizeMin" />

@@ -20,7 +20,11 @@ import java.util.ArrayList;
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 
+import es.procoders.spanisholivetechnology.controllers.AlmazaraController;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
+import es.procoders.spanisholivetechnology.controllers.ComercioAceiteOlivaController;
+import es.procoders.spanisholivetechnology.controllers.ComercioAceitunaMesaController;
+import es.procoders.spanisholivetechnology.controllers.FabricaAceitunaController;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.controllers.PlantacionController;
 import es.procoders.spanisholivetechnology.questions.Questions;
@@ -56,13 +60,22 @@ public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
             case BIOMASA:
                 new BiomasaController(rootView, getActivity());
                 break;
-
             case PLANTACION:
                 new PlantacionController(rootView, getActivity());
                 break;
             case ALMAZARA:
-                new PlantacionController(rootView, getActivity());
+                new AlmazaraController(rootView, getActivity());
                 break;
+            case FABRICAACEITUNA:
+                new FabricaAceitunaController(rootView, getActivity());
+                break;
+            case COMERCIOACEITE:
+                new ComercioAceiteOlivaController(rootView, getActivity());
+                break;
+            case COMERCIOACEITUNA:
+                new ComercioAceitunaMesaController(rootView, getActivity());
+                break;
+
         }
 
 

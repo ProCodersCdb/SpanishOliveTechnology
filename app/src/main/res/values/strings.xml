@@ -151,9 +151,9 @@
     <string name="almazaraQ4HintOption1">Indique el número de variedades</string>
     <string name="almazaraQ5HintOption1">Indique el tipo de variedades</string>
     <string name="almazaraQ6HintOption1">Indique % inicial granel frente a envasado</string>
-    <string name="almazaraQ7HintOption1">Indique Nº de botellas/hora</string>
-    <string name="almazaraQ8HintOption1">Indique capacidad en Nº de ml.</string>
-    <string name="almazaraQ9HintOption1">Indique rango de temperaturas anual</string>
+    <string name="almazaraQ7HintOption1">Nº de botellas/hora</string>
+    <string name="almazaraQ8HintOption1">Capacidad en ml.</string>
+    <string name="almazaraQ9HintOption1">Rango de temperaturas anual</string>
     <string name="almazaraQ15HintOption1">Escriba su comentario</string>
 
     <!-- Preguntas almazara-->
@@ -272,7 +272,8 @@
 
 <!-- Hint fabrica aceituna mesa-->
 
-    <string name="fabricaQ1HintOption1">País y localidad</string>
+    <string name="fabricaQ1HintOption1">País</string>
+    <string name="fabricaQ1HintOption2">Localidad</string>
     <string name="fabricaQ2HintOption2">Cantidad estimada</string>
     <string name="fabricaQ3HintOption3_1">Indicar % verde</string>
     <string name="fabricaQ3HintOption3_2">Indicar % negra</string>

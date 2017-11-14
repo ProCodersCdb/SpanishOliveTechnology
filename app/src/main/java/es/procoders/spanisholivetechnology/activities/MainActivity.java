@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity{
     private FloatingActionButton fab;
     private BaseAdapter adapter2;
     DialogPlus cargar;
+    private IFormularioDAO dao;
     Questions qu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity{
         }
 
         setContentView(R.layout.activity_main);
+        dao= new FormularioDAO();
         //Button btn = findViewById(R.id.btnNext);
         //btn.setOnClickListener(this);
         single = GeneralSingleton.getInstance();
@@ -86,11 +88,8 @@ public class MainActivity extends AppCompatActivity{
         cargar.show();
         lv = findViewById(R.id.list_main);
 
-
         loadArrayFormularios();
-
-
-
+      
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

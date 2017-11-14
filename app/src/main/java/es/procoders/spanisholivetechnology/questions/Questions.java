@@ -66,17 +66,53 @@ public class Questions implements GeneralControler {
 
     @Override
     public ArrayList<Respuesta> getFabricaAceituna() {
-        return null;
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ1), true, R.layout.fabricaaceitunamesa_details_1), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ2), true, R.layout.fabricaaceitunamesa_details_2), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ3), true, R.layout.fabricaaceitunamesa_details_3), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ4), true, R.layout.fabricaaceitunamesa_details_4), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ5), true, R.layout.fabricaaceitunamesa_details_5), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ6), false, R.layout.fabricaaceitunamesa_details_6), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ7), true, R.layout.fabricaaceitunamesa_details_7), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ8), false, R.layout.fabricaaceitunamesa_details_8), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ9), false, R.layout.fabricaaceitunamesa_details_9), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ10), true, R.layout.fabricaaceitunamesa_details_10), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ11), false, R.layout.fabricaaceitunamesa_details_11), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ12), false, R.layout.fabricaaceitunamesa_details_12), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.FABRICAACEITUNA, res.getString(R.string.fabricaQ13), false, R.layout.fabricaaceitunamesa_details_13), null));
+        return bioPreguntas;
     }
 
     @Override
     public ArrayList<Respuesta> getComercioAceite() {
-        return null;
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ1), true, R.layout.comercioaceiteoliva_details_1), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ2), true, R.layout.comercioaceiteoliva_details_2), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ3), true, R.layout.comercioaceiteoliva_details_3), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ4), false, R.layout.comercioaceiteoliva_details_4), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ5), false, R.layout.comercioaceiteoliva_details_5), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ6), true, R.layout.comercioaceiteoliva_details_6), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ7), false, R.layout.comercioaceiteoliva_details_7), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ8), false, R.layout.comercioaceiteoliva_details_8), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ9), false, R.layout.comercioaceiteoliva_details_9), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ10), false, R.layout.comercioaceiteoliva_details_10), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ11), false, R.layout.comercioaceiteoliva_details_11), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ12), true, R.layout.comercioaceiteoliva_details_12), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ13), false, R.layout.comercioaceiteoliva_details_13), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITE, res.getString(R.string.comercioAceiteQ14), false, R.layout.comercioaceiteoliva_details_14), null));
+        return bioPreguntas;
     }
 
     @Override
     public ArrayList<Respuesta> getComercioAceituna() {
-        return null;
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ1), false, R.layout.comercoaceitunamesa_details_1), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ2), true, R.layout.comercoaceitunamesa_details_2), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ3), true, R.layout.comercoaceitunamesa_details_3), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ4), true, R.layout.comercoaceitunamesa_details_4), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ5), true, R.layout.comercoaceitunamesa_details_5), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ6), true, R.layout.comercoaceitunamesa_details_6), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ7), true, R.layout.comercoaceitunamesa_details_7), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ8), true, R.layout.comercoaceitunamesa_details_8), null));
+        bioPreguntas.add(new Respuesta(new Pregunta(TipoRespuesta.COMERCIOACEITUNA, res.getString(R.string.comercioAceitunaQ9), true, R.layout.comercoaceitunamesa_details_9), null));
+        return bioPreguntas;
     }
 
     @Override

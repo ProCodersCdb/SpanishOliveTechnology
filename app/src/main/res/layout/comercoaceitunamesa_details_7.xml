@@ -99,6 +99,9 @@
 
         </android.support.design.widget.CoordinatorLayout>
 
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -119,7 +122,7 @@
                 android:gravity="center_horizontal">
 
                 <EditText
-                    android:id="@+id/comercioAcitunaQ7edt"
+                    android:id="@+id/comercioAceitunaQ7edt"
                     android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -129,11 +132,12 @@
                     android:ems="10"
                     android:fontFamily="@font/arial"
                     android:hint="@string/comercioAceitunaQ7Option7"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textShortMessage" />
 
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
 
     </LinearLayout>
 </FrameLayout>
