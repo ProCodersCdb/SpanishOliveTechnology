@@ -166,13 +166,31 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private boolean checkDB(EditText email, EditText password) {
-        return dao.comprobarPass(email.getText().toString(), password.getText().toString());
+        try {
+            return dao.comprobarPass(email.getText().toString(), password.getText().toString());
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
     private boolean checkDB(EditText email, EditText password, EditText name) {
-        return dao.crearUsuario(email.getText().toString(), password.getText().toString(), name.getText().toString());
+        try {
+            return dao.crearUsuario(email.getText().toString(), password.getText().toString(), name.getText().toString());
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
     private boolean checkDB(String email, String password  ) {
-        return dao.comprobarPass(email, password);
+        try {
+            return dao.comprobarPass(email, password);
+        }catch (Exception e ){
+            e.printStackTrace();
+            Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
 

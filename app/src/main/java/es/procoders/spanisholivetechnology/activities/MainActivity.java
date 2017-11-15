@@ -178,6 +178,7 @@ public class MainActivity extends AppCompatActivity{
         try {
             arrayFormulario = dao.consultarFormularios(single.getUser(), this);
         }catch (Exception e){
+            Toast.makeText(this, "Ha ocurrido un error cargando los formularios, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
             System.out.println(e.getMessage());
         }
         single.setFormularios(arrayFormulario);
