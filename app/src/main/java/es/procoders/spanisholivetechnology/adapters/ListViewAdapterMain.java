@@ -86,7 +86,18 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
             }
             if (user.getDate()!=null) {
                 date.setText(user.getDate());
-                estado.setTextColor(view.getContext().getResources().getColor(R.color.colorAccent));
+                switch (user.getEstado()){
+                    case "enviado":
+                        estado.setTextColor(view.getContext().getResources().getColor(android.R.color.holo_orange_light));
+                        break;
+                    case "visto":
+                        estado.setTextColor(view.getContext().getResources().getColor(android.R.color.holo_blue_light));
+                        break;
+                    case "contestado":
+                        estado.setTextColor(view.getContext().getResources().getColor(R.color.colorAccent));
+                        break;
+                }
+
                 estado.setText(user.getEstado());
             }else{
                 estado.setTextColor(view.getContext().getResources().getColor(android.R.color.holo_red_dark));
