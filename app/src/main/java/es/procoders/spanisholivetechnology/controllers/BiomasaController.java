@@ -13,12 +13,12 @@ import android.widget.Toast;
 import es.procoders.spanisholivetechnology.R;
 
 public class BiomasaController {
-    RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
-    EditText edtDetails5, edtDetails6, edtDetails8;
+    private RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
+    private EditText edtDetails5, edtDetails6, edtDetails8;
     private View view;
-    GeneralSingleton controller;
-    Activity activity;
-    Button save, back;
+    private  GeneralSingleton controller;
+    private Activity activity;
+    private Button save, back;
 
 
 

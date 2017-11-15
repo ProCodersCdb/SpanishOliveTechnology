@@ -1,10 +1,8 @@
 package es.procoders.spanisholivetechnology.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.Gravity;
@@ -18,27 +16,14 @@ import android.widget.Toast;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.OnItemClickListener;
 
-import java.lang.reflect.Array;
-import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.TreeMap;
-
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.activities.BiomasaActivity;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
 import es.procoders.spanisholivetechnology.adapters.SimpleAdapterSave;
-import es.procoders.spanisholivetechnology.beans.Formulario;
-import es.procoders.spanisholivetechnology.beans.Pregunta;
-import es.procoders.spanisholivetechnology.beans.Respuesta;
-import es.procoders.spanisholivetechnology.beans.TipoRespuesta;
-import es.procoders.spanisholivetechnology.beans.Usuario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
 import es.procoders.spanisholivetechnology.dao.FormularioDAO;
 import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
-import es.procoders.spanisholivetechnology.questions.Questions;
-import es.procoders.spanisholivetechnology.services.BiomasaService;
+import es.procoders.spanisholivetechnology.services.BussinessService;
 
 
 /**
@@ -55,15 +40,14 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
      * del sistema de Fragment
      */
 
-   //ListView lv;
     private IFormularioDAO dao = new FormularioDAO();
 
-    BaseAdapter adapter;
-    GeneralSingleton single;
-    FloatingActionButton floating;
-    BaseAdapter adapter2;
+    private BaseAdapter adapter;
+    private GeneralSingleton single;
+    private FloatingActionButton floating;
+    private BaseAdapter adapter2;
 
-    View rootView;
+    private View rootView;
 
 
 
@@ -101,7 +85,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
     private void initViews(View view) {
         floating = view.findViewById(R.id.fab);
         final BiomasaDAO biomasaDAO= new BiomasaDAO();
-        final BiomasaService finalServices = new BiomasaService();
+        final BussinessService finalServices = new BussinessService();
         floating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -170,7 +154,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         single.setPosition(i);
-        FragmentController.callFragment(single.getFragmentManager(), R.id.fragment_activityBiomasa, new BiomasaFragmentDetails()).commit();
+        FragmentController.callFragment(single.getFragmentManager(), R.id.fragment_activityBiomasa, new FragmentDetails()).commit();
     }
 
 

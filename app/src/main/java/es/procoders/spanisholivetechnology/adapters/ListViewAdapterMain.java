@@ -1,5 +1,6 @@
 package es.procoders.spanisholivetechnology.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
 
+    /*Este adaptador nos carga nuestros formularios guardados en el singleton, ya sean de la bbdd o locales.*/
 
     private Context ctx;
     private ArrayList<Formulario> lista;
@@ -34,9 +36,7 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
 
 
     }
- /*   public ListViewAdapter(){
 
-    }*/
 
     @Override
     public int getCount() {
@@ -54,6 +54,7 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         if (getCount()>0) {
@@ -66,22 +67,22 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
 
             switch (user.getTipo()){
                 case BIOMASA:
-                    name.setText("Comercio de biomasa");
+                    name.setText(R.string.Cbiomasa);
                     break;
                 case ALMAZARA:
-                    name.setText("Almazara");
+                    name.setText(R.string.CAlmazara);
                     break;
                 case PLANTACION:
-                    name.setText("Plantación");
+                    name.setText(R.string.CPlantacion);
                     break;
                 case COMERCIOACEITE:
-                    name.setText("Comercio de aceite de oliva");
+                    name.setText(R.string.Caceiteoliva);
                     break;
                 case FABRICAACEITUNA:
-                    name.setText("Fabrica de aceituna de mesa");
+                    name.setText(R.string.Cfabricaaceituna);
                     break;
                 case COMERCIOACEITUNA:
-                    name.setText("Comercio de aceituna de mesa");
+                    name.setText(R.string.Ccomercioaceituna);
                     break;
             }
             if (user.getDate()!=null) {

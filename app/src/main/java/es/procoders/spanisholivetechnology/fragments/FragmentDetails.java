@@ -3,22 +3,11 @@ package es.procoders.spanisholivetechnology.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
-import android.widget.Toast;
 
-
-import java.util.ArrayList;
-
-import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 import es.procoders.spanisholivetechnology.controllers.AlmazaraController;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
@@ -27,8 +16,6 @@ import es.procoders.spanisholivetechnology.controllers.ComercioAceitunaMesaContr
 import es.procoders.spanisholivetechnology.controllers.FabricaAceitunaController;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.controllers.PlantacionController;
-import es.procoders.spanisholivetechnology.questions.Questions;
-import es.procoders.spanisholivetechnology.questions.Options;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,16 +23,16 @@ import es.procoders.spanisholivetechnology.questions.Options;
  * @version 1.0
  * @since API 21
  */
-public class BiomasaFragmentDetails extends android.support.v4.app.Fragment {
+public class FragmentDetails extends android.support.v4.app.Fragment {
     /**
      *
      */
 
-    GeneralSingleton controller;
-    ImageButton save, back;
+    private GeneralSingleton controller;
+    private ImageButton save, back;
 
 
-    public BiomasaFragmentDetails() {
+    public FragmentDetails() {
         // Required empty public constructor
     }
 

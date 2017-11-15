@@ -1,35 +1,25 @@
 package es.procoders.spanisholivetechnology.activities;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.StrictMode;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.orhanobut.dialogplus.DialogPlus;
-import com.orhanobut.dialogplus.OnClickListener;
 import com.orhanobut.dialogplus.OnItemClickListener;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import es.procoders.spanisholivetechnology.R;
-import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapterMain;
 import es.procoders.spanisholivetechnology.adapters.SimpleAdapter;
 import es.procoders.spanisholivetechnology.adapters.SimpleAdapterCharge;
@@ -38,7 +28,6 @@ import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
 import es.procoders.spanisholivetechnology.dao.FormularioDAO;
 import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
-import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 import es.procoders.spanisholivetechnology.questions.Questions;
 
 
@@ -56,13 +45,13 @@ public class MainActivity extends AppCompatActivity{
      */
 
     private IFormularioDAO dao;
-    ListView lv;
-    BaseAdapter adapter3;
-    BaseAdapter adapter;
-    GeneralSingleton single;
+    private ListView lv;
+    private BaseAdapter adapter3;
+    private BaseAdapter adapter;
+    private GeneralSingleton single;
     private FloatingActionButton fab;
     private BaseAdapter adapter2;
-    Questions qu;
+    private Questions qu;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +77,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 single.setPositionformulario(i);
-                Intent inte= new Intent(view.getContext(), BiomasaActivity.class);
+                Intent inte= new Intent(view.getContext(), ActivityFragment.class);
                 startActivity(inte);
             }
         });
@@ -130,7 +119,7 @@ public class MainActivity extends AppCompatActivity{
                                 form.setTipo(form.getRespuestas().get(0).getPregunta().getTipo());
                                 single.getFormularios().add(form);
                                 single.setPositionformulario(single.getFormularios().size()-1);
-                                Intent inte= new Intent(view.getContext(), BiomasaActivity.class);
+                                Intent inte= new Intent(view.getContext(), ActivityFragment.class);
                                 startActivity(inte);
                                 dialog.dismiss();
                             }
@@ -152,6 +141,9 @@ public class MainActivity extends AppCompatActivity{
         loadArrayFormularios();
 
     }
+
+
+    // Dialogo de carga mientras descargamos los formularios de la bbdd.
     public void cargarDB(Activity activity){
         final DialogPlus dialog = DialogPlus.newDialog(activity)
                 .setAdapter(adapter3)
@@ -172,6 +164,8 @@ public class MainActivity extends AppCompatActivity{
         }, 3000);
     }
 
+    //Cargamos el array de formularios de la bbdd buscando por email y añadimos también el array local de formularios no enviados.
+    //T-odo ello lo guardamos en el singleton para poder utilizarlo mas tarde.
     private void loadArrayFormularios(){
         cargarDB(this);
         ArrayList<Formulario> arrayFormulario = new ArrayList<>();

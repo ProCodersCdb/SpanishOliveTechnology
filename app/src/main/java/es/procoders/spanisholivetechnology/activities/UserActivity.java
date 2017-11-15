@@ -39,7 +39,9 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     private IUsuarioDAO dao = new UsuarioDAO();
     private GeneralSingleton single;
 
-
+//Actividd de login con la que nos registramos o hacemos log en la aplicación.
+    //La actividad nos permite mediante un switch elegir si queremos hacer login o registrarnos.
+    //Nos guarda en sharedpreferences si queremos nuestro usuario para hacer login automaticamente al entrar en la app.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

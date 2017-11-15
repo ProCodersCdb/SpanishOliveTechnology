@@ -9,10 +9,10 @@ import es.procoders.spanisholivetechnology.beans.Respuesta;
  */
 
 interface GeneralControler {
-    abstract ArrayList<Respuesta> getBiomasa();
-    abstract ArrayList<Respuesta> getPlantacion();
-    abstract ArrayList<Respuesta> getFabricaAceituna();
-    abstract ArrayList<Respuesta> getComercioAceite();
-    abstract ArrayList<Respuesta> getComercioAceituna();
-    abstract ArrayList<Respuesta> getAlmazara();
+     ArrayList<Respuesta> getBiomasa();
+     ArrayList<Respuesta> getPlantacion();
+     ArrayList<Respuesta> getFabricaAceituna();
+     ArrayList<Respuesta> getComercioAceite();
+     ArrayList<Respuesta> getComercioAceituna();
+     ArrayList<Respuesta> getAlmazara();
 }
