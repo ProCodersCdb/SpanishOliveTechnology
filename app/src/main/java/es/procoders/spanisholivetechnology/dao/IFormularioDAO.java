@@ -12,7 +12,8 @@ import es.procoders.spanisholivetechnology.beans.Usuario;
  */
 
 public interface IFormularioDAO {
-    public Boolean crearFormulario (Formulario formulario);
-    public ArrayList<Formulario> consultarFormularios (Usuario usuario, Context context);
+     Boolean crearFormulario (Formulario formulario);
+     ArrayList<Formulario> consultarFormularios (Usuario usuario, Context context);
+     Boolean upgradeForm (Formulario formulario);
 
 }

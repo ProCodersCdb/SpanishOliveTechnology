@@ -121,15 +121,24 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                                         getActivity().onBackPressed();
                                         break;
                                     case 1:
-                                        if(finalServices.isReady(single.getFormularios().get(single.getPositionformulario()).getRespuestas())) {
-                                            dao.crearFormulario(single.getFormularios().get(single.getPositionformulario()));
-                                            single.getFormularios().remove(single.getFormularios().get(single.getPositionformulario()));
-                                            biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
-                                            getActivity().onBackPressed();
-                                        } else{
-                                            Toast.makeText(view.getContext()    , "Formulario no enviado, debes rellenar todos los campos requeridos", Toast.LENGTH_SHORT).show();
-                                            biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
-                                            getActivity().onBackPressed();
+                                        try {
+                                            if (finalServices.isReady(single.getFormularios().get(single.getPositionformulario()).getRespuestas())) {
+                                                if (single.getFormularios().get(single.getPositionformulario()).getDate() == null) {
+                                                    dao.crearFormulario(single.getFormularios().get(single.getPositionformulario()));
+                                                } else {
+                                                    dao.upgradeForm(single.getFormularios().get(single.getPositionformulario()));
+                                                }
+                                                single.getFormularios().remove(single.getFormularios().get(single.getPositionformulario()));
+                                                biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
+                                                getActivity().onBackPressed();
+                                            } else {
+                                                Toast.makeText(view.getContext(), "Formulario no enviado, debes rellenar todos los campos requeridos", Toast.LENGTH_SHORT).show();
+                                                biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
+                                                getActivity().onBackPressed();
+                                            }
+                                        }catch (Exception e){
+                                            Toast.makeText(view.getContext(), "Ha ocurrido un error enviando el formulario.", Toast.LENGTH_SHORT).show();
+                                            dialog.dismiss();
                                         }
                                         break;
                                     case 2:

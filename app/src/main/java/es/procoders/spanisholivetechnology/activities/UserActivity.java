@@ -37,6 +37,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     private SharedPreferences prefs;
     private TextInputLayout til_contraseña2, til_nombre;
     private IUsuarioDAO dao = new UsuarioDAO();
+    private GeneralSingleton single;
 
 
     @Override
@@ -44,7 +45,16 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         prefs = getSharedPreferences("usuario", Context.MODE_PRIVATE);
+        initViews();
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+        checkExist(prefs);
+    }
 
+    private void initViews() {
+        single = GeneralSingleton.getInstance();
         til_contraseña2 = findViewById(R.id.til_contraseña2);
         name = findViewById(R.id.user_name);
         til_nombre = findViewById(R.id.til_nombre);
@@ -58,11 +68,6 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(this);
         register.setOnClickListener(this);
         repassword.setVisibility(View.GONE);
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
-        checkExist(prefs);
         nuevouser.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -81,17 +86,16 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-
     }
 
     private void checkExist(SharedPreferences prefs) {
-        if (prefs.getString("email", null)!= null){
+        if (getSharedPreferences("usuario", Context.MODE_PRIVATE) != null){
             Usuario user =new Usuario();
             user.setPass(prefs.getString("password", null));
             user.setNombre(prefs.getString("name", null));
             user.setEmail(prefs.getString("email", null));
             if (checkDB(user.getEmail(), user.getPass())){
-                GeneralSingleton.getInstance().setUser(user);
+                single.setUser(user);
                 Intent inte = new Intent(this, MainActivity.class);
                 startActivity(inte);
             }else{
@@ -120,6 +124,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                             }
                         }catch (Exception e){
                             System.out.println(e.getMessage());
+                            Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
                         }
                     }else{
                         email.setError("Debes rellenar el campo");
@@ -145,6 +150,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             }catch (Exception e){
                                 System.out.println(e.getMessage());
+                                Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
                             }
                         }else{
                             repassword.setError("La contraseña debe ser la misma");
@@ -189,7 +195,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         user.setEmail(mail);
         editor.putString("email", mail);
         user.setPass(pass);
-        GeneralSingleton.getInstance().setUser(user);
+        single.setUser(user);
         editor.putString("password", pass);
         editor.commit();
 
