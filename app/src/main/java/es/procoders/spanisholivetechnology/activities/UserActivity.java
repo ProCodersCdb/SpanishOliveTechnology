@@ -120,7 +120,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                                     loginto();
                                 }
                             } else {
-                                Toast.makeText(this, "El email o contraseña no corresponde.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, "El email o contraseña no corresponde o no tienes conexión a internet", Toast.LENGTH_SHORT).show();
                             }
                         }catch (Exception e){
                             System.out.println(e.getMessage());
