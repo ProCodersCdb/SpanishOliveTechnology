@@ -6,21 +6,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.Formulario;
-import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 /**
- * Created by bjfem on 11/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
-
 
 public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
 
@@ -33,8 +30,6 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
         super(ctx,0,lista);
         this.ctx = ctx;
         this.lista = lista;
-
-
     }
 
 

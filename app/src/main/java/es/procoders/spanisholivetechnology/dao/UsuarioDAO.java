@@ -3,7 +3,9 @@ package es.procoders.spanisholivetechnology.dao;
 import java.sql.SQLException;
 
 /**
- * Created by joser on 12/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
@@ -11,6 +13,7 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
     //Propiedades
     private String table = "jperez_app.usuarios";
 
+    //TODO Pasar el nombre de la tabla a una constante
     //Constructor
     public UsuarioDAO() {
         super();
@@ -34,6 +37,7 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
 
     @Override
     public Boolean crearUsuario(String email, String pass, String datos) {
+        //TODO comprobar true or false en .execute
         Boolean retVal = true;
         try {
             conectar();

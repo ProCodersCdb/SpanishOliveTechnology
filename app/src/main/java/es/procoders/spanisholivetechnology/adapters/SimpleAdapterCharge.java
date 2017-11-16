@@ -6,13 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import es.procoders.spanisholivetechnology.R;
 
 /**
- * Created by bjfem on 12/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
+
 public class SimpleAdapterCharge extends BaseAdapter {
     /*Adaptador usado para cuadros de dialogo emergentes.*/
     private LayoutInflater layoutInflater;

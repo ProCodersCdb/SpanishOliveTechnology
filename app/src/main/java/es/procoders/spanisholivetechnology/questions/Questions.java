@@ -1,6 +1,5 @@
 package es.procoders.spanisholivetechnology.questions;
 
-
 import android.content.Context;
 import android.content.res.Resources;
 
@@ -17,10 +16,9 @@ import es.procoders.spanisholivetechnology.beans.TipoRespuesta;
  * @since API 21
  */
 
-
 public class Questions implements GeneralControler {
     /**
-     * Declaracion de variables utiles dentro de la clase
+     * Declaracion de variables útiles dentro de la clase
      */
     private ArrayList<Respuesta> bioPreguntas = new ArrayList<>();
     private Context ctx;

@@ -2,6 +2,11 @@ package es.procoders.spanisholivetechnology.beans;
 
 import java.io.Serializable;
 
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
 
 public class Usuario implements Serializable{
 

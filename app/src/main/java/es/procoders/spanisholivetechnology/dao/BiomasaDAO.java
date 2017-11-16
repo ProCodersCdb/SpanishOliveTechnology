@@ -1,8 +1,6 @@
 package es.procoders.spanisholivetechnology.dao;
 
 import android.content.Context;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -10,20 +8,19 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.TreeMap;
 
 import es.procoders.spanisholivetechnology.beans.Formulario;
-import es.procoders.spanisholivetechnology.beans.Pregunta;
-import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
 
 public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
 
     private final static String fileName = "datos.dat";
-
 
     @Override
     public void guardarLocal(ArrayList<Formulario> e, Context c) {

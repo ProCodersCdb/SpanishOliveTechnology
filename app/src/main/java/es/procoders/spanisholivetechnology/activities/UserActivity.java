@@ -3,12 +3,10 @@ package es.procoders.spanisholivetechnology.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.os.StrictMode;
-import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -19,15 +17,17 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONObject;
-
-import java.util.Objects;
-
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.Usuario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.dao.IUsuarioDAO;
 import es.procoders.spanisholivetechnology.dao.UsuarioDAO;
+
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
 
 public class UserActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText usuario, password, repassword, email, name;
@@ -39,7 +39,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     private IUsuarioDAO dao = new UsuarioDAO();
     private GeneralSingleton single;
 
-//Actividd de login con la que nos registramos o hacemos log en la aplicación.
+    //Actividad de login con la que nos registramos o hacemos log en la aplicación.
     //La actividad nos permite mediante un switch elegir si queremos hacer login o registrarnos.
     //Nos guarda en sharedpreferences si queremos nuestro usuario para hacer login automaticamente al entrar en la app.
     @Override

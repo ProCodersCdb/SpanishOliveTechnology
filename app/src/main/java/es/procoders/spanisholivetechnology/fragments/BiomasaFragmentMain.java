@@ -25,9 +25,7 @@ import es.procoders.spanisholivetechnology.dao.FormularioDAO;
 import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
 import es.procoders.spanisholivetechnology.services.BussinessService;
 
-
 /**
- * A simple {@link Fragment} subclass.
  * @author Procoders
  * @version 1.0
  * @since API 21
@@ -35,13 +33,7 @@ import es.procoders.spanisholivetechnology.services.BussinessService;
 
 public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnItemClickListener {
 
-    /**
-     * Esta clase hace llamada a clases secundarias que se precisan para el correcto funcionamiento
-     * del sistema de Fragment
-     */
-
     private IFormularioDAO dao = new FormularioDAO();
-
     private BaseAdapter adapter;
     private GeneralSingleton single;
     private FloatingActionButton floating;
@@ -57,21 +49,14 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
 
 
     @Override
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_biomasa_fragment_main, container, false);
         // Inflate the layout for this fragment
         single = GeneralSingleton.getInstance();
 
-
         initViews(rootView);
         return rootView;
-
-        /**
-         *
-         */
-
     }
 
     @Override
@@ -129,7 +114,6 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                                         dialog.dismiss();
                                         break;
                                 }
-
                                 dialog.dismiss();
                             }
                         })
@@ -141,12 +125,6 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                 dialog.show();
             }
         });
-
-        /**
-         * Tras la declaracion de las variables, se procede a la comprobacion de que las variables
-         * desiganadas en BiomasaServices
-         */
-
     }
 
 
@@ -156,6 +134,5 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
         single.setPosition(i);
         FragmentController.callFragment(single.getFragmentManager(), R.id.fragment_activityBiomasa, new FragmentDetails()).commit();
     }
-
 
 }

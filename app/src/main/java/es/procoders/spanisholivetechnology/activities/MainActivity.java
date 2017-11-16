@@ -2,11 +2,11 @@ package es.procoders.spanisholivetechnology.activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,19 +30,13 @@ import es.procoders.spanisholivetechnology.dao.FormularioDAO;
 import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
 import es.procoders.spanisholivetechnology.questions.Questions;
 
-
 /**
  * @author Procoders
  * @since API 21
  * @version 1.0
  */
-public class MainActivity extends AppCompatActivity{
 
-    /**
-     *
-     * @param savedInstanceState hace un guardado de la información recabada en cada una de las
-     *                           preguntas
-     */
+public class MainActivity extends AppCompatActivity{
 
     private IFormularioDAO dao;
     private ListView lv;
@@ -65,8 +59,6 @@ public class MainActivity extends AppCompatActivity{
 
         setContentView(R.layout.activity_main);
         dao= new FormularioDAO();
-        //Button btn = findViewById(R.id.btnNext);
-        //btn.setOnClickListener(this);
         single = GeneralSingleton.getInstance();
         fab = findViewById(R.id.fab_main);
         adapter2 = new SimpleAdapter(this);

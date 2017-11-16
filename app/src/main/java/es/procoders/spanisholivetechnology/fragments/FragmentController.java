@@ -5,7 +5,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 /**
- * Created by bjfem on 10/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 class FragmentController {

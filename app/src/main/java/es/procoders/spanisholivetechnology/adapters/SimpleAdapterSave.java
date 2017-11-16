@@ -10,8 +10,11 @@ import android.widget.TextView;
 import es.procoders.spanisholivetechnology.R;
 
 /**
- * Created by bjfem on 12/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
+
 public class SimpleAdapterSave extends BaseAdapter {
     /*Adaptador usado para cuadros de dialogo emergentes.*/
     private LayoutInflater layoutInflater;

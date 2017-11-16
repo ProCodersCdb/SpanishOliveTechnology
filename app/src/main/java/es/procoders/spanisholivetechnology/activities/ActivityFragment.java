@@ -1,7 +1,6 @@
 package es.procoders.spanisholivetechnology.activities;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.widget.ImageButton;
 
 import es.procoders.spanisholivetechnology.R;
@@ -16,7 +15,6 @@ import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
 
 /*Esta actividad llama a los fragments master/details que leen y modifican los formularios.
 * Con nuestro singleton guardamos el fragmentManager que nos hará falta para movernos entre fragmentos.*/
-
 public class ActivityFragment extends android.support.v4.app.FragmentActivity {
 
     private GeneralSingleton single;

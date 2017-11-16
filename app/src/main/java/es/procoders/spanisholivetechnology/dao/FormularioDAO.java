@@ -37,6 +37,8 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
     @Override
     public Boolean crearFormulario(Formulario formulario) {
         Boolean retVal = false;
+
+        //TODO Quitar comprobación. No se puede llamar al Singleton desde el DAO. Separación de capas.
         if (formulario.getUser().getEmail() == null){
             formulario.getUser().setEmail(GeneralSingleton.getInstance().getUser().getEmail());
         }
@@ -90,7 +92,6 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
     public ArrayList<Formulario> consultarFormularios(Usuario usuario, Context context) {
         ArrayList<Formulario> formularios = new ArrayList<>();
 
-
         try {
             conectar();
             consultaSQL = "SELECT * FROM "+table+" WHERE email = '"+usuario.getEmail()+"'";
@@ -108,6 +109,8 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
         return formularios;
     }
 
+
+    //TODO revisar método
     @Override
     public Boolean upgradeForm(Formulario formulario) {
         Boolean retVal = false;

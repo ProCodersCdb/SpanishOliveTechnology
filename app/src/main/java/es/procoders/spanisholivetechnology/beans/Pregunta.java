@@ -5,7 +5,9 @@ import android.support.annotation.NonNull;
 import java.io.Serializable;
 
 /**
- * Created by Apps on 10/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 public class Pregunta implements Comparable<Pregunta>, Serializable {

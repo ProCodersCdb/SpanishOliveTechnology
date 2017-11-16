@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * Created by bjfem on 11/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 public class Formulario implements Serializable {

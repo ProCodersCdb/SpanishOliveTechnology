@@ -11,7 +11,9 @@ import android.widget.Toast;
 import es.procoders.spanisholivetechnology.R;
 
 /**
- * Created by usuario on 14/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 public class ComercioAceitunaMesaController {
@@ -19,7 +21,6 @@ public class ComercioAceitunaMesaController {
     private RadioButton comercioAceitunaQ1Option1, comercioAceitunaQ1Option2, comercioAceitunaQ2Option1, comercioAceitunaQ2Option2,
             comercioAceitunaQ3Option1, comercioAceitunaQ3Option2, comercioAceitunaQ3Option3, comercioAceitunaQ4Option1,
             comercioAceitunaQ4Option2, comercioAceitunaQ5Option1, comercioAceitunaQ5Option2, comercioAceitunaQ5Option3;
-
 
     private EditText comercioAceitunaQ6edt, comercioAceitunaQ7edt, comercioAceitunaQ8edt, comercioAceitunaQ9edt;
 
@@ -164,8 +165,6 @@ public class ComercioAceitunaMesaController {
 
                         break;
                 }
-                // DAO
-                //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
                 activity.onBackPressed();
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
             }

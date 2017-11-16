@@ -1,12 +1,15 @@
 package es.procoders.spanisholivetechnology.services;
 
-
 import java.util.ArrayList;
-import java.util.TreeMap;
 
-import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
+
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
 
 public class BussinessService implements BussinessRule<Respuesta>{
 

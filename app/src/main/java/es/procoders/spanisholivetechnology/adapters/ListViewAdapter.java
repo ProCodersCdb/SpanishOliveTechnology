@@ -18,10 +18,9 @@ import es.procoders.spanisholivetechnology.beans.Respuesta;
  * @since API 21
  * @version 1.0
  */
+
 /*Este adaptador nos permite cargar las preguntas de los formularios y seleccionarlas para rellenarlas una por una.*/
-
 public class ListViewAdapter extends ArrayAdapter<Respuesta> {
-
 
     private Context ctx;
     private ArrayList<Respuesta> lista;
@@ -33,9 +32,6 @@ public class ListViewAdapter extends ArrayAdapter<Respuesta> {
 
 
     }
- /*   public ListViewAdapter(){
-
-    }*/
 
     @Override
     public int getCount() {

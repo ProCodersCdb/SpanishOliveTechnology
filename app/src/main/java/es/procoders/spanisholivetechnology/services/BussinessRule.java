@@ -8,10 +8,8 @@ import java.util.ArrayList;
  * @since API 21
  */
 
-//Interfaz que declara el funcionamiento genérico de una regla de negocio
+//Interfaz que declara el funcionamiento genérico de la regla de negocio implementada
 public interface BussinessRule<T> {
+
     Boolean isReady(ArrayList<T> t);
-    /**
-     *
-     */
 }
