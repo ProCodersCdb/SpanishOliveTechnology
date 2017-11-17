@@ -9,6 +9,7 @@ import java.io.Serializable;
  */
 
 public class Pregunta implements Comparable<Pregunta>, Serializable {
+
     private TipoRespuesta tipo;
     private String str;
     private boolean requerido;

@@ -26,7 +26,7 @@ public class PlantacionController {
     private Button save, back;
     private String plantacionQ1str1, plantacionQ1str2, plantacionQ1strEnd;
 
-    LinearLayout plantacionQ7edtContent, plantacionQ10edtContent;
+    private LinearLayout plantacionQ7edtContent, plantacionQ10edtContent;
 
 
 

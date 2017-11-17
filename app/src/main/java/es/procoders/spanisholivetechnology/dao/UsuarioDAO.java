@@ -34,7 +34,7 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
 
     @Override
     public Boolean crearUsuario(String email, String pass, String datos) {
-        Boolean retVal = false;
+        Boolean retVal = true;
         try {
             conectar();
             consultaSQL = "INSERT INTO "+table+" SET email='"+email+"', pass='"+pass+"', data='"+datos+"'";
@@ -43,7 +43,7 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return retVal;
+        return !retVal;
     }
 
     @Override
@@ -71,7 +71,6 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         consultaSQL = "SELECT pass FROM "+table+" WHERE email = '"+email+"'";
         try {
             stmt = conexionSQL.createStatement();

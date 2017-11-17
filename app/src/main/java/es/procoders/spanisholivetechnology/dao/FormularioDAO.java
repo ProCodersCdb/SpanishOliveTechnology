@@ -10,6 +10,7 @@ import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.beans.TipoRespuesta;
 import es.procoders.spanisholivetechnology.beans.Usuario;
+import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.questions.Questions;
 
 /**
@@ -36,8 +37,11 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
     @Override
     public Boolean crearFormulario(Formulario formulario) {
         Boolean retVal = false;
+        if (formulario.getUser().getEmail() == null){
+            formulario.getUser().setEmail(GeneralSingleton.getInstance().getUser().getEmail());
+        }
         String email = formulario.getUser().getEmail();
-        //String email = "sot@sot.es";
+
         TipoRespuesta tipoFormulario = (TipoRespuesta) formulario.getTipo();
         ArrayList<Respuesta> respuestas = formulario.getRespuestas();
 
@@ -102,6 +106,58 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
             e.printStackTrace();
         }
         return formularios;
+    }
+
+    @Override
+    public Boolean upgradeForm(Formulario formulario) {
+        Boolean retVal = false;
+        if (formulario.getUser().getEmail() == null){
+            formulario.getUser().setEmail(GeneralSingleton.getInstance().getUser().getEmail());
+        }
+        String deleteRow = "DELETE FROM "+table+" WHERE fecha = '"+formulario.getDate()+"'";
+        String email = formulario.getUser().getEmail();
+        TipoRespuesta tipoFormulario = (TipoRespuesta) formulario.getTipo();
+        ArrayList<Respuesta> respuestas = formulario.getRespuestas();
+
+        switch (tipoFormulario) {
+            case PLANTACION:
+                consultaSQL = insertPlantacion;
+                break;
+            case ALMAZARA:
+                consultaSQL = insertAlmazara;
+                break;
+            case FABRICAACEITUNA:
+                consultaSQL = insertFabricaAceituna;
+                break;
+            case COMERCIOACEITE:
+                consultaSQL = insertComercioAceite;
+                break;
+            case COMERCIOACEITUNA:
+                consultaSQL = insertComercioAceituna;
+                break;
+            case BIOMASA:
+                consultaSQL = insertBiomasa;
+                break;
+            default:
+                break;
+        }
+        try {
+            conectar();
+            conexionSQL.createStatement().execute(deleteRow);
+            preparedStmt = conexionSQL.prepareStatement(consultaSQL);
+            preparedStmt.setString(1,email);
+            preparedStmt.setString(2,tipoFormulario.toString());
+            for (int i = 0; i < respuestas.size(); i++) {
+                preparedStmt.setString(i+3, respuestas.get(i).getStr());
+            }
+            if (preparedStmt.executeUpdate() == 1) {
+                retVal = true;
+            }
+            desconectar();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return retVal;
     }
 
     private Formulario rellenarFormulario(Usuario usuario, Context context) throws SQLException {

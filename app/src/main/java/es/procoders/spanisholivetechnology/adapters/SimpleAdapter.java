@@ -13,7 +13,7 @@ import es.procoders.spanisholivetechnology.R;
  * Created by bjfem on 12/11/2017.
  */
 public class SimpleAdapter extends BaseAdapter {
-
+/*Adaptador usado para cuadros de dialogo emergentes.*/
     private LayoutInflater layoutInflater;
     private boolean isGrid;
 

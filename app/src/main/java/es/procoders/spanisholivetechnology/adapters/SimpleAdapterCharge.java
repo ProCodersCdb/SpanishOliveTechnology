@@ -14,7 +14,7 @@ import es.procoders.spanisholivetechnology.R;
  * Created by bjfem on 12/11/2017.
  */
 public class SimpleAdapterCharge extends BaseAdapter {
-
+    /*Adaptador usado para cuadros de dialogo emergentes.*/
     private LayoutInflater layoutInflater;
 
 

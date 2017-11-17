@@ -605,6 +605,12 @@
     <string name="biomasaQ5Opcion5">Cantidad en Kg</string>
     <string name="biomasaQ6Opcion6">Escribe el país</string>
     <string name="biomasaQ8Opcion8">Comentarios</string>
+    <string name="Cbiomasa">Comercio de biomasa</string>
+    <string name="CAlmazara">Almazara</string>
+    <string name="CPlantacion">Plantación</string>
+    <string name="Caceiteoliva">Comercio de aceite de oliva</string>
+    <string name="Cfabricaaceituna">Fabrica de aceituna de mesa</string>
+    <string name="Ccomercioaceituna">Comercio de aceituna de mesa</string>
 
 
     <!--                                 -->
