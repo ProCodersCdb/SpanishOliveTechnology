@@ -5,7 +5,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
@@ -20,11 +22,8 @@ public class FabricaAceitunaController {
     private GeneralSingleton controller;
     private Activity activity;
     private Button save, back;
-
-
-
-    private String fabricaQ1str1, fabricaQ1str2, fabricaQ1strEnd, fabricaQ3str1, fabricaQ3str2, fabricaQ3str3, fabricaQ3strEnd, fabricaQ8str1, fabricaQ8str2, fabricaQ8strEnd;
-
+    private String fabricaQ1str1, fabricaQ1str2, fabricaQ1strEnd, fabricaQ3str1, fabricaQ3str2, fabricaQ3strEnd, fabricaQ8str1, fabricaQ8str2, fabricaQ8strEnd;
+    LinearLayout fabricaQ3Content;
 
     public FabricaAceitunaController(final View v, final Activity activity) {
         this.view = v;
@@ -67,6 +66,36 @@ public class FabricaAceitunaController {
 
         // ############################# Control de eventos para los editText y descripciones ############################
 
+        switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
+
+            case R.layout.fabricaaceitunamesa_details_3:
+                fabricaQ3Content = v.findViewById(R.id.fabricaQ3Content);
+                fabricaQ3Content.setVisibility(View.GONE);
+
+                RadioGroup fabricaQ3Group = (RadioGroup) v.findViewById(R.id.fabricaQ3Group);
+                fabricaQ3Group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId) {
+                            case R.id.fabricaQ3Option1:
+                                fabricaQ3Content.setVisibility(View.GONE);
+                                break;
+                            case R.id.fabricaQ3Option2:
+                                fabricaQ3Content.setVisibility(View.GONE);
+                                break;
+                            case R.id.fabricaQ3Option3:
+                                fabricaQ3Content.setVisibility(View.VISIBLE);
+                                break;
+                        }
+                    }
+                });
+                break;
+
+            default:
+                break;
+        }
+
+
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,15 +127,14 @@ public class FabricaAceitunaController {
                         } else if (fabricaQ3Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ3Option2.getText().toString());
                         } else if (fabricaQ3Option3.isChecked()) {
-                            fabricaQ3str1 = fabricaQ3Option3.getText().toString();
                             if (!TextUtils.isEmpty(fabricaQ3edt1.getText())) {
-                                fabricaQ3str2 = fabricaQ3edt1.getText().toString();
+                                fabricaQ3str1 = fabricaQ3edt1.getText().toString();
                             }
                             if (!TextUtils.isEmpty(fabricaQ3edt2.getText())) {
-                                fabricaQ3str3 = fabricaQ3edt2.getText().toString();
+                                fabricaQ3str2 = fabricaQ3edt2.getText().toString();
                             }
 
-                            fabricaQ3strEnd = fabricaQ3str1.toString() + ", " + fabricaQ3str2.toString()+ ", " + fabricaQ3str3.toString();
+                            fabricaQ3strEnd = fabricaQ3str1.toString()+ " % verdes, " + fabricaQ3str2.toString() + " % negras";
 
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ3strEnd.toString());
                         }

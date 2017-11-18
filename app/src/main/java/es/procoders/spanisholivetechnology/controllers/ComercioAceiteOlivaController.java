@@ -79,6 +79,34 @@ public class ComercioAceiteOlivaController {
 
         controller = GeneralSingleton.getInstance();
 
+
+        switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
+
+            case R.layout.comercioaceiteoliva_details_13:
+                comercioAceiteQ13edt.setVisibility(View.GONE);
+
+                RadioGroup group = (RadioGroup) v.findViewById(R.id.comercioAceiteQ13Group);
+                group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId) {
+                            case R.id. comercioAceiteQ13Option1:
+                                comercioAceiteQ13edt.setVisibility(View.VISIBLE);
+                                break;
+                            case R.id.comercioAceiteQ13Option2:
+                                comercioAceiteQ13edt.setVisibility(View.GONE);
+                                break;
+                        }
+                    }
+                });
+                break;
+
+            default:
+                break;
+        }
+
+
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -246,7 +274,7 @@ public class ComercioAceiteOlivaController {
 
                         if (comercioAceiteQ13Option1.isChecked()) {
                             if (!TextUtils.isEmpty(comercioAceiteQ13edt.getText())) {
-                                controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ13Option1.getText().toString());
+                                controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ13edt.getText().toString());
                             }
                         } else if (comercioAceiteQ13Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(comercioAceiteQ13Option2.getText().toString());

@@ -193,7 +193,7 @@ public class PlantacionController {
                             if(!TextUtils.isEmpty(plantacionQ7edt.getText())){
                                 controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ7edt.getText().toString());
                             }
-                        } else if(plantacionQ5Option2.isChecked()) {
+                        } else if(plantacionQ7Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ7Option2.getText().toString());
                         }
                         break;

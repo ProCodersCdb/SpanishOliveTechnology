@@ -200,7 +200,9 @@ public class AlmazaraController {
                         break;
 
                     case R.layout.almazara_details_8:
-                        if (!TextUtils.isEmpty(almazaraQ8edt.getText())) {
+                        if (TextUtils.isEmpty(almazaraQ8edt.getText())) {
+                            almazaraQ8edt.setError("Campo requerido");
+                        }else {
                             almazaraQ8str1 = almazaraQ8edt.getText().toString();
                         }
                         if (almazaraQ8Option1.isChecked()) {
@@ -210,10 +212,15 @@ public class AlmazaraController {
                         } else if (almazaraQ8Option3.isChecked()) {
                             almazaraQ8str2 = almazaraQ8Option2.getText().toString();
                         }
-                        almazaraQ8strEnd = almazaraQ8str1.toString() + " ml., " + almazaraQ8str2.toString();
 
-                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ8strEnd.toString());
+                        if (!TextUtils.isEmpty(almazaraQ8edt.getText())) {
+                            if (almazaraQ8Option1.isChecked() || almazaraQ8Option1.isChecked() || almazaraQ8Option1.isChecked()) {
+                                almazaraQ8strEnd = almazaraQ8str1.toString() + " ml., " + almazaraQ8str2.toString();
 
+                                controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ8strEnd.toString());
+                            }
+
+                        }
                         break;
 
                     case R.layout.almazara_details_9:
