@@ -24,7 +24,7 @@ public class Questions implements GeneralControler {
      */
     private ArrayList<Respuesta> bioPreguntas = new ArrayList<>();
     private Context ctx;
-    Resources res;
+    private Resources res;
 
     public Questions(Context ctx) {
         this.ctx = ctx;

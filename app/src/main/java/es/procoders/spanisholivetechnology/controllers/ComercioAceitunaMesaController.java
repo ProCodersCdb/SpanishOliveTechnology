@@ -26,8 +26,8 @@ public class ComercioAceitunaMesaController {
     private Button back, save;
 
     private View view;
-    GeneralSingleton controller;
-    Activity activity;
+    private GeneralSingleton controller;
+    private Activity activity;
 
 
     public ComercioAceitunaMesaController(final View v, final Activity activity) {

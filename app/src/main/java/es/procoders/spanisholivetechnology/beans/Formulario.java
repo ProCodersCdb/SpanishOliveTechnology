@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 
 public class Formulario implements Serializable {
-
+//Bean del formulario, el cual registramos en la BBDD.
     private TipoRespuesta tipo;
     private Usuario user;
     private ArrayList<Respuesta> respuestas;

@@ -37,14 +37,26 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     private SharedPreferences prefs;
     private TextInputLayout til_contraseña2, til_nombre;
     private IUsuarioDAO dao = new UsuarioDAO();
+    private GeneralSingleton single;
 
-
+//Actividd de login con la que nos registramos o hacemos log en la aplicación.
+    //La actividad nos permite mediante un switch elegir si queremos hacer login o registrarnos.
+    //Nos guarda en sharedpreferences si queremos nuestro usuario para hacer login automaticamente al entrar en la app.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         prefs = getSharedPreferences("usuario", Context.MODE_PRIVATE);
+        initViews();
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
         checkExist(prefs);
+    }
+
+    private void initViews() {
+        single = GeneralSingleton.getInstance();
         til_contraseña2 = findViewById(R.id.til_contraseña2);
         name = findViewById(R.id.user_name);
         til_nombre = findViewById(R.id.til_nombre);
@@ -58,10 +70,6 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(this);
         register.setOnClickListener(this);
         repassword.setVisibility(View.GONE);
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
         nuevouser.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -80,19 +88,21 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-
     }
 
     private void checkExist(SharedPreferences prefs) {
-        if (prefs.getString("email", null)!= null){
+        if (getSharedPreferences("usuario", Context.MODE_PRIVATE) != null){
             Usuario user =new Usuario();
             user.setPass(prefs.getString("password", null));
             user.setNombre(prefs.getString("name", null));
             user.setEmail(prefs.getString("email", null));
-            GeneralSingleton.getInstance().setUser(user);
-            Intent inte = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(inte);
-            finish();
+            if (checkDB(user.getEmail(), user.getPass())){
+                single.setUser(user);
+                Intent inte = new Intent(this, MainActivity.class);
+                startActivity(inte);
+            }else{
+                Toast.makeText(this, "Error cargando usuario", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -112,10 +122,11 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                                     loginto();
                                 }
                             } else {
-                                Toast.makeText(this, "El email o contraseña no corresponde.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, "El email o contraseña no corresponde o no tienes conexión a internet", Toast.LENGTH_SHORT).show();
                             }
                         }catch (Exception e){
                             System.out.println(e.getMessage());
+                            Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
                         }
                     }else{
                         email.setError("Debes rellenar el campo");
@@ -141,6 +152,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             }catch (Exception e){
                                 System.out.println(e.getMessage());
+                                Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
                             }
                         }else{
                             repassword.setError("La contraseña debe ser la misma");
@@ -156,10 +168,31 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private boolean checkDB(EditText email, EditText password) {
-        return dao.comprobarPass(email.getText().toString(), password.getText().toString());
+        try {
+            return dao.comprobarPass(email.getText().toString(), password.getText().toString());
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
     private boolean checkDB(EditText email, EditText password, EditText name) {
-        return dao.crearUsuario(email.getText().toString(), password.getText().toString(), name.getText().toString());
+        try {
+            return dao.crearUsuario(email.getText().toString(), password.getText().toString(), name.getText().toString());
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+    private boolean checkDB(String email, String password  ) {
+        try {
+            return dao.comprobarPass(email, password);
+        }catch (Exception e ){
+            e.printStackTrace();
+            Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
 
@@ -182,7 +215,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         user.setEmail(mail);
         editor.putString("email", mail);
         user.setPass(pass);
-        GeneralSingleton.getInstance().setUser(user);
+        single.setUser(user);
         editor.putString("password", pass);
         editor.commit();
 

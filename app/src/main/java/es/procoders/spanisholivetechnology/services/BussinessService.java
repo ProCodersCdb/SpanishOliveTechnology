@@ -8,11 +8,9 @@ import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 
-public class BiomasaService {
+public class BussinessService implements BussinessRule<Respuesta>{
 
-
-
-
+    @Override
     public Boolean isReady(ArrayList<Respuesta> mapa) {
         boolean retVal= true;
         GeneralSingleton single= GeneralSingleton.getInstance();
@@ -25,6 +23,4 @@ public class BiomasaService {
         }
         return retVal;
     }
-
-//    public BussinessRule getRule ()
 }

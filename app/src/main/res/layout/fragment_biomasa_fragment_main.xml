@@ -66,15 +66,15 @@
         android:dividerHeight="0dp"
         android:fontFamily="@font/arial" />
 
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="60sp"
-        android:layout_height="60sp"
+        app:fabSize="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="26dp"
-        android:fontFamily="@font/arial"
-        android:src="@drawable/ic_addform"
-        android:tint="#fff" />
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_addform" />
 
 </FrameLayout>
 </LinearLayout>

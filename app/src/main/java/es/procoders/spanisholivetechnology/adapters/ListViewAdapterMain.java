@@ -1,5 +1,6 @@
 package es.procoders.spanisholivetechnology.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
 
+    /*Este adaptador nos carga nuestros formularios guardados en el singleton, ya sean de la bbdd o locales.*/
 
     private Context ctx;
     private ArrayList<Formulario> lista;
@@ -34,9 +36,7 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
 
 
     }
- /*   public ListViewAdapter(){
 
-    }*/
 
     @Override
     public int getCount() {
@@ -54,6 +54,7 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         if (getCount()>0) {
@@ -63,10 +64,41 @@ public class ListViewAdapterMain extends ArrayAdapter<Formulario> {
             TextView name = (TextView) view.findViewById(R.id.mainListView);
             TextView estado = (TextView) view.findViewById(R.id.estado_listView);
 
-            name.setText(user.getTipo().toString());
+
+            switch (user.getTipo()){
+                case BIOMASA:
+                    name.setText(R.string.Cbiomasa);
+                    break;
+                case ALMAZARA:
+                    name.setText(R.string.CAlmazara);
+                    break;
+                case PLANTACION:
+                    name.setText(R.string.CPlantacion);
+                    break;
+                case COMERCIOACEITE:
+                    name.setText(R.string.Caceiteoliva);
+                    break;
+                case FABRICAACEITUNA:
+                    name.setText(R.string.Cfabricaaceituna);
+                    break;
+                case COMERCIOACEITUNA:
+                    name.setText(R.string.Ccomercioaceituna);
+                    break;
+            }
             if (user.getDate()!=null) {
                 date.setText(user.getDate());
-                estado.setTextColor(view.getContext().getResources().getColor(R.color.colorAccent));
+                switch (user.getEstado()){
+                    case "enviado":
+                        estado.setTextColor(view.getContext().getResources().getColor(android.R.color.holo_orange_light));
+                        break;
+                    case "visto":
+                        estado.setTextColor(view.getContext().getResources().getColor(android.R.color.holo_blue_light));
+                        break;
+                    case "contestado":
+                        estado.setTextColor(view.getContext().getResources().getColor(R.color.colorAccent));
+                        break;
+                }
+
                 estado.setText(user.getEstado());
             }else{
                 estado.setTextColor(view.getContext().getResources().getColor(android.R.color.holo_red_dark));

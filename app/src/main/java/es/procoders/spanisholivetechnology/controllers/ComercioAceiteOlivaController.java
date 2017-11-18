@@ -33,8 +33,8 @@ public class ComercioAceiteOlivaController {
     private Button back, save;
 
     private View view;
-    GeneralSingleton controller;
-    Activity activity;
+    private GeneralSingleton controller;
+    private Activity activity;
 
 
     public ComercioAceiteOlivaController(final View v, final Activity activity) {

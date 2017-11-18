@@ -1,6 +1,8 @@
 package es.procoders.spanisholivetechnology.dao;
 
 import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,11 +10,14 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.TreeMap;
 
 import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.beans.Pregunta;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
+import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 
 
 public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
@@ -22,16 +27,19 @@ public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
 
     @Override
     public void guardarLocal(ArrayList<Formulario> e, Context c) {
-        for (Formulario formulario: e) {
-            if (formulario.getDate()!=null) {
-                e.remove(formulario);
+        ArrayList<Formulario> g = new ArrayList<>();
+
+            for (int i = 0; i < e.size(); i++) {
+                if (e.get(i).getDate() == null) {
+                    g.add(e.get(i));
+                }
             }
-        }
-        
+            e.removeAll(e);
+
         try {
             FileOutputStream fos = c.openFileOutput(fileName, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(e);
+            oos.writeObject(g);
             oos.close();
             fos.close();
         } catch (IOException u) {
@@ -53,6 +61,12 @@ public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
             fis.close();
         }  catch (Exception e) {
             e.printStackTrace();
+        }
+        GeneralSingleton single = GeneralSingleton.getInstance();
+        for (Formulario formulario: b) {
+            if (formulario.getUser() ==null) {
+                formulario.setUser(single.getUser());
+            }
         }
         return b;
     }

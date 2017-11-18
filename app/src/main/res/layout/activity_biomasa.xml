@@ -12,7 +12,7 @@
         android:id="@+id/fragment_activityBiomasa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="es.procoders.spanisholivetechnology.activities.BiomasaActivity">
+        tools:context="es.procoders.spanisholivetechnology.activities.ActivityFragment">
 
 
     </FrameLayout>
