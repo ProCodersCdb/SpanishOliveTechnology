@@ -3,7 +3,6 @@
         android:height="25dp"
         android:name="ic_info"
         android:viewportWidth="24.0"
-        android:name="ic_info"
         android:viewportHeight="24.0">
     <path
         android:fillColor="#F00"
