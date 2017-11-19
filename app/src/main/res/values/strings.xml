@@ -51,13 +51,14 @@
 
     <!-- Hint Plantacion -->
 
-    <string name="plantacionQ1HintOpcion1">Escribe el país</string>
-    <string name="plantacionQ2HintOpcion2">Indique la superficie</string>
+    <string name="plantacionQ1HintOpcion1">Indique el país</string>
+    <string name="plantacionQ1HintOpcion2">Indique la localidad</string>
+    <string name="plantacionQ2HintOpcion2">Superficie en m2</string>
     <string name="plantacionQ6HintOpcion6">Metros cúbicos por ha</string>
     <string name="plantacionQ7HintOpcion7">Indique caudal</string>
     <string name="plantacionQ10HintOpcion10">Nº de años con registros</string>
     <string name="plantacionQ11HintOpcion11">Indicar cifra</string>
-    <string name="plantacionQ12HintOpcion12">Nº de horas</string>
+    <string name="plantacionQ12HintOpcion12">Nº de horas/día</string>
     <string name="plantacionQ13HintOpcion13">Indique cultivos</string>
     <string name="plantacionQ15HintOpcion15">Comentarios</string>
 
@@ -274,7 +275,7 @@
     <string name="fabricaQ3HintOption3_1">Indicar % verde</string>
     <string name="fabricaQ3HintOption3_2">Indicar % negra</string>
     <string name="fabricaQ6HintOption6">Variedades a trabajar</string>
-    <string name="fabricaQ8HintOption8">gr/Kg</string>
+    <string name="fabricaQ8HintOption8">Indique Kg.</string>
     <string name="fabricaQ9HintOption9">Escribir rango</string>
     <string name="fabricaQ13HintOption13">Comentarios</string>
 
@@ -369,7 +370,7 @@
 
     <!--Hint comercio aceite de oliva-->
 
-    <string name="comercioAceiteQ5HintOpcion5">Indicar ml/L</string>
+    <string name="comercioAceiteQ5HintOpcion5">Indicar en L.</string>
     <string name="comercioAceiteQ7HintOpcion7">Litros granel/ nº botellas embasado</string>
     <string name="comercioAceiteQ8HintOpcion8">País destino</string>
     <string name="comercioAceiteQ10HintOpcion10">País de origen</string>
@@ -467,11 +468,10 @@
     <string name="comercioAceitunaQ9">País de origen para venta</string>
 
     <!-- Hint Aceituna Mesa -->
-
-    <string name="comercioAceitunaQ6Option6">Kg/gr</string>
-    <string name="comercioAceitunaQ7Option7">Indicar</string>
-    <string name="comercioAceitunaQ8Option8">Cantidad</string>
-    <string name="comercioAceitunaQ9Option9">Pais Origen Venta</string>
+    <string name="comercioAceitunaQ6HintOption6">Indicar en Kg.</string>
+    <string name="comercioAceitunaQ7Option7">Indicar calibre</string>
+    <string name="comercioAceitunaQ8Option8">Cantidad por formato</string>
+    <string name="comercioAceitunaQ9Option9">País Origen Venta</string>
 
     <!-- Titulos comercio aceituna de mesa-->
 

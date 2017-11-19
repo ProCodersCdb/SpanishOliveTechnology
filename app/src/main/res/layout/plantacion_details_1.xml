@@ -156,7 +156,7 @@
                         android:layout_marginTop="8dp"
                         android:ems="10"
                         android:fontFamily="@font/arial"
-                        android:hint="Escriba la localidad"
+                        android:hint="@string/plantacionQ1HintOpcion2"
                         android:inputType="textShortMessage" />
 
                 </android.support.design.widget.TextInputLayout>
