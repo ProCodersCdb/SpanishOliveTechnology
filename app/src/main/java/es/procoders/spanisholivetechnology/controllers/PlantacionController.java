@@ -12,6 +12,12 @@ import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
 
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
+
 public class PlantacionController {
     private RadioButton plantacionQ3Option1, plantacionQ3Option2, plantacionQ3Option3, plantacionQ4Option1, plantacionQ4Option2, plantacionQ4Option3, plantacionQ4Option4,
             plantacionQ5Option1, plantacionQ5Option2, plantacionQ7Option1, plantacionQ7Option2, plantacionQ8Option1, plantacionQ8Option2, plantacionQ9Option1,
@@ -263,8 +269,6 @@ public class PlantacionController {
                         break;
 
                 }
-                // DAO
-                //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
                 activity.onBackPressed();
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
             }

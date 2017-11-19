@@ -12,7 +12,14 @@ import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
 
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
+
 public class AlmazaraController {
+
     private RadioButton almazaraQ2Option1, almazaraQ2Option2, almazaraQ2Option3, almazaraQ6Option1, almazaraQ6Option2, almazaraQ6Option3,
             almazaraQ8Option1, almazaraQ8Option2, almazaraQ8Option3, almazaraQ10Option1, almazaraQ10Option2, almazaraQ11g1Option1, almazaraQ11g1Option2, almazaraQ11g2Option1,
             almazaraQ11g2Option2, almazaraQ11g2Option3, almazaraQ12Option1, almazaraQ12Option2, almazaraQ13Option1, almazaraQ13Option2, almazaraQ14Option1, almazaraQ14Option2;
@@ -216,10 +223,9 @@ public class AlmazaraController {
                         if (!TextUtils.isEmpty(almazaraQ8edt.getText())) {
                             if (almazaraQ8Option1.isChecked() || almazaraQ8Option1.isChecked() || almazaraQ8Option1.isChecked()) {
                                 almazaraQ8strEnd = almazaraQ8str1.toString() + " ml., " + almazaraQ8str2.toString();
-
                                 controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ8strEnd.toString());
-                            }
 
+                            }
                         }
                         break;
 
@@ -291,8 +297,6 @@ public class AlmazaraController {
                         break;
 
                 }
-                // DAO
-                //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
                 activity.onBackPressed();
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
             }

@@ -3,12 +3,10 @@ package es.procoders.spanisholivetechnology.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.os.StrictMode;
-import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -19,15 +17,19 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONObject;
-
-import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.Usuario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
-import es.procoders.spanisholivetechnology.dao.IUsuarioDAO;
-import es.procoders.spanisholivetechnology.dao.UsuarioDAO;
+import es.procoders.spanisholivetechnology.threads.TareaLogin;
+import es.procoders.spanisholivetechnology.threads.TareaRegister;
+
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
 
 public class UserActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText usuario, password, repassword, email, name;
@@ -36,10 +38,9 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     private CheckBox saveLog;
     private SharedPreferences prefs;
     private TextInputLayout til_contraseña2, til_nombre;
-    private IUsuarioDAO dao = new UsuarioDAO();
     private GeneralSingleton single;
 
-//Actividd de login con la que nos registramos o hacemos log en la aplicación.
+    //Actividad de login con la que nos registramos o hacemos log en la aplicación.
     //La actividad nos permite mediante un switch elegir si queremos hacer login o registrarnos.
     //Nos guarda en sharedpreferences si queremos nuestro usuario para hacer login automaticamente al entrar en la app.
     @Override
@@ -168,8 +169,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private boolean checkDB(EditText email, EditText password) {
+        TareaLogin tarea = new TareaLogin(email.getText().toString(), password.getText().toString());
         try {
-            return dao.comprobarPass(email.getText().toString(), password.getText().toString());
+            tarea.execute();
+            return tarea.get(4, TimeUnit.SECONDS);
         }catch (Exception e){
             e.printStackTrace();
             Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
@@ -177,8 +180,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private boolean checkDB(EditText email, EditText password, EditText name) {
+        TareaRegister tarea = new TareaRegister(email.getText().toString(), password.getText().toString(), name.getText().toString());
         try {
-            return dao.crearUsuario(email.getText().toString(), password.getText().toString(), name.getText().toString());
+            tarea.execute();
+            return tarea.get(4, TimeUnit.SECONDS);
         }catch (Exception e){
             e.printStackTrace();
             Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
@@ -186,8 +191,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private boolean checkDB(String email, String password  ) {
+        TareaLogin tarea = new TareaLogin(email, password);
         try {
-            return dao.comprobarPass(email, password);
+            tarea.execute();
+            return tarea.get(4, TimeUnit.SECONDS);
         }catch (Exception e ){
             e.printStackTrace();
             Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();

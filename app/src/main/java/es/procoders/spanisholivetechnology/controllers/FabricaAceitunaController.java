@@ -12,8 +12,14 @@ import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
 
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
 
 public class FabricaAceitunaController {
+
     private RadioButton fabricaQ3Option1, fabricaQ3Option2, fabricaQ3Option3, fabricaQ4Option1, fabricaQ4Option2, fabricaQ5Option1, fabricaQ5Option2, fabricaQ7Option1, fabricaQ7Option2, fabricaQ8Option1, fabricaQ8Option2, fabricaQ8Option3, fabricaQ8Option4, fabricaQ10Option1, fabricaQ10Option2, fabricaQ11Option1, fabricaQ11Option2, fabricaQ12Option1, fabricaQ12Option2;
 
     private EditText fabricaQ1edt1, fabricaQ1edt2, fabricaQ2edt, fabricaQ3edt1, fabricaQ3edt2, fabricaQ6edt, fabricaQ8edt, fabricaQ9edt, fabricaQ13edt;
@@ -94,8 +100,6 @@ public class FabricaAceitunaController {
             default:
                 break;
         }
-
-
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -245,8 +249,6 @@ public class FabricaAceitunaController {
 
                         break;
                 }
-                // DAO
-                //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
                 activity.onBackPressed();
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
 
@@ -260,7 +262,6 @@ public class FabricaAceitunaController {
                 activity.onBackPressed();
             }
         });
-
     }
 }
 

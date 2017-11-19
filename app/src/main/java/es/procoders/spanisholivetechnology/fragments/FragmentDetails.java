@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-
 import es.procoders.spanisholivetechnology.controllers.AlmazaraController;
 import es.procoders.spanisholivetechnology.controllers.BiomasaController;
 import es.procoders.spanisholivetechnology.controllers.ComercioAceiteOlivaController;
@@ -23,6 +22,7 @@ import es.procoders.spanisholivetechnology.controllers.PlantacionController;
  * @version 1.0
  * @since API 21
  */
+
 public class FragmentDetails extends android.support.v4.app.Fragment {
     /**
      *

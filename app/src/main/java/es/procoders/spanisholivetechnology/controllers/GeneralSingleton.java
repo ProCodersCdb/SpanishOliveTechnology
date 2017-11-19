@@ -1,27 +1,19 @@
 package es.procoders.spanisholivetechnology.controllers;
 
-import android.annotation.SuppressLint;
 import android.support.v4.app.FragmentManager;
 
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.TreeMap;
 
 import es.procoders.spanisholivetechnology.beans.Formulario;
-import es.procoders.spanisholivetechnology.beans.Pregunta;
-import es.procoders.spanisholivetechnology.beans.Respuesta;
 import es.procoders.spanisholivetechnology.beans.Usuario;
-import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
 
 /**
- * Created by Apps on 10/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 public class GeneralSingleton {
-    /**
-     *
-     */
-
 
     private  static GeneralSingleton single;
     private int position;
@@ -29,6 +21,21 @@ public class GeneralSingleton {
     private Usuario user;
     private ArrayList<Formulario> formularios;
     private int positionformulario;
+
+
+    private GeneralSingleton(){
+    }
+
+    public static GeneralSingleton getInstance(){
+        if (single == null){
+            single = new GeneralSingleton();
+        }
+        return single;
+    }
+
+    public void resetSingleton(){
+        single= new GeneralSingleton();
+    }
 
     public int getPositionformulario() {
         return positionformulario;
@@ -62,42 +69,12 @@ public class GeneralSingleton {
         this.position = position;
     }
 
-   /* public ArrayList<Respuesta> getRespuesta() {
-        return respuesta;
-    }
-
-    public void setRespuesta(ArrayList<Respuesta> respuesta) {
-        this.respuesta = respuesta;
-    }
-*/
-
-
-
     public FragmentManager getFragmentManager() {
         return fragmentManager;
     }
 
     public void setFragmentManager(FragmentManager fragmentManager) {
         this.fragmentManager = fragmentManager;
-    }
-
-
-
-
-
-    private GeneralSingleton(){
-
-    }
-
-
-    public static GeneralSingleton getInstance(){
-        if (single == null){
-            single = new GeneralSingleton();
-        }
-        return single;
-    }
-    public void resetSingleton(){
-        single= new GeneralSingleton();
     }
 
 

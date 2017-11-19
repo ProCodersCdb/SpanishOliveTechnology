@@ -8,7 +8,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * Created by joser on 13/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 class DBConnection {
@@ -26,17 +28,13 @@ class DBConnection {
 
     //Constructor por defecto
     protected DBConnection() {
-//        dbUser = "root"; //TODO sustituir cadenas por strings dentro de los recursos
-//        dbPass = "010883"; //TODO sustituir cadenas por strings dentro de los recursos
-//        urlServer = "jdbc:mariadb://192.168.1.36"; //TODO sustituir cadenas por strings dentro de los recursos
-//        urlServer = "jdbc:mariadb://10.20.32.115";
         dbUser = "jperez_app";
         dbPass = ")mSL!,^ub{7op{]1){p";
         urlServer = "jdbc:mariadb://164.138.209.89/";
     }
 
     protected void conectar() {
-        //create connection for a server installed in localhost, with a user "root" with no password
+        //create connection to a server in "urlServer", with a user "dbUser" using password "dbPass"
         try {
             Class.forName("org.mariadb.jdbc.Driver");
             conexionSQL = DriverManager.getConnection(urlServer, dbUser, dbPass);

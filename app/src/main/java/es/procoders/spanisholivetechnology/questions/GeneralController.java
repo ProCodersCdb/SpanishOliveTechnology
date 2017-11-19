@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import es.procoders.spanisholivetechnology.beans.Respuesta;
 
 /**
- * Created by bjfem on 10/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
-interface GeneralControler {
+interface GeneralController {
      ArrayList<Respuesta> getBiomasa();
      ArrayList<Respuesta> getPlantacion();
      ArrayList<Respuesta> getFabricaAceituna();

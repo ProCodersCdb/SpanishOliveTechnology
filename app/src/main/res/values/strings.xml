@@ -1,10 +1,6 @@
 <resources>
     <string name="app_name">Spanish Olive Technology</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
     <!-- Strings Tools -->
 
     <string name="yes">Si</string>
@@ -475,7 +471,7 @@
     <string name="comercioAceitunaQ6HintOption6">Indicar en Kg.</string>
     <string name="comercioAceitunaQ7Option7">Indicar calibre</string>
     <string name="comercioAceitunaQ8Option8">Cantidad por formato</string>
-    <string name="comercioAceitunaQ9Option9">Pais Origen Venta</string>
+    <string name="comercioAceitunaQ9Option9">País Origen Venta</string>
 
     <!-- Titulos comercio aceituna de mesa-->
 

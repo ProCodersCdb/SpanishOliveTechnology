@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -14,7 +13,9 @@ import android.widget.Toast;
 import es.procoders.spanisholivetechnology.R;
 
 /**
- *
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 public class ComercioAceiteOlivaController {
@@ -78,7 +79,6 @@ public class ComercioAceiteOlivaController {
         save = v.findViewById(R.id.btnOptionSave);
 
         controller = GeneralSingleton.getInstance();
-
 
         switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
 
@@ -294,8 +294,6 @@ public class ComercioAceiteOlivaController {
                         break;
 
                 }
-                // DAO
-                //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
                 activity.onBackPressed();
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
             }

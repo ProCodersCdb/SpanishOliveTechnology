@@ -5,21 +5,25 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import es.procoders.spanisholivetechnology.R;
 
+/**
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
+ */
+
 public class BiomasaController {
+
     private RadioButton det1opcion1, det1opcion2, det2opcion1, det2opcion2, det2opcion3, det3opcion1, det3opcion2, det3opcion3, det4opcion1, det4opcion2, det7opcion1, det7opcion2;
     private EditText edtDetails5, edtDetails6, edtDetails8;
     private View view;
     private  GeneralSingleton controller;
     private Activity activity;
     private Button save, back;
-
 
 
     public BiomasaController(final View v, final Activity activity){
@@ -133,8 +137,6 @@ public class BiomasaController {
                         break;
 
                 }
-                // DAO
-                //controller.getMapa().put(controller.getRespuesta().getPregunta(), controller.getRespuesta());
                 activity.onBackPressed();
                 Toast.makeText(v.getContext(), "Guardado", Toast.LENGTH_SHORT).show();
             }
