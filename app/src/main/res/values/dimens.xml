@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tamaño Titulo Opciones -->
+    <dimen name="optionTittleSize">50dp</dimen>
+    <dimen name="optionTittleSizeMid">40dp</dimen>
+    <dimen name="optionTittleSizeMin">30dp</dimen>
+
+    <!-- Tamaño Opciones RadioButtons -->
+    <dimen name="optionRbtnSizeMax">35dp</dimen>
+    <dimen name="optionRbtnSizeMid">25dp</dimen>
+    <dimen name="optionRbtnSizeMin">20dp</dimen>
+
+    <!-- Tamaño Opciones ListView-->
+    <dimen name="itemListSize">20dp</dimen>
+
+    <!-- Tamaño Botones -->
+    <dimen name="btnTextSize">20sp</dimen>
+</resources>

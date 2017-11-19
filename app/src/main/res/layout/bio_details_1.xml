@@ -3,66 +3,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="es.procoders.spanisholivetechnology.fragments.BiomasaFragmentDetails">
+    tools:context="es.procoders.spanisholivetechnology.fragments.FragmentDetails">
 
-  <android.support.constraint.ConstraintLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
-      <RadioGroup
-          android:id="@+id/GrupoDet1"
-          android:layout_width="125dp"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="8dp"
-          android:layout_marginEnd="8dp"
-          android:layout_marginStart="8dp"
-          android:layout_marginTop="8dp"
-          app:layout_constraintBottom_toTopOf="@+id/btnSaveBiomasa"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp">
 
-          <RadioButton
-              android:id="@+id/det1opcion1"
-              android:layout_width="match_parent"
-              android:layout_height="50dp"
-              android:layout_weight="1"
-              android:text="COMPRA" />
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="50"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/ic_btn_back"
+                    android:fontFamily="@font/arial"
+                    android:text="@string/btnBack"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
 
-          <RadioButton
-              android:id="@+id/det1opcion2"
-              android:layout_width="match_parent"
-              android:layout_height="50dp"
-              android:layout_weight="1"
-              android:text="VENTA" />
-      </RadioGroup>
+                <Button
+                    android:id="@+id/btnOptionSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_weight="50"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_option_ok"
+                    android:fontFamily="@font/arial"
+                    android:text="Guardar  "
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </LinearLayout>
 
-      <Button
-          android:id="@+id/btnSaveBiomasa"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="32dp"
-          android:layout_marginEnd="8dp"
-          android:layout_marginStart="8dp"
-          android:text="GUARDAR"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="72dp"
+                android:paddingRight="16dp">
 
-      <TextView
-          android:id="@+id/interes"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="8dp"
-          android:layout_marginEnd="8dp"
-          android:layout_marginStart="8dp"
-          android:layout_marginTop="8dp"
-          android:text="INTERÉS"
-          app:layout_constraintBottom_toTopOf="@+id/GrupoDet1"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-  </android.support.constraint.ConstraintLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arial"
+                    android:text="@string/bioQ1Tittle"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/optionTittleSizeMin" />
+            </LinearLayout>
 
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+
+                android:fontFamily="@font/arial"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="32dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="32dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/bioQ1Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="@font/arial"
+                    android:text="@string/bioQ1Description"
+                    android:textColor="@color/colorWhite" />
+
+
+            </android.support.design.widget.CoordinatorLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="70sp"
+                android:layout_weight="40"
+                android:fontFamily="@font/arial"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <RadioGroup
+                    android:id="@+id/GrupoDet1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/option_separator"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    tools:layout_editor_absoluteX="42dp"
+                    tools:layout_editor_absoluteY="273dp">
+
+                    <RadioButton
+                        android:id="@+id/det1opcion1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:fontFamily="@font/arial"
+                        android:gravity="center"
+                        android:text="@string/bioQ1Option1"
+                        android:textColor="@drawable/rbtn_textcolor_selector"
+                        android:textSize="@dimen/optionRbtnSizeMax" />
+
+                    <RadioButton
+                        android:id="@+id/det1opcion2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/arial"
+                        android:gravity="center"
+                        android:text="@string/bioQ1Option2"
+                        android:textColor="@drawable/rbtn_textcolor_selector"
+                        android:textSize="@dimen/optionRbtnSizeMax" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
 </FrameLayout>
