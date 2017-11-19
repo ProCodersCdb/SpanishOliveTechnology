@@ -14,7 +14,9 @@ import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
 import es.procoders.spanisholivetechnology.questions.Questions;
 
 /**
- * Created by joser on 13/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 public class FormularioDAO extends DBConnection implements IFormularioDAO {
@@ -35,13 +37,9 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
 
     //Métodos
     @Override
-    public Boolean crearFormulario(Formulario formulario) {
+    public Boolean crearFormulario(Formulario formulario) throws SQLException {
         Boolean retVal = false;
 
-        //TODO Quitar comprobación. No se puede llamar al Singleton desde el DAO. Separación de capas.
-        if (formulario.getUser().getEmail() == null){
-            formulario.getUser().setEmail(GeneralSingleton.getInstance().getUser().getEmail());
-        }
         String email = formulario.getUser().getEmail();
 
         TipoRespuesta tipoFormulario = (TipoRespuesta) formulario.getTipo();
@@ -83,13 +81,14 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
             desconectar();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
         return retVal;
     }
 
 
     @Override
-    public ArrayList<Formulario> consultarFormularios(Usuario usuario, Context context) {
+    public ArrayList<Formulario> consultarFormularios(Usuario usuario, Context context) throws SQLException {
         ArrayList<Formulario> formularios = new ArrayList<>();
 
         try {
@@ -105,14 +104,15 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
             desconectar();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
         return formularios;
     }
 
 
-    //TODO revisar método
+    //TODO revisar método. Se pueden ahorrar casi todas las líneas haciendo llamada a Crear tras hacer el delete
     @Override
-    public Boolean upgradeForm(Formulario formulario) {
+    public Boolean upgradeForm(Formulario formulario) throws SQLException {
         Boolean retVal = false;
         if (formulario.getUser().getEmail() == null){
             formulario.getUser().setEmail(GeneralSingleton.getInstance().getUser().getEmail());
@@ -159,6 +159,7 @@ public class FormularioDAO extends DBConnection implements IFormularioDAO {
             desconectar();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
         return retVal;
     }

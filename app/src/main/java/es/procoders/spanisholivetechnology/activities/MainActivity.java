@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -18,6 +17,7 @@ import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.OnItemClickListener;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapterMain;
@@ -25,10 +25,11 @@ import es.procoders.spanisholivetechnology.adapters.SimpleAdapter;
 import es.procoders.spanisholivetechnology.adapters.SimpleAdapterCharge;
 import es.procoders.spanisholivetechnology.beans.Formulario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
-import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
+import es.procoders.spanisholivetechnology.dao.LocalDAO;
 import es.procoders.spanisholivetechnology.dao.FormularioDAO;
 import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
 import es.procoders.spanisholivetechnology.questions.Questions;
+import es.procoders.spanisholivetechnology.threads.TareaReadForms;
 
 /**
  * @author Procoders
@@ -50,12 +51,6 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //TODO QUITAR LUEGO CUANDO ESTÉ EL ASYNC
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
 
         setContentView(R.layout.activity_main);
         dao= new FormularioDAO();
@@ -161,14 +156,16 @@ public class MainActivity extends AppCompatActivity{
     private void loadArrayFormularios(){
         cargarDB(this);
         ArrayList<Formulario> arrayFormulario = new ArrayList<>();
+        TareaReadForms tarea = new TareaReadForms(single.getUser(), this);
         try {
-            arrayFormulario = dao.consultarFormularios(single.getUser(), this);
+            tarea.execute();
+            arrayFormulario = tarea.get(4, TimeUnit.SECONDS);
         }catch (Exception e){
             Toast.makeText(this, "Ha ocurrido un error cargando los formularios, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
             System.out.println(e.getMessage());
         }
         single.setFormularios(arrayFormulario);
-        GeneralSingleton.getInstance().getFormularios().addAll(new BiomasaDAO().recuperarLocal(this));
+        GeneralSingleton.getInstance().getFormularios().addAll(new LocalDAO().recuperarLocal(this));
 
         adapter = new ListViewAdapterMain(this, single.getFormularios());
         lv.setAdapter(adapter);

@@ -18,7 +18,7 @@ import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
  * @since API 21
  */
 
-public class BiomasaDAO implements GestionDAO<ArrayList<Formulario>>{
+public class LocalDAO implements GestionDAO<ArrayList<Formulario>>{
 
     private final static String fileName = "datos.dat";
 

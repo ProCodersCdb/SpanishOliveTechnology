@@ -16,7 +16,7 @@ import es.procoders.spanisholivetechnology.beans.TipoRespuesta;
  * @since API 21
  */
 
-public class Questions implements GeneralControler {
+public class Questions implements GeneralController {
     /**
      * Declaracion de variables útiles dentro de la clase
      */

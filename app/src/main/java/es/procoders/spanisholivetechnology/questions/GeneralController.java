@@ -10,7 +10,7 @@ import es.procoders.spanisholivetechnology.beans.Respuesta;
  * @since API 21
  */
 
-interface GeneralControler {
+interface GeneralController {
      ArrayList<Respuesta> getBiomasa();
      ArrayList<Respuesta> getPlantacion();
      ArrayList<Respuesta> getFabricaAceituna();

@@ -17,11 +17,13 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.concurrent.TimeUnit;
+
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.beans.Usuario;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
-import es.procoders.spanisholivetechnology.dao.IUsuarioDAO;
-import es.procoders.spanisholivetechnology.dao.UsuarioDAO;
+import es.procoders.spanisholivetechnology.threads.TareaLogin;
+import es.procoders.spanisholivetechnology.threads.TareaRegister;
 
 /**
  * @author Procoders
@@ -36,7 +38,6 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     private CheckBox saveLog;
     private SharedPreferences prefs;
     private TextInputLayout til_contraseña2, til_nombre;
-    private IUsuarioDAO dao = new UsuarioDAO();
     private GeneralSingleton single;
 
     //Actividad de login con la que nos registramos o hacemos log en la aplicación.
@@ -168,8 +169,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private boolean checkDB(EditText email, EditText password) {
+        TareaLogin tarea = new TareaLogin(email.getText().toString(), password.getText().toString());
         try {
-            return dao.comprobarPass(email.getText().toString(), password.getText().toString());
+            tarea.execute();
+            return tarea.get(4, TimeUnit.SECONDS);
         }catch (Exception e){
             e.printStackTrace();
             Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
@@ -177,8 +180,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private boolean checkDB(EditText email, EditText password, EditText name) {
+        TareaRegister tarea = new TareaRegister(email.getText().toString(), password.getText().toString(), name.getText().toString());
         try {
-            return dao.crearUsuario(email.getText().toString(), password.getText().toString(), name.getText().toString());
+            tarea.execute();
+            return tarea.get(4, TimeUnit.SECONDS);
         }catch (Exception e){
             e.printStackTrace();
             Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();
@@ -186,8 +191,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private boolean checkDB(String email, String password  ) {
+        TareaLogin tarea = new TareaLogin(email, password);
         try {
-            return dao.comprobarPass(email, password);
+            tarea.execute();
+            return tarea.get(4, TimeUnit.SECONDS);
         }catch (Exception e ){
             e.printStackTrace();
             Toast.makeText(this, "Ha ocurrido un error, intentelo de nuevo mas tarde.", Toast.LENGTH_SHORT).show();

@@ -20,24 +20,10 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
     }
 
     //Métodos
-    @Override
-    public Boolean crearUsuario (String email, String pass){
-        Boolean retVal = false;
-        try {
-            conectar();
-            consultaSQL = "INSERT INTO "+table+" SET email='"+email+"', pass='"+pass+"'";
-            retVal = conexionSQL.createStatement().execute(consultaSQL);
-            desconectar();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return retVal;
-    }
 
     @Override
-    public Boolean crearUsuario(String email, String pass, String datos) {
-        //TODO comprobar true or false en .execute
+    public Boolean crearUsuario(String email, String pass, String datos) throws SQLException {
+
         Boolean retVal = true;
         try {
             conectar();
@@ -46,12 +32,14 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
             desconectar();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
         return !retVal;
     }
 
+    //No implementado aún en la aplicación
     @Override
-    public Boolean actualizarPass(String email, String pass) {
+    public Boolean actualizarPass(String email, String pass) throws SQLException {
         Boolean retVal = false;
         try {
             conectar();
@@ -62,30 +50,27 @@ public class UsuarioDAO extends DBConnection implements IUsuarioDAO {
             desconectar();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
 
         return retVal;
     }
 
     @Override
-    public Boolean comprobarPass(String email, String pass) {
+    public Boolean comprobarPass(String email, String pass) throws SQLException {
         Boolean retVal = false;
         try {
             conectar();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        consultaSQL = "SELECT pass FROM "+table+" WHERE email = '"+email+"'";
-        try {
+            consultaSQL = "SELECT pass FROM "+table+" WHERE email = '"+email+"'";
             stmt = conexionSQL.createStatement();
             rs = stmt.executeQuery(consultaSQL);
             rs.next();
             retVal = pass.equals(rs.getString("pass"));
             desconectar();
-        }catch (Exception e){
-            System.out.printf(e.getMessage());
+        }catch (SQLException e){
+            e.printStackTrace();
+            throw e;
         }
-
         return retVal;
     }
 }

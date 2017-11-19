@@ -1,13 +1,17 @@
 package es.procoders.spanisholivetechnology.dao;
 
+import java.sql.SQLException;
+
 /**
- * Created by joser on 13/11/2017.
+ * @author Procoders
+ * @version 1.0
+ * @since API 21
  */
 
 public interface IUsuarioDAO {
 
-    public Boolean crearUsuario(String email, String pass);
-    public Boolean crearUsuario(String email, String pass, String datos);
-    public Boolean actualizarPass(String email, String pass);
-    public Boolean comprobarPass(String email, String pass);
+//    public Boolean crearUsuario(String email, String pass) throws SQLException;
+    public Boolean crearUsuario(String email, String pass, String datos) throws SQLException;
+    public Boolean actualizarPass(String email, String pass) throws SQLException;
+    public Boolean comprobarPass(String email, String pass) throws SQLException;
 }

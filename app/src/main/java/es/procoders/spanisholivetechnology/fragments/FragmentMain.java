@@ -3,7 +3,6 @@ package es.procoders.spanisholivetechnology.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,10 +19,12 @@ import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.adapters.ListViewAdapter;
 import es.procoders.spanisholivetechnology.adapters.SimpleAdapterSave;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
-import es.procoders.spanisholivetechnology.dao.BiomasaDAO;
+import es.procoders.spanisholivetechnology.dao.LocalDAO;
 import es.procoders.spanisholivetechnology.dao.FormularioDAO;
 import es.procoders.spanisholivetechnology.dao.IFormularioDAO;
 import es.procoders.spanisholivetechnology.services.BussinessService;
+import es.procoders.spanisholivetechnology.threads.TareaAddForm;
+import es.procoders.spanisholivetechnology.threads.TareaUpgradeForm;
 
 /**
  * @author Procoders
@@ -31,7 +32,7 @@ import es.procoders.spanisholivetechnology.services.BussinessService;
  * @since API 21
  */
 
-public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnItemClickListener {
+public class FragmentMain extends ListFragment implements AdapterView.OnItemClickListener {
 
     private IFormularioDAO dao = new FormularioDAO();
     private BaseAdapter adapter;
@@ -43,7 +44,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
 
 
 
-    public BiomasaFragmentMain() {
+    public FragmentMain() {
         // Required empty public constructor
     }
 
@@ -69,7 +70,7 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
 
     private void initViews(View view) {
         floating = view.findViewById(R.id.fab);
-        final BiomasaDAO biomasaDAO= new BiomasaDAO();
+        final LocalDAO localDAO = new LocalDAO();
         final BussinessService finalServices = new BussinessService();
         floating.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,23 +87,25 @@ public class BiomasaFragmentMain extends ListFragment implements AdapterView.OnI
                             public void onItemClick(DialogPlus dialog, Object item, View view, int position) {
                                 switch (position){
                                     case 0:
-                                        biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
+                                        localDAO.guardarLocal(single.getFormularios(), view.getContext());
                                         getActivity().onBackPressed();
                                         break;
                                     case 1:
                                         try {
                                             if (finalServices.isReady(single.getFormularios().get(single.getPositionformulario()).getRespuestas())) {
                                                 if (single.getFormularios().get(single.getPositionformulario()).getDate() == null) {
-                                                    dao.crearFormulario(single.getFormularios().get(single.getPositionformulario()));
+                                                    TareaAddForm tarea = new TareaAddForm(single.getFormularios().get(single.getPositionformulario()));
+                                                    tarea.execute();
                                                 } else {
-                                                    dao.upgradeForm(single.getFormularios().get(single.getPositionformulario()));
+                                                    TareaUpgradeForm tarea = new TareaUpgradeForm(single.getFormularios().get(single.getPositionformulario()));
+                                                    tarea.execute();
                                                 }
                                                 single.getFormularios().remove(single.getFormularios().get(single.getPositionformulario()));
-                                                biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
+                                                localDAO.guardarLocal(single.getFormularios(), view.getContext());
                                                 getActivity().onBackPressed();
                                             } else {
                                                 Toast.makeText(view.getContext(), "Formulario no enviado, debes rellenar todos los campos requeridos", Toast.LENGTH_SHORT).show();
-                                                biomasaDAO.guardarLocal(single.getFormularios(), view.getContext());
+                                                localDAO.guardarLocal(single.getFormularios(), view.getContext());
                                                 getActivity().onBackPressed();
                                             }
                                         }catch (Exception e){

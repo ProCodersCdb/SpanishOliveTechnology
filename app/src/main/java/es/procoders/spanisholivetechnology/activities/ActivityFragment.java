@@ -5,7 +5,7 @@ import android.widget.ImageButton;
 
 import es.procoders.spanisholivetechnology.R;
 import es.procoders.spanisholivetechnology.controllers.GeneralSingleton;
-import es.procoders.spanisholivetechnology.fragments.BiomasaFragmentMain;
+import es.procoders.spanisholivetechnology.fragments.FragmentMain;
 
 /**
  * @author Procoders
@@ -32,7 +32,7 @@ public class ActivityFragment extends android.support.v4.app.FragmentActivity {
         back = (ImageButton) findViewById(R.id.btnBack);
 
 
-        BiomasaFragmentMain fragment = new BiomasaFragmentMain();
+        FragmentMain fragment = new FragmentMain();
         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.fragment_activityBiomasa, fragment);
         ft.commit();
