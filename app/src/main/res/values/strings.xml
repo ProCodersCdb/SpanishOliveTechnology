@@ -137,7 +137,7 @@
 
 
 
-    <!-- ####################################### STRINGS ALMANZARA #################################### -->
+    <!-- ####################################### STRINGS ALMAZARA #################################### -->
 
     <!-- Hints almazara-->
 
@@ -156,7 +156,7 @@
     <!-- Preguntas almazara-->
 
     <string name="almazaraQ1">País y localidad</string>
-    <string name="almazaraQ2">Objetivo almanzara</string>
+    <string name="almazaraQ2">Objetivo almazara</string>
     <string name="almazaraQ3">Capacidad trabajo</string>
     <string name="almazaraQ4">Nº de variedades de aceituna a trabajar</string>
     <string name="almazaraQ5">Tipo  de variedades de aceituna a trabajar</string>
@@ -174,7 +174,7 @@
     <!-- Títulos almazara -->
 
     <string name="almazaraQ1Tittle">País y Localidad</string>
-    <string name="almazaraQ2Tittle">Objetivo Almanzara</string>
+    <string name="almazaraQ2Tittle">Objetivo Almazara</string>
     <string name="almazaraQ3Tittle">Capacidad Trabajo</string>
     <string name="almazaraQ4Tittle">Nº de Variedades de Aceituna a Trabajar</string>
     <string name="almazaraQ5Tittle">Tipo  de Variedades de Aceituna a Trabajar</string>
