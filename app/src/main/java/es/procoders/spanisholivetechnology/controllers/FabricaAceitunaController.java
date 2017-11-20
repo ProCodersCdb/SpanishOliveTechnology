@@ -107,15 +107,12 @@ public class FabricaAceitunaController {
                 switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
 
                     case R.layout.fabricaaceitunamesa_details_1:
-                        if (!TextUtils.isEmpty(fabricaQ1edt1.getText())) {
+                        if (!TextUtils.isEmpty(fabricaQ1edt1.getText()) && !TextUtils.isEmpty(fabricaQ1edt2.getText())) {
                             fabricaQ1str1 = fabricaQ1edt1.getText().toString();
-                        }
-                        if (!TextUtils.isEmpty(fabricaQ1edt2.getText())) {
                             fabricaQ1str2 = fabricaQ1edt2.getText().toString();
+                            fabricaQ1strEnd = fabricaQ1str1.toString() + ", " + fabricaQ1str2.toString();
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ1strEnd.toString());
                         }
-                        fabricaQ1strEnd = fabricaQ1str1.toString() + ", " + fabricaQ1str2.toString();
-
-                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ1strEnd.toString());
 
                         break;
 
@@ -131,18 +128,13 @@ public class FabricaAceitunaController {
                         } else if (fabricaQ3Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ3Option2.getText().toString());
                         } else if (fabricaQ3Option3.isChecked()) {
-                            if (!TextUtils.isEmpty(fabricaQ3edt1.getText())) {
+                            if (!TextUtils.isEmpty(fabricaQ3edt1.getText()) && !TextUtils.isEmpty(fabricaQ3edt2.getText())) {
                                 fabricaQ3str1 = fabricaQ3edt1.getText().toString();
-                            }
-                            if (!TextUtils.isEmpty(fabricaQ3edt2.getText())) {
                                 fabricaQ3str2 = fabricaQ3edt2.getText().toString();
+                                fabricaQ3strEnd = fabricaQ3str1.toString()+ " % verdes, " + fabricaQ3str2.toString() + " % negras";
+                                controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ3strEnd.toString());
                             }
-
-                            fabricaQ3strEnd = fabricaQ3str1.toString()+ " % verdes, " + fabricaQ3str2.toString() + " % negras";
-
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ3strEnd.toString());
                         }
-
                         break;
 
                     case R.layout.fabricaaceitunamesa_details_4:
@@ -196,9 +188,10 @@ public class FabricaAceitunaController {
                         if (!TextUtils.isEmpty(fabricaQ8edt.getText())) {
                             fabricaQ8str2 = fabricaQ8edt.getText().toString();
                         }
-
-                        fabricaQ8strEnd = fabricaQ8str1.toString() + ", " + fabricaQ8str2.toString();
-                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ8strEnd.toString());
+                        if (fabricaQ8str1 != null && fabricaQ8str2 != null){
+                            fabricaQ8strEnd = fabricaQ8str1.toString() + ", " + fabricaQ8str2.toString();
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(fabricaQ8strEnd.toString());
+                        }
 
                         break;
 
