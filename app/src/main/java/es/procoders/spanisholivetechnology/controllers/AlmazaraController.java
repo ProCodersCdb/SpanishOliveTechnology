@@ -138,15 +138,12 @@ public class AlmazaraController {
                 switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
 
                     case R.layout.almazara_details_1:
-                        if (!TextUtils.isEmpty(almazaraQ1edt1.getText())) {
+                        if (!TextUtils.isEmpty(almazaraQ1edt1.getText()) && !TextUtils.isEmpty(almazaraQ1edt2.getText())) {
                             almazaraQ1str1 =almazaraQ1edt1.getText().toString();
-                        }
-                        if (!TextUtils.isEmpty(almazaraQ1edt2.getText())) {
                             almazaraQ1str2 = almazaraQ1edt2.getText().toString();
+                            almazaraQ1strEnd = almazaraQ1str1.toString() + ", " + almazaraQ1str2.toString();
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ1strEnd.toString());
                         }
-                        almazaraQ1strEnd = almazaraQ1str1.toString() + ", " + almazaraQ1str2.toString();
-
-                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ1strEnd.toString());
 
                         break;
 
@@ -164,15 +161,12 @@ public class AlmazaraController {
                         break;
 
                     case R.layout.almazara_details_3:
-                        if (!TextUtils.isEmpty(almazaraQ3edt1.getText())) {
+                        if (!TextUtils.isEmpty(almazaraQ3edt1.getText()) && !TextUtils.isEmpty(almazaraQ3edt2.getText())) {
                             almazaraQ3str1 = almazaraQ3edt1.getText().toString();
-                        }
-                        if (!TextUtils.isEmpty(almazaraQ3edt2.getText())) {
                             almazaraQ3str2 = almazaraQ3edt2.getText().toString();
+                            almazaraQ3strEnd = almazaraQ3str1.toString() + ", " + almazaraQ3str2.toString();
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ3strEnd.toString());
                         }
-                        almazaraQ3strEnd = almazaraQ3str1.toString() + ", " + almazaraQ3str2.toString();
-
-                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ3strEnd.toString());
 
                         break;
 
@@ -242,7 +236,7 @@ public class AlmazaraController {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ10Option2.getText().toString());
                         }
                         break;
-
+                    //TODO arreglar el crasheo
                     case R.layout.almazara_details_11:
                         if(almazaraQ11g1Option1.isChecked()){
                             almazaraQ11str1 = almazaraQ11g1Option1.getText().toString();
