@@ -49,10 +49,6 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_user);
         prefs = getSharedPreferences("usuario", Context.MODE_PRIVATE);
         initViews();
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
         checkExist(prefs);
     }
 
@@ -120,6 +116,8 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                                     guardarDatos(prefs, false);
                                     loginto();
                                 } else {
+                                    GeneralSingleton single = GeneralSingleton.getInstance();
+                                    single.setUser(new Usuario(email.getText().toString(), name.getText().toString(), password.getText().toString()));
                                     loginto();
                                 }
                             } else {
@@ -146,7 +144,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                                         guardarDatos(prefs, true);
                                         loginto();
                                     } else {
-                                        GeneralSingleton single =GeneralSingleton.getInstance();
+                                        GeneralSingleton single = GeneralSingleton.getInstance();
                                         single.setUser(new Usuario(email.getText().toString(), name.getText().toString(), password.getText().toString()));
                                         loginto();
                                     }
