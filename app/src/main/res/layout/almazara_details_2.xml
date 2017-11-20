@@ -150,7 +150,7 @@
 
                 <RadioButton
                     android:id="@+id/almazaraQ2Option3"
-                    android:text="@string/almazaraQ3"
+                    android:text="@string/almazaraQ2Option3"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_weight="1"
