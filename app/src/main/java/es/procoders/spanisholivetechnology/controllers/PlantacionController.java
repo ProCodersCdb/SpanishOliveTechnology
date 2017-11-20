@@ -131,16 +131,14 @@ public class PlantacionController {
                 switch (controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).getPregunta().getLayout()) {
 
                     case R.layout.plantacion_details_1:
-                        if(!TextUtils.isEmpty(plantacionQ1edt1.getText())) {
+                        if(!TextUtils.isEmpty(plantacionQ1edt1.getText()) && !TextUtils.isEmpty(plantacionQ1edt2.getText())) {
                             plantacionQ1str1 = plantacionQ1edt1.getText().toString();
-                        }
-                        if(!TextUtils.isEmpty(plantacionQ1edt2.getText())){
                             plantacionQ1str2 = plantacionQ1edt2.getText().toString();
+                            plantacionQ1strEnd = plantacionQ1str1.toString() + ", " + plantacionQ1str2.toString();
+                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ1strEnd.toString());
+                        } else {
+
                         }
-                        plantacionQ1strEnd = plantacionQ1str1.toString() + ", " + plantacionQ1str2.toString();
-
-                        controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(plantacionQ1strEnd.toString());
-
                         break;
 
                     case R.layout.plantacion_details_2:
