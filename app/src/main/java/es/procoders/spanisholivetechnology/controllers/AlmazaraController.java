@@ -26,7 +26,7 @@ public class AlmazaraController {
 
     private EditText almazaraQ1edt1, almazaraQ1edt2, almazaraQ3edt1, almazaraQ3edt2, almazaraQ4edt, almazaraQ5edt, almazaraQ6edt, almazaraQ7edt, almazaraQ8edt, almazaraQ9edt, almazaraQ15edt;
 
-    private View view;
+    private View vista;
     private GeneralSingleton controller;
     private Activity activity;
     private Button save, back;
@@ -38,7 +38,7 @@ public class AlmazaraController {
 
 
     public AlmazaraController(final View v, final Activity activity) {
-        this.view = v;
+        this.vista = v;
         this.activity = activity;
 
         almazaraQ1edt1 = v.findViewById(R.id.almazaraQ1edt1);
@@ -74,6 +74,8 @@ public class AlmazaraController {
         almazaraQ14Option1 = v.findViewById(R.id.almazaraQ14Option1);
         almazaraQ14Option2 = v.findViewById(R.id.almazaraQ14Option2);
         almazaraQ15edt = v.findViewById(R.id.almazaraQ15edt);
+        almazaraQ11Group1 = v.findViewById(R.id.almazaraQ11Group1);
+        almazaraQ11Group2 = v.findViewById(R.id.almazaraQ11Group2);
 
         save = v.findViewById(R.id.btnOptionSave);
         back = v.findViewById(R.id.btnBack);
@@ -109,8 +111,6 @@ public class AlmazaraController {
                 break;
 
             case R.layout.almazara_details_11:
-                almazaraQ11Group1 = v.findViewById(R.id.almazaraQ11Group1);
-                almazaraQ11Group2 = v.findViewById(R.id.almazaraQ11Group2);
                 almazaraQ11Group2.setVisibility(View.GONE);
 
                 almazaraQ11Group1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -236,30 +236,25 @@ public class AlmazaraController {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ10Option2.getText().toString());
                         }
                         break;
-                    //TODO arreglar el crasheo
+
                     case R.layout.almazara_details_11:
                         if(almazaraQ11g1Option1.isChecked()){
-                            almazaraQ11str1 = almazaraQ11g1Option1.getText().toString();
+                            //Check if any RadioButton is checked. -1 means no button is checked
+                            int checked = almazaraQ11Group2.getCheckedRadioButtonId();
+                            if (checked != -1) {
+                                //Get the checked RadioButton
+                                RadioButton buttonChecked = (RadioButton)vista.findViewById(checked);
+                                //Save type of lab into the Form
+                                controller.getFormularios().get(controller.getPositionformulario()).
+                                        getRespuestas().get(controller.getPosition()).
+                                        setStr(buttonChecked.getText().toString());
+                            }
                         } else if(almazaraQ11g1Option2.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ11g1Option2.getText().toString());
                         }
 
-                        if(almazaraQ11g2Option1.isChecked()){
-                            almazaraQ11str2 = almazaraQ11g2Option1.getText().toString();
-                        } else if(almazaraQ11g2Option2.isChecked()) {
-                            almazaraQ11str2 = almazaraQ11g2Option2.getText().toString();
-                        } else if(almazaraQ11g2Option3.isChecked()) {
-                            almazaraQ11str2 = almazaraQ11g2Option3.getText().toString();
-                        }
-
-                        if (almazaraQ11g1Option1.isChecked()){
-                            if (almazaraQ11g2Option1.isChecked() || almazaraQ11g2Option2.isChecked() || almazaraQ11g2Option3.isChecked())
-                            almazaraQ11strEnd = almazaraQ11str1.toString() + ", " + almazaraQ11str2.toString();
-
-                            controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ11strEnd.toString());
-                        }
-
                         break;
+
                     case R.layout.almazara_details_12:
                         if (almazaraQ12Option1.isChecked()) {
                             controller.getFormularios().get(controller.getPositionformulario()).getRespuestas().get(controller.getPosition()).setStr(almazaraQ12Option1.getText().toString());
